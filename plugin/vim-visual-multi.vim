@@ -1,0 +1,6 @@
+let g:VM_mouse_mappings = 1
+
+let g:VM_maps = {}
+let g:VM_maps['Increase'] = '<A-=>'
+let g:VM_maps['Decrease'] = '<A-->' 
+let g:VM_maps['Find Under'] = '<A-m>'

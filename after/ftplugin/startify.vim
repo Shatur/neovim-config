@@ -1,0 +1,2 @@
+setlocal cursorline
+setlocal buflisted
