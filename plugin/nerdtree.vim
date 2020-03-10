@@ -46,6 +46,8 @@ let g:NERDTreeExtensionHighlightColor['x86_64'] = s:rspec_red
 let g:NERDTreeExtensionHighlightColor['otf'] = s:white
 
 let NERDTreeMinimalUI = 1
+let NERDTreeUpdateOnCursorHold = 0
+let NERDTreeChDirMode = 2
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
