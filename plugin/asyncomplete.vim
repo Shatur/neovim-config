@@ -1,14 +1,3 @@
-autocmd vimrc User asyncomplete_setup call asyncomplete#register_source({
-    \ 'name': 'spell',
-    \ 'whitelist': ['text', 'markdown', 'gitcommit'],
-    \ 'completor': function('asyncomplete#sources#spell#completor'),
-    \ })
-autocmd vimrc User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
-    \ 'name': 'file',
-    \ 'whitelist': ['*'],
-    \ 'priority': 10,
-    \ 'completor': function('asyncomplete#sources#file#completor')
-    \ }))
 call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
     \ 'name': 'buffer',
     \ 'whitelist': ['*'],
