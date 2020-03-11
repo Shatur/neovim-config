@@ -1,3 +1,2 @@
-wincmd L
-vert resize 80
+wincmd J
 setlocal spell
