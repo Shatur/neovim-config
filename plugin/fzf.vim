@@ -5,5 +5,13 @@ command! -bang -nargs=* Ag
   \                         : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
   \                 <bang>0)
 
+let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+
 nnoremap <C-p> :Files<CR>
 nnoremap <C-f> :Ag 
+nnoremap <F1> :Helptags<CR>
+
+" Mapping selecting mappings
+nmap <Leader><tab> <plug>(fzf-maps-n)
+xmap <Leader><tab> <plug>(fzf-maps-x)
+omap <Leader><tab> <plug>(fzf-maps-o)
