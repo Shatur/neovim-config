@@ -26,6 +26,9 @@ autocmd vimrc User lsp_setup call lsp#register_server({
     \ })
 
 let g:lsp_semantic_enabled = 1
+let g:lsp_signs_error = {'text': ''}
+let g:lsp_signs_warning = {'text': ''}
+let g:lsp_signs_hint = {'text': ''}
 
 highlight MemberVariable ctermfg=DarkRed guifg=#9c3a3a
 highlight link LspWarningText Underlined
