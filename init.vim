@@ -3,6 +3,7 @@ scriptencoding utf-8
 " General
 set title
 set lazyredraw
+set linebreak
 set spelllang=en_us,ru_ru
 set mouse=a
 set number relativenumber
