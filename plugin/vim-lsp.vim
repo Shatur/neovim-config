@@ -24,6 +24,11 @@ autocmd vimrc User lsp_setup call lsp#register_server({
     \ 'cmd': {server_info->['nc', 'localhost', '6008']},
     \ 'whitelist': ['gdscript3']
     \ })
+autocmd vimrc User lsp_setup call lsp#register_server({
+    \ 'name': 'vim-language-server',
+    \ 'cmd': {server_info->['vim-language-server', '--stdio']},
+    \ 'whitelist': ['vim'],
+    \ })
 
 let g:lsp_semantic_enabled = 1
 let g:lsp_signs_error = {'text': ''}
