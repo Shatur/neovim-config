@@ -16,6 +16,8 @@ set listchars=tab:→\ " Display tabs
 set fillchars=eob:\ " Do not show ~
 set whichwrap+=h,l,<,>,[,] " Wrap movement between lines in edit mode
 set clipboard+=unnamedplus
+set pumheight=10
+set pumblend=50
 
 " Theme
 set termguicolors
