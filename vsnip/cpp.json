@@ -1,0 +1,11 @@
+{
+  "for": {
+    "prefix": ["for", "range"],
+    "body": [
+      "for (${1:element} : ${2:container}) {",
+      "    $0",
+      "}"
+    ],
+    "description": "range-based"
+  }
+}
