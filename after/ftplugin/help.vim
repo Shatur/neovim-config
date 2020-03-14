@@ -1,2 +1,3 @@
 wincmd L
-vert resize 85
+vertical resize 82
+setlocal winfixwidth
