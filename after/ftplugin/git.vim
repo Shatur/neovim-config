@@ -1,2 +1,2 @@
-wincmd J
+wincmd L
 setlocal spell
