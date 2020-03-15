@@ -1,11 +1,19 @@
 # Neovim configuration
 
-Used together with [plugins](https://github.com/Shatur95/neovim-plugins).
+Used together with [this](https://github.com/Shatur95/neovim-plugins) plugins.
 
 ## Installation
 
+**Linux**
+
 ```bash
 git clone git@github.com:Shatur95/neovim-config.git ~/.config/nvim
+```
+
+**Windows**
+
+```bash
+git clone git@github.com:Shatur95/neovim-config.git $env:LOCALAPPDATA/nvim
 ```
 
 ## Style

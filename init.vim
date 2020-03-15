@@ -7,7 +7,6 @@ set linebreak
 set spelllang=en_us,ru_ru
 set mouse=a
 set number relativenumber
-set guifont=SauceCodePro\ Nerd\ Font\ Mono
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -17,6 +16,13 @@ set fillchars=eob:\ " Do not show ~
 set whichwrap+=h,l,<,>,[,] " Wrap movement between lines in edit mode
 set clipboard+=unnamedplus
 set pumheight=10
+
+" Fonts
+if has('win32')
+  set guifont=SauceCodePro\ NF
+else
+  set guifont=SauceCodePro\ Nerd\ Font\ Mono
+endif
 
 " Theme
 set termguicolors
