@@ -53,11 +53,13 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-" Saving
+" Buffer / tab control
 nnoremap <Leader>w <C-w>
 noremap <C-w> :w<CR>
 noremap <C-q> :bd<CR>
+noremap <A-q> :tabclose<CR>
 noremap <C-x> :w<CR>:bd<CR>
+noremap <A-x> :w<CR>:tabclose<CR>
 
 " Make behavior more like in common editors
 set pastetoggle=<F10>
