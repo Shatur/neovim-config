@@ -54,8 +54,7 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
 " Buffer / tab control
-nnoremap <Leader>w <C-w>
-noremap <C-w> :w<CR>
+noremap <C-s> :w<CR>
 noremap <C-q> :bd<CR>
 noremap <A-q> :tabclose<CR>
 noremap <C-x> :w<CR>:bd<CR>
