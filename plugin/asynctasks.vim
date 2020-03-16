@@ -1,6 +1,7 @@
 let g:asynctasks_template = 0
 let g:asynctasks_confirm = 0
 let g:asyncrun_rootmarks = ['.git', '.root', 'compile_commands.json']
+let g:asynctasks_edit_split = 'vert'
 
 noremap <silent><F6> :wa<CR>:AsyncTask project-run<CR>
 noremap <silent><F7> :wa<CR>:AsyncTask project-build<CR>
