@@ -11,7 +11,7 @@ autocmd vimrc User lsp_setup call lsp#register_server({
     \       'entity.name.type.template.cpp': 'Type',
     \       'variable.other.cpp': 'Identifier',
     \       'variable.other.enumnumber.cpp': 'Identifier',
-    \       'variable.other.field.cpp': 'MemberVariable'
+    \       'variable.other.field.cpp': 'markdownHeadingDelimiter'
     \ }
     \ })
 autocmd vimrc User lsp_setup call lsp#register_server({
@@ -36,7 +36,6 @@ let g:lsp_signs_warning = {'text': ''}
 let g:lsp_signs_hint = {'text': ''}
 let g:lsp_highlight_references_enabled = 1
 
-highlight MemberVariable ctermfg=DarkRed guifg=#9c3a3a
 highlight link LspWarningText Underlined
 
 nmap <A-CR> <plug>(lsp-code-action)
