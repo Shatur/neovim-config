@@ -72,6 +72,9 @@ cnoremap <C-v> <C-r>+
 inoremap <S-Left> <Esc>vb
 inoremap <S-Right> <Esc>ve
 
+" Render markdown in hover messages
+let g:markdown_fenced_languages = ['help']
+
 " Custom group for all autocmd's in configuration
 augroup vimrc
   autocmd!
