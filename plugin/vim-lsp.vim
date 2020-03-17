@@ -9,8 +9,8 @@ autocmd vimrc User lsp_setup call lsp#register_server({
     \       'entity.name.type.class.cpp': 'Type',
     \       'entity.name.type.enum.cpp': 'Type',
     \       'entity.name.type.template.cpp': 'Type',
+    \       'variable.other.enummember.cpp': 'Type',
     \       'variable.other.cpp': 'Identifier',
-    \       'variable.other.enumnumber.cpp': 'Identifier',
     \       'variable.other.field.cpp': 'markdownHeadingDelimiter'
     \ }
     \ })
