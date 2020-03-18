@@ -71,6 +71,7 @@ inoremap <C-v> <C-g>u<F10><C-r>+<F10>
 cnoremap <C-v> <C-r>+
 inoremap <S-Left> <Esc>vb
 inoremap <S-Right> <Esc>ve
+vnoremap / y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 " Render markdown in hover messages
 let g:markdown_fenced_languages = ['help']
