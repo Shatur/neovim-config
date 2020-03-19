@@ -27,7 +27,6 @@ let g:startify_lists = [
       \ ]
 
 let g:startify_change_to_vcs_root = 1
-let g:startify_change_to_dir = 1
 
 if has('win32')
   let g:startify_bookmarks = [ {'c': '~/AppData/Local/nvim/init.vim'} ]
