@@ -1,11 +1,20 @@
 {
-  "for": {
+  "range-based for": {
     "prefix": ["for", "range"],
     "body": [
       "for (${1:element} : ${2:container}) {",
       "    $0",
       "}"
     ],
-    "description": "range-based"
+    "description": "loop"
+  },
+  "index-based for": {
+    "prefix": ["for", "index"],
+    "body": [
+      "for (${1:size_t} ${2:i} = 0; $2 < ${3:size}; ++$2) {",
+      "    $0",
+      "}"
+    ],
+    "description": "loop"
   }
 }
