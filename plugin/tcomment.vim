@@ -1,11 +1,11 @@
 if has('win32')
-  inoremap <C-/> <Esc>:TComment<CR>
-  nnoremap <C-/> :TComment<CR>
-  vnoremap <C-/> :TComment<CR>
+  inoremap <silent> <C-/> <Esc>:TComment<CR>
+  nnoremap <silent> <C-/> :TCo<silent> mment<CR>
+  vnoremap <silent> <C-/> :TComment<CR><silent> 
   let g:tcomment_mapleader1 = '<A-/>'
 else
-  inoremap <C-_> <Esc>:TComment<CR>
-  nnoremap <C-_> :TComment<CR>
-  vnoremap <C-_> :TComment<CR>
+  inoremap <silent> <C-_> <Esc>:TComment<CR>
+  nnoremap <silent> <C-_> :TComment<CR>
+  vnoremap <silent> <C-_> :TComment<CR>
   let g:tcomment_mapleader1 = '<A-_>'
 endif

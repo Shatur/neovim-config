@@ -51,5 +51,5 @@ let NERDTreeChDirMode = 2
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
-nnoremap <A-n> :NERDTreeToggle<CR>
-nnoremap <A-f> :NERDTreeFind<CR>
+nnoremap <silent> <A-n> :NERDTreeToggle<CR>
+nnoremap <silent> <A-f> :NERDTreeFind<CR>

@@ -63,7 +63,7 @@ noremap <A-x> :w<CR>:tabclose<CR>
 
 " Make behavior more like in common editors
 set pastetoggle=<F10>
-noremap <F5> :e<CR>
+noremap <silent> <F5> :e<CR>
 noremap <C-a> gg0vG$
 inoremap <C-a> <Esc>gg0vG$
 inoremap <C-z> <C-o>u
