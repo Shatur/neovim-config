@@ -26,6 +26,14 @@ let g:startify_lists = [
       \ { 'type': 'commands',  'header': ['   Команды'] },
       \ ]
 
+let g:startify_skiplist = [
+      \ 'start/.*/doc/.*\.txt',
+      \ 'runtime/doc/.*\.txt',
+      \ '/.git/',
+      \ 'fugitiveblame$',
+      \ '/run/user/',
+      \ ]
+
 let g:startify_change_to_vcs_root = 1
 
 if has('win32')
