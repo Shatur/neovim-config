@@ -34,8 +34,6 @@ set signcolumn=yes " Always show the signcolum, otherwise it would shift the tex
 set updatetime=100 " To show git changes often
 set noshowmode " Do not display current mode (use Airline for it)
 set hidden " For switching between edited buffers
-set completeopt-=preview " Disable embedded preview
-set completeopt+=menuone,noinsert " Autocomplete
 set shortmess+=c " Shut off completion messages
 
 " Remap increase / decrease number shortucts to + and - signs with Alt
