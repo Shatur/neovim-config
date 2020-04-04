@@ -76,7 +76,7 @@ vnoremap / y/\V<C-R>=escape(@",'/\')<CR><CR>
 nnoremap S "_diwP
 vnoremap S "_dP
 nnoremap Y y$
-nnoremap <expr> <CR> &buftype ==# 'quickfix' ? "\<CR>" : ':'
+nnoremap <CR> :
 noremap <silent> <Backspace> :b#<CR>
 let mapleader = " "
 
