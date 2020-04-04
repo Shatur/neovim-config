@@ -72,6 +72,14 @@ inoremap <S-Left> <Esc>vb
 inoremap <S-Right> <Esc>ve
 vnoremap / y/\V<C-R>=escape(@",'/\')<CR><CR>
 
+" Remap useless keys
+nnoremap S "_diwP
+vnoremap S "_dP
+nnoremap Y y$
+nnoremap <expr> <CR> &buftype ==# 'quickfix' ? "\<CR>" : ':'
+noremap <silent> <Backspace> :b#<CR>
+let mapleader = " "
+
 " Render markdown in hover messages
 let g:markdown_fenced_languages = ['help']
 
