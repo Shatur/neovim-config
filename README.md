@@ -1,6 +1,6 @@
 # Neovim configuration
 
-Used together with [this](https://github.com/Shatur95/neovim-plugins) plugins.
+Used together with [these](https://github.com/Shatur95/neovim-plugins) plugins.
 
 ## Installation
 
