@@ -7,6 +7,8 @@ if exists('g:started_by_firenvim')
   let g:startify_disable_at_vimenter = 1
   let loaded_nerd_tree = 0
 
+  autocmd vimrc FocusLost * ++nested write
+
   nnoremap <silent> <Esc><Esc> :call firenvim#focus_page()<CR>
   nnoremap <silent> <C-z> :write<CR>:call firenvim#hide_frame()<CR>
 endif
