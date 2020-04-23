@@ -7,10 +7,5 @@ let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 nnoremap <C-f> :Ag 
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <F1> :Helptags<CR>
-nnoremap <silent> <C-Tab> :Buffers<CR>
+nnoremap <silent> <Leader><Tab> :Buffers<CR>
 nnoremap <silent> <S-CR> :Commands<CR>
-
-" Mapping selecting mappings
-nmap <Leader><Tab> <plug>(fzf-maps-n)
-xmap <Leader><Tab> <plug>(fzf-maps-x)
-omap <Leader><Tab> <plug>(fzf-maps-o)
