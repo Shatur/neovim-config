@@ -49,3 +49,25 @@ function! s:on_text_document_did_open() abort
   nnoremap <buffer><silent> gR :<C-u>LampReferences<CR>
   nnoremap <buffer><silent> <Space>s :LampSwitchSourceHeader<CR>
 endfunction
+
+command! LampSwitchSourceHeader call s:clangd_switch_source_header()
+function! s:clangd_switch_source_header() abort
+  if &filetype !=# 'cpp'
+    return
+  endif
+
+  let l:server = lamp#server#registry#get_by_name('clangd')
+  if empty(l:server)
+    echomsg 'clangd does not exists'
+    return
+  endif
+
+  let l:header = lamp#sync(l:server.request('textDocument/switchSourceHeader', {
+              \ 'uri': lamp#protocol#document#identifier(bufnr('%')).uri
+              \ }))
+  if strlen(l:header) == 0
+    echomsg 'source header does not found.'
+    return
+  endif
+  execute printf('edit %s', fnameescape(lamp#protocol#document#decode_uri(l:header)))
+endfunction
