@@ -74,8 +74,6 @@ inoremap <S-Right> <Esc>ve
 vnoremap / y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 " Remap useless keys
-nnoremap S "_diwP
-vnoremap S "_dP
 nnoremap Y y$
 nnoremap <CR> :
 noremap <silent> <Backspace> :b#<CR>
