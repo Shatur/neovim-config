@@ -38,6 +38,7 @@ set completeopt+=menuone,noselect,noinsert
 set noshowmode " Do not display current mode (use Airline for it)
 set hidden " For switching between edited buffers
 set shortmess+=c " Shut off completion messages
+set wildmode=longest:full,full
 
 " Remap increase / decrease number shortucts to + and - signs with Alt
 nnoremap <C-=> <C-a>
