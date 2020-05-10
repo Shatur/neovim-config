@@ -8,7 +8,7 @@ set splitright
 set spelllang=en_us,ru_ru
 set mouse=a
 set number relativenumber
-set smartcase
+set ignorecase smartcase
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -16,9 +16,10 @@ set list
 set listchars=tab:→\ " Display tabs
 set fillchars=eob:\ " Do not show ~
 set whichwrap+=h,l,<,>,[,] " Wrap movement between lines in edit mode
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 set pumheight=10
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+set wildmode=longest:full,full
 
 " Fonts
 if has('win32')
@@ -38,7 +39,6 @@ set completeopt+=menuone,noselect,noinsert
 set noshowmode " Do not display current mode (use Airline for it)
 set hidden " For switching between edited buffers
 set shortmess+=c " Shut off completion messages
-set wildmode=longest:full,full
 
 " Remap increase / decrease number shortucts to + and - signs with Alt
 nnoremap <C-=> <C-a>
@@ -78,11 +78,9 @@ vnoremap / y/\V<C-R>=escape(@",'/\')<CR><CR>
 " Remap useless keys
 nnoremap Y y$
 nnoremap <CR> :
+vnoremap <CR> :
 noremap <silent> <Backspace> :b#<CR>
 let mapleader = " "
-
-" Render markdown in hover messages
-let g:markdown_fenced_languages = ['help']
 
 " Custom group for all autocmd's in configuration
 augroup vimrc
