@@ -1,22 +1,29 @@
 scriptencoding utf-8
 
+function! StartifyEntryFormat()
+  return 'WebDevIconsGetFileTypeSymbol(absolute_path) . " " . entry_path'
+endfunction
+
+highlight link StartifyHeader String
+
 let g:startify_ascii = [
-            \ '      .            .      ',
-            \ '    .,;.           :,.    ',
-            \ '  .,;;;,,.         ccc;.  ',
-            \ '.;c::::,,,.        ccccc: ',
-            \ '.::cc::,,,,,.      cccccc.',
-            \ '.cccccc;;;;;;.     llllll.',
-            \ '.cccccc.,;;;;;;.   llllll.',
-            \ '.cccccc  .;;;;;;.  oooooo.',
-            \ '.lllllc   .;;;;;;;.oooooo.',
-            \ '.lllllc     ,::::::looooo.',
-            \ '.llllll      .:::::lloddd.',
-            \ '.looool       .;::coooodo.',
-            \ '  .cool         .ccoooc.  ',
-            \ '    .co          .:o:.    ',
-            \ '      .           ..      ',
-            \]
+      \ '      .            .      ',
+      \ '    .,;.           :,.    ',
+      \ '  .,;;;,,.         ccc;.  ',
+      \ '.;c::::,,,.        ccccc: ',
+      \ '.::cc::,,,,,.      cccccc.',
+      \ '.cccccc;;;;;;.     llllll.',
+      \ '.cccccc.,;;;;;;.   llllll.',
+      \ '.cccccc  .;;;;;;.  oooooo.',
+      \ '.lllllc   .;;;;;;;.oooooo.',
+      \ '.lllllc     ,::::::looooo.',
+      \ '.llllll      .:::::lloddd.',
+      \ '.looool       .;::coooodo.',
+      \ '  .cool         .ccoooc.  ',
+      \ '    .co          .:o:.    ',
+      \ '      .           ..      ',
+      \]
+
 let g:startify_custom_header = 'startify#center(g:startify_ascii)'
 
 let g:startify_lists = [
