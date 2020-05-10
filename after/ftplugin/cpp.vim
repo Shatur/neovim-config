@@ -1,3 +1,3 @@
 setlocal formatoptions-=cro
 setlocal cinoptions+=L0,j1,(0,ws,Ws
-set nowrap
+setlocal nowrap
