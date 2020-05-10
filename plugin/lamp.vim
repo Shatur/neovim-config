@@ -7,8 +7,6 @@ function! s:on_initialized()
         \   'command': ['clangd', '--header-insertion=never', '--suggest-missing-includes', '--background-index', '-j=8', '--cross-file-rename', '--pch-storage=memory', '--clang-tidy', '--clang-tidy-checks=bugprone-*,misc-*,-misc-non-private-member-variables-in-classes,performance-*,modernize-use-*,-modernize-use-trailing-return-type'],
         \   'filetypes': ['cpp', 'c'],
         \   'root_uri': { -> lamp#findup(['.git', 'compile_commands.json']) },
-        \   'initialization_options': { -> {
-        \   } },
         \   'capabilitis': {
         \     'completionProvider': {
         \       'triggerCharacters': ['.', ',']
@@ -19,13 +17,14 @@ function! s:on_initialized()
         \   'command': ['nc', 'localhost', '6008'],
         \   'filetypes': ['gdscript3'],
         \   'root_uri': { -> lamp#findup(['.git', 'project.godot']) },
-        \   'initialization_options': { -> {
-        \   } },
-        \   'capabilitis': {
-        \     'completionProvider': {
-        \       'triggerCharacters': ['.', ',']
-        \     }
-        \   }
+        \ })
+  call lamp#register('bash-language-server', {
+        \   'command': ['bash-language-server', 'start'],
+        \   'filetypes': ['sh', 'bash'],
+        \ })
+  call lamp#register('cmake-language-server', {
+        \   'command': ['cmake-language-server'],
+        \   'filetypes': ['cmake'],
         \ })
 endfunction
 
