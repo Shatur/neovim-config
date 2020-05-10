@@ -39,6 +39,7 @@ set completeopt+=menuone,noselect,noinsert
 set noshowmode " Do not display current mode (use Airline for it)
 set hidden " For switching between edited buffers
 set shortmess+=c " Shut off completion messages
+let loaded_netrwPlugin = v:false " Do not load built-in netrw
 
 " Remap increase / decrease number shortucts to + and - signs with Alt
 nnoremap <C-=> <C-a>
