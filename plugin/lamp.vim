@@ -46,7 +46,7 @@ function! s:on_text_document_did_open() abort
   nnoremap <buffer><silent> <A-LeftRelease> :<C-u>LampDefinition edit<CR>
   nnoremap <buffer><silent> gr :<C-u>LampRename<CR>
   nnoremap <buffer><silent> gR :<C-u>LampReferences<CR>
-  nnoremap <buffer><silent> <Space>s :LampSwitchSourceHeader<CR>
+  nnoremap <buffer><silent> <Leader>h :LampSwitchSourceHeader<CR>
 endfunction
 
 command! LampSwitchSourceHeader call s:clangd_switch_source_header()
