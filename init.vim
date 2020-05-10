@@ -80,7 +80,7 @@ nnoremap Y y$
 nnoremap <CR> :
 vnoremap <CR> :
 noremap <silent> <Backspace> :b#<CR>
-let mapleader = " "
+let mapleader = ' '
 
 " Custom group for all autocmd's in configuration
 augroup vimrc
