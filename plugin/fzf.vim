@@ -14,6 +14,7 @@ let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 nnoremap <C-f> :Ag<Space>
 nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <A-o> :History<CR>
 nnoremap <silent> <F1> :Helptags<CR>
 nnoremap <silent> <Leader><Tab> :Buffers<CR>
 nnoremap <silent> <S-CR> :Commands<CR>
