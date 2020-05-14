@@ -25,6 +25,9 @@ function! s:on_initialized()
   call lamp#register('cmake-language-server', {
         \   'command': ['cmake-language-server'],
         \   'filetypes': ['cmake'],
+        \   'initialization_options': { -> {
+        \     'buildDirectory': cmake#get_build_dir()
+        \   } }
         \ })
 endfunction
 
