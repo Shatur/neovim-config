@@ -67,15 +67,25 @@ nnoremap <C-l> <C-w>l
 
 " Buffer / tab control
 noremap <C-q> :bd<CR>
+vnoremap <C-q> :bd<CR>
+inoremap <C-q> <Esc>:bd<CR>
 noremap <A-q> :tabclose<CR>
+vnoremap <A-q> :tabclose<CR>
+inoremap <A-q> <Esc>:tabclose<CR>
 noremap <C-x> :w<CR>:bd<CR>
+vnoremap <C-x> :w<CR>:bd<CR>
+inoremap <C-x> <Esc>:w<CR>:bd<CR>
 noremap <A-x> :w<CR>:tabclose<CR>
+vnoremap <A-x> :w<CR>:tabclose<CR>
+inoremap <A-x> <Esc>:w<CR>:tabclose<CR>
 
 " Make behavior more like in common editors
 set pastetoggle=<F10>
 noremap <C-s> :w<CR>
+vnoremap <C-s> :w<CR>
 inoremap <C-s> <C-o>:w<CR>
 noremap <C-a> gg0vG$
+vnoremap <C-a> <Esc>gg0vG$
 inoremap <C-a> <Esc>gg0vG$
 inoremap <C-z> <C-o>u
 inoremap <C-v> <C-g>u<F10><C-r>+<F10>
