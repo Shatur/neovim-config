@@ -4,7 +4,7 @@ function! s:on_initialized()
   call lamp#builtin#vim_language_server()
 
   call lamp#register('clangd', {
-        \   'command': ['clangd', '--header-insertion=never', '--suggest-missing-includes', '--background-index', '-j=8', '--cross-file-rename', '--pch-storage=memory', '--clang-tidy', '--clang-tidy-checks=bugprone-*,misc-*,-misc-non-private-member-variables-in-classes,performance-*,modernize-use-*,-modernize-use-trailing-return-type'],
+        \   'command': ['clangd', '--header-insertion=never', '--suggest-missing-includes', '--background-index', '-j=8', '--cross-file-rename', '--pch-storage=memory', '--clang-tidy', '--clang-tidy-checks=-clang-analyzer-*,bugprone-*,misc-*,-misc-non-private-member-variables-in-classes,performance-*,-performance-no-automatic-move,modernize-use-*,-modernize-use-nodiscard,-modernize-use-trailing-return-type'],
         \   'filetypes': ['cpp', 'c'],
         \   'root_uri': { -> lamp#findup(['.git', 'compile_commands.json']) },
         \   'capabilitis': {
