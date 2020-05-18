@@ -13,6 +13,7 @@ noremap <silent> <S-F7> :CMakeBuildAll<CR>
 noremap <silent> <A-F7> :CMakeOpenBuildDir<CR>
 noremap <silent> <F8> :CMakeSelectTarget<CR>
 noremap <silent> <S-F8> :CMakeSelectBuildType<CR>
+noremap <silent> <A-F8> :CMakeSetTargetArguments<CR>
 noremap <silent> <F9> :CMakeConfigure -G Ninja<CR>
 noremap <silent> <S-F9> :CMakeClean<CR>
 noremap <silent> <A-F9> :CMakeCreateProject<CR>
