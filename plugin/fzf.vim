@@ -1,6 +1,6 @@
 " Use FZF for spell suggestions
 function! FzfSpellSink(word)
-  exe 'normal! "_ciw'.a:word
+  exe 'normal! "_ciw' . a:word
 endfunction
 function! FzfSpell()
   let suggestions = spellsuggest(expand('<cword>'))
@@ -13,6 +13,7 @@ command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-hea
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 nnoremap <C-f> :Ag<Space>
+nnoremap <A-f> :BLines<CR>
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <A-o> :History<CR>
 nnoremap <silent> <F1> :Helptags<CR>
