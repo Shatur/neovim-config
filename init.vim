@@ -90,6 +90,7 @@ inoremap <C-a> <Esc>gg0vG$
 inoremap <C-z> <C-o>u
 inoremap <C-v> <C-g>u<F10><C-r>+<F10>
 cnoremap <C-v> <C-r>+
+tnoremap <C-v> <C-\><C-N>pi
 inoremap <S-Left> <Esc>vb
 inoremap <S-Right> <Esc>ve
 vnoremap / y/\V<C-R>=escape(@",'/\')<CR><CR>
