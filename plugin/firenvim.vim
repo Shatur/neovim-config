@@ -3,6 +3,7 @@ if !exists('g:started_by_firenvim')
 endif
 
 set laststatus=0
+set showmode
 
 " For unknown reason Airline want to set this variable to v:true 
 let g:loaded_airline = v:true
