@@ -2,9 +2,7 @@ scriptencoding utf-8
 
 let g:airline_powerline_fonts = 1
 
-if !exists('g:started_by_firenvim')
-  let g:airline#extensions#tabline#enabled = 1
-endif
+let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_symbols = {}
 let g:airline_symbols.notexists = ''
