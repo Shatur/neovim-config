@@ -18,7 +18,6 @@ set fillchars=eob:\ " Do not show ~
 set whichwrap+=h,l,<,>,[,] " Wrap movement between lines in edit mode
 set clipboard=unnamedplus
 set pumheight=10
-set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set wildmode=longest:full,full
 
 " Fonts
