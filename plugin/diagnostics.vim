@@ -1,0 +1,4 @@
+call sign_define('LspDiagnosticsErrorSign', {'text' : '', 'texthl' : 'LspDiagnosticsError'})
+call sign_define('LspDiagnosticsWarningSign', {'text' : '', 'texthl' : 'LspDiagnosticsWarning'})
+call sign_define('LspDiagnosticInformationSign', {'text' : 'i', 'texthl' : 'LspDiagnosticsInformation'})
+call sign_define('LspDiagnosticHintSign', {'text' : '', 'texthl' : 'LspDiagnosticsHint'})
