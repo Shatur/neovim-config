@@ -1,12 +1,12 @@
 packadd nvim-lsp
 
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gr <cmd>lua vim.lsp.buf.rename()<CR>
-nnoremap <silent> gR <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> g0 <cmd>lua vim.lsp.buf.document_symbol()<CR>
-nnoremap <silent> gW <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
-nnoremap <silent> <A-d> <cmd>lua vim.lsp.util.show_line_diagnostics()<CR>
+nnoremap gd <Cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap K <Cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap gr <Cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap gR <Cmd>lua vim.lsp.buf.references()<CR>
+nnoremap g0 <Cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap gW <Cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+nnoremap <A-d> <Cmd>lua vim.lsp.util.show_line_diagnostics()<CR>
 
 lua << EOF
   local nvim_lsp = require'nvim_lsp'

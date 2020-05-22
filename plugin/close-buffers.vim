@@ -1,1 +1,1 @@
-nnoremap <silent> Q :Bdelete menu<CR>
+nnoremap Q <Cmd>Bdelete menu<CR>

@@ -1,7 +1,8 @@
 GuiPopupmenu 0
 GuiTabline 0
+GuiScrollBar 1
 
 " Context menu
-nnoremap <silent> <RightMouse> :call GuiShowContextMenu()<CR>
-inoremap <silent> <RightMouse> <Esc>:call GuiShowContextMenu()<CR>
-vnoremap <silent> <RightMouse> :call GuiShowContextMenu()<CR>gv
+nnoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>
+inoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>
+vnoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>gv

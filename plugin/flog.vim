@@ -1,1 +1,1 @@
-nnoremap <silent> <Leader>gl :Flog -all<CR>
+nnoremap <Leader>gl <Cmd>Flog -all<CR>

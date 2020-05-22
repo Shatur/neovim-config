@@ -23,5 +23,5 @@ let g:loaded_vista = v:false
 let g:loaded_webdevicons = v:false
 let g:loaded_nerd_tree = v:false
 
-nnoremap <silent> <Esc><Esc> :call firenvim#focus_page()<CR>
-nnoremap <silent> <C-z> :write<CR>:call firenvim#hide_frame()<CR>
+nnoremap <Esc><Esc> <Cmd>call firenvim#focus_page()<CR>
+nnoremap <C-z> <Cmd>write<CR><Cmd>call firenvim#hide_frame()<CR>

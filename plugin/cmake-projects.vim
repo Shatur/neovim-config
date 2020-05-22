@@ -4,16 +4,16 @@ else
   let g:default_projects_path = '/mnt/Files/Code/'
 endif
 
-noremap <silent> <F5> :CMakeBuildAndDebug<CR>
-noremap <silent> <S-F5> :CMakeDebug<CR>
-noremap <silent> <F6> :CMakeBuildAndRun<CR>
-noremap <silent> <S-F6> :CMakeRun<CR>
-noremap <silent> <F7> :CMakeBuild<CR>
-noremap <silent> <S-F7> :CMakeBuildAll<CR>
-noremap <silent> <A-F7> :CMakeOpenBuildDir<CR>
-noremap <silent> <F8> :CMakeSelectTarget<CR>
-noremap <silent> <S-F8> :CMakeSelectBuildType<CR>
-noremap <silent> <A-F8> :CMakeSetTargetArguments<CR>
-noremap <silent> <F9> :CMakeConfigure -G Ninja<CR>
-noremap <silent> <S-F9> :CMakeClean<CR>
-noremap <silent> <A-F9> :CMakeCreateProject<CR>
+noremap <F5> <Cmd>CMakeBuildAndDebug<CR>
+noremap <S-F5> <Cmd>CMakeDebug<CR>
+noremap <F6> <Cmd>CMakeBuildAndRun<CR>
+noremap <S-F6> <Cmd>CMakeRun<CR>
+noremap <F7> <Cmd>CMakeBuild<CR>
+noremap <S-F7> <Cmd>CMakeBuildAll<CR>
+noremap <A-F7> <Cmd>CMakeOpenBuildDir<CR>
+noremap <F8> <Cmd>CMakeSelectTarget<CR>
+noremap <S-F8> <Cmd>CMakeSelectBuildType<CR>
+noremap <A-F8> <Cmd>CMakeSetTargetArguments<CR>
+noremap <F9> <Cmd>CMakeConfigure -G Ninja<CR>
+noremap <S-F9> <Cmd>CMakeClean<CR>
+noremap <A-F9> <Cmd>CMakeCreateProject<CR>

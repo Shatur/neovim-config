@@ -49,4 +49,5 @@ else
   let g:startify_bookmarks = [ {'c': '~/.config/nvim/init.vim'} ]
 endif
 
-noremap <silent> <C-n> :Startify<CR>
+noremap <C-n> <Cmd>Startify<CR>
+inoremap <C-n> <Esc><Cmd>Startify<CR>

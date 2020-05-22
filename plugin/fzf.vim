@@ -13,10 +13,10 @@ command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-hea
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 nnoremap <C-f> :Ag<Space>
-nnoremap <A-f> :BLines<CR>
-nnoremap <silent> <C-p> :Files<CR>
-nnoremap <silent> <A-o> :History<CR>
-nnoremap <silent> <F1> :Helptags<CR>
-nnoremap <silent> <Leader><Tab> :Buffers<CR>
-nnoremap <silent> <S-CR> :Commands<CR>
-nnoremap <silent> z= :call FzfSpell()<CR>
+nnoremap <A-f> <Cmd>BLines<CR>
+nnoremap <C-p> <Cmd>Files<CR>
+nnoremap <A-o> <Cmd>History<CR>
+nnoremap <F1> <Cmd>Helptags<CR>
+nnoremap <Leader><Tab> <Cmd>Buffers<CR>
+nnoremap <S-CR> <Cmd>Commands<CR>
+nnoremap z= <Cmd>call FzfSpell()<CR>

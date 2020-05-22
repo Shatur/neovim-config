@@ -5,5 +5,5 @@ let g:vista_executive_for = {
     \ 'markdown': 'toc',
     \ }
 
-nnoremap <silent> <A-v> :Vista!!<CR>
-nnoremap <silent> <A-p> :Vista finder<CR>
+nnoremap <A-v> <Cmd>Vista!!<CR>
+nnoremap <A-p> <Cmd>Vista finder<CR>
