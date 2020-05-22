@@ -1,1 +1,1 @@
-map <Leader> <plug>(easymotion-prefix)
+map <Leader> <Plug>(easymotion-prefix)

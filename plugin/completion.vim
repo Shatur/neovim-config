@@ -1,4 +1,4 @@
-let g:completion_confirm_key_rhs = "\<plug>(PearTreeExpand)"
+let g:completion_confirm_key_rhs = "\<Plug>(PearTreeExpand)"
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"

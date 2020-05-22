@@ -4,5 +4,5 @@ let g:pear_tree_smart_backspace = 1
 let g:pear_tree_repeatable_expand = 0
 let g:pear_tree_map_special_keys = 0
 
-imap <BS> <plug>(PearTreeBackspace)
-imap <Esc> <plug>(PearTreeFinishExpansion)
+imap <BS> <Plug>(PearTreeBackspace)
+imap <Esc> <Plug>(PearTreeFinishExpansion)
