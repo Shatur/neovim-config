@@ -1,6 +1,6 @@
-nmap <Leader>gs <Cmd>G<CR>
-nmap <Leader>gD <Cmd>G difftool -y<CR>
-nmap <Leader>gd <Cmd>Gdiffsplit<CR>
-nmap <Leader>gb <Cmd>GBrowse<CR>
-nmap <Leader>gp <Cmd>G push<CR>
-nmap <Leader>gP <Cmd>G pull --rebase<CR>
+nnoremap <Leader>gs <Cmd>G<CR>
+nnoremap <Leader>gD <Cmd>G difftool -y<CR>
+nnoremap <Leader>gd <Cmd>Gdiffsplit<CR>
+nnoremap <Leader>gb <Cmd>GBrowse<CR>
+nnoremap <Leader>gp <Cmd>G push<CR>
+nnoremap <Leader>gP <Cmd>G pull --rebase<CR>
