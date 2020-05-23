@@ -6,4 +6,4 @@ let g:vista_executive_for = {
     \ }
 
 nnoremap <A-v> <Cmd>Vista!!<CR>
-nnoremap <A-p> <Cmd>Vista finder<CR>
+nnoremap <A-t> <Cmd>Vista finder<CR>
