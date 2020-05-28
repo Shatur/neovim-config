@@ -78,6 +78,12 @@ noremap <A-x> <Cmd>w<CR><Cmd>tabclose<CR>
 vnoremap <A-x> <Cmd>w<CR><Cmd>tabclose<CR>
 inoremap <A-x> <Esc><Cmd>w<CR><Cmd>tabclose<CR>
 
+" Quickfix history navigation
+noremap ]h <Cmd>cnewer<CR>
+vnoremap ]h <Cmd>cnewer<CR>
+noremap [h <Cmd>colder<CR>
+vnoremap [h <Cmd>colder<CR>
+
 " Make behavior more like in common editors
 set pastetoggle=<F10>
 noremap <C-s> <Cmd>w<CR>
