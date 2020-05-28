@@ -43,18 +43,20 @@ function! s:on_text_document_did_open() abort
   setlocal omnifunc=lamp#complete
 
   " Commands
-  nnoremap <buffer><silent> K :<C-u>LampHover<CR>
-  nnoremap <buffer><silent> <A-CR> :<C-u>LampCodeAction<CR>
-  vnoremap <buffer><silent> <A-CR> :LampCodeAction<CR>
-  vnoremap <buffer><silent> <A-i> :LampRangeFormatting<CR>
-  nnoremap <buffer><silent> <A-i> :<C-u>LampFormatting<CR>
-  inoremap <buffer><silent> <A-i> <C-o>:<C-u>LampFormatting<CR>
-  nnoremap <buffer><silent> gd :<C-u>LampDefinition edit<CR>
-  nnoremap <buffer><silent> gD :<C-u>LampTypeDefinition edit<CR>
-  nnoremap <buffer><silent> <A-LeftRelease> :<C-u>LampDefinition edit<CR>
-  nnoremap <buffer><silent> gr :<C-u>LampRename<CR>
-  nnoremap <buffer><silent> gR :<C-u>LampReferences<CR>
-  nnoremap <buffer><silent> <Leader>h :LampSwitchSourceHeader<CR>
+  nnoremap <buffer><silent> K <Cmd>LampHover<CR>
+  nnoremap <buffer><silent> <A-CR> <Cmd>LampCodeAction<CR>
+  vnoremap <buffer><silent> <A-CR> <Cmd>LampCodeAction<CR>
+  vnoremap <buffer><silent> <A-i> <Cmd>LampRangeFormatting<CR>
+  nnoremap <buffer><silent> <A-i> <Cmd>LampRangeFormatting<CR>
+  inoremap <buffer><silent> <A-i> <Cmd>LampRangeFormatting<CR>
+  nnoremap <buffer><silent> gd <Cmd>LampDefinition edit<CR>
+  nnoremap <buffer><silent> gD <Cmd>LampTypeDefinition edit<CR>
+  nnoremap <buffer><silent> <A-LeftRelease> <Cmd>LampDefinition edit<CR>
+  nnoremap <buffer><silent> gr <Cmd>LampRename<CR>
+  nnoremap <buffer><silent> gR <Cmd>LampReferences<CR>
+  nnoremap <buffer><silent> gs <Cmd>LampSwitchSourceHeader<CR>
+  nnoremap <buffer><silent> ]d <Cmd>LampDiagnosticsNext<CR>
+  nnoremap <buffer><silent> [d <Cmd>LampDiagnosticsPrev<CR>
 endfunction
 
 command! LampSwitchSourceHeader call s:clangd_switch_source_header()
