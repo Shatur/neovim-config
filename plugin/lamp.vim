@@ -51,7 +51,7 @@ function! s:on_text_document_did_open() abort
   inoremap <buffer><silent> <A-i> <Cmd>LampRangeFormatting<CR>
   nnoremap <buffer><silent> gd <Cmd>LampDefinition edit<CR>
   nnoremap <buffer><silent> gD <Cmd>LampTypeDefinition edit<CR>
-  nnoremap <buffer><silent> <A-LeftRelease> <Cmd>LampDefinition edit<CR>
+  nnoremap <buffer><silent> <C-LeftMouse> <LeftMouse><Cmd>LampDefinition edit<CR>
   nnoremap <buffer><silent> gr <Cmd>LampRename<CR>
   nnoremap <buffer><silent> gR <Cmd>LampReferences<CR>
   nnoremap <buffer><silent> gs <Cmd>LampSwitchSourceHeader<CR>
