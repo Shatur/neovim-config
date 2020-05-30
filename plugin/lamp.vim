@@ -80,3 +80,20 @@ function! s:clangd_switch_source_header() abort
   endif
   execute printf('edit %s', fnameescape(lamp#protocol#document#decode_uri(l:header)))
 endfunction
+
+command! ReloadDocument call s:reload_document()
+function! s:reload_document()
+  let l:bufnr = bufnr('%')
+  let l:bufname = bufname(l:bufnr)
+  enew
+  let l:temp_bufnr = bufnr('%')
+  try
+    execute printf('%sbdelete!', l:bufnr)
+  catch /.*/
+  endtry
+  execute printf('edit! %s', fnameescape(l:bufname))
+  try
+    execute printf('%sbdelete!', l:temp_bufnr)
+  catch /.*/
+  endtry
+endfunction
