@@ -1,6 +1,7 @@
 " Initialize servers
 autocmd! vimrc User lamp#initialized call s:on_initialized()
 function! s:on_initialized()
+  call compete#source#lamp#register()
   call lamp#config('view.sign.error.text', '')
   call lamp#config('view.sign.warning.text', '')
   call lamp#config('view.sign.information.text', 'i')

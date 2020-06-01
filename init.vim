@@ -7,8 +7,10 @@ set linebreak
 set splitright
 set spelllang=en_us,ru_ru
 set mouse=a
-set number relativenumber
-set ignorecase smartcase
+set number
+set relativenumber
+set ignorecase
+set smartcase
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -38,9 +40,8 @@ set completeopt=menuone,noselect,noinsert
 set noshowmode " Do not display current mode (use Airline for it)
 set hidden " For switching between edited buffers
 set shortmess+=c " Shut off completion messages
-let loaded_netrwPlugin = v:false " Do not load built-in netrw
 
-" Remap increase / decrease number shortucts to + and - signs with Alt
+" Remap increase / decrease number shortucts to + and - signs
 nnoremap <C-=> <C-a>
 nnoremap <C--> <C-x>
 

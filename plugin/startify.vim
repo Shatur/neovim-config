@@ -4,8 +4,6 @@ function! StartifyEntryFormat()
   return 'WebDevIconsGetFileTypeSymbol(absolute_path) . " " . entry_path'
 endfunction
 
-highlight link StartifyHeader String
-
 let g:startify_ascii = [
       \ '      .            .      ',
       \ '    .,;.           :,.    ',
@@ -48,6 +46,8 @@ if has('win32')
 else
   let g:startify_bookmarks = [ {'c': '~/.config/nvim/init.vim'} ]
 endif
+
+highlight link StartifyHeader String
 
 noremap <C-n> <Cmd>Startify<CR>
 inoremap <C-n> <Esc><Cmd>Startify<CR>
