@@ -1,0 +1,18 @@
+nmap <buffer><expr> <CR> "\<Plug>(fern-action-mark-toggle)"
+nmap <buffer><expr> <Esc> "\<Plug>(fern-action-cancel)"
+nmap <buffer><expr> <S-k> "\<Plug>(fern-action-leave)"
+nmap <buffer><expr> <C-h> "\<Plug>(fern-action-hidden-toggle)"
+nmap <buffer><expr> <C-CR> "\<Plug>(fern-action-enter)"
+nmap <buffer><expr> h "\<Plug>(fern-action-collapse)"
+nmap <buffer><expr> l fern#smart#leaf("\<Plug>(fern-action-open)", "\<Plug>(fern-action-expand)")
+nmap <buffer><expr> m "\<Plug>(fern-action-move)"
+nmap <buffer><expr> r "\<Plug>(fern-action-rename)"
+nmap <buffer><expr> d "\<Plug>(fern-action-trash)"
+nmap <buffer><expr> y "\<Plug>(fern-action-clipboard-copy)"
+nmap <buffer><expr> c "\<Plug>(fern-action-clipboard-move)"
+nmap <buffer><expr> p "\<Plug>(fern-action-clipboard-paste)"
+nmap <buffer><expr> o "\<Plug>(fern-action-open:system)"
+nmap <buffer><expr> F "\<Plug>(fern-action-create-folder)"
+nmap <buffer><expr> N "\<Plug>(fern-action-create-file)"
+nmap <buffer><expr> <F5> "\<Plug>(fern-action-reload)"
+nmap <buffer><expr> <2-LeftMouse> fern#smart#leaf("\<Plug>(fern-action-open)", "\<Plug>(fern-action-expand)")
