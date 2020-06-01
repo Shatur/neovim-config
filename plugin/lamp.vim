@@ -81,19 +81,13 @@ function! s:clangd_switch_source_header() abort
   execute printf('edit %s', fnameescape(lamp#protocol#document#decode_uri(l:header)))
 endfunction
 
-command! ReloadDocument call s:reload_document()
-function! s:reload_document()
+command! TouchDocument call s:touch_document() 
+function! s:touch_document() abort
   let l:bufnr = bufnr('%')
-  let l:bufname = bufname(l:bufnr)
-  enew
-  let l:temp_bufnr = bufnr('%')
-  try
-    execute printf('%sbdelete!', l:bufnr)
-  catch /.*/
-  endtry
-  execute printf('edit! %s', fnameescape(l:bufname))
-  try
-    execute printf('%sbdelete!', l:temp_bufnr)
-  catch /.*/
-  endtry
+  for l:server in lamp#server#registry#find_by_filetype(&filetype)
+    call l:server.notify('textDocument/didChange', {
+    \   'textDocument': lamp#protocol#document#versioned_identifier(l:bufnr),
+    \   'contentChanges': []
+    \ })
+  endfor
 endfunction
