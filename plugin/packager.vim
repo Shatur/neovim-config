@@ -1,7 +1,7 @@
 function! PackagerInit() abort
   packadd vim-packager
 
-  call packager#init()
+  call packager#init({'dir': stdpath("data") . '/site/pack/packager'})
   call packager#add('kristijanhusak/vim-packager', {'type': 'opt'})
 
   if has('win32')
