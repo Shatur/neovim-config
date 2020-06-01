@@ -13,7 +13,7 @@ command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-hea
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 nnoremap <C-f> :Ag<Space>
-nnoremap <A-f> <Cmd>BLines<CR>
+nnoremap <A-l> <Cmd>BLines<CR>
 nnoremap <C-p> <Cmd>Files<CR>
 nnoremap <A-p> <Cmd>History<CR>
 nnoremap <F1> <Cmd>Helptags<CR>
