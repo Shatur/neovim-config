@@ -1,12 +1,11 @@
 # Neovim configuration
 
-Used together with [these](https://github.com/Shatur95/neovim-plugins) plugins.
-
 ## Installation
 
 **Linux**
 
 ```bash
+git clone git@github.com:kristijanhusak/vim-packager.git ~/.config/nvim/pack/packager/opt/vim-packager
 git clone git@github.com:Shatur95/neovim-config.git ~/.config/nvim
 ```
 
@@ -14,6 +13,7 @@ git clone git@github.com:Shatur95/neovim-config.git ~/.config/nvim
 
 ```bash
 git clone git@github.com:Shatur95/neovim-config.git $env:LOCALAPPDATA/nvim
+git clone git@github.com:kristijanhusak/vim-packager.git ~/AppData/Local/nvim/pack/packager/opt/vim-packager
 ```
 
 ## Style

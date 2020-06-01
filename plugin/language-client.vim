@@ -20,6 +20,4 @@ let g:LanguageClient_semanticHighlightMaps = {
       \ }
       \ }
 
-" Disable completion and diagnostics
 let g:LanguageClient_diagnosticsEnable = 0
-autocmd vimrc VimEnter * autocmd! languageClient CompleteDone *
