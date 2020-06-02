@@ -17,4 +17,4 @@ endfunction
 
 autocmd vimrc BufEnter * ++nested call s:hijack_directory()
 
-nnoremap <A-f> <Cmd>execute 'Fern ' . asyncrun#get_root('%') . ' -reveal=%:h -drawer -toggle -keep'<CR>
+nnoremap <A-f> <Cmd>execute 'Fern ' . asyncrun#get_root('%') . ' -reveal=% -drawer -toggle -keep'<CR>
