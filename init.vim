@@ -50,6 +50,8 @@ nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
 nnoremap <expr> <Up> v:count ? '<Up>' : 'g<UP>'
 nnoremap <expr> <Down> v:count ? '<Down>' : 'g<Down>'
+nnoremap <expr> <Up> pumvisible() ? '<Up>' : 'g<UP>'
+nnoremap <expr> <Down> pumvisible() ? '<Down>' : 'g<Down>'
 
 " Split navigation
 tnoremap <C-h> <C-\><C-N><C-w>h
