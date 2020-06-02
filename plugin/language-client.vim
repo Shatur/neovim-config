@@ -20,4 +20,6 @@ let g:LanguageClient_semanticHighlightMaps = {
       \ }
       \ }
 
+" Use only for syntax highlighting
 let g:LanguageClient_diagnosticsEnable = 0
+autocmd vimrc VimEnter * autocmd! languageClient CompleteDone *

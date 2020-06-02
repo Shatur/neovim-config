@@ -12,15 +12,15 @@ function! packager#Init() abort
   call packager#add('stsewd/fzf-checkout.vim')
 
   " Completion
-  call packager#add('hrsh7th/vim-lamp', {'type': 'opt'})
+  call packager#add('hrsh7th/vim-lamp')
   call packager#add('hrsh7th/vim-compete')
-  call packager#add('hrsh7th/vim-compete-lamp', {'type': 'opt'})
+  call packager#add('hrsh7th/vim-compete-lamp')
   call packager#add('hrsh7th/vim-vsnip')
   call packager#add('hrsh7th/vim-vsnip-integ')
 
   " Programming
   call packager#add('d86leader/vim-cpp-helper', {'type': 'opt'})
-  call packager#add('autozimu/LanguageClient-neovim', {'type': 'opt', 'branch': 'next', 'do': 'bash install.sh'})
+  call packager#add('autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'})
   call packager#add('Shatur95/vim-cmake-projects', {'type': 'opt'})
   call packager#add('rafaeldelboni/vim-gdscript3', {'type': 'opt'})
 

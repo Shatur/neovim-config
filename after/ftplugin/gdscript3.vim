@@ -1,6 +1,4 @@
 packadd vim-gdscript3
-packadd vim-compete-lamp
-packadd vim-lamp
 
 setlocal formatoptions-=cro
 setlocal noexpandtab

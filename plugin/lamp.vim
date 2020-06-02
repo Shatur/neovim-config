@@ -40,9 +40,6 @@ endfunction
 " Initialize buffers
 autocmd! vimrc User lamp#text_document_did_open call s:on_text_document_did_open()
 function! s:on_text_document_did_open() abort
-  " Completion
-  setlocal omnifunc=lamp#complete
-
   " Commands
   nnoremap <buffer><silent> K <Cmd>LampHover<CR>
   nnoremap <buffer><silent> <A-CR> <Cmd>LampCodeAction<CR>
