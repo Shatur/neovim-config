@@ -1,7 +1,7 @@
 function! packager#Init() abort
   packadd vim-packager
 
-  call packager#init({'dir': stdpath('data') . '/site/pack/packager'})
+  call packager#init({'dir': stdpath('data') . '/site/pack/packager', 'disable_default_mappings': v:true})
   call packager#add('kristijanhusak/vim-packager', {'type': 'opt'})
 
   " FZF
