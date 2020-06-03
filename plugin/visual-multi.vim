@@ -3,6 +3,7 @@ autocmd vimrc User visual_multi_mappings imap <buffer><expr> <CR> pumvisible() ?
 let g:VM_mouse_mappings = 1
 let g:VM_show_warnings = 0
 let g:VM_silent_exit = 1
+let g:VM_leader = '<Space><Space>'
 
 let g:VM_Extend_hl = 'PmenuSel'
 let g:VM_Cursor_hl = 'PmenuSel'
