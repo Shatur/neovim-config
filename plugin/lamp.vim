@@ -79,7 +79,7 @@ function! s:clangd_switch_source_header() abort
   execute printf('edit %s', fnameescape(lamp#protocol#document#decode_uri(l:header)))
 endfunction
 
-command! TouchDocument call s:touch_document() 
+command! TouchDocument call s:touch_document()
 function! s:touch_document() abort
   let l:bufnr = bufnr('%')
   for l:server in lamp#server#registry#find_by_filetype(&filetype)
