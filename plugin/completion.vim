@@ -12,6 +12,23 @@ let g:completion_chain_complete_list = {
     \   }
     \}
 
+let g:completion_customize_lsp_label = {
+      \ 'Function': '',
+      \ 'Method': '',
+      \ 'Reference': '',
+      \ 'Enum': '',
+      \ 'Field': '',
+      \ 'Keyword': '',
+      \ 'Variable': '',
+      \ 'Folder': '',
+      \ 'Snippet': '',
+      \ 'Operator': '',
+      \ 'Module': '',
+      \ 'Text': '',
+      \ 'Class': '',
+      \ 'Interface': '',
+      \}
+
 " Use completion-nvim in every buffer
 autocmd vimrc BufEnter * lua require'completion'.on_attach()
 
