@@ -1,8 +1,8 @@
 " Tune default commands
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case ' . shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
-command! Spell call fzf#Spell()
-command! Packages call fzf#Packages()
+command! Spell call vimrc#fzf#Spell()
+command! Packages call vimrc#fzf#Packages()
 
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 

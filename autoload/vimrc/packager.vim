@@ -1,4 +1,4 @@
-function! packager#Init() abort
+function! vimrc#packager#Init() abort
   packadd vim-packager
 
   call packager#init({'dir': stdpath('data') . '/site/pack/packager', 'disable_default_mappings': v:true})
@@ -21,7 +21,7 @@ function! packager#Init() abort
   " Programming
   call packager#add('d86leader/vim-cpp-helper', {'type': 'opt'})
   call packager#add('autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'})
-  call packager#add('Shatur95/vim-cmake-projects', {'type': 'opt'})
+  call packager#add('Shatur95/vim-cmake-projects')
   call packager#add('rafaeldelboni/vim-gdscript3')
 
   " Git

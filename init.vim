@@ -110,6 +110,13 @@ vnoremap <CR> :
 noremap <Backspace> <Cmd>b#<CR>
 let mapleader = ' '
 
+" Disable netrw
+let g:loaded_netrw = v:true
+let g:loaded_netrwPlugin = v:true
+let g:loaded_netrwSettings = v:true
+let g:loaded_netrwFileHandlers = v:true
+
+
 " Custom group for all autocmd's in configuration
 augroup vimrc
   autocmd!

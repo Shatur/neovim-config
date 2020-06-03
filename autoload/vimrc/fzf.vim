@@ -11,12 +11,12 @@ function! s:OpenPackageFolder(plugin_name) abort
   call system(program . packager#plugin(a:plugin_name).dir)
 endfunction
 
-function! fzf#Spell() abort
+function! vimrc#fzf#Spell() abort
   let suggestions = spellsuggest(expand('<cword>'))
   return fzf#run({'source': suggestions, 'sink': function('s:ReplaceCurrentWorld'), 'down': 10 })
 endfunction
 
-function! fzf#Packages() abort
-  call packager#Init()
+function! vimrc#fzf#Packages() abort
+  call vimrc#packager#Init()
   call fzf#run(fzf#wrap({'source': packager#plugin_names(), 'sink': function('s:OpenPackageFolder')}))
 endfunction
