@@ -26,7 +26,7 @@ call mkdp#util#install() " Markdown preview
 **Arch Linux**
 
 ```bash
-yay -S fzf ripgrep the_silver_searcher nerd-fonts-source-code-pro xkb-switch
+yay -S fzf ripgrep nerd-fonts-source-code-pro xkb-switch
 
 # Install LanguageClient-neovim binary, used for semantic highlighting
 cd ~/.local/share/nvim/site/pack/Shatur
@@ -37,7 +37,7 @@ cd ~/.local/share/nvim/site/pack/Shatur
 
 ```bash
 scoop bucket add nerd-fonts
-sudo scoop install -g fzf ripgrep ag SourceCodePro-NF
+sudo scoop install -g fzf ripgrep SourceCodePro-NF
 
 cd $env:LOCALAPPDATA/nvim-data/site/pack/Shatur
 ./install.ps1
