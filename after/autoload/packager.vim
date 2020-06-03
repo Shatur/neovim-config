@@ -12,9 +12,9 @@ function! packager#Init() abort
   call packager#add('stsewd/fzf-checkout.vim')
 
   " Completion
-  call packager#add('hrsh7th/vim-lamp')
-  call packager#add('hrsh7th/vim-compete')
-  call packager#add('hrsh7th/vim-compete-lamp')
+  call packager#add('neovim/nvim-lsp')
+  call packager#add('haorenW1025/completion-nvim')
+  call packager#add('haorenW1025/diagnostic-nvim')
   call packager#add('hrsh7th/vim-vsnip')
   call packager#add('hrsh7th/vim-vsnip-integ')
 
@@ -22,7 +22,7 @@ function! packager#Init() abort
   call packager#add('d86leader/vim-cpp-helper', {'type': 'opt'})
   call packager#add('autozimu/LanguageClient-neovim', {'branch': 'next', 'do': 'bash install.sh'})
   call packager#add('Shatur95/vim-cmake-projects', {'type': 'opt'})
-  call packager#add('rafaeldelboni/vim-gdscript3', {'type': 'opt'})
+  call packager#add('rafaeldelboni/vim-gdscript3')
 
   " Git
   call packager#add('tpope/vim-fugitive')
