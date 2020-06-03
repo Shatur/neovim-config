@@ -113,4 +113,7 @@ let mapleader = ' '
 " Custom group for all autocmd's in configuration
 augroup vimrc
   autocmd!
+
+  " Highligh yanked text
+  autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 200)
 augroup END
