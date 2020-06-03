@@ -116,11 +116,10 @@ let g:loaded_netrwPlugin = v:true
 let g:loaded_netrwSettings = v:true
 let g:loaded_netrwFileHandlers = v:true
 
-
 " Custom group for all autocmd's in configuration
 augroup vimrc
   autocmd!
 
   " Highligh yanked text
-  autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 200)
+  autocmd TextYankPost * silent! lua return (not vim.v.event.visual) and require'vim.highlight'.on_yank("IncSearch", 300)
 augroup END
