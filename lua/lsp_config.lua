@@ -4,6 +4,7 @@ local diagnostic = require'diagnostic'.on_attach
 nvim_lsp.bashls.setup{on_attach = diagnostic}
 nvim_lsp.vimls.setup{on_attach = diagnostic}
 nvim_lsp.gdscript.setup{on_attach = diagnostic}
+nvim_lsp.pyls.setup{on_attach = diagnostic}
 
 nvim_lsp.gdscript.setup{
     on_attach = diagnostic,
