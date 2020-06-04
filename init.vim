@@ -116,6 +116,10 @@ let g:loaded_netrwPlugin = v:true
 let g:loaded_netrwSettings = v:true
 let g:loaded_netrwFileHandlers = v:true
 
+" Setup built-in LSP client
+packadd nvim-lsp
+lua require'lsp_config'
+
 " Custom group for all autocmd's in configuration
 augroup vimrc
   autocmd!
