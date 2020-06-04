@@ -3,8 +3,19 @@ if !exists('g:started_by_firenvim')
 endif
 
 set laststatus=0
-set showmode
 packadd firenvim
+
+let g:firenvim_config = {
+    \ 'globalSettings': {
+        \ 'alt': 'all',
+    \  },
+    \ 'localSettings': {
+        \ '.*': {
+            \ 'cmdline': 'firenvim',
+            \ 'takeover': 'never',
+        \ },
+    \ }
+\ }
 
 " For unknown reason Airline want to set this variable to v:true
 let g:loaded_airline = v:true

@@ -3,7 +3,7 @@ local nvim_lsp = require'nvim_lsp'
 local apply_settings = function()
   require'diagnostic'.on_attach()
 
-  local map_options = { noremap=true, silent=true }
+  local map_options = {noremap=true, silent=true}
   vim.api.nvim_buf_set_keymap(0, 'n', 'gd', '<Cmd>lua vim.lsp.buf.declaration()<CR>', map_options)
   vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', map_options)
   vim.api.nvim_buf_set_keymap(0, 'n', 'gr', '<Cmd>lua vim.lsp.buf.rename()<CR>', map_options)
@@ -33,7 +33,10 @@ nvim_lsp.gdscript.setup{
 
 nvim_lsp.clangd.setup{
     cmd = {'clangd', '--header-insertion=never', '--suggest-missing-includes', '--background-index', '-j=8', '--cross-file-rename', '--pch-storage=memory', '--clang-tidy', '--clang-tidy-checks=-clang-analyzer-*,bugprone-*,misc-*,-misc-non-private-member-variables-in-classes,performance-*,-performance-no-automatic-move,modernize-use-*,-modernize-use-nodiscard,-modernize-use-trailing-return-type'},
-    on_attach = apply_settings,
+    on_attach = function()
+        apply_settings()
+        vim.api.nvim_buf_set_keymap(0, 'n', 'gs', '<Cmd>ClangdSwitchSourceHeader<CR>', {noremap=true, silent=true})
+    end,
     capabilities = {
         textDocument = {
             completion = {
