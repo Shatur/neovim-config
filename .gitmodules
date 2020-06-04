@@ -88,9 +88,6 @@
 [submodule "pack/plugins/start/vim-one"]
 	path = pack/plugins/start/vim-one
 	url = git@github.com:rakr/vim-one.git
-[submodule "pack/plugins/start/vim-rhubarb"]
-	path = pack/plugins/start/vim-rhubarb
-	url = git@github.com:tpope/vim-rhubarb.git
 [submodule "pack/plugins/start/vim-sandwich"]
 	path = pack/plugins/start/vim-sandwich
 	url = git@github.com:machakann/vim-sandwich.git
