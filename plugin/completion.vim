@@ -14,19 +14,20 @@ let g:completion_chain_complete_list = {
 
 let g:completion_customize_lsp_label = {
       \ 'Function': '',
-      \ 'Method': '',
+      \ 'Method': '',
       \ 'Reference': '',
-      \ 'Enum': '',
-      \ 'Field': '',
+      \ 'Enum': '',
+      \ 'Field': 'ﰠ',
       \ 'Keyword': '',
-      \ 'Variable': '',
+      \ 'Variable': '',
       \ 'Folder': '',
-      \ 'Snippet': '',
-      \ 'Operator': '',
+      \ 'Snippet': '',
+      \ 'Operator': '',
       \ 'Module': '',
-      \ 'Text': '',
+      \ 'Text': 'ﮜ',
+      \ 'Buffers': '',
       \ 'Class': '',
-      \ 'Interface': '',
+      \ 'Interface': ''
       \}
 
 " Use completion-nvim in every buffer
