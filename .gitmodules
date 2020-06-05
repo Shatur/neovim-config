@@ -70,9 +70,6 @@
 [submodule "pack/plugins/start/vim-fugitive"]
 	path = pack/plugins/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule "pack/plugins/start/vim-gdscript3"]
-	path = pack/plugins/start/vim-gdscript3
-	url = git@github.com:rafaeldelboni/vim-gdscript3.git
 [submodule "pack/plugins/start/vim-gitgutter"]
 	path = pack/plugins/start/vim-gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
@@ -142,3 +139,6 @@
 [submodule "pack/plugins/opt/vim-startuptime"]
 	path = pack/plugins/opt/vim-startuptime
 	url = git@github.com:dstein64/vim-startuptime.git
+[submodule "pack/plugins/start/vim-godot"]
+	path = pack/plugins/start/vim-godot
+	url = git@github.com:habamax/vim-godot.git
