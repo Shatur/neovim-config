@@ -1,6 +1,0 @@
-nmap <buffer> ) <Plug>(PackagerGotoNextPlugin)
-nmap <buffer> ( <Plug>(PackagerGotoPrevPlugin)
-nmap <buffer> <C-CR> <Plug>(PackagerOpenSha)
-nmap <buffer> E <Plug>(PackagerOpenStdout)
-nmap <buffer> O <Plug>(PackagerPluginDetails)
-nmap <buffer> D <Plug>(PackagerStatus)
