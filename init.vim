@@ -37,7 +37,8 @@ colorscheme one
 set signcolumn=yes " Always show the signcolum, otherwise it would shift the text each time changes appear/disappear
 set updatetime=100 " To show git changes often
 set completeopt=menuone,noselect,noinsert
-set noshowmode " Do not display current mode (use Airline for it)
+set noshowmode " Do not display current mode (use Lightline for it)
+set showtabline=2 " Always show tabline to display buffers
 set hidden " For switching between edited buffers
 set shortmess+=c " Shut off completion messages
 
