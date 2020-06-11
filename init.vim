@@ -81,6 +81,12 @@ noremap <A-x> <Cmd>w<CR><Cmd>tabclose<CR>
 vnoremap <A-x> <Cmd>w<CR><Cmd>tabclose<CR>
 inoremap <A-x> <Esc><Cmd>w<CR><Cmd>tabclose<CR>
 
+" Tabs navigation
+noremap ]<Tab> <Cmd>tabnext<CR>
+vnoremap ]<Tab> <Cmd>tabnext<CR>
+noremap [<Tab> <Cmd>tabprevious<CR>
+vnoremap [<Tab> <Cmd>tabprevious<CR>
+
 " Quickfix history navigation
 noremap ]h <Cmd>cnewer<CR>
 vnoremap ]h <Cmd>cnewer<CR>
