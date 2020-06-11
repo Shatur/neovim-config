@@ -2,7 +2,6 @@
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case ' . <q-args>, 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 command! Spell call vimrc#fzf#Spell()
-command! Packages call vimrc#fzf#Packages()
 
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
@@ -14,4 +13,3 @@ nnoremap <F1> <Cmd>Helptags<CR>
 nnoremap <Leader><Tab> <Cmd>Buffers<CR>
 nnoremap <S-CR> <Cmd>Commands<CR>
 nnoremap z= <Cmd>Spell<CR>
-nnoremap <Leader>p <Cmd>Packages<CR>
