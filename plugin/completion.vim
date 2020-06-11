@@ -1,4 +1,4 @@
-let g:completion_auto_change_source = v:true
+let g:completion_auto_change_source = 1
 let g:completion_enable_snippet = 'vim-vsnip'
 let g:completion_confirm_key = ''
 
