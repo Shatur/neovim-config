@@ -1,9 +1,9 @@
 let g:vista_executive_for = {
-    \ 'cpp': 'vim_lsp',
-    \ 'gdscript': 'vim_lsp',
-    \ 'python': 'vim_lsp',
-    \ 'markdown': 'toc',
-    \ }
+      \ 'gdscript': 'nvim_lsp',
+      \ 'cpp': 'nvim_lsp',
+      \ 'python': 'nvim_lsp',
+      \ 'markdown': 'toc',
+      \ }
 
 nnoremap <A-v> <Cmd>Vista!!<CR>
 nnoremap <A-t> <Cmd>Vista finder<CR>
