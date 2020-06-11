@@ -37,7 +37,4 @@ imap <expr> <CR> pumvisible() ? complete_info()['selected'] != '-1' ? '<Plug>(co
 imap <A-j> <cmd>lua require'source'.prevCompletion()<CR>
 imap <A-k> <cmd>lua require'source'.nextCompletion()<CR>
 
-inoremap <expr> <Tab> pumvisible() ? '<C-n>' : '<Tab>'
-inoremap <expr> <S-Tab> pumvisible() ? '<C-p>' : '<S-Tab>'
 inoremap <silent><expr> <C-Space> completion#trigger_completion()
-
