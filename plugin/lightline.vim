@@ -9,8 +9,12 @@ let g:lightline#bufferline#show_number = 2
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
-      \   'left': [['mode', 'paste'], ['branch'], ['filename']],
+      \   'left': [['mode', 'paste'], ['branch'], ['filename', 'asyncrun']],
       \   'right': [['percent', 'lineinfo'], ['fileformat'], ['function', 'filetype']]
+      \ },
+      \ 'inactive': {
+      \   'left': [['filename', 'asyncrun']],
+      \   'right': [['percent', 'lineinfo']]
       \ },
       \ 'tabline': {
       \   'left': [['buffers']],
@@ -26,6 +30,7 @@ let g:lightline = {
       \   'filename': 'vimrc#lightline#Filename',
       \   'function': 'vimrc#lightline#NearestFunction',
       \   'branch': 'vimrc#lightline#Branch',
+      \   'asyncrun': 'vimrc#lightline#Asyncrun'
       \ },
       \ 'component_type': {
       \   'buffers': 'tabsel'

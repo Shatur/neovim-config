@@ -1,3 +1,10 @@
+function s:IsFiletypeIgnored() abort
+  if &filetype ==? 'fern'
+    return v:true
+  endif
+  return v:false
+endfunction
+
 function! vimrc#lightline#Tabs() abort
   if tabpagenr('$') == 1
     return []
@@ -25,7 +32,17 @@ function! vimrc#lightline#NearestFunction()
   return ' ' . function_name
 endfunction
 
+function vimrc#lightline#Asyncrun() abort
+  if &filetype !=? 'qf'
+    return ''
+  endif
+  return get(g:, 'asyncrun_status', '')
+endfunction
+
 function vimrc#lightline#Branch() abort
+  if s:IsFiletypeIgnored()
+    return ''
+  endif
   let head = FugitiveHead()
   if empty(head)
     return ''
@@ -33,8 +50,10 @@ function vimrc#lightline#Branch() abort
   return head . ' '
 endfunction
 
-
 function! vimrc#lightline#Filename()
+  if s:IsFiletypeIgnored()
+    return ''
+  endif
   let filename = expand('%:t')
   if empty(filename)
     return '[Без имени]'
