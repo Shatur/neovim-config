@@ -2,10 +2,10 @@ setlocal nonumber
 setlocal norelativenumber
 setlocal signcolumn=no
 
-nmap <buffer><expr> <Esc> '<Plug>(fern-action-cancel)'
-nmap <buffer><expr> <S-k> '<Plug>(fern-action-leave)'
+nmap <buffer><expr> <Esc> <Plug>(fern-action-cancel)
 nmap <buffer><expr> <C-h> '<Plug>(fern-action-hidden-toggle)'
-nmap <buffer><expr> <C-CR> '<Plug>(fern-action-enter)'
+nmap <buffer><expr> <S-k> '<Plug>(fern-action-leave)<Plug>(fern-wait)<Plug>(fern-action-cd:root)<CR>'
+nmap <buffer><expr> <C-CR> '<Plug>(fern-action-enter)<Plug>(fern-wait)<Plug>(fern-action-cd:root)<CR>'
 nmap <buffer><expr> h '<Plug>(fern-action-collapse)'
 nmap <buffer><expr> l fern#smart#leaf('<Plug>(fern-action-open)', '<Plug>(fern-action-expand)')
 nmap <buffer><expr> m '<Plug>(fern-action-move)'
