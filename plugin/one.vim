@@ -5,3 +5,7 @@ colorscheme one
 call one#highlight('DiffRemoved', '', 'bg', '')
 call one#highlight('DiffAdded', '', 'bg', '')
 call one#highlight('Constant', '56b6c2', '', '')
+call one#highlight('LspDiagnosticsErrorSign', 'be5046', '', '')
+call one#highlight('LspDiagnosticsWarningSign', 'd19a66', '', '')
+call one#highlight('LspDiagnosticInformationSign', '98c379', '', '')
+call one#highlight('LspDiagnosticHintSign', 'e5c07b', '', '')

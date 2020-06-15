@@ -125,6 +125,10 @@ let g:loaded_netrwFileHandlers = v:true
 " Setup built-in LSP client
 packadd nvim-lsp
 lua require'lsp_config'
+sign define LspDiagnosticsErrorSign text=
+sign define LspDiagnosticsWarningSign text=
+sign define LspDiagnosticInformationSign text=
+sign define LspDiagnosticHintSign text=
 
 " Custom group for all autocmd's in configuration
 augroup vimrc
