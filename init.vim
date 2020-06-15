@@ -31,7 +31,6 @@ endif
 
 " Theme
 set termguicolors
-colorscheme one
 
 " For better plugins integration
 set signcolumn=yes " Always show the signcolum, otherwise it would shift the text each time changes appear/disappear
