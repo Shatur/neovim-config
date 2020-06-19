@@ -21,6 +21,7 @@ set whichwrap+=h,l,<,>,[,] " Wrap movement between lines in edit mode
 set clipboard=unnamedplus
 set pumheight=10
 set wildmode=longest:full,full
+set termguicolors
 
 " Fonts
 if has('win32')
@@ -29,17 +30,20 @@ else
   set guifont=SauceCodePro\ Nerd\ Font\ Mono
 endif
 
-" Theme
-set termguicolors
-
 " For better plugins integration
 set signcolumn=yes " Always show the signcolum, otherwise it would shift the text each time changes appear/disappear
 set updatetime=100 " To show git changes often
 set completeopt=menuone,noselect,noinsert
-set noshowmode " Do not display current mode (use Lightline for it)
+set noshowmode " Do not display current mode (use statusline for it)
 set showtabline=2 " Always show tabline to display buffers
 set hidden " For switching between edited buffers
 set shortmess+=c " Shut off completion messages
+
+" Remap useless keys
+let mapleader = ' '
+nnoremap Y y$
+noremap <CR> :
+noremap <Backspace> <Cmd>b#<CR>
 
 " Remap increase / decrease number shortucts to + and - signs
 nnoremap <C-=> <C-a>
@@ -109,12 +113,8 @@ inoremap <S-Left> <Esc>vb
 inoremap <S-Right> <Esc>ve
 vnoremap / y/\V<C-R>=escape(@",'/\')<CR><CR>
 
-" Remap useless keys
-nnoremap Y y$
-nnoremap <CR> :
-vnoremap <CR> :
-noremap <Backspace> <Cmd>b#<CR>
-let mapleader = ' '
+" Other useful shortucts
+noremap <Leader>cd <Cmd>cd %:h<CR>
 
 " Disable netrw
 let g:loaded_netrw = v:true

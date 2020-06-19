@@ -8,4 +8,4 @@ noremap <F3> <Cmd>call asyncrun#quickfix_toggle(10)<CR>
 inoremap <F3> <Esc><Cmd>call asyncrun#quickfix_toggle(10)<CR>
 noremap <C-BS> <Cmd>AsyncStop<CR>
 inoremap <C-BS> <Esc><Cmd>AsyncStop<CR>
-nnoremap <Leader>cd <Cmd>execute 'cd ' . asyncrun#get_root('%')<CR>
+noremap <Leader>pcd <Cmd>execute 'cd ' . asyncrun#get_root('%')<CR>
