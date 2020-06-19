@@ -73,34 +73,25 @@ nnoremap <C-l> <C-w>l
 
 " Buffer / tab control
 noremap <C-q> <Cmd>bd<CR>
-vnoremap <C-q> <Cmd>bd<CR>
 inoremap <C-q> <Esc><Cmd>bd<CR>
 noremap <A-q> <Cmd>tabclose<CR>
-vnoremap <A-q> <Cmd>tabclose<CR>
 inoremap <A-q> <Esc><Cmd>tabclose<CR>
 noremap <C-x> <Cmd>w<CR><Cmd>bd<CR>
-vnoremap <C-x> <Cmd>w<CR><Cmd>bd<CR>
 inoremap <C-x> <Esc><Cmd>w<CR><Cmd>bd<CR>
 noremap <A-x> <Cmd>w<CR><Cmd>tabclose<CR>
-vnoremap <A-x> <Cmd>w<CR><Cmd>tabclose<CR>
 inoremap <A-x> <Esc><Cmd>w<CR><Cmd>tabclose<CR>
 
 " Tabs navigation
 noremap ]<Tab> <Cmd>tabnext<CR>
-vnoremap ]<Tab> <Cmd>tabnext<CR>
 noremap [<Tab> <Cmd>tabprevious<CR>
-vnoremap [<Tab> <Cmd>tabprevious<CR>
 
 " Quickfix history navigation
 noremap ]h <Cmd>cnewer<CR>
-vnoremap ]h <Cmd>cnewer<CR>
 noremap [h <Cmd>colder<CR>
-vnoremap [h <Cmd>colder<CR>
 
 " Make behavior more like in common editors
 set pastetoggle=<F10>
 noremap <C-s> <Cmd>w<CR>
-vnoremap <C-s> <Cmd>w<CR>
 inoremap <C-s> <Cmd>w<CR>
 noremap <C-a> gg0vG$
 vnoremap <C-a> <Esc>gg0vG$

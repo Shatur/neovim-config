@@ -5,11 +5,11 @@ command! Spell call vimrc#fzf#Spell()
 
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
-nnoremap <C-f> :Find<Space>
-nnoremap <A-l> <Cmd>BLines<CR>
-nnoremap <C-p> <Cmd>Files<CR>
-nnoremap <A-p> <Cmd>History<CR>
-nnoremap <F1> <Cmd>Helptags<CR>
-nnoremap <Leader><Tab> <Cmd>Buffers<CR>
-nnoremap <S-CR> <Cmd>Commands<CR>
+noremap <C-f> :Find ''<Left>
+noremap <A-l> <Cmd>BLines<CR>
+noremap <C-p> <Cmd>Files<CR>
+noremap <A-p> <Cmd>History<CR>
+noremap <F1> <Cmd>Helptags<CR>
+noremap <Leader><Tab> <Cmd>Buffers<CR>
+noremap <S-CR> <Cmd>Commands<CR>
 nnoremap z= <Cmd>Spell<CR>
