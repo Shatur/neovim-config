@@ -13,6 +13,7 @@ local apply_settings = function()
   vim.api.nvim_buf_set_keymap(0, 'n', '<A-d>', '<Cmd>lua vim.lsp.util.show_line_diagnostics()<CR>', map_options)
 end
 
+nvim_lsp.cmake.setup{on_attach = apply_settings}
 nvim_lsp.bashls.setup{on_attach = apply_settings}
 nvim_lsp.vimls.setup{on_attach = apply_settings}
 nvim_lsp.gdscript.setup{on_attach = apply_settings}
