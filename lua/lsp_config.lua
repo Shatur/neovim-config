@@ -10,6 +10,7 @@ local apply_settings = function()
   vim.api.nvim_buf_set_keymap(0, 'n', 'gR', '<Cmd>lua vim.lsp.buf.references()<CR>', map_options)
   vim.api.nvim_buf_set_keymap(0, 'n', 'gS', '<Cmd>lua vim.lsp.buf.document_symbol()<CR>', map_options)
   vim.api.nvim_buf_set_keymap(0, 'n', 'gW', '<Cmd>lua vim.lsp.buf.workspace_symbol()<CR>', map_options)
+  vim.api.nvim_buf_set_keymap(0, 'n', '<A-CR>', '<Cmd>lua vim.lsp.buf.code_action()<CR>', map_options)
   vim.api.nvim_buf_set_keymap(0, 'n', '<A-d>', '<Cmd>lua vim.lsp.util.show_line_diagnostics()<CR>', map_options)
 end
 
