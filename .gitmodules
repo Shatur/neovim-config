@@ -145,3 +145,6 @@
 [submodule "pack/plugins/start/lightline-bufferline"]
 	path = pack/plugins/start/lightline-bufferline
 	url = git@github.com:mengelbrecht/lightline-bufferline.git
+[submodule "pack/plugins/start/vim-cutlass"]
+	path = pack/plugins/start/vim-cutlass
+	url = git@github.com:svermeulen/vim-cutlass.git

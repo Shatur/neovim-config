@@ -45,6 +45,14 @@ nnoremap Y y$
 noremap <CR> :
 noremap <Backspace> <Cmd>b#<CR>
 
+" Use alternative shortcuts for cut
+noremap <Leader>d d
+nnoremap <Leader>dd dd
+noremap <Leader>x x
+nnoremap <Leader>xx xx
+noremap <Leader>c c
+nnoremap <Leader>cc cc
+
 " Remap increase / decrease number shortucts to + and - signs
 nnoremap <C-=> <C-a>
 nnoremap <C--> <C-x>
