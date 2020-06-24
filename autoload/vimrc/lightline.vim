@@ -5,6 +5,12 @@ function s:IsFiletypeIgnored() abort
   return v:false
 endfunction
 
+function vimrc#lightline#reloadColorscheme() abort
+  execute 'source' globpath(&rtp, 'autoload/lightline/colorscheme/one.vim')
+  call lightline#colorscheme()
+  call lightline#update()
+endfunction
+
 function! vimrc#lightline#Tabs() abort
   if tabpagenr('$') == 1
     return []

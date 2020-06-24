@@ -1,3 +1,5 @@
+autocmd OptionSet background call vimrc#lightline#reloadColorscheme()
+
 let g:lightline#bufferline#clickable = 1
 let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#unnamed = '[Нет имени]'
