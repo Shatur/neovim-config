@@ -148,3 +148,6 @@
 [submodule "pack/plugins/start/vim-cutlass"]
 	path = pack/plugins/start/vim-cutlass
 	url = git@github.com:svermeulen/vim-cutlass.git
+[submodule "pack/plugins/start/Colorizer"]
+	path = pack/plugins/start/Colorizer
+	url = git@github.com:chrisbra/Colorizer.git
