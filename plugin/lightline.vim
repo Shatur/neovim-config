@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 autocmd OptionSet background call vimrc#lightline#reloadColorscheme()
 
 let g:lightline#bufferline#clickable = 1

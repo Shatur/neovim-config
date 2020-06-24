@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let g:completion_auto_change_source = 1
 let g:completion_enable_snippet = 'vim-vsnip'
 let g:completion_confirm_key = ''
