@@ -11,6 +11,21 @@ function vimrc#lightline#reloadColorscheme() abort
   call lightline#update()
 endfunction
 
+function vimrc#lightline#CursorsCount() abort
+  let vm_info = VMInfos()
+  if empty(vm_info)
+    return ''
+  endif
+  return vm_info['current'] . '/' . vm_info['total'] . ' '
+endfunction
+
+function vimrc#lightline#Multicursors() abort
+  if exists('b:VM_Selection') && !empty(b:VM_Selection)
+    return 'MULTI CURSORS'
+  endif
+  return ''
+endfunction
+
 function! vimrc#lightline#Tabs() abort
   if tabpagenr('$') == 1
     return []

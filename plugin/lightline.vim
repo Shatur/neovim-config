@@ -2,10 +2,10 @@ scriptencoding utf-8
 
 autocmd OptionSet background call vimrc#lightline#reloadColorscheme()
 
-let g:lightline#bufferline#clickable = 1
-let g:lightline#bufferline#enable_devicons = 1
+let g:lightline#bufferline#clickable = v:true
+let g:lightline#bufferline#enable_devicons = v:true
 let g:lightline#bufferline#unnamed = '[Нет имени]'
-let g:lightline#bufferline#unicode_symbols = 1
+let g:lightline#bufferline#unicode_symbols = v:true
 let g:lightline#bufferline#read_only = ' '
 let g:lightline#bufferline#modified = ' '
 let g:lightline#bufferline#show_number = 2
@@ -13,8 +13,8 @@ let g:lightline#bufferline#show_number = 2
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
-      \   'left': [['mode', 'paste'], ['branch'], ['filename', 'asyncrun']],
-      \   'right': [['percent', 'lineinfo'], ['fileformat'], ['function', 'filetype']]
+      \   'left': [['mode', 'multicursors', 'paste'], ['branch'], ['filename', 'asyncrun']],
+      \   'right': [['cursorscount', 'percent', 'lineinfo'], ['fileformat'], ['function', 'filetype']]
       \ },
       \ 'inactive': {
       \   'left': [['filename', 'asyncrun']],
@@ -29,6 +29,8 @@ let g:lightline = {
       \   'tabs': 'vimrc#lightline#Tabs',
       \ },
       \ 'component_function': {
+      \   'multicursors': 'vimrc#lightline#Multicursors',
+      \   'cursorscount': 'vimrc#lightline#CursorsCount',
       \   'filetype': 'vimrc#lightline#Filetype',
       \   'fileformat': 'vimrc#lightline#Fileformat',
       \   'filename': 'vimrc#lightline#Filename',
