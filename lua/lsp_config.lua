@@ -39,12 +39,16 @@ nvim_lsp.clangd.setup{
         apply_settings()
         vim.api.nvim_buf_set_keymap(0, 'n', 'gs', '<Cmd>ClangdSwitchSourceHeader<CR>', {noremap=true, silent=true})
     end,
+    on_init = require'clangd_nvim'.on_init,
     capabilities = {
         textDocument = {
             completion = {
                 completionItem = {
                     snippetSupport = true
                 }
+            },
+            semanticHighlightingCapabilities = {
+                semanticHighlighting = true
             }
         }
     },

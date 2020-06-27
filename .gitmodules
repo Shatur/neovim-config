@@ -43,9 +43,6 @@
 [submodule "pack/plugins/start/tcomment_vim"]
 	path = pack/plugins/start/tcomment_vim
 	url = git@github.com:tomtom/tcomment_vim.git
-[submodule "pack/plugins/start/LanguageClient-neovim"]
-	path = pack/plugins/start/LanguageClient-neovim
-	url = git@github.com:autozimu/LanguageClient-neovim.git
 [submodule "pack/plugins/start/vim-cool"]
 	path = pack/plugins/start/vim-cool
 	url = git@github.com:romainl/vim-cool.git
@@ -151,3 +148,6 @@
 [submodule "pack/plugins/start/Colorizer"]
 	path = pack/plugins/start/Colorizer
 	url = git@github.com:chrisbra/Colorizer.git
+[submodule "pack/plugins/start/clangd-nvim"]
+	path = pack/plugins/start/clangd-nvim
+	url = git@github.com:robert-oleynik/clangd-nvim.git

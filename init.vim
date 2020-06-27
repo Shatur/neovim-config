@@ -126,6 +126,7 @@ let g:loaded_netrwFileHandlers = v:true
 
 " Setup built-in LSP client
 packadd nvim-lsp
+packadd clangd-nvim
 lua require'lsp_config'
 sign define LspDiagnosticsErrorSign text=
 sign define LspDiagnosticsWarningSign text=
