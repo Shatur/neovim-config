@@ -1,8 +1,19 @@
+scriptencoding utf-8
+
 function s:IsFiletypeIgnored() abort
   if &filetype ==? 'fern'
     return v:true
   endif
   return v:false
+endfunction
+
+function! vimrc#lightline#LspStatus() abort
+  if luaeval('#vim.lsp.buf_get_clients() == 0')
+    return ''
+  endif
+
+  let messages = luaeval("require('lsp-status').messages()")
+  return join(map(messages, '"[" . v:val.name . "] " . v:val.content . " "'))
 endfunction
 
 function vimrc#lightline#reloadColorscheme() abort

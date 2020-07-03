@@ -14,7 +14,7 @@ let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [['mode', 'multicursors', 'paste'], ['branch'], ['filename', 'asyncrun']],
-      \   'right': [['cursorscount', 'percent', 'lineinfo'], ['fileformat'], ['function', 'filetype']]
+      \   'right': [['cursorscount', 'percent', 'lineinfo'], ['fileformat'], ['function', 'lspstatus', 'filetype']]
       \ },
       \ 'inactive': {
       \   'left': [['filename', 'asyncrun']],
@@ -35,6 +35,7 @@ let g:lightline = {
       \   'fileformat': 'vimrc#lightline#Fileformat',
       \   'filename': 'vimrc#lightline#Filename',
       \   'function': 'vimrc#lightline#NearestFunction',
+      \   'lspstatus': 'vimrc#lightline#LspStatus',
       \   'branch': 'vimrc#lightline#Branch',
       \   'asyncrun': 'vimrc#lightline#Asyncrun'
       \ },

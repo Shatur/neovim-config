@@ -1,4 +1,6 @@
 local nvim_lsp = require'nvim_lsp'
+local lsp_status = require'lsp-status'
+lsp_status.register_progress()
 
 local apply_settings = function()
   require'diagnostic'.on_attach()
@@ -35,12 +37,19 @@ nvim_lsp.gdscript.setup{
 
 nvim_lsp.clangd.setup{
     cmd = {'clangd', '--header-insertion=never', '--suggest-missing-includes', '--background-index', '-j=8', '--cross-file-rename', '--pch-storage=memory', '--clang-tidy', '--clang-tidy-checks=-clang-analyzer-*,bugprone-*,misc-*,-misc-non-private-member-variables-in-classes,performance-*,-performance-no-automatic-move,modernize-use-*,-modernize-use-nodiscard,-modernize-use-trailing-return-type'},
-    on_attach = function()
+    on_attach = function(client)
         apply_settings()
+        lsp_status.on_attach(client)
         vim.api.nvim_buf_set_keymap(0, 'n', 'gs', '<Cmd>ClangdSwitchSourceHeader<CR>', {noremap=true, silent=true})
     end,
     on_init = require'clangd_nvim'.on_init,
+    callbacks = lsp_status.extensions.clangd.setup(),
     capabilities = {
+        capabilities = {
+            window = {
+                workDoneProgress = true
+            }
+        },
         textDocument = {
             completion = {
                 completionItem = {
@@ -53,6 +62,7 @@ nvim_lsp.clangd.setup{
         }
     },
     init_options = {
+        clangdFileStatus = true,
         usePlaceholders = true,
         completeUnimported = true
     }

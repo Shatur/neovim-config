@@ -151,3 +151,6 @@
 [submodule "pack/plugins/start/clangd-nvim"]
 	path = pack/plugins/start/clangd-nvim
 	url = git@github.com:robert-oleynik/clangd-nvim.git
+[submodule "pack/plugins/start/lsp-status.nvim"]
+	path = pack/plugins/start/lsp-status.nvim
+	url = git@github.com:nvim-lua/lsp-status.nvim.git
