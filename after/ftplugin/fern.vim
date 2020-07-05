@@ -5,7 +5,7 @@ setlocal signcolumn=no
 nmap <buffer> <C-c> <Plug>(fern-action-cancel)
 nmap <buffer> h <Plug>(fern-action-collapse)
 nmap <buffer> m <Plug>(fern-action-move)
-nmap <buffer> x <Plug>(fern-action-open:system)
+nmap <buffer> o <Plug>(fern-action-open:system)
 nmap <buffer> R <Plug>(fern-action-rename)
 nmap <buffer> D <Plug>(fern-action-trash)
 nmap <buffer> C <Plug>(fern-action-clipboard-copy)
