@@ -7,6 +7,49 @@ function s:IsFiletypeIgnored() abort
   return v:false
 endfunction
 
+function! vimrc#lightline#Warnings() abort
+  if luaeval('#vim.lsp.buf_get_clients() == 0')
+    return ''
+  endif
+
+  let diagnostics = luaeval("require('lsp-status').diagnostics()")
+  let warnings_count = diagnostics['warnings']
+  let info_count = diagnostics['info']
+  let hints_count = diagnostics['hints']
+
+  let text = ''
+  if warnings_count != 0
+    let text .= warnings_count . ' '
+  endif
+  if info_count != 0
+    if !empty(text)
+      let text .= ' '
+    endif
+    let text .= info_count . ' '
+  endif
+  if hints_count != 0
+    if !empty(text)
+      let text .= ' '
+    endif
+    let text .= hints_count . ' '
+  endif
+  return text
+endfunction
+
+
+function! vimrc#lightline#Errors() abort
+  if luaeval('#vim.lsp.buf_get_clients() == 0')
+    return ''
+  endif
+
+  let diagnostics = luaeval("require('lsp-status').diagnostics()")
+  let errors_count = diagnostics['errors']
+  if errors_count == 0
+    return ''
+  endif
+  return errors_count . ' '
+endfunction
+
 function! vimrc#lightline#LspStatus() abort
   if luaeval('#vim.lsp.buf_get_clients() == 0')
     return ''

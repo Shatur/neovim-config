@@ -1,6 +1,7 @@
 scriptencoding utf-8
 
-autocmd OptionSet background call vimrc#lightline#reloadColorscheme()
+autocmd vimrc OptionSet background call vimrc#lightline#reloadColorscheme()
+autocmd vimrc User LspDiagnosticsChanged call lightline#update()
 
 let g:lightline#bufferline#clickable = v:true
 let g:lightline#bufferline#enable_devicons = v:true
@@ -14,7 +15,7 @@ let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [['mode', 'multicursors', 'paste'], ['branch'], ['filename', 'asyncrun']],
-      \   'right': [['cursorscount', 'percent', 'lineinfo'], ['fileformat'], ['function', 'lspstatus', 'filetype']]
+      \   'right': [['errors', 'warnings', 'cursorscount', 'percent', 'lineinfo'], ['fileformat'], ['function', 'lspstatus', 'filetype']]
       \ },
       \ 'inactive': {
       \   'left': [['filename', 'asyncrun']],
@@ -27,6 +28,8 @@ let g:lightline = {
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
       \   'tabs': 'vimrc#lightline#Tabs',
+      \   'errors': 'vimrc#lightline#Errors',
+      \   'warnings': 'vimrc#lightline#Warnings'
       \ },
       \ 'component_function': {
       \   'multicursors': 'vimrc#lightline#Multicursors',
@@ -40,7 +43,9 @@ let g:lightline = {
       \   'asyncrun': 'vimrc#lightline#Asyncrun'
       \ },
       \ 'component_type': {
-      \   'buffers': 'tabsel'
+      \   'buffers': 'tabsel',
+      \   'errors': 'error',
+      \   'warnings': 'warning'
       \ },
       \ 'component_raw': {
       \   'buffers': 1
