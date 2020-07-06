@@ -22,19 +22,6 @@ nvim_lsp.vimls.setup{on_attach = apply_settings}
 nvim_lsp.gdscript.setup{on_attach = apply_settings}
 nvim_lsp.pyls.setup{on_attach = apply_settings}
 
-nvim_lsp.gdscript.setup{
-    on_attach = apply_settings,
-    capabilities = {
-        textDocument = {
-            completion = {
-                completionItem = {
-                    snippetSupport = true
-                }
-            }
-        }
-    }
-}
-
 nvim_lsp.clangd.setup{
     cmd = {'clangd', '--header-insertion=never', '--suggest-missing-includes', '--background-index', '-j=8', '--cross-file-rename', '--pch-storage=memory', '--clang-tidy', '--clang-tidy-checks=-clang-analyzer-*,bugprone-*,misc-*,-misc-non-private-member-variables-in-classes,performance-*,-performance-no-automatic-move,modernize-use-*,-modernize-use-nodiscard,-modernize-use-trailing-return-type'},
     on_attach = function(client)
