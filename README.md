@@ -26,11 +26,7 @@ call mkdp#util#install() " Markdown preview
 **Arch Linux**
 
 ```bash
-yay -S fzf ripgrep nerd-fonts-source-code-pro xkb-switch
-
-# Install LanguageClient-neovim binary, used for semantic highlighting
-cd ~/.local/share/nvim/site/pack/Shatur
-./install.sh
+yay -S fzf ripgrep nerd-fonts-source-code-pro xkb-switch vim-language-server cmake-language-server bash-language-server
 ```
 
 **Windows**
@@ -38,15 +34,14 @@ cd ~/.local/share/nvim/site/pack/Shatur
 ```bash
 scoop bucket add nerd-fonts
 sudo scoop install -g fzf ripgrep SourceCodePro-NF
-
-cd $env:LOCALAPPDATA/nvim-data/site/pack/Shatur
-./install.ps1
+npm install -g vim-language-server
+pip install cmake-language-server
 ```
 
 FZF in scoop comes without Vim plugin, so need to download it manually:
 
 ```bash
-git clone --depth=1 git@github.com:junegunn/fzf.git $env:LOCALAPPDATA/nvim-data/site/pack/Shatur/start/fzf
+git clone --depth=1 git@github.com:junegunn/fzf.git $env:LOCALAPPDATA/nvim/pack/plugins/start/fzf
 ```
 
 ### Updating plugins
