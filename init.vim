@@ -139,5 +139,5 @@ augroup vimrc
   autocmd!
 
   " Highligh yanked text
-  autocmd TextYankPost * silent! lua return (not vim.v.event.visual) and require'vim.highlight'.on_yank("IncSearch", 300)
+  autocmd TextYankPost * silent! lua vim.highlight.on_yank()
 augroup END
