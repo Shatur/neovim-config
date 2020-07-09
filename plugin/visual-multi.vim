@@ -1,5 +1,4 @@
 autocmd vimrc User visual_multi_mappings imap <buffer><expr> <CR> pumvisible() ? '<C-Y>' : '<Plug>(VM-I-Return)'
-autocmd vimrc User visual_multi_mappings nmap <buffer> p "+<Plug>(VM-p-Paste)
 
 let g:VM_mouse_mappings = v:true
 let g:VM_show_warnings = v:false
