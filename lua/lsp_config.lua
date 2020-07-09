@@ -28,6 +28,10 @@ nvim_lsp.clangd.setup{
         apply_settings()
         lsp_status.on_attach(client)
         vim.api.nvim_buf_set_keymap(0, 'n', 'gs', '<Cmd>ClangdSwitchSourceHeader<CR>', {noremap=true, silent=true})
+        vim.api.nvim_buf_set_keymap(0, 'n', 'gh', '<Cmd>lua require"clangd_nvim".enable()<CR>', {noremap=true, silent=true})
+        vim.api.nvim_buf_set_keymap(0, 'n', 'gH', '<Cmd>lua require"clangd_nvim".disable()<CR>', {noremap=true, silent=true})
+        vim.api.nvim_buf_set_keymap(0, 'n', 'gl', '<Cmd>lua require"clangd_nvim".disable()<CR>', {noremap=true, silent=true})
+        vim.api.nvim_buf_set_keymap(0, 'n', 'gL', '<Cmd>lua require"clangd_nvim".disable()<CR>', {noremap=true, silent=true})
     end,
     on_init = require'clangd_nvim'.on_init,
     callbacks = lsp_status.extensions.clangd.setup(),
