@@ -43,7 +43,7 @@ set shortmess+=c " Shut off completion messages
 let mapleader = ' '
 nnoremap Y y$
 noremap <CR> :
-noremap <Backspace> <Cmd>b#<CR>
+noremap <Backspace> <Cmd>buffer #<CR>
 
 " Use alternative shortcuts for cut
 noremap <Leader>p p
