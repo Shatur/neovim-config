@@ -7,12 +7,12 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 command! Spell call vimrc#fzf#Spell()
 command! Packages call vimrc#fzf#Packages()
 
-noremap <C-f> :Find ''<Left>
-noremap <A-l> <Cmd>BLines<CR>
-noremap <C-p> <Cmd>Files<CR>
-noremap <A-p> <Cmd>History<CR>
-noremap <F1> <Cmd>Helptags<CR>
-noremap <Leader><Tab> <Cmd>Buffers<CR>
-noremap <S-CR> <Cmd>Commands<CR>
+noremap <C-f> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
+noremap <A-l> <Cmd>SwitchToNormalBuffer<CR><Cmd>BLines<CR>
+noremap <C-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>Files<CR>
+noremap <A-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>History<CR>
+noremap <F1> <Cmd>SwitchToNormalBuffer<CR><Cmd>Helptags<CR>
+noremap <Leader><Tab> <Cmd>SwitchToNormalBuffer<CR><Cmd>Buffers<CR>
+noremap <S-CR> <Cmd>SwitchToNormalBuffer<CR><Cmd>Commands<CR>
 nnoremap z= <Cmd>Spell<CR>
 nnoremap <Leader>a <Cmd>Packages<CR>

@@ -52,16 +52,16 @@ let g:lightline = {
       \ }
       \ }
 
-nmap <Leader>1 <Plug>lightline#bufferline#go(1)
-nmap <Leader>2 <Plug>lightline#bufferline#go(2)
-nmap <Leader>3 <Plug>lightline#bufferline#go(3)
-nmap <Leader>4 <Plug>lightline#bufferline#go(4)
-nmap <Leader>5 <Plug>lightline#bufferline#go(5)
-nmap <Leader>6 <Plug>lightline#bufferline#go(6)
-nmap <Leader>7 <Plug>lightline#bufferline#go(7)
-nmap <Leader>8 <Plug>lightline#bufferline#go(8)
-nmap <Leader>9 <Plug>lightline#bufferline#go(9)
-nmap <Leader>0 <Plug>lightline#bufferline#go(10)
+nmap <Leader>1 <Cmd>SwitchToNormalBuffer<CR><Plug>lightline#bufferline#go(1)
+nmap <Leader>2 <Cmd>SwitchToNormalBuffer<CR><Plug>lightline#bufferline#go(2)
+nmap <Leader>3 <Cmd>SwitchToNormalBuffer<CR><Plug>lightline#bufferline#go(3)
+nmap <Leader>4 <Cmd>SwitchToNormalBuffer<CR><Plug>lightline#bufferline#go(4)
+nmap <Leader>5 <Cmd>SwitchToNormalBuffer<CR><Plug>lightline#bufferline#go(5)
+nmap <Leader>6 <Cmd>SwitchToNormalBuffer<CR><Plug>lightline#bufferline#go(6)
+nmap <Leader>7 <Cmd>SwitchToNormalBuffer<CR><Plug>lightline#bufferline#go(7)
+nmap <Leader>8 <Cmd>SwitchToNormalBuffer<CR><Plug>lightline#bufferline#go(8)
+nmap <Leader>9 <Cmd>SwitchToNormalBuffer<CR><Plug>lightline#bufferline#go(9)
+nmap <Leader>0 <Cmd>SwitchToNormalBuffer<CR><Plug>lightline#bufferline#go(10)
 
 nmap <Leader>c1 <Plug>lightline#bufferline#delete(1)
 nmap <Leader>c2 <Plug>lightline#bufferline#delete(2)

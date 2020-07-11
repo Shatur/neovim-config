@@ -134,6 +134,9 @@ sign define LspDiagnosticsWarningSign text=
 sign define LspDiagnosticsInformationSign text=
 sign define LspDiagnosticsHintSign text=
 
+" Used to prevent opening new buffers in a small buffers
+command! SwitchToNormalBuffer lua require'buffers'.switch_to_normal_buffer()
+
 " Custom group for all autocmd's in configuration
 augroup vimrc
   autocmd!

@@ -49,5 +49,5 @@ endif
 
 highlight link StartifyHeader String
 
-noremap <C-n> <Cmd>Startify<CR>
-inoremap <C-n> <Esc><Cmd>Startify<CR>
+noremap <C-n> <Cmd>SwitchToNormalBuffer<CR><Cmd>Startify<CR>
+inoremap <C-n> <Esc><Cmd>SwitchToNormalBuffer<CR><Cmd>Startify<CR>
