@@ -26,7 +26,7 @@ call mkdp#util#install() " Markdown preview
 **Arch Linux**
 
 ```bash
-yay -S fzf ripgrep nerd-fonts-source-code-pro xkb-switch vim-language-server cmake-language-server bash-language-server
+yay -S fzf ripgrep nerd-fonts-source-code-pro xkb-switch vim-language-server cmake-language-server bash-language-server lua-language-server-git
 ```
 
 **Windows**
