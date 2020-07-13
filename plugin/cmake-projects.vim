@@ -3,6 +3,7 @@ if has('win32')
 else
   let g:default_projects_path = '/mnt/Files/Code/'
 endif
+let g:cmake_debug_command = 'DebugLLDB'
 
 noremap <F5> <Cmd>CMakeBuildAndDebug<CR>
 noremap <S-F5> <Cmd>CMakeDebug<CR>
