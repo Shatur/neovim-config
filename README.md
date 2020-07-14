@@ -26,14 +26,14 @@ call mkdp#util#install() " Markdown preview
 **Arch Linux**
 
 ```bash
-yay -S fzf ripgrep nerd-fonts-source-code-pro xkb-switch vim-language-server cmake-language-server bash-language-server lua-language-server-git
+yay -S fzf ripgrep nerd-fonts-source-code-pro xkb-switch vim-language-server cmake-language-server bash-language-server lua-language-server-git lldb
 ```
 
 **Windows**
 
 ```bash
 scoop bucket add nerd-fonts
-sudo scoop install -g fzf ripgrep SourceCodePro-NF
+sudo scoop install -g fzf ripgrep SourceCodePro-NF clang
 npm install -g vim-language-server
 pip install cmake-language-server
 ```

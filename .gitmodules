@@ -154,3 +154,6 @@
 [submodule "pack/plugins/start/lsp-status.nvim"]
 	path = pack/plugins/start/lsp-status.nvim
 	url = git@github.com:nvim-lua/lsp-status.nvim.git
+[submodule "pack/plugins/start/nvim-dap"]
+	path = pack/plugins/start/nvim-dap
+	url = git@github.com:mfussenegger/nvim-dap.git
