@@ -115,6 +115,10 @@ inoremap <S-Left> <Esc>vb
 inoremap <S-Right> <Esc>ve
 vnoremap / y/\V<C-R>=escape(@",'/\')<CR><CR>
 
+" Git
+nnoremap <Leader>gl <Cmd>diffget //2<CR>
+nnoremap <Leader>gh <Cmd>diffget //3<CR>
+
 " Other useful shortucts
 noremap <Leader>cd <Cmd>cd %:h<CR>
 
