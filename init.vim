@@ -93,12 +93,16 @@ noremap <A-x> <Cmd>w<CR><Cmd>tabclose<CR>
 inoremap <A-x> <Esc><Cmd>w<CR><Cmd>tabclose<CR>
 
 " Tabs navigation
-noremap ]<Tab> <Cmd>tabnext<CR>
-noremap [<Tab> <Cmd>tabprevious<CR>
+noremap ]<Tab> <Cmd>SwitchToNormalBuffer<CR><Cmd>tabnext<CR>
+noremap [<Tab> <Cmd>SwitchToNormalBuffer<CR><Cmd>tabprevious<CR>
 
 " Quickfix history navigation
 noremap ]h <Cmd>cnewer<CR>
 noremap [h <Cmd>colder<CR>
+
+" Buffer navigation
+noremap ]b <Cmd>SwitchToNormalBuffer<CR><Cmd>bnext<CR>
+noremap [b <Cmd>SwitchToNormalBuffer<CR><Cmd>bprevious<CR>
 
 " Make behavior more like in common editors
 set pastetoggle=<F10>
