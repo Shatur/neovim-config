@@ -4,15 +4,13 @@ function! StartifyEntryFormat()
   return 'WebDevIconsGetFileTypeSymbol(absolute_path) . " " . entry_path'
 endfunction
 
-let g:startify_ascii = [
+let g:startify_custom_header = [
       \'    _   _                 _           ',
       \'   | \ | | ___  _____   _(_)_ __ ___  ',
       \'   |  \| |/ _ \/ _ \ \ / / | `_ ` _ \ ',
       \'   | |\  |  __/ (_) \ V /| | | | | | |',
       \'   |_| \_|\___|\___/ \_/ |_|_| |_| |_|',
       \]
-
-let g:startify_custom_header = 'g:startify_ascii'
 
 let g:startify_lists = [
       \ { 'type': 'bookmarks', 'header': ['   Закладки'] },
