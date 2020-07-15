@@ -1,1 +1,2 @@
 setlocal nobuflisted
+setlocal winfixwidth
