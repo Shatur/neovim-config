@@ -5,28 +5,19 @@ function! StartifyEntryFormat()
 endfunction
 
 let g:startify_ascii = [
-      \ '      .            .      ',
-      \ '    .,;.           :,.    ',
-      \ '  .,;;;,,.         ccc;.  ',
-      \ '.;c::::,,,.        ccccc: ',
-      \ '.::cc::,,,,,.      cccccc.',
-      \ '.cccccc;;;;;;.     llllll.',
-      \ '.cccccc.,;;;;;;.   llllll.',
-      \ '.cccccc  .;;;;;;.  oooooo.',
-      \ '.lllllc   .;;;;;;;.oooooo.',
-      \ '.lllllc     ,::::::looooo.',
-      \ '.llllll      .:::::lloddd.',
-      \ '.looool       .;::coooodo.',
-      \ '  .cool         .ccoooc.  ',
-      \ '    .co          .:o:.    ',
-      \ '      .           ..      ',
+      \'    _   _                 _           ',
+      \'   | \ | | ___  _____   _(_)_ __ ___  ',
+      \'   |  \| |/ _ \/ _ \ \ / / | `_ ` _ \ ',
+      \'   | |\  |  __/ (_) \ V /| | | | | | |',
+      \'   |_| \_|\___|\___/ \_/ |_|_| |_| |_|',
       \]
 
-let g:startify_custom_header = 'startify#center(g:startify_ascii)'
+let g:startify_custom_header = 'g:startify_ascii'
 
 let g:startify_lists = [
       \ { 'type': 'bookmarks', 'header': ['   Закладки'] },
       \ { 'type': 'files',     'header': ['   Последние файлы'] },
+      \ { 'type': 'dir',       'header': ['   Текущая папка '. getcwd()] },
       \ { 'type': 'sessions',  'header': ['   Сессии'] },
       \ { 'type': 'commands',  'header': ['   Команды'] },
       \ ]
