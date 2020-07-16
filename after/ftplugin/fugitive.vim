@@ -1,2 +1,1 @@
 wincmd L
-setlocal winfixwidth
