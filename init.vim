@@ -104,6 +104,15 @@ noremap [h <Cmd>colder<CR>
 noremap ]b <Cmd>SwitchToNormalBuffer<CR><Cmd>bnext<CR>
 noremap [b <Cmd>SwitchToNormalBuffer<CR><Cmd>bprevious<CR>
 
+" Git
+nnoremap <Leader>gl <Cmd>diffget //2<CR>
+nnoremap <Leader>gh <Cmd>diffget //3<CR>
+
+" Filter quickfix using built-in plugin
+packadd cfilter
+nnoremap <Leader>qw <Cmd>Cfilter предупреждение:<CR>
+nnoremap <Leader>qe <Cmd>Cfilter ошибка:<CR>
+
 " Make behavior more like in common editors
 set pastetoggle=<F10>
 noremap <C-s> <Cmd>w<CR>
@@ -118,10 +127,6 @@ tnoremap <C-v> <C-\><C-N>pi
 inoremap <S-Left> <Esc>vb
 inoremap <S-Right> <Esc>ve
 vnoremap / y/\V<C-R>=escape(@",'/\')<CR><CR>
-
-" Git
-nnoremap <Leader>gl <Cmd>diffget //2<CR>
-nnoremap <Leader>gh <Cmd>diffget //3<CR>
 
 " Other useful shortucts
 noremap <Leader>cd <Cmd>cd %:h<CR>
