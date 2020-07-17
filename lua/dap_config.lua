@@ -29,17 +29,17 @@ end
 M.start_lldb = function(args)
   local config = {
     type = "cpp",
-    name = args[1],
     request = "launch",
+    name = args[1],
+    cwd = vim.fn.fnamemodify(args[1], ":p:h"),
     program = table.remove(args, 1),
     args = args,
     env = current_env(),
-    cwd = vim.fn.getcwd(),
     MIMode = "gdb",
   }
 
   dap.launch(dap.adapters.cpp, config)
-  dap.repl.open()
+  dap.repl.open({height=15})
 end
 
 return M
