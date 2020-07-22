@@ -1,2 +1,1 @@
 setlocal nobuflisted
-setlocal winfixwidth
