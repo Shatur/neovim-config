@@ -1,8 +1,14 @@
 local M = {}
 
 function M.switch_to_normal_buffer()
+  local current_buffer = vim.fn.winnr()
   while M.is_small_buffer() do
       vim.api.nvim_command('wincmd w')
+      if current_buffer == vim.fn.winnr() then
+        -- To avoid infinity loop
+        vim.api.nvim_command('only')
+        break
+      end
   end
 end
 
