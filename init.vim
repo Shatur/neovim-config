@@ -39,6 +39,15 @@ set showtabline=2 " Always show tabline to display buffers
 set hidden " For switching between edited buffers
 set shortmess+=c " Shut off completion messages
 
+" Used to prevent opening new buffers in a small buffers
+command! SwitchToNormalBuffer lua require'buffers'.switch_to_normal_buffer()
+
+" Delete buffer with saving the current layout (except special buffers)
+command! BDelete lua require'buffers'.close_current_buffer()
+
+" Delete all buffers except the current one
+command! BDeleteOther lua require'buffers'.close_other_buffers()
+
 " Remap useless keys
 let mapleader = ' '
 nnoremap Y y$
@@ -83,14 +92,15 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Buffer / tab control
-noremap <C-q> <Cmd>bd<CR>
-inoremap <C-q> <Esc><Cmd>bd<CR>
+noremap <C-q> <Cmd>BDelete<CR>
+inoremap <C-q> <Esc><Cmd>BDelete<CR>
 noremap <A-q> <Cmd>tabclose<CR>
 inoremap <A-q> <Esc><Cmd>tabclose<CR>
-noremap <C-x> <Cmd>w<CR><Cmd>bd<CR>
-inoremap <C-x> <Esc><Cmd>w<CR><Cmd>bd<CR>
+noremap <C-x> <Cmd>w<CR><Cmd>BDelete<CR>
+inoremap <C-x> <Esc><Cmd>w<CR><Cmd>BDelete<CR>
 noremap <A-x> <Cmd>w<CR><Cmd>tabclose<CR>
 inoremap <A-x> <Esc><Cmd>w<CR><Cmd>tabclose<CR>
+noremap Q <Cmd>BDeleteOther<CR>
 
 " Tabs navigation
 noremap ]<Tab> <Cmd>SwitchToNormalBuffer<CR><Cmd>tabnext<CR>
@@ -146,9 +156,6 @@ sign define LspDiagnosticsErrorSign text=
 sign define LspDiagnosticsWarningSign text=
 sign define LspDiagnosticsInformationSign text=
 sign define LspDiagnosticsHintSign text=
-
-" Used to prevent opening new buffers in a small buffers
-command! SwitchToNormalBuffer lua require'buffers'.switch_to_normal_buffer()
 
 " Custom group for all autocmd's in configuration
 augroup vimrc

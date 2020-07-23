@@ -1,9 +1,6 @@
 [submodule "pack/plugins/start/asyncrun.vim"]
 	path = pack/plugins/start/asyncrun.vim
 	url = git@github.com:skywind3000/asyncrun.vim.git
-[submodule "pack/plugins/start/close-buffers.vim"]
-	path = pack/plugins/start/close-buffers.vim
-	url = git@github.com:Asheq/close-buffers.vim.git
 [submodule "pack/plugins/start/completion-buffers"]
 	path = pack/plugins/start/completion-buffers
 	url = git@github.com:steelsojka/completion-buffers.git
