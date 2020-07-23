@@ -7,7 +7,13 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 command! Spell call vimrc#fzf#Spell()
 command! Packages call vimrc#fzf#Packages()
 
-noremap <C-f> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
+if has('win32')
+  noremap <C-/> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
+  inoremap <C-/> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
+else
+  noremap <C-_> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
+  inoremap <C-_> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
+endif
 noremap <A-l> <Cmd>SwitchToNormalBuffer<CR><Cmd>BLines<CR>
 noremap <C-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>Files<CR>
 noremap <A-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>History<CR>
