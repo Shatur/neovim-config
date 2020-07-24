@@ -8,7 +8,6 @@ set splitright
 set spelllang=en_us,ru_ru
 set mouse=a
 set number
-set relativenumber
 set ignorecase
 set smartcase
 set tabstop=4
