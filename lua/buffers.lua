@@ -13,7 +13,7 @@ function M.switch_to_normal_buffer()
 end
 
 function M.is_special_buffer()
-  return vim.bo.filetype == 'fern' or vim.bo.filetype == 'qf' or vim.bo.filetype == 'vista_markdown' or vim.bo.filetype == 'vista' or vim.bo.filetype == 'help' or vim.bo.filetype == 'fugitive' or vim.bo.filetype == 'gitcommit' or vim.bo.filetype == 'dap-repl'
+  return vim.bo.filetype == 'startuptime' or vim.bo.filetype == 'fern' or vim.bo.filetype == 'qf' or vim.bo.filetype == 'vista_markdown' or vim.bo.filetype == 'vista' or vim.bo.filetype == 'help' or vim.bo.filetype == 'fugitive' or vim.bo.filetype == 'gitcommit' or vim.bo.filetype == 'dap-repl'
 end
 
 function M.close_current_buffer()
