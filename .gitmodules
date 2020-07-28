@@ -154,3 +154,6 @@
 [submodule "pack/plugins/start/nvim-dap"]
 	path = pack/plugins/start/nvim-dap
 	url = git@github.com:mfussenegger/nvim-dap.git
+[submodule "pack/plugins/start/scroll.vim"]
+	path = pack/plugins/start/scroll.vim
+	url = git@github.com:mg979/scroll.vim.git
