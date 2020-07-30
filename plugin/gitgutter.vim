@@ -1,4 +1,4 @@
-if exists('g:started_by_firenvim')
+if exists('g:started_by_firenvim') || exists('g:vscode')
   finish
 endif
 

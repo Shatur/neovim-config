@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 let g:terminal_default_mapping = v:false
 let g:terminal_list = v:false
 let g:terminal_height = 15

@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 

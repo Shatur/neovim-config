@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 autocmd vimrc User visual_multi_mappings imap <buffer><expr> <CR> pumvisible() ? '<C-Y>' : '<Plug>(VM-I-Return)'
 
 let g:VM_mouse_mappings = v:true

@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 let g:cursorword_highlight = 0
 let g:cursorword_delay = 250
 

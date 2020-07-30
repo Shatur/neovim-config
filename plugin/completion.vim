@@ -1,3 +1,7 @@
+if exists('g:vscode')
+  finish
+endif
+
 scriptencoding utf-8
 
 let g:completion_auto_change_source = 1
