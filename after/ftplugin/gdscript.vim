@@ -1,3 +1,5 @@
+packadd vim-godot
+
 setlocal formatoptions-=cro
 setlocal colorcolumn=80
 setlocal nowrap

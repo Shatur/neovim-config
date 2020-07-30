@@ -7,27 +7,18 @@
 [submodule "pack/plugins/start/completion-nvim"]
 	path = pack/plugins/start/completion-nvim
 	url = git@github.com:haorenW1025/completion-nvim.git
-[submodule "pack/plugins/start/diagnostic-nvim"]
-	path = pack/plugins/start/diagnostic-nvim
-	url = git@github.com:haorenW1025/diagnostic-nvim.git
 [submodule "pack/plugins/start/fern-renderer-devicons.vim"]
 	path = pack/plugins/start/fern-renderer-devicons.vim
 	url = git@github.com:lambdalisue/fern-renderer-devicons.vim.git
 [submodule "pack/plugins/start/fern.vim"]
 	path = pack/plugins/start/fern.vim
 	url = git@github.com:lambdalisue/fern.vim.git
-[submodule "pack/plugins/start/Fold-License"]
-	path = pack/plugins/start/Fold-License
-	url = git@github.com:vim-scripts/Fold-License.git
 [submodule "pack/plugins/start/fzf-checkout.vim"]
 	path = pack/plugins/start/fzf-checkout.vim
 	url = git@github.com:stsewd/fzf-checkout.vim.git
 [submodule "pack/plugins/start/fzf.vim"]
 	path = pack/plugins/start/fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
-[submodule "pack/plugins/start/nvim-lsp"]
-	path = pack/plugins/start/nvim-lsp
-	url = git@github.com:neovim/nvim-lsp.git
 [submodule "pack/plugins/start/neoformat"]
 	path = pack/plugins/start/neoformat
 	url = git@github.com:sbdchd/neoformat.git
@@ -100,12 +91,6 @@
 [submodule "pack/plugins/start/vim-visual-multi"]
 	path = pack/plugins/start/vim-visual-multi
 	url = git@github.com:mg979/vim-visual-multi.git
-[submodule "pack/plugins/start/vim-vsnip"]
-	path = pack/plugins/start/vim-vsnip
-	url = git@github.com:hrsh7th/vim-vsnip.git
-[submodule "pack/plugins/start/vim-vsnip-integ"]
-	path = pack/plugins/start/vim-vsnip-integ
-	url = git@github.com:hrsh7th/vim-vsnip-integ.git
 [submodule "pack/plugins/start/vim-xkbswitch"]
 	path = pack/plugins/start/vim-xkbswitch
 	url = git@github.com:lyokha/vim-xkbswitch.git
@@ -118,21 +103,9 @@
 [submodule "pack/plugins/opt/Tortoise-Typing"]
 	path = pack/plugins/opt/Tortoise-Typing
 	url = git@github.com:thanthese/Tortoise-Typing.git
-[submodule "pack/plugins/opt/markdown-preview.nvim"]
-	path = pack/plugins/opt/markdown-preview.nvim
-	url = git@github.com:iamcco/markdown-preview.nvim.git
-[submodule "pack/plugins/opt/vim-cmake-projects"]
-	path = pack/plugins/opt/vim-cmake-projects
-	url = git@github.com:Shatur95/vim-cmake-projects.git
-[submodule "pack/plugins/opt/vim-cpp-helper"]
-	path = pack/plugins/opt/vim-cpp-helper
-	url = git@github.com:d86leader/vim-cpp-helper.git
 [submodule "pack/plugins/opt/vim-startuptime"]
 	path = pack/plugins/opt/vim-startuptime
 	url = git@github.com:dstein64/vim-startuptime.git
-[submodule "pack/plugins/start/vim-godot"]
-	path = pack/plugins/start/vim-godot
-	url = git@github.com:habamax/vim-godot.git
 [submodule "pack/plugins/start/lightline.vim"]
 	path = pack/plugins/start/lightline.vim
 	url = git@github.com:itchyny/lightline.vim.git
@@ -142,18 +115,9 @@
 [submodule "pack/plugins/start/vim-cutlass"]
 	path = pack/plugins/start/vim-cutlass
 	url = git@github.com:svermeulen/vim-cutlass.git
-[submodule "pack/plugins/start/Colorizer"]
-	path = pack/plugins/start/Colorizer
-	url = git@github.com:chrisbra/Colorizer.git
-[submodule "pack/plugins/start/clangd-nvim"]
-	path = pack/plugins/start/clangd-nvim
-	url = git@github.com:robert-oleynik/clangd-nvim.git
-[submodule "pack/plugins/start/lsp-status.nvim"]
-	path = pack/plugins/start/lsp-status.nvim
-	url = git@github.com:nvim-lua/lsp-status.nvim.git
-[submodule "pack/plugins/start/nvim-dap"]
-	path = pack/plugins/start/nvim-dap
-	url = git@github.com:mfussenegger/nvim-dap.git
 [submodule "pack/plugins/start/scroll.vim"]
 	path = pack/plugins/start/scroll.vim
 	url = git@github.com:mg979/scroll.vim.git
+[submodule "pack/plugins/opt/vim-godot"]
+	path = pack/plugins/opt/vim-godot
+	url = git@github.com:habamax/vim-godot.git

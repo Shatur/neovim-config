@@ -117,11 +117,6 @@ noremap [b <Cmd>SwitchToNormalBuffer<CR><Cmd>bprevious<CR>
 nnoremap <Leader>gl <Cmd>diffget //2<CR>
 nnoremap <Leader>gh <Cmd>diffget //3<CR>
 
-" Filter quickfix using built-in plugin
-packadd cfilter
-nnoremap <Leader>qw <Cmd>Cfilter предупреждение:<CR>
-nnoremap <Leader>qe <Cmd>Cfilter ошибка:<CR>
-
 " Make behavior more like in common editors
 set pastetoggle=<F10>
 noremap <C-s> <Cmd>w<CR>
@@ -145,16 +140,6 @@ let g:loaded_netrw = v:true
 let g:loaded_netrwPlugin = v:true
 let g:loaded_netrwSettings = v:true
 let g:loaded_netrwFileHandlers = v:true
-
-" Setup built-in LSP client
-packadd nvim-lsp
-packadd lsp-status.nvim
-packadd clangd-nvim
-lua require'lsp_config'
-sign define LspDiagnosticsErrorSign text=
-sign define LspDiagnosticsWarningSign text=
-sign define LspDiagnosticsInformationSign text=
-sign define LspDiagnosticsHintSign text=
 
 " Custom group for all autocmd's in configuration
 augroup vimrc

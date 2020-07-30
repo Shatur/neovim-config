@@ -7,29 +7,25 @@ set showtabline=0
 packadd firenvim
 
 let g:firenvim_config = {
-    \ 'globalSettings': {
+      \ 'globalSettings': {
         \ 'alt': 'all',
-    \  },
-    \ 'localSettings': {
+      \  },
+      \ 'localSettings': {
         \ '.*': {
-            \ 'cmdline': 'firenvim',
-            \ 'takeover': 'never',
-        \ },
-    \ }
-\ }
+          \ 'cmdline': 'firenvim',
+          \ 'takeover': 'never',
+          \ },
+        \ }
+      \ }
 
 let b:loaded_lastplace_plugin = v:false
 let g:fern_loaded = v:false
-let g:loaded_close_buffers = v:false
-let g:loaded_cmake_projects = v:false
 let g:loaded_fugitive = v:false
 let g:loaded_gitgutter = v:false
 let g:loaded_gtfo = v:false
 let g:loaded_lightline = v:false
 let g:loaded_lightline_bufferline = v:false
 let g:loaded_startify = v:false
-let g:loaded_vim_cpp_helper = v:false
-let g:loaded_colorizer = v:false
 let g:loaded_vista = v:false
 let g:loaded_webdevicons = v:false
 
