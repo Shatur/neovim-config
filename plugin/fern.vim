@@ -1,3 +1,7 @@
+if exists('g:started_by_firenvim')
+  finish
+endif
+
 let g:fern#renderer = 'devicons'
 let g:fern#disable_default_mappings = v:true
 

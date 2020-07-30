@@ -1,3 +1,7 @@
+if exists('g:started_by_firenvim')
+  finish
+endif
+
 scriptencoding utf-8
 
 function! StartifyEntryFormat()
