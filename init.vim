@@ -1,5 +1,53 @@
 scriptencoding utf-8
 
+set clipboard=unnamedplus
+
+" Disable some built-in plugins
+let g:loaded_netrw = v:true
+let g:loaded_netrwPlugin = v:true
+let g:loaded_netrwSettings = v:true
+let g:loaded_netrwFileHandlers = v:true
+let g:did_install_default_menus = v:true
+
+" Remap useless keys
+let mapleader = ' '
+nnoremap Y y$
+noremap <CR> :
+noremap <Backspace> <Cmd>buffer #<CR>
+
+" Use alternative shortcuts for cut
+noremap <Leader>p p
+noremap <Leader>d d
+noremap <Leader>D D
+nnoremap <Leader>dd dd
+noremap <Leader>x x
+nnoremap <Leader>xx xx
+noremap <Leader>c c
+noremap <Leader>C C
+nnoremap <Leader>cc cc
+
+" Remap increase / decrease number shortucts to + and - signs
+nnoremap <C-=> <C-a>
+nnoremap <C--> <C-x>
+
+" .. and use <C-a> to select all
+noremap <C-a> gg0vG$
+vnoremap <C-a> <Esc>gg0vG$
+inoremap <C-a> <Esc>gg0vG$
+
+" Custom group for all autocmd's in configuration
+augroup vimrc
+  autocmd!
+
+  " Highligh yanked text
+  autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+augroup END
+
+if exists('g:vscode')
+  " All next settings only for Neovim
+  finish
+endif
+
 " General
 set title
 set lazyredraw
@@ -17,7 +65,6 @@ set list
 set listchars=tab:→\ " Display tabs
 set fillchars=eob:\ " Do not show ~
 set whichwrap+=h,l,<,>,[,] " Wrap movement between lines in edit mode
-set clipboard=unnamedplus
 set pumheight=10
 set wildmode=longest:full,full
 set termguicolors
@@ -46,27 +93,6 @@ command! BDelete lua require'buffers'.close_current_buffer()
 
 " Delete all buffers except the current one
 command! BDeleteOther lua require'buffers'.close_other_buffers()
-
-" Remap useless keys
-let mapleader = ' '
-nnoremap Y y$
-noremap <CR> :
-noremap <Backspace> <Cmd>buffer #<CR>
-
-" Use alternative shortcuts for cut
-noremap <Leader>p p
-noremap <Leader>d d
-noremap <Leader>D D
-nnoremap <Leader>dd dd
-noremap <Leader>x x
-nnoremap <Leader>xx xx
-noremap <Leader>c c
-noremap <Leader>C C
-nnoremap <Leader>cc cc
-
-" Remap increase / decrease number shortucts to + and - signs
-nnoremap <C-=> <C-a>
-nnoremap <C--> <C-x>
 
 " Movement around wrapped lines
 nnoremap <expr> j v:count ? 'j' : 'gj'
@@ -101,10 +127,6 @@ noremap <A-x> <Cmd>w<CR><Cmd>tabclose<CR>
 inoremap <A-x> <Esc><Cmd>w<CR><Cmd>tabclose<CR>
 noremap Q <Cmd>BDeleteOther<CR>
 
-" Tabs navigation
-noremap ]<Tab> <Cmd>SwitchToNormalBuffer<CR><Cmd>tabnext<CR>
-noremap [<Tab> <Cmd>SwitchToNormalBuffer<CR><Cmd>tabprevious<CR>
-
 " Quickfix history navigation
 noremap ]h <Cmd>cnewer<CR>
 noremap [h <Cmd>colder<CR>
@@ -113,38 +135,20 @@ noremap [h <Cmd>colder<CR>
 noremap ]b <Cmd>SwitchToNormalBuffer<CR><Cmd>bnext<CR>
 noremap [b <Cmd>SwitchToNormalBuffer<CR><Cmd>bprevious<CR>
 
-" Git
+" Git diffs
 nnoremap <Leader>gl <Cmd>diffget //2<CR>
 nnoremap <Leader>gh <Cmd>diffget //3<CR>
 
 " Make behavior more like in common editors
-set pastetoggle=<F10>
 noremap <C-s> <Cmd>w<CR>
 inoremap <C-s> <Cmd>w<CR>
-noremap <C-a> gg0vG$
-vnoremap <C-a> <Esc>gg0vG$
-inoremap <C-a> <Esc>gg0vG$
 inoremap <C-z> <C-o>u
-inoremap <C-v> <C-g>u<F10><C-r>+<F10>
+inoremap <C-v> <C-g>u<Cmd>set paste<CR><C-r>+<Cmd>set nopaste<CR>
 cnoremap <C-v> <C-r>+
 tnoremap <C-v> <C-\><C-N>pi
 inoremap <S-Left> <Esc>vb
 inoremap <S-Right> <Esc>ve
 vnoremap / y/\V<C-R>=escape(@",'/\')<CR><CR>
 
-" Other useful shortucts
+" Other
 noremap <Leader>cd <Cmd>cd %:h<CR>
-
-" Disable netrw
-let g:loaded_netrw = v:true
-let g:loaded_netrwPlugin = v:true
-let g:loaded_netrwSettings = v:true
-let g:loaded_netrwFileHandlers = v:true
-
-" Custom group for all autocmd's in configuration
-augroup vimrc
-  autocmd!
-
-  " Highligh yanked text
-  autocmd TextYankPost * silent! lua vim.highlight.on_yank()
-augroup END
