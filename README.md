@@ -20,22 +20,19 @@ git clone --recursive git@github.com:Shatur95/neovim-config.git $env:LOCALAPPDAT
 
 ```vim
 call firenvim#install(0) " To enable embedding in browsers via firenvim
-call mkdp#util#install() " Markdown preview
 ```
 
 **Arch Linux**
 
 ```bash
-yay -S fzf ripgrep nerd-fonts-source-code-pro xkb-switch vim-language-server cmake-language-server bash-language-server lua-language-server-git lldb
+yay -S fzf ripgrep nerd-fonts-source-code-pro xkb-switch
 ```
 
 **Windows**
 
 ```bash
 scoop bucket add nerd-fonts
-sudo scoop install -g fzf ripgrep SourceCodePro-NF clang
-npm install -g vim-language-server
-pip install cmake-language-server
+sudo scoop install -g fzf ripgrep SourceCodePro-NF
 ```
 
 FZF in scoop comes without Vim plugin, so need to download it manually:
