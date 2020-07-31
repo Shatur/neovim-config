@@ -1,9 +1,6 @@
 [submodule "pack/plugins/start/vim-cool"]
 	path = pack/plugins/start/vim-cool
 	url = git@github.com:romainl/vim-cool.git
-[submodule "pack/plugins/start/vim-easymotion"]
-	path = pack/plugins/start/vim-easymotion
-	url = git@github.com:easymotion/vim-easymotion.git
 [submodule "pack/plugins/start/vim-eunuch"]
 	path = pack/plugins/start/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
@@ -118,3 +115,9 @@
 [submodule "pack/plugins/opt/scroll.vim"]
 	path = pack/plugins/opt/scroll.vim
 	url = git@github.com:mg979/scroll.vim.git
+[submodule "pack/plugins/opt/vscode-easymotion"]
+	path = pack/plugins/opt/vscode-easymotion
+	url = git@github.com:asvetliakov/vim-easymotion.git
+[submodule "pack/plugins/opt/vim-easymotion"]
+	path = pack/plugins/opt/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion

@@ -2,7 +2,11 @@
 " So, mark plugins that not used in VSCode and Firenvim as optional and load
 " it by the conditions. 
 
-if !exists('g:vscode')
+if exists('g:vscode')
+  " For VSCode I use fixed version of EasyMotion
+  packadd vscode-easymotion
+else
+  packadd vim-easymotion
   packadd vim-visual-multi
   packadd vim-one
   packadd vim-cursorword
