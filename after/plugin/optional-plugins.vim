@@ -7,9 +7,10 @@ if exists('g:vscode')
   packadd vscode-easymotion
 else
   packadd vim-easymotion
-  packadd vim-visual-multi
+  packadd vim-move
   packadd vim-one
   packadd vim-cursorword
+  packadd vim-visual-multi
   packadd tcomment_vim
   packadd scroll.vim
   packadd pear-tree
