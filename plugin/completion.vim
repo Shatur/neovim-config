@@ -4,6 +4,9 @@ endif
 
 scriptencoding utf-8
 
+packadd completion-nvim
+packadd completion-buffers
+
 let g:completion_auto_change_source = 1
 let g:completion_confirm_key = ''
 

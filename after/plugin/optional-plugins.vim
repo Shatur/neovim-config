@@ -15,8 +15,6 @@ else
   packadd pear-tree
   packadd neoformat
   packadd fzf.vim
-  packadd completion-nvim
-  packadd completion-buffers
 
   if !exists('g:started_by_firenvim')
     packadd vista.vim
