@@ -1,102 +1,30 @@
-[submodule "pack/plugins/start/asyncrun.vim"]
-	path = pack/plugins/start/asyncrun.vim
-	url = git@github.com:skywind3000/asyncrun.vim.git
-[submodule "pack/plugins/start/completion-buffers"]
-	path = pack/plugins/start/completion-buffers
-	url = git@github.com:steelsojka/completion-buffers.git
-[submodule "pack/plugins/start/completion-nvim"]
-	path = pack/plugins/start/completion-nvim
-	url = git@github.com:haorenW1025/completion-nvim.git
-[submodule "pack/plugins/start/fern-renderer-devicons.vim"]
-	path = pack/plugins/start/fern-renderer-devicons.vim
-	url = git@github.com:lambdalisue/fern-renderer-devicons.vim.git
-[submodule "pack/plugins/start/fern.vim"]
-	path = pack/plugins/start/fern.vim
-	url = git@github.com:lambdalisue/fern.vim.git
-[submodule "pack/plugins/start/fzf-checkout.vim"]
-	path = pack/plugins/start/fzf-checkout.vim
-	url = git@github.com:stsewd/fzf-checkout.vim.git
-[submodule "pack/plugins/start/fzf.vim"]
-	path = pack/plugins/start/fzf.vim
-	url = git@github.com:junegunn/fzf.vim.git
-[submodule "pack/plugins/start/neoformat"]
-	path = pack/plugins/start/neoformat
-	url = git@github.com:sbdchd/neoformat.git
-[submodule "pack/plugins/start/pear-tree"]
-	path = pack/plugins/start/pear-tree
-	url = git@github.com:tmsvg/pear-tree.git
-[submodule "pack/plugins/start/quickfix-reflector.vim"]
-	path = pack/plugins/start/quickfix-reflector.vim
-	url = git@github.com:stefandtw/quickfix-reflector.vim.git
-[submodule "pack/plugins/start/tcomment_vim"]
-	path = pack/plugins/start/tcomment_vim
-	url = git@github.com:tomtom/tcomment_vim.git
 [submodule "pack/plugins/start/vim-cool"]
 	path = pack/plugins/start/vim-cool
 	url = git@github.com:romainl/vim-cool.git
-[submodule "pack/plugins/start/vim-cursorword"]
-	path = pack/plugins/start/vim-cursorword
-	url = git@github.com:itchyny/vim-cursorword.git
-[submodule "pack/plugins/start/vim-devicons"]
-	path = pack/plugins/start/vim-devicons
-	url = git@github.com:ryanoasis/vim-devicons.git
 [submodule "pack/plugins/start/vim-easymotion"]
 	path = pack/plugins/start/vim-easymotion
 	url = git@github.com:easymotion/vim-easymotion.git
 [submodule "pack/plugins/start/vim-eunuch"]
 	path = pack/plugins/start/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
-[submodule "pack/plugins/start/vim-flog"]
-	path = pack/plugins/start/vim-flog
-	url = git@github.com:rbong/vim-flog.git
-[submodule "pack/plugins/start/vim-fugitive"]
-	path = pack/plugins/start/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
-[submodule "pack/plugins/start/vim-gitgutter"]
-	path = pack/plugins/start/vim-gitgutter
-	url = git@github.com:airblade/vim-gitgutter.git
-[submodule "pack/plugins/start/vim-gtfo"]
-	path = pack/plugins/start/vim-gtfo
-	url = git@github.com:justinmk/vim-gtfo.git
-[submodule "pack/plugins/start/vim-lastplace"]
-	path = pack/plugins/start/vim-lastplace
-	url = git@github.com:farmergreg/vim-lastplace.git
 [submodule "pack/plugins/start/vim-move"]
 	path = pack/plugins/start/vim-move
 	url = git@github.com:matze/vim-move.git
-[submodule "pack/plugins/start/vim-one"]
-	path = pack/plugins/start/vim-one
-	url = git@github.com:rakr/vim-one.git
 [submodule "pack/plugins/start/vim-sandwich"]
 	path = pack/plugins/start/vim-sandwich
 	url = git@github.com:machakann/vim-sandwich.git
-[submodule "pack/plugins/start/vim-scriptease"]
-	path = pack/plugins/start/vim-scriptease
-	url = git@github.com:tpope/vim-scriptease.git
-[submodule "pack/plugins/start/vim-startify"]
-	path = pack/plugins/start/vim-startify
-	url = git@github.com:mhinz/vim-startify.git
 [submodule "pack/plugins/start/vim-subversive"]
 	path = pack/plugins/start/vim-subversive
 	url = git@github.com:svermeulen/vim-subversive.git
 [submodule "pack/plugins/start/vim-swap"]
 	path = pack/plugins/start/vim-swap
 	url = git@github.com:machakann/vim-swap.git
-[submodule "pack/plugins/start/vim-terminal-help"]
-	path = pack/plugins/start/vim-terminal-help
-	url = git@github.com:skywind3000/vim-terminal-help.git
 [submodule "pack/plugins/start/vim-unimpaired"]
 	path = pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
-[submodule "pack/plugins/start/vim-visual-multi"]
-	path = pack/plugins/start/vim-visual-multi
-	url = git@github.com:mg979/vim-visual-multi.git
 [submodule "pack/plugins/start/vim-xkbswitch"]
 	path = pack/plugins/start/vim-xkbswitch
 	url = git@github.com:lyokha/vim-xkbswitch.git
-[submodule "pack/plugins/start/vista.vim"]
-	path = pack/plugins/start/vista.vim
-	url = git@github.com:liuchengxu/vista.vim.git
 [submodule "pack/plugins/opt/firenvim"]
 	path = pack/plugins/opt/firenvim
 	url = git@github.com:glacambre/firenvim.git
@@ -106,18 +34,87 @@
 [submodule "pack/plugins/opt/vim-startuptime"]
 	path = pack/plugins/opt/vim-startuptime
 	url = git@github.com:dstein64/vim-startuptime.git
-[submodule "pack/plugins/start/lightline.vim"]
-	path = pack/plugins/start/lightline.vim
-	url = git@github.com:itchyny/lightline.vim.git
-[submodule "pack/plugins/start/lightline-bufferline"]
-	path = pack/plugins/start/lightline-bufferline
-	url = git@github.com:mengelbrecht/lightline-bufferline.git
 [submodule "pack/plugins/start/vim-cutlass"]
 	path = pack/plugins/start/vim-cutlass
 	url = git@github.com:svermeulen/vim-cutlass.git
-[submodule "pack/plugins/start/scroll.vim"]
-	path = pack/plugins/start/scroll.vim
-	url = git@github.com:mg979/scroll.vim.git
 [submodule "pack/plugins/opt/vim-godot"]
 	path = pack/plugins/opt/vim-godot
 	url = git@github.com:habamax/vim-godot.git
+[submodule "pack/plugins/opt/vista.vim"]
+	path = pack/plugins/opt/vista.vim
+	url = git@github.com:liuchengxu/vista.vim.git
+[submodule "pack/plugins/opt/vim-visual-multi"]
+	path = pack/plugins/opt/vim-visual-multi
+	url = git@github.com:mg979/vim-visual-multi.git
+[submodule "pack/plugins/opt/vim-terminal-help"]
+	path = pack/plugins/opt/vim-terminal-help
+	url = git@github.com:skywind3000/vim-terminal-help.git
+[submodule "pack/plugins/opt/vim-startify"]
+	path = pack/plugins/opt/vim-startify
+	url = git@github.com:mhinz/vim-startify.git
+[submodule "pack/plugins/opt/vim-scriptease"]
+	path = pack/plugins/opt/vim-scriptease
+	url = git@github.com:tpope/vim-scriptease.git
+[submodule "pack/plugins/opt/vim-one"]
+	path = pack/plugins/opt/vim-one
+	url = git@github.com:rakr/vim-one.git
+[submodule "pack/plugins/opt/vim-lastplace"]
+	path = pack/plugins/opt/vim-lastplace
+	url = git@github.com:farmergreg/vim-lastplace.git
+[submodule "pack/plugins/opt/vim-gtfo"]
+	path = pack/plugins/opt/vim-gtfo
+	url = git@github.com:justinmk/vim-gtfo.git
+[submodule "pack/plugins/opt/vim-gitgutter"]
+	path = pack/plugins/opt/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
+[submodule "pack/plugins/opt/vim-fugitive"]
+	path = pack/plugins/opt/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "pack/plugins/opt/vim-flog"]
+	path = pack/plugins/opt/vim-flog
+	url = git@github.com:rbong/vim-flog.git
+[submodule "pack/plugins/opt/vim-devicons"]
+	path = pack/plugins/opt/vim-devicons
+	url = git@github.com:ryanoasis/vim-devicons.git
+[submodule "pack/plugins/opt/vim-cursorword"]
+	path = pack/plugins/opt/vim-cursorword
+	url = git@github.com:itchyny/vim-cursorword.git
+[submodule "pack/plugins/opt/quickfix-reflector.vim"]
+	path = pack/plugins/opt/quickfix-reflector.vim
+	url = git@github.com:stefandtw/quickfix-reflector.vim.git
+[submodule "pack/plugins/opt/pear-tree"]
+	path = pack/plugins/opt/pear-tree
+	url = git@github.com:tmsvg/pear-tree.git
+[submodule "pack/plugins/opt/neoformat"]
+	path = pack/plugins/opt/neoformat
+	url = git@github.com:sbdchd/neoformat.git
+[submodule "pack/plugins/opt/lightline.vim"]
+	path = pack/plugins/opt/lightline.vim
+	url = git@github.com:itchyny/lightline.vim.git
+[submodule "pack/plugins/opt/lightline-bufferline"]
+	path = pack/plugins/opt/lightline-bufferline
+	url = git@github.com:mengelbrecht/lightline-bufferline.git
+[submodule "pack/plugins/opt/fzf.vim"]
+	path = pack/plugins/opt/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git
+[submodule "pack/plugins/opt/fzf-checkout.vim"]
+	path = pack/plugins/opt/fzf-checkout.vim
+	url = git@github.com:stsewd/fzf-checkout.vim.git
+[submodule "pack/plugins/opt/fern.vim"]
+	path = pack/plugins/opt/fern.vim
+	url = git@github.com:lambdalisue/fern.vim.git
+[submodule "pack/plugins/opt/fern-renderer-devicons.vim"]
+	path = pack/plugins/opt/fern-renderer-devicons.vim
+	url = git@github.com:lambdalisue/fern-renderer-devicons.vim.git
+[submodule "pack/plugins/opt/completion-nvim"]
+	path = pack/plugins/opt/completion-nvim
+	url = git@github.com:nvim-lua/completion-nvim.git
+[submodule "pack/plugins/opt/completion-buffers"]
+	path = pack/plugins/opt/completion-buffers
+	url = git@github.com:steelsojka/completion-buffers.git
+[submodule "pack/plugins/opt/asyncrun.vim"]
+	path = pack/plugins/opt/asyncrun.vim
+	url = git@github.com:skywind3000/asyncrun.vim.git
+[submodule "pack/plugins/opt/scroll.vim"]
+	path = pack/plugins/opt/scroll.vim
+	url = git@github.com:mg979/scroll.vim.git

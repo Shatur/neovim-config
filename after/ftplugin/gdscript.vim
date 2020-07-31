@@ -1,4 +1,4 @@
-packadd! vim-godot
+packadd vim-godot
 
 setlocal formatoptions-=cro
 setlocal colorcolumn=80
