@@ -121,3 +121,6 @@
 [submodule "pack/plugins/opt/vim-move"]
 	path = pack/plugins/opt/vim-move
 	url = git@github.com:matze/vim-move.git
+[submodule "pack/plugins/opt/vim-commentary"]
+	path = pack/plugins/opt/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git

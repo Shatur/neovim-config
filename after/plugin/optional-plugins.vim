@@ -11,7 +11,7 @@ else
   packadd vim-one
   packadd vim-cursorword
   packadd vim-visual-multi
-  packadd tcomment_vim
+  packadd vim-commentary
   packadd scroll.vim
   packadd pear-tree
   packadd neoformat
