@@ -18,26 +18,19 @@ nmap gcc <Plug>VSCodeCommentaryLine
 " GitGutter-like
 nnoremap ]c <Cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR>
 nnoremap [c <Cmd>call VSCodeNotify('workbench.action.editor.previousChange')<CR>
+nnoremap <Leader>hs <Cmd>call VSCodeNotify('git.stageSelectedRanges')<CR>
+nnoremap <Leader>hu <Cmd>call VSCodeNotify('git.unstageSelectedRanges')<CR>
+nnoremap <Leader>hr <Cmd>call VSCodeNotify('git.revertSelectedRanges')<CR>
 
-" Split navigation
-nnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.focusBelowGroup')<CR>
-xnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.focusBelowGroup')<CR>
-nnoremap <C-k> <Cmd>call VSCodeNotify('workbench.action.focusAboveGroup')<CR>
-xnoremap <C-k> <Cmd>call VSCodeNotify('workbench.action.focusAboveGroup')<CR>
-nnoremap <C-h> <Cmd>call VSCodeNotify('workbench.action.focusLeftGroup')<CR>
-xnoremap <C-h> <Cmd>call VSCodeNotify('workbench.action.focusLeftGroup')<CR>
-nnoremap <C-l> <Cmd>call VSCodeNotify('workbench.action.focusRightGroup')<CR>
-xnoremap <C-l> <Cmd>call VSCodeNotify('workbench.action.focusRightGroup')<CR>
+" Fugitive-like
+nnoremap <Leader>gl <Cmd>call VSCodeNotify('git-graph.view')<CR>
+nnoremap <Leader>gp <Cmd>call VSCodeNotify('git.push')<CR>
+nnoremap <Leader>gP <Cmd>call VSCodeNotify('git.pullRebase')<CR>
+nnoremap <Leader>gd <Cmd>call VSCodeNotify('git.openChange')<CR>
 
 " Tab control
 noremap Q <Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>
 nnoremap <C-x> <Cmd>call VSCodeCall('workbench.action.files.save')<CR><Cmd>Tabclose<CR>
-
-" Git
-nnoremap <Leader>gs <Cmd>call VSCodeNotify('workbench.view.scm')<CR>
-nnoremap <Leader>gp <Cmd>call VSCodeNotify('git.push')<CR>
-nnoremap <Leader>gP <Cmd>call VSCodeNotify('git.pullRebase')<CR>
-nnoremap <Leader>gl <Cmd>call VSCodeNotify('git.viewHistory')<CR>
 
 " Movement around wrapped lines
 nmap <expr> j v:count ? 'j' : 'gj'
