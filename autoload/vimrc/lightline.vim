@@ -19,19 +19,19 @@ function! vimrc#lightline#Warnings() abort
 
   let text = ''
   if warnings_count != 0
-    let text .= warnings_count . ' '
+    let text .= warnings_count .. ' '
   endif
   if info_count != 0
     if !empty(text)
       let text .= ' '
     endif
-    let text .= info_count . ' '
+    let text .= info_count .. ' '
   endif
   if hints_count != 0
     if !empty(text)
       let text .= ' '
     endif
-    let text .= hints_count . ' '
+    let text .= hints_count .. ' '
   endif
   return text
 endfunction
@@ -47,7 +47,7 @@ function! vimrc#lightline#Errors() abort
   if errors_count == 0
     return ''
   endif
-  return errors_count . ' '
+  return errors_count .. ' '
 endfunction
 
 function! vimrc#lightline#LspStatus() abort
@@ -56,7 +56,7 @@ function! vimrc#lightline#LspStatus() abort
   endif
 
   let messages = luaeval("require('lsp-status').messages()")
-  return join(map(messages, '"[" . v:val.name . "] " . v:val.content . " "'))
+  return join(map(messages, '"[" .. v:val.name .. "] " .. v:val.content .. " "'))
 endfunction
 
 function vimrc#lightline#reloadColorscheme() abort
@@ -70,7 +70,7 @@ function vimrc#lightline#CursorsCount() abort
   if empty(vm_info)
     return ''
   endif
-  return vm_info['current'] . '/' . vm_info['total'] . ' '
+  return vm_info['current'] .. '/' .. vm_info['total'] .. ' '
 endfunction
 
 function vimrc#lightline#Multicursors() abort
@@ -88,7 +88,7 @@ function! vimrc#lightline#Tabs() abort
 endfunction
 
 function! vimrc#lightline#Filetype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype .. ' ' .. WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
 
 function! vimrc#lightline#Fileformat()
@@ -96,7 +96,7 @@ function! vimrc#lightline#Fileformat()
     return ''
   endif
 
-  return &fileencoding . ' ' . WebDevIconsGetFileFormatSymbol()
+  return &fileencoding .. ' ' .. WebDevIconsGetFileFormatSymbol()
 endfunction
 
 function! vimrc#lightline#NearestFunction()
@@ -104,7 +104,7 @@ function! vimrc#lightline#NearestFunction()
   if empty(function_name)
     return ''
   endif
-  return ' ' . function_name
+  return ' ' .. function_name
 endfunction
 
 function vimrc#lightline#Asyncrun() abort
@@ -122,7 +122,7 @@ function vimrc#lightline#Branch() abort
   if empty(head)
     return ''
   endif
-  return head . ' '
+  return head .. ' '
 endfunction
 
 function! vimrc#lightline#Filename()

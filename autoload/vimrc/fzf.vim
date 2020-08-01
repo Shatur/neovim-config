@@ -1,5 +1,5 @@
 function! s:ReplaceCurrentWorld(word) abort
-  exe 'normal! "_ciw' . a:word
+  exe 'normal! "_ciw' .. a:word
 endfunction
 
 function! vimrc#fzf#Spell() abort
@@ -8,7 +8,7 @@ function! vimrc#fzf#Spell() abort
 endfunction
 
 function! s:Packadd(package) abort
-  exe 'packadd ' . a:package
+  exe 'packadd ' .. a:package
 endfunction
 
 function! vimrc#fzf#Packages() abort
