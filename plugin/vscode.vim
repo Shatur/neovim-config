@@ -34,10 +34,10 @@ noremap Q <Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>
 nnoremap <C-x> <Cmd>call VSCodeCall('workbench.action.files.save')<CR><Cmd>Tabclose<CR>
 
 " Git
-nnoremap <Leader>gs <Cmd>call VSCodeNotify('workbench.view.scm')
-nnoremap <Leader>gp <Cmd>call VSCodeNotify('git.push')
-nnoremap <Leader>gP <Cmd>call VSCodeNotify('git.pullRebase')
-nnoremap <Leader>gl <Cmd>call VSCodeNotify('git.viewHistory')
+nnoremap <Leader>gs <Cmd>call VSCodeNotify('workbench.view.scm')<CR>
+nnoremap <Leader>gp <Cmd>call VSCodeNotify('git.push')<CR>
+nnoremap <Leader>gP <Cmd>call VSCodeNotify('git.pullRebase')<CR>
+nnoremap <Leader>gl <Cmd>call VSCodeNotify('git.viewHistory')<CR>
 
 " Movement around wrapped lines
 nmap <expr> j v:count ? 'j' : 'gj'
