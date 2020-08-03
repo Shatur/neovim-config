@@ -21,6 +21,7 @@ endif
 noremap <A-l> <Cmd>SwitchToNormalBuffer<CR><Cmd>BLines<CR>
 noremap <C-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>Files<CR>
 noremap <A-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>History<CR>
+noremap <A-s> <Cmd>Maps<CR>
 noremap <F1> <Cmd>SwitchToNormalBuffer<CR><Cmd>Helptags<CR>
 noremap <Leader><Tab> <Cmd>SwitchToNormalBuffer<CR><Cmd>Buffers<CR>
 noremap <S-CR> <Cmd>SwitchToNormalBuffer<CR><Cmd>Commands<CR>
