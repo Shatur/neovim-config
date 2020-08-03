@@ -1,6 +1,5 @@
 setlocal nonumber
 setlocal norelativenumber
-setlocal signcolumn=no
 
 call glyph_palette#apply()
 
