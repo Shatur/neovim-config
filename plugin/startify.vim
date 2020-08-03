@@ -4,8 +4,8 @@ endif
 
 scriptencoding utf-8
 
-function! StartifyEntryFormat()
-  return 'WebDevIconsGetFileTypeSymbol(absolute_path) . " " . entry_path'
+function! StartifyEntryFormat() abort
+  return 'nerdfont#find(absolute_path) .. " " .. entry_path'
 endfunction
 
 let g:startify_custom_header = []

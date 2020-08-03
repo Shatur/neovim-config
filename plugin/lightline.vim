@@ -7,7 +7,7 @@ scriptencoding utf-8
 autocmd vimrc OptionSet background call vimrc#lightline#reloadColorscheme()
 
 let g:lightline#bufferline#clickable = v:true
-let g:lightline#bufferline#enable_devicons = v:true
+let g:lightline#bufferline#enable_nerdfont = v:true
 let g:lightline#bufferline#unnamed = '[Нет имени]'
 let g:lightline#bufferline#unicode_symbols = v:true
 let g:lightline#bufferline#read_only = ' '

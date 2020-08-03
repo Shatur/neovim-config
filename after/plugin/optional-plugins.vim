@@ -18,6 +18,8 @@ else
   packadd fzf.vim
 
   if !exists('g:started_by_firenvim')
+    packadd nerdfont.vim
+    packadd glyph-palette.vim
     packadd vista.vim
     packadd vim-terminal-help
     packadd vim-startify
@@ -27,13 +29,12 @@ else
     packadd vim-gitgutter
     packadd vim-fugitive
     packadd vim-flog
-    packadd vim-devicons
     packadd quickfix-reflector.vim
     packadd lightline.vim
     packadd lightline-bufferline
     packadd fzf-checkout.vim
     packadd fern.vim
-    packadd fern-renderer-devicons.vim
+    packadd fern-renderer-nerdfont.vim
     packadd asyncrun.vim
   endif
 endif

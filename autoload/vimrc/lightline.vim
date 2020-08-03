@@ -88,7 +88,7 @@ function! vimrc#lightline#Tabs() abort
 endfunction
 
 function! vimrc#lightline#Filetype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype .. ' ' .. WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype .. ' ' .. nerdfont#find() : 'no ft') : ''
 endfunction
 
 function! vimrc#lightline#Fileformat()
@@ -96,7 +96,7 @@ function! vimrc#lightline#Fileformat()
     return ''
   endif
 
-  return &fileencoding .. ' ' .. WebDevIconsGetFileFormatSymbol()
+  return &fileencoding .. ' ' .. nerdfont#fileformat#find()
 endfunction
 
 function! vimrc#lightline#NearestFunction()

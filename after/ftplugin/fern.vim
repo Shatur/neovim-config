@@ -2,6 +2,8 @@ setlocal nonumber
 setlocal norelativenumber
 setlocal signcolumn=no
 
+call glyph_palette#apply()
+
 nmap <buffer> F <Plug>(fern-action-new-dir)
 nmap <buffer> N <Plug>(fern-action-new-file)
 nmap <buffer> U <Plug>(fern-action-leave)<Plug>(fern-wait)<Plug>(fern-action-tcd:root)<CR>
