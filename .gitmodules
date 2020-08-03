@@ -112,9 +112,6 @@
 [submodule "pack/plugins/opt/vim-easymotion"]
 	path = pack/plugins/opt/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
-[submodule "pack/plugins/opt/vim-move"]
-	path = pack/plugins/opt/vim-move
-	url = git@github.com:matze/vim-move.git
 [submodule "pack/plugins/opt/vim-commentary"]
 	path = pack/plugins/opt/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
@@ -127,3 +124,6 @@
 [submodule "pack/plugins/opt/fern-renderer-nerdfont.vim"]
 	path = pack/plugins/opt/fern-renderer-nerdfont.vim
 	url = git@github.com:lambdalisue/fern-renderer-nerdfont.vim.git
+[submodule "pack/plugins/start/vim-move"]
+	path = pack/plugins/start/vim-move
+	url = git@github.com:matze/vim-move.git
