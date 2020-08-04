@@ -25,5 +25,6 @@ noremap <A-s> <Cmd>Maps<CR>
 noremap <F1> <Cmd>SwitchToNormalBuffer<CR><Cmd>Helptags<CR>
 noremap <C-Tab> <Cmd>SwitchToNormalBuffer<CR><Cmd>Buffers<CR>
 noremap <S-CR> <Cmd>SwitchToNormalBuffer<CR><Cmd>Commands<CR>
+noremap <Leader>gc <Cmd>Commits<CR>
 nnoremap z= <Cmd>Spell<CR>
 nnoremap <Leader>a <Cmd>Packages<CR>
