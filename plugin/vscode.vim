@@ -43,3 +43,4 @@ nmap <expr> <Down> v:count ? '<Down>' : 'g<Down>'
 
 " Other
 nnoremap <Leader>z <Cmd>call VSCodeNotify('workbench.action.toggleZenMode')<CR>
+nnoremap z= <Cmd>call VSCodeNotify('editor.action.quickFix')<CR>
