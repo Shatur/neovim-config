@@ -64,9 +64,6 @@
 [submodule "pack/plugins/opt/vim-fugitive"]
 	path = pack/plugins/opt/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule "pack/plugins/opt/vim-flog"]
-	path = pack/plugins/opt/vim-flog
-	url = git@github.com:rbong/vim-flog.git
 [submodule "pack/plugins/opt/vim-cursorword"]
 	path = pack/plugins/opt/vim-cursorword
 	url = git@github.com:itchyny/vim-cursorword.git
