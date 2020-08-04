@@ -5,6 +5,9 @@ endif
 " Usually installed system-wide, so disable it by the parameter
 let g:loaded_fzf = v:false
 
+" GTFO-like
+nnoremap gof <Cmd>call VSCodeNotify('revealFileInOS')<CR>
+
 " Unimpaired-like, treat VSCode tabs like buffers
 nnoremap ]b <Cmd>Tabnext<CR>
 nnoremap [b <Cmd>Tabprevious<CR>
