@@ -14,16 +14,10 @@ let mapleader = ' '
 nnoremap Y y$
 noremap <CR> :
 
-" Use alternative shortcuts for cut
-noremap <Leader>p p
-noremap <Leader>d d
-noremap <Leader>D D
-nnoremap <Leader>dd dd
-noremap <Leader>x x
-nnoremap <Leader>xx xx
-noremap <Leader>c c
-noremap <Leader>C C
-nnoremap <Leader>cc cc
+" Move operator
+noremap m d
+noremap M D
+nnoremap mm dd
 
 " Remap increase / decrease number shortucts to + and - signs
 nnoremap <C-=> <C-a>
