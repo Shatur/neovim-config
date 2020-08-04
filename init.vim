@@ -13,7 +13,6 @@ let g:did_install_default_menus = v:true
 let mapleader = ' '
 nnoremap Y y$
 noremap <CR> :
-noremap <Backspace> <Cmd>buffer #<CR>
 
 " Use alternative shortcuts for cut
 noremap <Leader>p p
@@ -127,6 +126,7 @@ inoremap <C-x> <Esc><Cmd>w<CR><Cmd>BDelete<CR>
 noremap <A-x> <Cmd>w<CR><Cmd>tabclose<CR>
 inoremap <A-x> <Esc><Cmd>w<CR><Cmd>tabclose<CR>
 noremap Q <Cmd>BDeleteOther<CR>
+noremap <Backspace> <Cmd>buffer #<CR>
 
 " Quickfix history navigation
 noremap ]h <Cmd>cnewer<CR>
