@@ -1,5 +1,7 @@
 scriptencoding utf-8
 
+set ignorecase
+set smartcase
 set clipboard=unnamedplus
 
 " Disable some built-in plugins
@@ -37,7 +39,7 @@ augroup vimrc
 augroup END
 
 if exists('g:vscode')
-  " All next settings only for Neovim
+  " VSCode do not need the next settings
   finish
 endif
 
@@ -50,8 +52,6 @@ set splitright
 set spelllang=en_us,ru_ru
 set mouse=a
 set number
-set ignorecase
-set smartcase
 set tabstop=4
 set shiftwidth=4
 set expandtab
