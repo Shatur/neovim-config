@@ -2,6 +2,8 @@ if !exists('g:vscode')
   finish
 endif
 
+filetype plugin off
+
 " Usually installed system-wide, so disable it by the parameter
 let g:loaded_fzf = v:false
 
