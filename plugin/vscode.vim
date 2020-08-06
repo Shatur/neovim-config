@@ -31,6 +31,9 @@ nnoremap <Leader>gp <Cmd>call VSCodeNotify('git.push')<CR>
 nnoremap <Leader>gP <Cmd>call VSCodeNotify('git.pullRebase')<CR>
 nnoremap <Leader>gd <Cmd>call VSCodeNotify('git.openChange')<CR>
 
+" Visual-Multi like
+nnoremap <A-m> i<Cmd>call VSCodeNotify('editor.action.addSelectionToNextFindMatch')<CR>
+
 " Tab control
 noremap Q <Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>
 nnoremap <C-x> <Cmd>call VSCodeCall('workbench.action.files.save')<CR><Cmd>Tabclose<CR>
