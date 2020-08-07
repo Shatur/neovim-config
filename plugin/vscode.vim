@@ -9,6 +9,7 @@ let g:loaded_fzf = v:false
 
 " GTFO-like
 nnoremap gof <Cmd>call VSCodeNotify('revealFileInOS')<CR>
+nnoremap got <Cmd>call VSCodeNotify('workbench.action.terminal.openNativeConsole')<CR>
 
 " Unimpaired-like, treat VSCode tabs like buffers
 nnoremap ]b <Cmd>Tabnext<CR>
