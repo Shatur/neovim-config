@@ -35,16 +35,21 @@ nnoremap <Leader>gd <Cmd>call VSCodeNotify('git.openChange')<CR>
 
 " Visual-Multi like
 nnoremap <A-m> i<Cmd>call VSCodeNotify('editor.action.addSelectionToNextFindMatch')<CR>
+vnoremap <A-m> <Esc>i<Cmd>call vimrc#vscode#CommandOnLastLesection('editor.action.addSelectionToNextFindMatch')<CR>
 
 " Tab control
 noremap Q <Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>
 nnoremap <C-x> <Cmd>call VSCodeCall('workbench.action.files.save')<CR><Cmd>Tabclose<CR>
 
 " Movement around wrapped lines
-nmap <expr> j v:count ? 'j' : 'gj'
-nmap <expr> k v:count ? 'k' : 'gk'
-nmap <expr> <Up> v:count ? '<Up>' : 'g<UP>'
-nmap <expr> <Down> v:count ? '<Down>' : 'g<Down>'
+nmap j gj
+nmap k gk
+
+" Remap default multicursors command to use m for move
+xunmap ma
+xunmap mi
+xunmap mA
+xunmap mI
 
 " Other
 nnoremap <Leader>z <Cmd>call VSCodeNotify('workbench.action.toggleZenMode')<CR>
