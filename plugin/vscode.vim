@@ -42,6 +42,12 @@ vnoremap <A-m> <Esc>i<Cmd>call vimrc#vscode#CommandOnLastLesection('editor.actio
 noremap Q <Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>
 nnoremap <C-x> <Cmd>call VSCodeCall('workbench.action.files.save')<CR><Cmd>Tabclose<CR>
 
+" Formatting
+nmap <A-i> <Cmd>call VSCodeNotify('editor.action.formatSelection')<CR>
+xmap <A-i> <Cmd>call vimrc#vscode#VisualModeCommand('editor.action.formatSelection')<CR>
+nnoremap == <Cmd>call VSCodeNotify('editor.action.reindentselectedlines')<CR>
+xnoremap = <Cmd>call vimrc#vscode#VisualModeCommand('editor.action.reindentselectedlines')<CR>
+
 " Movement around wrapped lines
 nmap j gj
 nmap k gk
