@@ -37,6 +37,8 @@ nnoremap <Leader>gd <Cmd>call VSCodeNotify('git.openChange')<CR>
 " Visual-Multi like
 nnoremap <A-m> i<Cmd>call VSCodeNotify('editor.action.addSelectionToNextFindMatch')<CR>
 vnoremap <A-m> <Esc>i<Cmd>call vimrc#vscode#CommandOnLastLesection('editor.action.addSelectionToNextFindMatch')<CR>
+nnoremap <C-Down> i<Cmd>call VSCodeNotify('editor.action.insertCursorBelow')<CR>
+nnoremap <C-Up> i<Cmd>call VSCodeNotify('editor.action.insertCursorAbove')<CR>
 
 " Tab control
 noremap Q <Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>
