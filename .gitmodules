@@ -1,6 +1,3 @@
-[submodule "pack/plugins/start/vim-cool"]
-	path = pack/plugins/start/vim-cool
-	url = git@github.com:romainl/vim-cool.git
 [submodule "pack/plugins/start/vim-eunuch"]
 	path = pack/plugins/start/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
@@ -127,3 +124,6 @@
 [submodule "pack/plugins/start/vim-yoink"]
 	path = pack/plugins/start/vim-yoink
 	url = git@github.com:svermeulen/vim-yoink.git
+[submodule "pack/plugins/opt/vim-cool"]
+	path = pack/plugins/opt/vim-cool
+	url = git@github.com:romainl/vim-cool.git

@@ -6,6 +6,7 @@ if exists('g:vscode')
   " For VSCode I use fixed version of EasyMotion
   packadd vscode-easymotion
 else
+  packadd vim-cool
   packadd vim-easymotion
   packadd vim-one
   packadd vim-cursorword

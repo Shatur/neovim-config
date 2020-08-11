@@ -48,6 +48,14 @@ xmap <A-i> <Cmd>call vimrc#vscode#VisualModeCommand('editor.action.formatSelecti
 nnoremap == <Cmd>call VSCodeNotify('editor.action.reindentselectedlines')<CR>
 xnoremap = <Cmd>call vimrc#vscode#VisualModeCommand('editor.action.reindentselectedlines')<CR>
 
+" Use built-in search engine
+" Open insert mode to handle it correctly
+nnoremap / i<Cmd>call VSCodeNotify('actions.find')<CR>
+nnoremap ? i<Cmd>call VSCodeNotify('actions.find')<CR>
+nnoremap * i<Cmd>call VSCodeNotify('actions.find')<CR>
+xnoremap / <Cmd>call vimrc#vscode#VisualModeCommand('actions.find')<CR>
+xnoremap ? <Cmd>call vimrc#vscode#VisualModeCommand('actions.find')<CR>
+
 " Movement around wrapped lines
 nmap j gj
 nmap k gk
