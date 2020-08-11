@@ -16,6 +16,7 @@ else
   packadd pear-tree
   packadd neoformat
   packadd fzf.vim
+  packadd vim-visual-star-search
 
   if !exists('g:started_by_firenvim')
     packadd nerdfont.vim

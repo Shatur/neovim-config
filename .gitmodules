@@ -127,3 +127,6 @@
 [submodule "pack/plugins/opt/vim-cool"]
 	path = pack/plugins/opt/vim-cool
 	url = git@github.com:romainl/vim-cool.git
+[submodule "pack/plugins/opt/vim-visual-star-search"]
+	path = pack/plugins/opt/vim-visual-star-search
+	url = git@github.com:bronson/vim-visual-star-search.git
