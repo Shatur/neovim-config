@@ -35,7 +35,7 @@ nnoremap <Leader>gd <Cmd>call VSCodeNotify('git.openChange')<CR>
 
 " Visual-Multi like
 nnoremap <A-m> i<Cmd>call VSCodeNotify('editor.action.addSelectionToNextFindMatch')<CR>
-vnoremap <A-m> <Esc>i<Cmd>call vimrc#vscode#CommandOnLastLesection('editor.action.addSelectionToNextFindMatch')<CR>
+vnoremap <A-m> <Esc>i<Cmd>lua require'vscode'.command_on_last_selection('editor.action.addSelectionToNextFindMatch')<CR>
 nnoremap <C-Down> i<Cmd>call VSCodeNotify('editor.action.insertCursorBelow')<CR>
 nnoremap <C-Up> i<Cmd>call VSCodeNotify('editor.action.insertCursorAbove')<CR>
 
@@ -44,17 +44,17 @@ noremap Q <Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>
 nnoremap <C-x> <Cmd>call VSCodeCall('workbench.action.files.save')<CR><Cmd>Tabclose<CR>
 
 " Formatting
-xmap <A-i> <Cmd>call vimrc#vscode#VisualModeCommand('editor.action.formatSelection')<CR>
+xmap <A-i> <Cmd>lua require'vscode'.visual_mode_command('editor.action.formatSelection')<CR>
 nnoremap == <Cmd>call VSCodeNotify('editor.action.reindentselectedlines')<CR>
-xnoremap = <Cmd>call vimrc#vscode#VisualModeCommand('editor.action.reindentselectedlines')<CR>
+xnoremap = <Cmd>lua require'vscode'.visual_mode_command('editor.action.reindentselectedlines')<CR>
 
 " Use built-in search engine
 " Open insert mode to handle it correctly
 nnoremap / i<Cmd>call VSCodeNotify('actions.find')<CR>
 nnoremap ? i<Cmd>call VSCodeNotify('actions.find')<CR>
 nnoremap * i<Cmd>call VSCodeNotify('actions.find')<CR>
-xnoremap / <Cmd>call vimrc#vscode#VisualModeCommand('actions.find')<CR>
-xnoremap ? <Cmd>call vimrc#vscode#VisualModeCommand('actions.find')<CR>
+xnoremap / <Cmd>lua require'vscode'.visual_mode_command('actions.find')<CR>
+xnoremap ? <Cmd>lua require'vscode'.visual_mode_command('actions.find')<CR>
 
 " Movement around wrapped lines
 nmap j gj
