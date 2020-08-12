@@ -55,6 +55,8 @@ nnoremap ? i<Cmd>call VSCodeNotify('actions.find')<CR>
 nnoremap * i<Cmd>call VSCodeNotify('actions.find')<CR>
 xnoremap / <Cmd>lua require'vscode'.visual_mode_command('actions.find')<CR>
 xnoremap ? <Cmd>lua require'vscode'.visual_mode_command('actions.find')<CR>
+nnoremap n i<Cmd>call VSCodeNotify('editor.action.nextMatchFindAction')<CR>
+nnoremap N i<Cmd>call VSCodeNotify('editor.action.previousMatchFindAction')<CR>
 
 " Movement around wrapped lines
 nmap j gj
