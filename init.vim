@@ -46,6 +46,7 @@ endif
 " General
 set title
 set titlestring=%F
+set cursorline
 set lazyredraw
 set linebreak
 set splitright
