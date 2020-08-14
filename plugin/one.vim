@@ -9,3 +9,5 @@ colorscheme one
 call one#highlight('DiffRemoved', '', 'bg', '')
 call one#highlight('DiffAdded', '', 'bg', '')
 call one#highlight('Constant', '56b6c2', '', '')
+
+highlight default GlyphPalette8 guifg=#ebca8d
