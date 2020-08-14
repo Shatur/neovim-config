@@ -50,13 +50,12 @@ xnoremap = <Cmd>lua require'vscode'.visual_mode_command('editor.action.reindents
 
 " Use built-in search engine
 " Open insert mode to handle it correctly
-nnoremap / i<Cmd>call VSCodeNotify('actions.find')<CR>
-nnoremap ? i<Cmd>call VSCodeNotify('actions.find')<CR>
-nnoremap * i<Cmd>call VSCodeNotify('actions.find')<CR>
-xnoremap / <Cmd>lua require'vscode'.visual_mode_command('actions.find')<CR>
-xnoremap ? <Cmd>lua require'vscode'.visual_mode_command('actions.find')<CR>
-nnoremap n i<Cmd>call VSCodeNotify('editor.action.nextMatchFindAction')<CR>
-nnoremap N i<Cmd>call VSCodeNotify('editor.action.previousMatchFindAction')<CR>
+noremap / i<Cmd>call VSCodeNotify('actions.find')<CR>
+noremap ? i<Cmd>call VSCodeNotify('actions.find')<CR>
+nnoremap * i<Cmd>call VSCodeNotify('editor.action.nextMatchFindAction')<CR><Cmd>call VSCodeNotify('actions.find')<CR>
+xnoremap * <Esc>i<Cmd>lua require'vscode'.command_on_last_selection('editor.action.nextMatchFindAction')<CR><Cmd>call VSCodeNotify('actions.find')<CR>
+nnoremap n i<Cmd>call VSCodeNotify('editor.action.nextMatchFindAction')<CR><Cmd>call VSCodeNotify('actions.find')<CR>
+nnoremap N i<Cmd>call VSCodeNotify('editor.action.previousMatchFindAction')<CR><Cmd>call VSCodeNotify('actions.find')<CR>
 
 " Movement around wrapped lines
 nmap j gj
