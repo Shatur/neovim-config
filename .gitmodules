@@ -1,6 +1,3 @@
-[submodule "pack/plugins/start/vim-eunuch"]
-	path = pack/plugins/start/vim-eunuch
-	url = git@github.com:tpope/vim-eunuch.git
 [submodule "pack/plugins/start/vim-sandwich"]
 	path = pack/plugins/start/vim-sandwich
 	url = git@github.com:machakann/vim-sandwich.git
@@ -130,3 +127,6 @@
 [submodule "pack/plugins/opt/vim-visual-star-search"]
 	path = pack/plugins/opt/vim-visual-star-search
 	url = git@github.com:bronson/vim-visual-star-search.git
+[submodule "pack/plugins/opt/vim-eunuch"]
+	path = pack/plugins/opt/vim-eunuch
+	url = git@github.com:tpope/vim-eunuch.git
