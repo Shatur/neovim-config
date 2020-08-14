@@ -57,6 +57,9 @@ xnoremap * <Esc>i<Cmd>lua require'vscode'.command_on_last_selection('editor.acti
 nnoremap n i<Cmd>call VSCodeNotify('editor.action.nextMatchFindAction')<CR><Cmd>call VSCodeNotify('actions.find')<CR>
 nnoremap N i<Cmd>call VSCodeNotify('editor.action.previousMatchFindAction')<CR><Cmd>call VSCodeNotify('actions.find')<CR>
 
+" LSP
+noremap gf i<Cmd>call VSCodeNotify('references-view.find')<CR>
+
 " Movement around wrapped lines
 nmap j gj
 nmap k gk
