@@ -60,10 +60,6 @@ nnoremap N i<Cmd>call VSCodeNotify('editor.action.previousMatchFindAction')<CR><
 " LSP
 noremap gf i<Cmd>call VSCodeNotify('references-view.find')<CR>
 
-" Movement around wrapped lines
-nmap j gj
-nmap k gk
-
 " Remap default multicursors command to use m for move
 xunmap ma
 xunmap mi
