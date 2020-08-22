@@ -89,6 +89,18 @@ command! BDelete lua require'buffers'.close_current_buffer()
 " Delete all buffers except the current one
 command! BDeleteOther lua require'buffers'.close_other_buffers()
 
+" Open folder in system explorer
+command! -complete=dir -nargs=* Explorer lua require'gtfo'.open_explorer(vim.fn.expand('<args>'))
+
+" Open folder in system terminal
+command! -complete=dir -nargs=* Terminal lua require'gtfo'.open_terminal(vim.fn.expand('<args>'))
+
+" Open current file folder
+noremap got <Cmd>lua require'gtfo'.open_terminal(vim.fn.expand('%:h'))<CR>
+noremap goT <Cmd>lua require'gtfo'.open_terminal()<CR>
+noremap gof <Cmd>lua require'gtfo'.open_explorer(vim.fn.expand('%:h'))<CR>
+noremap goF <Cmd>lua require'gtfo'.open_explorer()<CR>
+
 " Movement around wrapped lines
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'

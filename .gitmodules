@@ -49,9 +49,6 @@
 [submodule "pack/plugins/opt/vim-lastplace"]
 	path = pack/plugins/opt/vim-lastplace
 	url = git@github.com:farmergreg/vim-lastplace.git
-[submodule "pack/plugins/opt/vim-gtfo"]
-	path = pack/plugins/opt/vim-gtfo
-	url = git@github.com:justinmk/vim-gtfo.git
 [submodule "pack/plugins/opt/vim-gitgutter"]
 	path = pack/plugins/opt/vim-gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
