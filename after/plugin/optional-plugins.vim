@@ -12,6 +12,7 @@ else
   packadd vim-cursorword
   packadd vim-visual-multi
   packadd vim-commentary
+  packadd open-browser.vim
   packadd scroll.vim
   packadd pear-tree
   packadd neoformat
@@ -31,6 +32,7 @@ else
     packadd vim-gitgutter
     packadd vim-fugitive
     packadd vim-flog
+    packadd open-browser-github.vim
     packadd quickfix-reflector.vim
     packadd lightline.vim
     packadd lightline-bufferline

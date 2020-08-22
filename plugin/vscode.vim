@@ -11,6 +11,9 @@ let g:loaded_fzf = v:false
 nnoremap gof <Cmd>call VSCodeNotify('revealFileInOS')<CR>
 nnoremap got <Cmd>call VSCodeNotify('workbench.action.terminal.openNativeConsole')<CR>
 
+" Open-browser-like
+nnoremap gx <Cmd>call VSCodeNotify('editor.action.openLink')<CR>
+
 " Unimpaired-like, treat VSCode tabs like buffers
 nnoremap ]b <Cmd>Tabnext<CR>
 nnoremap [b <Cmd>Tabprevious<CR>
@@ -33,7 +36,7 @@ nnoremap <Leader>gp <Cmd>call VSCodeNotify('git.push')<CR>
 nnoremap <Leader>gP <Cmd>call VSCodeNotify('git.pullRebase')<CR>
 nnoremap <Leader>gd <Cmd>call VSCodeNotify('git.openChange')<CR>
 
-" Visual-Multi like
+" Visual-Multi-like
 nnoremap <A-m> i<Cmd>call VSCodeNotify('editor.action.addSelectionToNextFindMatch')<CR>
 vnoremap <A-m> <Esc>i<Cmd>lua require'vscode'.command_on_last_selection('editor.action.addSelectionToNextFindMatch')<CR>
 nnoremap <C-Down> i<Cmd>call VSCodeNotify('editor.action.insertCursorBelow')<CR>

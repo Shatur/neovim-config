@@ -130,3 +130,9 @@
 [submodule "pack/plugins/opt/vim-eunuch"]
 	path = pack/plugins/opt/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
+[submodule "pack/plugins/opt/open-browser.vim"]
+	path = pack/plugins/opt/open-browser.vim
+	url = git@github.com:tyru/open-browser.vim.git
+[submodule "pack/plugins/opt/open-browser-github.vim"]
+	path = pack/plugins/opt/open-browser-github.vim
+	url = git@github.com:tyru/open-browser-github.vim.git
