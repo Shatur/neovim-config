@@ -12,7 +12,7 @@ nmap <buffer> cc <Plug>(fern-action-clipboard-move)
 nmap <buffer> cw <Plug>(fern-action-move)
 nmap <buffer> dd <Plug>(fern-action-trash)
 nmap <buffer> h <Plug>(fern-action-collapse)
-nmap <buffer> m <Plug>(fern-action-mark-toggle)j
+nmap <buffer><nowait> m <Plug>(fern-action-mark-toggle)j
 nmap <buffer> o <Plug>(fern-action-open:system)
 nmap <buffer> p <Plug>(fern-action-clipboard-paste)
 nmap <buffer> yy <Plug>(fern-action-clipboard-copy)
