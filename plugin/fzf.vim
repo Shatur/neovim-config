@@ -18,7 +18,6 @@ else
   noremap <C-_> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
   inoremap <C-_> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
 endif
-noremap <A-l> <Cmd>SwitchToNormalBuffer<CR><Cmd>BLines<CR>
 noremap <C-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>Files<CR>
 noremap <A-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>History<CR>
 noremap <A-s> <Cmd>Maps<CR>
