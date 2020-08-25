@@ -19,9 +19,9 @@ nnoremap ]b <Cmd>Tabnext<CR>
 nnoremap [b <Cmd>Tabprevious<CR>
 
 " Commentary-like
-xmap gc  <Plug>VSCodeCommentary
-nmap gc  <Plug>VSCodeCommentary
-omap gc  <Plug>VSCodeCommentary
+xmap gc <Plug>VSCodeCommentary
+nmap gc <Plug>VSCodeCommentary
+omap gc <Plug>VSCodeCommentary
 nmap gcc <Plug>VSCodeCommentaryLine
 
 " GitGutter-like
