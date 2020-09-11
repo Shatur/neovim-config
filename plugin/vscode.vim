@@ -75,5 +75,4 @@ xunmap mI
 
 " Other
 nnoremap <Leader>z <Cmd>call VSCodeNotify('workbench.action.toggleZenMode')<CR>
-nnoremap K <Cmd>call VSCodeNotify('editor.action.showHover')<CR>
 nnoremap z= <Cmd>call VSCodeNotify('editor.action.quickFix')<CR>
