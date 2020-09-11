@@ -62,6 +62,7 @@ nnoremap N i<Cmd>call VSCodeNotify('editor.action.previousMatchFindAction')<CR><
 
 " LSP
 noremap gf i<Cmd>call VSCodeNotify('references-view.find')<CR>
+noremap gs <Cmd>call VSCodeNotify('workbench.action.showAllSymbols')<CR>
 
 " Movement around wrapped lines
 nmap j gj
