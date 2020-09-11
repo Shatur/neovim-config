@@ -46,8 +46,7 @@ nnoremap <C-Up> i<Cmd>call VSCodeNotify('editor.action.insertCursorAbove')<CR>
 noremap Q <Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>
 nnoremap <C-x> <Cmd>call VSCodeCall('workbench.action.files.save')<CR><Cmd>Tabclose<CR>
 
-" Formatting
-xmap <A-i> <Cmd>lua require'vscode'.visual_mode_command('editor.action.formatSelection')<CR>
+" Use == for reindent instead of LSP formatting
 nnoremap == <Cmd>call VSCodeNotify('editor.action.reindentselectedlines')<CR>
 xnoremap = <Cmd>lua require'vscode'.visual_mode_command('editor.action.reindentselectedlines')<CR>
 
