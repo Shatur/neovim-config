@@ -50,15 +50,6 @@ nnoremap <C-x> <Cmd>call VSCodeCall('workbench.action.files.save')<CR><Cmd>Tabcl
 nnoremap == <Cmd>call VSCodeNotify('editor.action.reindentselectedlines')<CR>
 xnoremap = <Cmd>lua require'vscode'.visual_mode_command('editor.action.reindentselectedlines')<CR>
 
-" Use built-in search engine
-" Open insert mode to handle it correctly
-noremap / i<Cmd>call VSCodeNotify('actions.find')<CR>
-noremap ? i<Cmd>call VSCodeNotify('actions.find')<CR>
-nnoremap * i<Cmd>call VSCodeNotify('editor.action.nextMatchFindAction')<CR><Cmd>call VSCodeNotify('actions.find')<CR>
-xnoremap * <Esc>i<Cmd>lua require'vscode'.command_on_last_selection('editor.action.nextMatchFindAction')<CR><Cmd>call VSCodeNotify('actions.find')<CR>
-nnoremap n i<Cmd>call VSCodeNotify('editor.action.nextMatchFindAction')<CR><Cmd>call VSCodeNotify('actions.find')<CR>
-nnoremap N i<Cmd>call VSCodeNotify('editor.action.previousMatchFindAction')<CR><Cmd>call VSCodeNotify('actions.find')<CR>
-
 " LSP
 noremap gf i<Cmd>call VSCodeNotify('references-view.find')<CR>
 noremap gs <Cmd>call VSCodeNotify('workbench.action.showAllSymbols')<CR>
