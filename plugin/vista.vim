@@ -4,5 +4,5 @@ endif
 
 let g:vista_echo_cursor = v:false
 
-nnoremap <C-t> <Cmd>SwitchToNormalBuffer<CR><Cmd>Vista finder<CR>
+nnoremap gO <Cmd>SwitchToNormalBuffer<CR><Cmd>Vista finder<CR>
 nnoremap <A-v> <Cmd>SwitchToNormalBuffer<CR><Cmd>Vista!!<CR>
