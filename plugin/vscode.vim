@@ -32,8 +32,6 @@ nnoremap ghu <Cmd>call VSCodeNotify('git.unstageSelectedRanges')<CR>
 nnoremap ghr <Cmd>call VSCodeNotify('git.revertSelectedRanges')<CR>
 
 " Fugitive-like
-nnoremap <Leader>gp <Cmd>call VSCodeNotify('git.push')<CR>
-nnoremap <Leader>gP <Cmd>call VSCodeNotify('git.pullRebase')<CR>
 nnoremap <Leader>gd <Cmd>call VSCodeNotify('git.openChange')<CR>
 
 " Visual-Multi-like

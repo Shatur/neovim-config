@@ -8,5 +8,5 @@ noremap <A--> <Cmd>call asyncrun#quickfix_toggle(10)<CR>
 inoremap <A--> <Esc><Cmd>call asyncrun#quickfix_toggle(10)<CR>
 noremap <C-BS> <Cmd>AsyncStop<CR>
 inoremap <C-BS> <Esc><Cmd>AsyncStop<CR>
-nnoremap <Leader>gP <Cmd>call asyncrun#run('', {}, 'git pull --rebase')<CR>
+nnoremap <A-y> <Cmd>call asyncrun#run('', {}, 'git pull --rebase')<CR>
 noremap <Leader>rcd <Cmd>execute 'cd ' . asyncrun#get_root('%')<CR>
