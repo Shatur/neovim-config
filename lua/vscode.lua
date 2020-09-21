@@ -11,7 +11,7 @@ function M.command_on_last_selection(command)
 end
 
 function M.visual_mode_command(command)
-  if vim.fn.visualmode() == 'V' then
+  if vim.fn.mode() == 'V' then
     local startLine = vim.fn.line('v')
     local endLine = vim.fn.line('.')
     vim.fn.VSCodeNotifyRange(command, startLine, endLine, 1)
