@@ -40,6 +40,12 @@ vnoremap <A-m> <Esc>i<Cmd>lua require'vscode'.command_on_last_selection('editor.
 nnoremap <C-Down> i<Cmd>call VSCodeNotify('editor.action.insertCursorBelow')<CR>
 nnoremap <C-Up> i<Cmd>call VSCodeNotify('editor.action.insertCursorAbove')<CR>
 
+" Diagnostic jumping
+nnoremap [w <Cmd>call VSCodeNotify('editor.action.marker.prev')<CR>
+nnoremap ]w <Cmd>call VSCodeNotify('editor.action.marker.next')<CR>
+nnoremap [W <Cmd>call VSCodeNotify('editor.action.marker.prevInFiles')<CR>
+nnoremap ]W <Cmd>call VSCodeNotify('editor.action.marker.nextInFiles')<CR>
+
 " Tab control
 noremap Q <Cmd>call VSCodeNotify('workbench.action.closeOtherEditors')<CR>
 nnoremap <C-x> <Cmd>call VSCodeCall('workbench.action.files.save')<CR><Cmd>Tabclose<CR>
