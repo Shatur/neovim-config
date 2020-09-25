@@ -115,9 +115,6 @@
 [submodule "pack/plugins/start/vim-move"]
 	path = pack/plugins/start/vim-move
 	url = git@github.com:matze/vim-move.git
-[submodule "pack/plugins/start/vim-yoink"]
-	path = pack/plugins/start/vim-yoink
-	url = git@github.com:svermeulen/vim-yoink.git
 [submodule "pack/plugins/opt/vim-cool"]
 	path = pack/plugins/opt/vim-cool
 	url = git@github.com:romainl/vim-cool.git
