@@ -57,7 +57,7 @@ xnoremap = <Cmd>lua require'vscode'.visual_mode_command('editor.action.reindents
 xnoremap <A-=> <Cmd>lua require'vscode'.visual_mode_command('editor.action.formatSelection')<CR>
 
 " LSP
-noremap gf i<Cmd>call VSCodeNotify('references-view.find')<CR>
+noremap gh i<Cmd>call VSCodeNotify('references-view.find')<CR>
 noremap gs <Cmd>call VSCodeNotify('workbench.action.showAllSymbols')<CR>
 
 " Movement around wrapped lines
