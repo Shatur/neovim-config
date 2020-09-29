@@ -52,7 +52,9 @@ nnoremap <C-x> <Cmd>call VSCodeCall('workbench.action.files.save')<CR><Cmd>Tabcl
 
 " Use == for reindent instead of LSP formatting
 nnoremap == <Cmd>call VSCodeNotify('editor.action.reindentselectedlines')<CR>
+nnoremap <A-=> <Cmd>call VSCodeNotify('editor.action.formatSelection')<CR>
 xnoremap = <Cmd>lua require'vscode'.visual_mode_command('editor.action.reindentselectedlines')<CR>
+xnoremap <A-=> <Cmd>lua require'vscode'.visual_mode_command('editor.action.formatSelection')<CR>
 
 " LSP
 noremap gf i<Cmd>call VSCodeNotify('references-view.find')<CR>
