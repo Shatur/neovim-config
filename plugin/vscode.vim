@@ -27,9 +27,9 @@ nmap gcc <Plug>VSCodeCommentaryLine
 " GitGutter-like
 nnoremap ]c <Cmd>call VSCodeNotify('workbench.action.editor.nextChange')<CR>
 nnoremap [c <Cmd>call VSCodeNotify('workbench.action.editor.previousChange')<CR>
-nnoremap ghs <Cmd>call VSCodeNotify('git.stageSelectedRanges')<CR>
-nnoremap ghu <Cmd>call VSCodeNotify('git.unstageSelectedRanges')<CR>
-nnoremap ghr <Cmd>call VSCodeNotify('git.revertSelectedRanges')<CR>
+nnoremap <Leader>hs <Cmd>call VSCodeNotify('git.stageSelectedRanges')<CR>
+nnoremap <Leader>hu <Cmd>call VSCodeNotify('git.unstageSelectedRanges')<CR>
+nnoremap <Leader>hr <Cmd>call VSCodeNotify('git.revertSelectedRanges')<CR>
 
 " Fugitive-like
 nnoremap <Leader>gd <Cmd>call VSCodeNotify('git.openChange')<CR>
