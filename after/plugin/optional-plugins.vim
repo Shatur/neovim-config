@@ -20,6 +20,7 @@ else
   packadd vim-visual-star-search
 
   if !exists('g:started_by_firenvim')
+    packadd conflict-marker.vim
     packadd nerdfont.vim
     packadd glyph-palette.vim
     packadd vista.vim

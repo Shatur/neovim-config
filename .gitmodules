@@ -127,3 +127,6 @@
 [submodule "pack/plugins/opt/open-browser-github.vim"]
 	path = pack/plugins/opt/open-browser-github.vim
 	url = git@github.com:tyru/open-browser-github.vim.git
+[submodule "pack/plugins/opt/conflict-marker.vim"]
+	path = pack/plugins/opt/conflict-marker.vim
+	url = git@github.com:rhysd/conflict-marker.vim.git
