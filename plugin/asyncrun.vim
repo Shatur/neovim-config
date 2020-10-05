@@ -1,5 +1,5 @@
 " Fugitive integration
-command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
+command! -bang -nargs=* -complete=file Make AsyncRun<bang> -auto=make -program=make -strip <args>
 
 let g:asyncrun_open = 10
 let g:asyncrun_rootmarks = ['.git', '.compile_commands.json']

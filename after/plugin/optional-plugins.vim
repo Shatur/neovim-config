@@ -6,6 +6,8 @@ if exists('g:vscode')
   " For VSCode I use fixed version of EasyMotion
   packadd vscode-easymotion
 else
+  packadd asyncrun.vim
+  packadd vim-langtool
   packadd vim-cool
   packadd vim-easymotion
   packadd vim-one
@@ -40,6 +42,5 @@ else
     packadd fzf-checkout.vim
     packadd fern.vim
     packadd fern-renderer-nerdfont.vim
-    packadd asyncrun.vim
   endif
 endif
