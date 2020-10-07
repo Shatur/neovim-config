@@ -15,6 +15,7 @@ end
 function M.is_special_buffer()
   return vim.bo.filetype == 'fern' or
     vim.bo.filetype == 'fugitive' or
+    vim.bo.filetype == 'fugitiveblame' or
     vim.bo.filetype == 'gitrebase' or
     vim.bo.filetype == 'gitcommit' or
     vim.bo.filetype == 'help' or
