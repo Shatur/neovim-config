@@ -8,14 +8,20 @@ function! StartifyEntryFormat() abort
   return 'nerdfont#find(absolute_path) .. " " .. entry_path'
 endfunction
 
+function! s:GetRecentCMakeLists() abort
+  let files = filter(copy(v:oldfiles), 'v:val =~# "CMakeLists\.txt$" && v:val !~# "^file://.*"')
+  return map(files, '{"line": fnamemodify(v:val, ":."), "path": v:val}')
+endfunction
+
 let g:startify_custom_header = []
+let g:startify_change_cmd = 'cd'
 
 let g:startify_lists = [
-      \ { 'type': 'bookmarks', 'header': ['   Закладки'] },
-      \ { 'type': 'files',     'header': ['   Последние файлы'] },
-      \ { 'type': 'dir',       'header': ['   Текущая папка '. getcwd()] },
-      \ { 'type': 'sessions',  'header': ['   Сессии'] },
-      \ { 'type': 'commands',  'header': ['   Команды'] },
+      \ { 'header': ['   Закладки'], 'type': 'bookmarks' },
+      \ { 'header': ['   Последние файлы'], 'type': 'files' },
+      \ { 'header': ['   CMakeLists.txt'], 'type': function('s:GetRecentCMakeLists') },
+      \ { 'header': ['   Сессии'], 'type': 'sessions' },
+      \ { 'header': ['   Команды'], 'type': 'commands' },
       \ ]
 
 let g:startify_skiplist = [
