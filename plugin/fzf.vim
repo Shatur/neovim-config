@@ -13,11 +13,13 @@ command! Packages call vimrc#fzf#Packages()
 
 if has('win32')
   noremap <C-/> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
-  inoremap <C-/> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
+  inoremap <C-/> <Cmd>SwitchToNormalBuffer<CR><Esc>:Find ''<Left>
 else
   noremap <C-_> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
-  inoremap <C-_> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
+  inoremap <C-_> <Cmd>SwitchToNormalBuffer<CR><Esc>:Find ''<Left>
 endif
+noremap <A-/> <Cmd>SwitchToNormalBuffer<CR><Cmd>BLines<CR>
+inoremap <A-/> <Cmd>SwitchToNormalBuffer<CR><Cmd>BLines<CR>
 noremap <C-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>Files<CR>
 noremap <A-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>History<CR>
 noremap <A-s> <Cmd>Maps<CR>
