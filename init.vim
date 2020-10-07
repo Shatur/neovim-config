@@ -63,6 +63,7 @@ set whichwrap+=h,l,<,>,[,] " Wrap movement between lines in edit mode
 set pumheight=10
 set wildmode=longest:full,full
 set termguicolors
+set winblend=20
 
 " Fonts
 if has('win32')
