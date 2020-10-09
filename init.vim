@@ -158,5 +158,13 @@ tnoremap <C-v> <C-\><C-N>pi
 inoremap <S-Left> <Esc>vb
 inoremap <S-Right> <Esc>ve
 
+" Cmdline shortcuts
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <A-b> <C-Left>
+cnoremap <A-f> <C-Right>
+cnoremap <C-k> <C-\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>
+cnoremap <C-l> <C-\>e('')<CR>
+
 " Other
 noremap <Leader>cd <Cmd>cd %:h<CR>
