@@ -12,14 +12,14 @@ command! Spell call vimrc#fzf#Spell()
 command! Packages call vimrc#fzf#Packages()
 
 if has('win32')
-  noremap <C-/> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
-  inoremap <C-/> <Cmd>SwitchToNormalBuffer<CR><Esc>:Find ''<Left>
+  noremap <C-/> <Cmd>SwitchToNormalBuffer<CR><Cmd>BLines<CR>
+  inoremap <C-/> <Cmd>SwitchToNormalBuffer<CR><Esc><Cmd>BLines<CR>
 else
-  noremap <C-_> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
-  inoremap <C-_> <Cmd>SwitchToNormalBuffer<CR><Esc>:Find ''<Left>
+  noremap <C-_> <Cmd>SwitchToNormalBuffer<CR><Cmd>BLines<CR>
+  inoremap <C-_> <Cmd>SwitchToNormalBuffer<CR><Esc><Cmd>BLines<CR>
 endif
-noremap <A-/> <Cmd>SwitchToNormalBuffer<CR><Cmd>BLines<CR>
-inoremap <A-/> <Cmd>SwitchToNormalBuffer<CR><Cmd>BLines<CR>
+noremap <A-/> <Cmd>SwitchToNormalBuffer<CR>:Find ''<Left>
+inoremap <A-/> <Cmd>SwitchToNormalBuffer<CR><Esc>:Find ''<Left>
 noremap <C-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>Files<CR>
 noremap <A-p> <Cmd>SwitchToNormalBuffer<CR><Cmd>History<CR>
 noremap <A-s> <Cmd>Maps<CR>
