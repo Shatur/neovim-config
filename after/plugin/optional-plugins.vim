@@ -42,5 +42,6 @@ else
     packadd fzf-checkout.vim
     packadd fern.vim
     packadd fern-renderer-nerdfont.vim
+    packadd fern-hijack.vim 
   endif
 endif

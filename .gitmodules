@@ -133,3 +133,6 @@
 [submodule "pack/plugins/opt/vim-langtool"]
 	path = pack/plugins/opt/vim-langtool
 	url = git@github.com:Konfekt/vim-langtool.git
+[submodule "pack/plugins/opt/fern-hijack.vim"]
+	path = pack/plugins/opt/fern-hijack.vim
+	url = git@github.com:lambdalisue/fern-hijack.vim.git
