@@ -13,16 +13,10 @@ function M.switch_to_normal_buffer()
 end
 
 function M.is_special_buffer()
-  return vim.bo.filetype == 'fern' or
-    vim.bo.filetype == 'fugitive' or
-    vim.bo.filetype == 'fugitiveblame' or
+  return not vim.api.nvim_buf_get_option(0, 'modifiable') or
     vim.bo.filetype == 'gitrebase' or
     vim.bo.filetype == 'gitcommit' or
-    vim.bo.filetype == 'help' or
-    vim.bo.filetype == 'qf' or
-    vim.bo.filetype == 'startuptime' or
-    vim.bo.filetype == 'vista' or
-    vim.bo.filetype == 'vista_markdown'
+    vim.bo.filetype == 'qf'
 end
 
 function M.close_current_buffer()
@@ -45,7 +39,7 @@ function M.close_other_buffers()
   local buffers_info = vim.fn.getbufinfo()
   for _, buffer in ipairs(buffers_info) do
     local bufnr = buffer['bufnr']
-    if bufnr ~= current_bufnr then
+    if bufnr ~= current_bufnr and not vim.api.nvim_buf_get_option(0, 'modified') then
       vim.api.nvim_command('bdelete ' .. bufnr)
     end
   end
