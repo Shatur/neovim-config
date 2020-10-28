@@ -17,10 +17,10 @@ function M.open_terminal(path)
   if path == nil then
     return
   end
-  if vim.fn.has('unix') then
+  if vim.fn.has('unix') == 1 then
     vim.fn.system('konsole --separate --workdir ' .. vim.fn.shellescape(path) .. ' &')
   else
-    vim.fn.system('powershell -NoLogo -NoExit -Command ' .. vim.fn.shellescape(path))
+    vim.fn.system('start /D "' .. vim.fn.shellescape(path) .. '" powershell')
   end
 end
 
@@ -29,7 +29,7 @@ function M.open_explorer(path)
   if path == nil then
     return
   end
-  if vim.fn.has('unix') then
+  if vim.fn.has('unix') == 1 then
     vim.fn.system('xdg-open ' .. vim.fn.shellescape(path))
   else
     vim.fn.system('explorer ' .. vim.fn.shellescape(path))
