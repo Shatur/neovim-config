@@ -58,9 +58,6 @@
 [submodule "pack/plugins/opt/pear-tree"]
 	path = pack/plugins/opt/pear-tree
 	url = git@github.com:tmsvg/pear-tree.git
-[submodule "pack/plugins/opt/neoformat"]
-	path = pack/plugins/opt/neoformat
-	url = git@github.com:sbdchd/neoformat.git
 [submodule "pack/plugins/opt/lightline.vim"]
 	path = pack/plugins/opt/lightline.vim
 	url = git@github.com:itchyny/lightline.vim.git

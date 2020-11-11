@@ -17,7 +17,6 @@ else
   packadd open-browser.vim
   packadd scroll.vim
   packadd pear-tree
-  packadd neoformat
   packadd fzf.vim
   packadd vim-visual-star-search
 
