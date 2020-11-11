@@ -25,9 +25,6 @@
 [submodule "pack/plugins/start/vim-cutlass"]
 	path = pack/plugins/start/vim-cutlass
 	url = git@github.com:svermeulen/vim-cutlass.git
-[submodule "pack/plugins/opt/vista.vim"]
-	path = pack/plugins/opt/vista.vim
-	url = git@github.com:liuchengxu/vista.vim.git
 [submodule "pack/plugins/opt/vim-visual-multi"]
 	path = pack/plugins/opt/vim-visual-multi
 	url = git@github.com:mg979/vim-visual-multi.git

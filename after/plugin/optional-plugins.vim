@@ -25,7 +25,6 @@ else
     packadd conflict-marker.vim
     packadd nerdfont.vim
     packadd glyph-palette.vim
-    packadd vista.vim
     packadd vim-eunuch
     packadd vim-terminal-help
     packadd vim-startify
