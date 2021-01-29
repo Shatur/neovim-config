@@ -80,12 +80,6 @@ vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
 -- Used to prevent opening new buffers in a small buffers
 vim.cmd("command! SwitchToNormalBuffer lua require'buffers'.switch_to_normal_buffer()")
 
--- Delete buffer with saving the current layout (except special buffers)
-vim.cmd("command! BDelete lua require'buffers'.close_current_buffer()")
-
--- Delete all buffers except the current one
-vim.cmd("command! BDeleteOther lua require'buffers'.close_other_buffers()")
-
 -- Open folder in system explorer
 vim.cmd("command! -complete=dir -nargs=* Explorer lua require'gtfo'.open_explorer(vim.fn.expand('<args>'))")
 
@@ -120,25 +114,9 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true })
 
--- Buffer / tab control
-vim.api.nvim_set_keymap('', '<C-q>', '<Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-q>', '<Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<C-x>', '<Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-x>', '<Esc><Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-x>', '<Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-x>', '<Esc><Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', 'Q', '<Cmd>BDeleteOther<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<Backspace>', '<Cmd>buffer #<CR>', { noremap = true })
-
 -- Quickfix history navigation
 vim.api.nvim_set_keymap('', ']h', '<Cmd>cnewer<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '[h', '<Cmd>colder<CR>', { noremap = true })
-
--- Buffer navigation
-vim.api.nvim_set_keymap('', ']b', '<Cmd>SwitchToNormalBuffer<CR><Cmd>bnext<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '[b', '<Cmd>SwitchToNormalBuffer<CR><Cmd>bprevious<CR>', { noremap = true })
 
 -- Git diffs
 vim.api.nvim_set_keymap('n', '<Leader>gl', '<Cmd>diffget //2<CR>', { noremap = true })
@@ -164,3 +142,6 @@ vim.api.nvim_set_keymap('c', '<C-l>', "<C-\\>e('')<CR>", { noremap = true })
 
 -- Other
 vim.api.nvim_set_keymap('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true })
+
+require('plugin-settings.barbar')
+require('plugin-settings.lualine')

@@ -35,8 +35,8 @@ else
     packadd vim-flog
     packadd open-browser-github.vim
     packadd quickfix-reflector.vim
-    packadd lightline.vim
-    packadd lightline-bufferline
+    packadd nvim-web-devicons
+    packadd barbar.nvim
     packadd fzf-checkout.vim
     packadd fern.vim
     packadd fern-renderer-nerdfont.vim
