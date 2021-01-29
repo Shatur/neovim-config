@@ -11,7 +11,7 @@ else
   packadd vim-cool
   packadd vim-easymotion
   packadd vim-one
-  packadd vim-cursorword
+  packadd nvim-cursorline
   packadd vim-visual-multi
   packadd vim-commentary
   packadd open-browser.vim

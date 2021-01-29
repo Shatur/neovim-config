@@ -49,9 +49,6 @@
 [submodule "pack/plugins/opt/vim-fugitive"]
 	path = pack/plugins/opt/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule "pack/plugins/opt/vim-cursorword"]
-	path = pack/plugins/opt/vim-cursorword
-	url = git@github.com:itchyny/vim-cursorword.git
 [submodule "pack/plugins/opt/quickfix-reflector.vim"]
 	path = pack/plugins/opt/quickfix-reflector.vim
 	url = git@github.com:stefandtw/quickfix-reflector.vim.git
@@ -130,3 +127,6 @@
 [submodule "pack/plugins/opt/fern-hijack.vim"]
 	path = pack/plugins/opt/fern-hijack.vim
 	url = git@github.com:lambdalisue/fern-hijack.vim.git
+[submodule "pack/plugins/opt/nvim-cursorline"]
+	path = pack/plugins/opt/nvim-cursorline
+	url = git@github.com:yamatsum/nvim-cursorline.git
