@@ -35,9 +35,9 @@ let g:startify_skiplist = [
 let g:startify_change_to_vcs_root = 1
 
 if has('win32')
-  let g:startify_bookmarks = [ {'c': '~/AppData/Local/nvim/init.vim'} ]
+  let g:startify_bookmarks = [ {'c': '~/AppData/Local/nvim/init.lua'} ]
 else
-  let g:startify_bookmarks = [ {'c': '~/.config/nvim/init.vim'} ]
+  let g:startify_bookmarks = [ {'c': '~/.config/nvim/init.lua'} ]
 endif
 
 highlight link StartifyHeader String
