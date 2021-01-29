@@ -60,6 +60,12 @@ vim.o.pumheight = 10
 vim.o.wildmode = 'longest:full,full' 
 vim.o.termguicolors = true
 vim.o.winblend = 20
+vim.o.hidden = true -- For switching between edited buffers
+vim.o.showmode = false -- Do not display current mode (use statusline for it)
+vim.o.signcolumn = 'yes' -- Always show the signcolum, otherwise it would shift the text each time changes appear/disappear
+vim.o.updatetime = 100 -- To show git changes often
+vim.o.completeopt = 'menuone,noselect,noinsert'
+vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
 
 -- Fonts
 if vim.fn.has('win32') == 1 then
@@ -67,24 +73,6 @@ if vim.fn.has('win32') == 1 then
 else
   vim.o.guifont = 'SauceCodePro Nerd Font Mono'
 end
-
--- For better plugins integration
-vim.o.signcolumn = 'yes' -- Always show the signcolum, otherwise it would shift the text each time changes appear/disappear
-vim.o.updatetime = 100 -- To show git changes often
-vim.o.completeopt = 'menuone,noselect,noinsert'
-vim.o.showmode = false -- Do not display current mode (use statusline for it)
-vim.o.showtabline = 2 -- Always show tabline to display buffers
-vim.o.hidden = true -- For switching between edited buffers
-vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
-
--- Used to prevent opening new buffers in a small buffers
-vim.cmd("command! SwitchToNormalBuffer lua require'buffers'.switch_to_normal_buffer()")
-
--- Open folder in system explorer
-vim.cmd("command! -complete=dir -nargs=* Explorer lua require'gtfo'.open_explorer(vim.fn.expand('<args>'))")
-
--- Open folder in system terminal
-vim.cmd("command! -complete=dir -nargs=* Terminal lua require'gtfo'.open_terminal(vim.fn.expand('<args>'))")
 
 -- Open current file folder
 vim.api.nvim_set_keymap('', 'got', "<Cmd>lua require'gtfo'.open_terminal(vim.fn.expand('%:h'))<CR>", { noremap = true })
@@ -118,10 +106,6 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true })
 vim.api.nvim_set_keymap('', ']h', '<Cmd>cnewer<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '[h', '<Cmd>colder<CR>', { noremap = true })
 
--- Git diffs
-vim.api.nvim_set_keymap('n', '<Leader>gl', '<Cmd>diffget //2<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>gh', '<Cmd>diffget //3<CR>', { noremap = true })
-
 -- Make behavior more like in common editors
 vim.api.nvim_set_keymap('', '<C-s>', '<Cmd>w<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-s>', '<Cmd>w<CR>', { noremap = true })
@@ -142,6 +126,15 @@ vim.api.nvim_set_keymap('c', '<C-l>', "<C-\\>e('')<CR>", { noremap = true })
 
 -- Other
 vim.api.nvim_set_keymap('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true })
+
+-- Used to prevent opening new buffers in a small buffers
+vim.cmd("command! SwitchToNormalBuffer lua require'buffers'.switch_to_normal_buffer()")
+
+-- Open folder in system explorer
+vim.cmd("command! -complete=dir -nargs=* Explorer lua require'gtfo'.open_explorer(vim.fn.expand('<args>'))")
+
+-- Open folder in system terminal
+vim.cmd("command! -complete=dir -nargs=* Terminal lua require'gtfo'.open_terminal(vim.fn.expand('<args>'))")
 
 require('plugin-settings.barbar')
 require('plugin-settings.lualine')
