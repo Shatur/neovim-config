@@ -124,12 +124,12 @@
 [submodule "pack/plugins/opt/lualine.nvim"]
 	path = pack/plugins/opt/lualine.nvim
 	url = git@github.com:hoob3rt/lualine.nvim.git
-[submodule "pack/plugins/opt/barbar.nvim"]
-	path = pack/plugins/opt/barbar.nvim
-	url = git@github.com:romgrk/barbar.nvim.git
 [submodule "pack/plugins/opt/nvim-web-devicons"]
 	path = pack/plugins/opt/nvim-web-devicons
 	url = git@github.com:kyazdani42/nvim-web-devicons.git
 [submodule "pack/plugins/opt/nvim-treesitter"]
 	path = pack/plugins/opt/nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+[submodule "pack/plugins/opt/nvim-bufferline.lua"]
+	path = pack/plugins/opt/nvim-bufferline.lua
+	url = git@github.com:akinsho/nvim-bufferline.lua.git
