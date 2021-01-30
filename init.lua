@@ -34,6 +34,8 @@ vim.cmd('autocmd!')
 vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
 vim.cmd('augroup END')
 
+require('plugins')
+
 if vim.fn.exists('g:vscode') == 1 then
   -- VSCode do not need the next settings
   return
@@ -135,6 +137,3 @@ vim.cmd("command! -complete=dir -nargs=* Explorer lua require'gtfo'.open_explore
 
 -- Open folder in system terminal
 vim.cmd("command! -complete=dir -nargs=* Terminal lua require'gtfo'.open_terminal(vim.fn.expand('<args>'))")
-
-require('plugin-settings.barbar')
-require('plugin-settings.lualine')
