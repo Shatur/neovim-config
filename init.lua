@@ -76,12 +76,6 @@ else
   vim.o.guifont = 'SauceCodePro Nerd Font Mono'
 end
 
--- Open current file folder
-vim.api.nvim_set_keymap('', 'got', '<Cmd>lua require"gtfo".open_terminal(vim.fn.expand("%:h"))<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', 'goT', '<Cmd>lua require"gtfo".open_terminal()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', 'gof', '<Cmd>lua require"gtfo".open_explorer(vim.fn.expand("%:h"))<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', 'goF', '<Cmd>lua require"gtfo".open_explorer()<CR>', { noremap = true })
-
 -- Movement around wrapped lines
 vim.api.nvim_set_keymap('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true })
 vim.api.nvim_set_keymap('n', 'k', 'v:count ? "k" : "gk"', { noremap = true, expr = true })
@@ -129,11 +123,11 @@ vim.api.nvim_set_keymap('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
 -- Other
 vim.api.nvim_set_keymap('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true })
 
--- Used to prevent opening new buffers in a small buffers
-vim.cmd('command! SwitchToNormalBuffer lua require"buffers".switch_to_normal_buffer()')
+-- Tab control
+vim.api.nvim_set_keymap('', '<A-q>', '<Cmd>tabclose<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<A-x>', '<Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-x>', '<Esc><Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
 
--- Open folder in system explorer
-vim.cmd('command! -complete=dir -nargs=* Explorer lua require"gtfo".open_explorer(vim.fn.expand("<args>"))')
-
--- Open folder in system terminal
-vim.cmd('command! -complete=dir -nargs=* Terminal lua require"gtfo".open_terminal(vim.fn.expand("<args>"))')
+-- Contains custom scripted things
+require('utils')

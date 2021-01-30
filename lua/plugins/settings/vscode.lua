@@ -32,7 +32,7 @@ vim.api.nvim_set_keymap('n', '<Leader>gd', '<Cmd>call VSCodeNotify("git.openChan
 
 -- Visual-Multi-like
 vim.api.nvim_set_keymap('n', '<A-m>', 'i<Cmd>call VSCodeNotify("editor.action.addSelectionToNextFindMatch")<CR>', { noremap = true })
-vvim.api.nvim_set_keymap('', '<A-m>', '<Esc>i<Cmd>lua require"vscode".command_on_last_selection("editor.action.addSelectionToNextFindMatch")<CR>', { noremap = true })
+vvim.api.nvim_set_keymap('', '<A-m>', '<Esc>i<Cmd>lua require"utils.vscode".command_on_last_selection("editor.action.addSelectionToNextFindMatch")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-Down>', 'i<Cmd>call VSCodeNotify("editor.action.insertCursorBelow")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-Up>', 'i<Cmd>call VSCodeNotify("editor.action.insertCursorAbove")<CR>', { noremap = true })
 
@@ -49,8 +49,8 @@ vim.api.nvim_set_keymap('n', '<C-x>', '<Cmd>call VSCodeCall("workbench.action.fi
 -- Use == for reindent instead of LSP formatting
 vim.api.nvim_set_keymap('n', '==', '<Cmd>call VSCodeNotify("editor.action.reindentselectedlines")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<A-=>', '<Cmd>call VSCodeNotify("editor.action.formatSelection")<CR>', { noremap = true })
-vim.api.nvim_set_keymap('x', '=', '<Cmd>lua require"vscode".visual_mode_command("editor.action.reindentselectedlines")<CR>', { noremap = true })
-vim.api.nvim_set_keymap('x', '<A-=>', '<Cmd>lua require"vscode".visual_mode_command("editor.action.formatSelection")<CR>', { noremap = true })
+vim.api.nvim_set_keymap('x', '=', '<Cmd>lua require"utils.vscode".visual_mode_command("editor.action.reindentselectedlines")<CR>', { noremap = true })
+vim.api.nvim_set_keymap('x', '<A-=>', '<Cmd>lua require"utils.vscode".visual_mode_command("editor.action.formatSelection")<CR>', { noremap = true })
 
 -- LSP
 vim.api.nvim_set_keymap('', 'gh', 'i<Cmd>call VSCodeNotify("references-view.find")<CR>', { noremap = true })
