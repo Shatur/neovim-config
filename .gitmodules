@@ -130,3 +130,6 @@
 [submodule "pack/plugins/opt/nvim-web-devicons"]
 	path = pack/plugins/opt/nvim-web-devicons
 	url = git@github.com:kyazdani42/nvim-web-devicons.git
+[submodule "pack/plugins/opt/nvim-treesitter"]
+	path = pack/plugins/opt/nvim-treesitter
+	url = git@github.com:nvim-treesitter/nvim-treesitter.git

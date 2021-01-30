@@ -36,6 +36,9 @@ if vim.fn.exists('g:started_by_firenvim') == 1 then
   return
 end
 
+vim.cmd('packadd nvim-treesitter')
+require('plugins.settings.treesitter')
+
 require('plugins.settings.fzf')
 require('plugins.settings.terminal-help')
 require('plugins.settings.fern')
