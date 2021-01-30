@@ -23,7 +23,7 @@ vim.api.nvim_set_keymap('n', '<C-=>', '<C-a>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-->', '<C-x>', { noremap = true })
 
 -- ..and use <C-a> to select all
-vim.api.nvim_set_keymap('', '<C-a>', 'gg0vG', { noremap = true })
+vim.api.nvim_set_keymap('', '<C-a>', 'gg0vG$', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-a>', '<Esc>gg0vG$', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-a>', '<Esc>gg0vG$', { noremap = true })
 
@@ -77,18 +77,18 @@ else
 end
 
 -- Open current file folder
-vim.api.nvim_set_keymap('', 'got', "<Cmd>lua require'gtfo'.open_terminal(vim.fn.expand('%:h'))<CR>", { noremap = true })
-vim.api.nvim_set_keymap('', 'goT', "<Cmd>lua require'gtfo'.open_terminal()<CR>", { noremap = true })
-vim.api.nvim_set_keymap('', 'gof', "<Cmd>lua require'gtfo'.open_explorer(vim.fn.expand('%:h'))<CR>", { noremap = true })
-vim.api.nvim_set_keymap('', 'goF', "<Cmd>lua require'gtfo'.open_explorer()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('', 'got', '<Cmd>lua require"gtfo".open_terminal(vim.fn.expand("%:h"))<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', 'goT', '<Cmd>lua require"gtfo".open_terminal()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', 'gof', '<Cmd>lua require"gtfo".open_explorer(vim.fn.expand("%:h"))<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', 'goF', '<Cmd>lua require"gtfo".open_explorer()<CR>', { noremap = true })
 
 -- Movement around wrapped lines
-vim.api.nvim_set_keymap('n', 'j', "v:count ? 'j' : 'gj'", { noremap = true, expr = true })
-vim.api.nvim_set_keymap('n', 'k', "v:count ? 'k' : 'gk'", { noremap = true, expr = true })
-vim.api.nvim_set_keymap('n', '<Up>', "v:count ? '<Up>' : 'g<Up>'", { noremap = true, expr = true })
-vim.api.nvim_set_keymap('n', '<Down>', "v:count ? '<Down>' : 'g<Down>'", { noremap = true, expr = true })
-vim.api.nvim_set_keymap('i', '<Up>', "pumvisible() ? '<Up>' : '<C-o>g<UP>'", { noremap = true, expr = true })
-vim.api.nvim_set_keymap('i', '<Down>', "pumvisible() ? '<Down>' : '<C-o>g<Down>'", { noremap = true, expr = true })
+vim.api.nvim_set_keymap('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true })
+vim.api.nvim_set_keymap('n', 'k', 'v:count ? "k" : "gk"', { noremap = true, expr = true })
+vim.api.nvim_set_keymap('n', '<Up>', 'v:count ? "<Up>" : "g<Up>"', { noremap = true, expr = true })
+vim.api.nvim_set_keymap('n', '<Down>', 'v:count ? "<Down>" : "g<Down>"', { noremap = true, expr = true })
+vim.api.nvim_set_keymap('i', '<Up>', 'pumvisible() ? "<Up>" : "<C-o>g<UP>"', { noremap = true, expr = true })
+vim.api.nvim_set_keymap('i', '<Down>', 'pumvisible() ? "<Down>" : "<C-o>g<Down>"', { noremap = true, expr = true })
 
 -- Split navigation
 vim.api.nvim_set_keymap('t', '<C-h>', '<C-\\><C-N><C-w>h', { noremap = true })
@@ -124,16 +124,16 @@ vim.api.nvim_set_keymap('c', '<C-e>', '<End>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<A-b>', '<C-Left>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<A-f>', '<C-Right>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-k>', '<C-\\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>', { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-l>', "<C-\\>e('')<CR>", { noremap = true })
+vim.api.nvim_set_keymap('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
 
 -- Other
 vim.api.nvim_set_keymap('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true })
 
 -- Used to prevent opening new buffers in a small buffers
-vim.cmd("command! SwitchToNormalBuffer lua require'buffers'.switch_to_normal_buffer()")
+vim.cmd('command! SwitchToNormalBuffer lua require"buffers".switch_to_normal_buffer()')
 
 -- Open folder in system explorer
-vim.cmd("command! -complete=dir -nargs=* Explorer lua require'gtfo'.open_explorer(vim.fn.expand('<args>'))")
+vim.cmd('command! -complete=dir -nargs=* Explorer lua require"gtfo".open_explorer(vim.fn.expand("<args>"))')
 
 -- Open folder in system terminal
-vim.cmd("command! -complete=dir -nargs=* Terminal lua require'gtfo'.open_terminal(vim.fn.expand('<args>'))")
+vim.cmd('command! -complete=dir -nargs=* Terminal lua require"gtfo".open_terminal(vim.fn.expand("<args>"))')
