@@ -6,6 +6,9 @@ if vim.fn.exists('g:vscode') == 1 then
   return
 end
 
+-- Colorscheme (should be initialized before other things)
+vim.cmd('colorscheme codedark')
+
 require('plugins.settings.xkbswitch')
 require('plugins.settings.swap')
 require('plugins.settings.subversive')
@@ -28,9 +31,6 @@ vim.cmd('packadd open-browser.vim')
 vim.cmd('packadd pear-tree')
 vim.cmd('packadd open-browser-github.vim')
 
--- Colorscheme (should be initialized before bufferline)
-vim.cmd('colorscheme codedark')
-
 if vim.fn.exists('g:started_by_firenvim') == 1 then
   require('plugins.settings.firenvim')
   vim.cmd('packadd firenvim')
@@ -39,6 +39,9 @@ end
 
 vim.cmd('packadd nvim-treesitter')
 require('plugins.settings.treesitter')
+
+vim.cmd('packadd nvim-bufferline.lua')
+require('plugins.settings.bufferline')
 
 require('plugins.settings.fzf')
 require('plugins.settings.terminal-help')
@@ -69,6 +72,3 @@ vim.cmd('packadd fern-hijack.vim')
 vim.cmd('packadd vim-gitgutter')
 vim.cmd('packadd fzf-checkout.vim')
 vim.cmd('packadd vim-fugitive')
-
-vim.cmd('packadd nvim-bufferline.lua')
-require('plugins.settings.bufferline')
