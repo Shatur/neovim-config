@@ -11,13 +11,11 @@ require('plugins.settings.swap')
 require('plugins.settings.subversive')
 
 require('plugins.settings.asyncrun')
-require('plugins.settings.one')
 require('plugins.settings.visual-multi')
 require('plugins.settings.open-browser')
 require('plugins.settings.pear-tree')
 
 vim.cmd('packadd vim-cool')
-vim.cmd('packadd vim-one')
 vim.cmd('packadd vim-easymotion')
 vim.cmd('packadd vim-cool')
 vim.cmd('packadd nvim-cursorline')
@@ -29,6 +27,9 @@ vim.cmd('packadd vim-visual-multi')
 vim.cmd('packadd open-browser.vim')
 vim.cmd('packadd pear-tree')
 vim.cmd('packadd open-browser-github.vim')
+
+-- Colorscheme (should be initialized before bufferline)
+vim.cmd('colorscheme codedark')
 
 if vim.fn.exists('g:started_by_firenvim') == 1 then
   require('plugins.settings.firenvim')

@@ -37,9 +37,6 @@
 [submodule "pack/plugins/opt/vim-scriptease"]
 	path = pack/plugins/opt/vim-scriptease
 	url = git@github.com:tpope/vim-scriptease.git
-[submodule "pack/plugins/opt/vim-one"]
-	path = pack/plugins/opt/vim-one
-	url = git@github.com:rakr/vim-one.git
 [submodule "pack/plugins/opt/vim-lastplace"]
 	path = pack/plugins/opt/vim-lastplace
 	url = git@github.com:farmergreg/vim-lastplace.git
@@ -133,3 +130,6 @@
 [submodule "pack/plugins/opt/nvim-bufferline.lua"]
 	path = pack/plugins/opt/nvim-bufferline.lua
 	url = git@github.com:akinsho/nvim-bufferline.lua.git
+[submodule "pack/plugins/opt/vim-code-dark"]
+	path = pack/plugins/opt/vim-code-dark
+	url = git@github.com:tomasiser/vim-code-dark.git
