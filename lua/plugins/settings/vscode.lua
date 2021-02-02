@@ -1,8 +1,5 @@
 vim.cmd('filetype plugin off')
 
--- Usually installed system-wide, so disable it by the parameter
-vim.g.loaded_fzf = false
-
 -- GTFO-like
 vim.api.nvim_set_keymap('n', 'gof', '<Cmd>call VSCodeNotify("revealFileInOS")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'got', '<Cmd>call VSCodeNotify("workbench.action.terminal.openNativeConsole")<CR>', { noremap = true })

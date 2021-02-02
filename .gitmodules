@@ -52,12 +52,6 @@
 [submodule "pack/plugins/opt/pear-tree"]
 	path = pack/plugins/opt/pear-tree
 	url = git@github.com:tmsvg/pear-tree.git
-[submodule "pack/plugins/opt/fzf.vim"]
-	path = pack/plugins/opt/fzf.vim
-	url = git@github.com:junegunn/fzf.vim.git
-[submodule "pack/plugins/opt/fzf-checkout.vim"]
-	path = pack/plugins/opt/fzf-checkout.vim
-	url = git@github.com:stsewd/fzf-checkout.vim.git
 [submodule "pack/plugins/opt/fern.vim"]
 	path = pack/plugins/opt/fern.vim
 	url = git@github.com:lambdalisue/fern.vim.git
@@ -133,3 +127,12 @@
 [submodule "pack/plugins/opt/vim-code-dark"]
 	path = pack/plugins/opt/vim-code-dark
 	url = git@github.com:tomasiser/vim-code-dark.git
+[submodule "pack/plugins/opt/telescope.nvim"]
+	path = pack/plugins/opt/telescope.nvim
+	url = git@github.com:nvim-telescope/telescope.nvim.git
+[submodule "pack/plugins/opt/plenary.nvim"]
+	path = pack/plugins/opt/plenary.nvim
+	url = git@github.com:nvim-lua/plenary.nvim.git
+[submodule "pack/plugins/opt/popup.nvim"]
+	path = pack/plugins/opt/popup.nvim
+	url = git@github.com:nvim-lua/popup.nvim.git

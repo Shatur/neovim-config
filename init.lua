@@ -8,6 +8,9 @@ vim.g.loaded_netrwPlugin = true
 vim.g.loaded_netrwSettings = true
 vim.g.loaded_netrwFileHandlers = true
 
+-- Usually installed system-wide, so disable it by the parameter
+vim.g.loaded_fzf = false
+
 -- Remap useless keys
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })

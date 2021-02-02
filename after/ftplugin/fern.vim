@@ -3,7 +3,6 @@ setlocal norelativenumber
 
 call glyph_palette#apply()
 
-nmap <buffer> A <Cmd>call vimrc#fzf#FernActions()<CR>
 nmap <buffer> F <Plug>(fern-action-new-dir)
 nmap <buffer> N <Plug>(fern-action-new-file)
 nmap <buffer> U <Plug>(fern-action-leave)<Plug>(fern-wait)<Plug>(fern-action-cd:root)<CR>
