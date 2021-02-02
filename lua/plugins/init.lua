@@ -1,4 +1,9 @@
 require('plugins.settings.easymotion')
+require('plugins.settings.xkbswitch')
+require('plugins.settings.swap')
+require('plugins.settings.subversive')
+
+vim.cmd('packadd vim-cool')
 
 if vim.fn.exists('g:vscode') == 1 then
   require('plugins.settings.vscode')
@@ -9,18 +14,12 @@ end
 -- Colorscheme (should be initialized before other things)
 vim.cmd('colorscheme codedark')
 
-require('plugins.settings.xkbswitch')
-require('plugins.settings.swap')
-require('plugins.settings.subversive')
-
 require('plugins.settings.asyncrun')
 require('plugins.settings.visual-multi')
 require('plugins.settings.open-browser')
 require('plugins.settings.pear-tree')
 
-vim.cmd('packadd vim-cool')
 vim.cmd('packadd vim-easymotion')
-vim.cmd('packadd vim-cool')
 vim.cmd('packadd nvim-cursorline')
 vim.cmd('packadd vim-commentary')
 vim.cmd('packadd scroll.vim')
