@@ -18,8 +18,8 @@ vim.api.nvim_set_keymap('', '<C-q>', '<Cmd>BDelete<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<C-x>', '<Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-x>', '<Esc><Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', 'Q', '<Cmd>SwitchToNormalBuffer<Cmd>BDeleteOther<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<Backspace>', '<Cmd>SwitchToNormalBuffer<Cmd>buffer #<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', 'Q', '<Cmd>SwitchToNormalBuffer<CR><Cmd>BDeleteOther<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<Backspace>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>buffer #<CR>', { noremap = true })
 
 -- Open current file folder
 vim.api.nvim_set_keymap('', 'got', '<Cmd>lua require"utils.gtfo".open_terminal(vim.fn.expand("%:h"))<CR>', { noremap = true })
