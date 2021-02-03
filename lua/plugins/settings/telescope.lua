@@ -1,3 +1,17 @@
+require('telescope').setup{
+  defaults = {
+    file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
+    grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
+    qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+    mappings = {
+      i = {
+        ["<C-v>"] = false,
+        ["<C-x>"] = require('telescope.actions').goto_file_selection_vsplit
+      }
+    }
+  }
+}
+
 vim.api.nvim_set_keymap('n', '<A-b>', '<Cmd>Telescope git_branches<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'z=', '<Cmd>Telescope spell_suggest<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<S-CR>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope commands<CR>', { noremap = true })
