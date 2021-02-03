@@ -14,10 +14,12 @@ end
 -- Colorscheme (should be initialized before other things)
 vim.cmd('colorscheme codedark')
 
+vim.cmd('packadd nvim-autopairs')
+require('plugins.settings.autopairs')
+
 require('plugins.settings.asyncrun')
 require('plugins.settings.visual-multi')
 require('plugins.settings.open-browser')
-require('plugins.settings.pear-tree')
 
 vim.cmd('packadd vim-easymotion')
 vim.cmd('packadd nvim-cursorline')
@@ -27,7 +29,6 @@ vim.cmd('packadd vim-visual-star-search')
 vim.cmd('packadd asyncrun.vim')
 vim.cmd('packadd vim-visual-multi')
 vim.cmd('packadd open-browser.vim')
-vim.cmd('packadd pear-tree')
 vim.cmd('packadd open-browser-github.vim')
 
 if vim.fn.exists('g:started_by_firenvim') == 1 then

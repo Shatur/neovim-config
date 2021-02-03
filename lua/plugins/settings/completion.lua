@@ -31,7 +31,8 @@ vim.g.completion_customize_lsp_label = {
 -- Use completion-nvim in every buffer
 vim.cmd('autocmd vimrc BufEnter * lua require("completion").on_attach()')
 
-vim.api.nvim_set_keymap('i', '<CR>', 'pumvisible() ? complete_info()["selected"] != "-1" ? "<Plug>(completion_confirm_completion)" : "<C-e><CR>" : "<Plug>(PearTreeExpand)"', { expr = true })
+-- luaeval is used because of this issue: https://github.com/neovim/neovim/issues/13862
+vim.api.nvim_set_keymap('i', '<CR>', [[luaeval('require("utils.completion_autopairs").completion_confirm()')]], { expr = true, noremap = true })
 vim.api.nvim_set_keymap('i', '<C-Space>', 'completion#trigger_completion()', { noremap = true, expr = true, silent = true })
 
 vim.api.nvim_set_keymap('i', '<Tab>', 'pumvisible() ? "<Down>" : "<Tab>"', { expr = true })
