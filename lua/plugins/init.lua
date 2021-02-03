@@ -38,6 +38,7 @@ if vim.fn.exists('g:started_by_firenvim') == 1 then
 end
 
 vim.cmd('packadd! nvim-treesitter')
+vim.cmd('packadd! nvim-ts-rainbow')
 require('plugins.settings.treesitter')
 
 vim.cmd('packadd! nvim-web-devicons')

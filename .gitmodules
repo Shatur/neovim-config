@@ -136,3 +136,6 @@
 [submodule "pack/plugins/opt/nvim-autopairs"]
 	path = pack/plugins/opt/nvim-autopairs
 	url = git@github.com:windwp/nvim-autopairs.git
+[submodule "pack/plugins/opt/nvim-ts-rainbow"]
+	path = pack/plugins/opt/nvim-ts-rainbow
+	url = git@github.com:p00f/nvim-ts-rainbow.git
