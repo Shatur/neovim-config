@@ -25,20 +25,14 @@ call firenvim#install(0) " To enable embedding in browsers via firenvim
 **Arch Linux**
 
 ```bash
-yay -S fzf ripgrep nerd-fonts-source-code-pro xkb-switch
+yay -S ripgrep nerd-fonts-source-code-pro xkb-switch
 ```
 
 **Windows**
 
 ```bash
 scoop bucket add nerd-fonts
-sudo scoop install -g fzf ripgrep SourceCodePro-NF
-```
-
-FZF in scoop comes without Vim plugin, so need to download it manually:
-
-```bash
-git clone --depth=1 git@github.com:junegunn/fzf.git $env:LOCALAPPDATA/nvim/pack/plugins/start/fzf
+sudo scoop install -g ripgrep SourceCodePro-NF
 ```
 
 ### Updating plugins
