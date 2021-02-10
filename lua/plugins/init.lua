@@ -23,7 +23,7 @@ require('plugins.settings.open-browser')
 
 vim.cmd('packadd! vim-easymotion')
 vim.cmd('packadd! nvim-cursorline')
-vim.cmd('packadd! vim-commentary')
+vim.cmd('packadd! kommentary')
 vim.cmd('packadd! scroll.vim')
 vim.cmd('packadd! vim-visual-star-search')
 vim.cmd('packadd! asyncrun.vim')
