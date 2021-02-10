@@ -56,7 +56,7 @@ vim.o.mouse = 'a'
 vim.wo.number = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
-vim.o.expandtab = true
+vim.cmd('set expandtab') -- https://github.com/neovim/neovim/issues/12978
 vim.wo.list = true
 vim.o.listchars = 'tab:→ ' -- Display tabs
 vim.o.fillchars = 'eob: ' -- Hide ~
