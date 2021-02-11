@@ -17,6 +17,7 @@ vim.cmd('colorscheme codedark')
 vim.cmd('packadd! nvim-autopairs')
 require('plugins.settings.autopairs')
 
+require('plugins.settings.cursorline')
 require('plugins.settings.asyncrun')
 require('plugins.settings.visual-multi')
 require('plugins.settings.open-browser')
