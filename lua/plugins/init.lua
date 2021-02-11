@@ -17,6 +17,9 @@ vim.cmd('colorscheme codedark')
 vim.cmd('packadd! nvim-autopairs')
 require('plugins.settings.autopairs')
 
+vim.cmd('packadd! kommentary')
+require('plugins.settings.kommentary')
+
 require('plugins.settings.cursorline')
 require('plugins.settings.asyncrun')
 require('plugins.settings.visual-multi')
@@ -24,7 +27,6 @@ require('plugins.settings.open-browser')
 
 vim.cmd('packadd! vim-easymotion')
 vim.cmd('packadd! nvim-cursorline')
-vim.cmd('packadd! kommentary')
 vim.cmd('packadd! scroll.vim')
 vim.cmd('packadd! vim-visual-star-search')
 vim.cmd('packadd! asyncrun.vim')
