@@ -1,13 +1,10 @@
 require('telescope').setup{
   defaults = {
-    file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
-    grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
-    qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
-    file_sorter =  require'telescope.sorters'.get_fzy_sorter,
+    file_sorter =  require('telescope.sorters').get_fzy_sorter,
     mappings = {
       i = {
         ["<C-v>"] = false,
-        ["<C-x>"] = require('telescope.actions').goto_file_selection_vsplit
+        ["<C-x>"] = require('telescope.actions').select_vertical
       }
     }
   }

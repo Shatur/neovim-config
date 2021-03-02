@@ -1,4 +1,8 @@
 local lualine = require('lualine')
-lualine.theme = 'codedark'
-lualine.extensions = { 'fzf' }
-lualine.status()
+require('lualine').status{
+  options = {
+    theme = 'codedark',
+    section_separators = {},
+    component_separators = {'|', '|'},
+  },
+}
