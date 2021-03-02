@@ -3,8 +3,6 @@ require('plugins.settings.xkbswitch')
 require('plugins.settings.swap')
 require('plugins.settings.subversive')
 
-vim.cmd('packadd! vim-cool')
-
 if vim.fn.exists('g:vscode') == 1 then
   require('plugins.settings.vscode')
   vim.cmd('packadd! vscode-easymotion')
@@ -25,6 +23,7 @@ require('plugins.settings.asyncrun')
 require('plugins.settings.visual-multi')
 require('plugins.settings.open-browser')
 
+vim.cmd('packadd! vim-cool')
 vim.cmd('packadd! vim-easymotion')
 vim.cmd('packadd! nvim-cursorline')
 vim.cmd('packadd! scroll.vim')
