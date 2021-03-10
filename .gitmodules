@@ -1,141 +1,188 @@
 [submodule "pack/plugins/start/vim-sandwich"]
 	path = pack/plugins/start/vim-sandwich
 	url = git@github.com:machakann/vim-sandwich.git
+	ignore = dirty
 [submodule "pack/plugins/start/vim-subversive"]
 	path = pack/plugins/start/vim-subversive
 	url = git@github.com:svermeulen/vim-subversive.git
+	ignore = dirty
 [submodule "pack/plugins/start/vim-swap"]
 	path = pack/plugins/start/vim-swap
 	url = git@github.com:machakann/vim-swap.git
+	ignore = dirty
 [submodule "pack/plugins/start/vim-unimpaired"]
 	path = pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
+	ignore = dirty
 [submodule "pack/plugins/start/vim-xkbswitch"]
 	path = pack/plugins/start/vim-xkbswitch
 	url = git@github.com:lyokha/vim-xkbswitch.git
+	ignore = dirty
 [submodule "pack/plugins/opt/firenvim"]
 	path = pack/plugins/opt/firenvim
 	url = git@github.com:glacambre/firenvim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/Tortoise-Typing"]
 	path = pack/plugins/opt/Tortoise-Typing
 	url = git@github.com:thanthese/Tortoise-Typing.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-startuptime"]
 	path = pack/plugins/opt/vim-startuptime
 	url = git@github.com:dstein64/vim-startuptime.git
+	ignore = dirty
 [submodule "pack/plugins/start/vim-cutlass"]
 	path = pack/plugins/start/vim-cutlass
 	url = git@github.com:svermeulen/vim-cutlass.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-visual-multi"]
 	path = pack/plugins/opt/vim-visual-multi
 	url = git@github.com:mg979/vim-visual-multi.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-terminal-help"]
 	path = pack/plugins/opt/vim-terminal-help
 	url = git@github.com:skywind3000/vim-terminal-help.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-startify"]
 	path = pack/plugins/opt/vim-startify
 	url = git@github.com:mhinz/vim-startify.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-scriptease"]
 	path = pack/plugins/opt/vim-scriptease
 	url = git@github.com:tpope/vim-scriptease.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-lastplace"]
 	path = pack/plugins/opt/vim-lastplace
 	url = git@github.com:farmergreg/vim-lastplace.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-fugitive"]
 	path = pack/plugins/opt/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
+	ignore = dirty
 [submodule "pack/plugins/opt/quickfix-reflector.vim"]
 	path = pack/plugins/opt/quickfix-reflector.vim
 	url = git@github.com:stefandtw/quickfix-reflector.vim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/fern.vim"]
 	path = pack/plugins/opt/fern.vim
 	url = git@github.com:lambdalisue/fern.vim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/completion-nvim"]
 	path = pack/plugins/opt/completion-nvim
 	url = git@github.com:nvim-lua/completion-nvim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/completion-buffers"]
 	path = pack/plugins/opt/completion-buffers
 	url = git@github.com:steelsojka/completion-buffers.git
+	ignore = dirty
 [submodule "pack/plugins/opt/asyncrun.vim"]
 	path = pack/plugins/opt/asyncrun.vim
 	url = git@github.com:skywind3000/asyncrun.vim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/scroll.vim"]
 	path = pack/plugins/opt/scroll.vim
 	url = git@github.com:mg979/scroll.vim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vscode-easymotion"]
 	path = pack/plugins/opt/vscode-easymotion
 	url = git@github.com:asvetliakov/vim-easymotion.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-easymotion"]
 	path = pack/plugins/opt/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
+	ignore = dirty
 [submodule "pack/plugins/opt/nerdfont.vim"]
 	path = pack/plugins/opt/nerdfont.vim
 	url = git@github.com:lambdalisue/nerdfont.vim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/glyph-palette.vim"]
 	path = pack/plugins/opt/glyph-palette.vim
 	url = git@github.com:lambdalisue/glyph-palette.vim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/fern-renderer-nerdfont.vim"]
 	path = pack/plugins/opt/fern-renderer-nerdfont.vim
 	url = git@github.com:lambdalisue/fern-renderer-nerdfont.vim.git
+	ignore = dirty
 [submodule "pack/plugins/start/vim-move"]
 	path = pack/plugins/start/vim-move
 	url = git@github.com:matze/vim-move.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-cool"]
 	path = pack/plugins/opt/vim-cool
 	url = git@github.com:romainl/vim-cool.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-visual-star-search"]
 	path = pack/plugins/opt/vim-visual-star-search
 	url = git@github.com:bronson/vim-visual-star-search.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-eunuch"]
 	path = pack/plugins/opt/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
+	ignore = dirty
 [submodule "pack/plugins/opt/open-browser.vim"]
 	path = pack/plugins/opt/open-browser.vim
 	url = git@github.com:tyru/open-browser.vim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/open-browser-github.vim"]
 	path = pack/plugins/opt/open-browser-github.vim
 	url = git@github.com:tyru/open-browser-github.vim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/conflict-marker.vim"]
 	path = pack/plugins/opt/conflict-marker.vim
 	url = git@github.com:rhysd/conflict-marker.vim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/fern-hijack.vim"]
 	path = pack/plugins/opt/fern-hijack.vim
 	url = git@github.com:lambdalisue/fern-hijack.vim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/nvim-cursorline"]
 	path = pack/plugins/opt/nvim-cursorline
 	url = git@github.com:yamatsum/nvim-cursorline.git
+	ignore = dirty
 [submodule "pack/plugins/opt/lualine.nvim"]
 	path = pack/plugins/opt/lualine.nvim
 	url = git@github.com:hoob3rt/lualine.nvim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/nvim-web-devicons"]
 	path = pack/plugins/opt/nvim-web-devicons
 	url = git@github.com:kyazdani42/nvim-web-devicons.git
+	ignore = dirty
 [submodule "pack/plugins/opt/nvim-treesitter"]
 	path = pack/plugins/opt/nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+	ignore = dirty
 [submodule "pack/plugins/opt/nvim-bufferline.lua"]
 	path = pack/plugins/opt/nvim-bufferline.lua
 	url = git@github.com:akinsho/nvim-bufferline.lua.git
+	ignore = dirty
 [submodule "pack/plugins/opt/vim-code-dark"]
 	path = pack/plugins/opt/vim-code-dark
 	url = git@github.com:tomasiser/vim-code-dark.git
+	ignore = dirty
 [submodule "pack/plugins/opt/telescope.nvim"]
 	path = pack/plugins/opt/telescope.nvim
 	url = git@github.com:nvim-telescope/telescope.nvim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/plenary.nvim"]
 	path = pack/plugins/opt/plenary.nvim
 	url = git@github.com:nvim-lua/plenary.nvim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/popup.nvim"]
 	path = pack/plugins/opt/popup.nvim
 	url = git@github.com:nvim-lua/popup.nvim.git
+	ignore = dirty
 [submodule "pack/plugins/opt/nvim-autopairs"]
 	path = pack/plugins/opt/nvim-autopairs
 	url = git@github.com:windwp/nvim-autopairs.git
+	ignore = dirty
 [submodule "pack/plugins/opt/nvim-ts-rainbow"]
 	path = pack/plugins/opt/nvim-ts-rainbow
 	url = git@github.com:p00f/nvim-ts-rainbow.git
+	ignore = dirty
 [submodule "pack/plugins/opt/kommentary"]
 	path = pack/plugins/opt/kommentary
 	url = git@github.com:b3nj5m1n/kommentary.git
+	ignore = dirty
 [submodule "pack/plugins/opt/gitsigns.nvim"]
 	path = pack/plugins/opt/gitsigns.nvim
 	url = https://github.com/lewis6991/gitsigns.nvim.git
+	ignore = dirty
