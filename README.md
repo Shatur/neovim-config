@@ -50,7 +50,3 @@ git -C ~/.local/share/nvim/site/pack/Shatur submodule update --remote
 ```bash
 git -C $env:LOCALAPPDATA/nvim-data/site/pack/Shatur submodule update --remote
 ```
-
-## Style
-
-I use [vint](https://github.com/Vimjas/vint) for configuration linting.
