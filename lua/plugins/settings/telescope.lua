@@ -1,10 +1,15 @@
+local actions = require('telescope.actions')
+
 require('telescope').setup{
   defaults = {
     file_sorter =  require('telescope.sorters').get_fzy_sorter,
     mappings = {
       i = {
-        ["<C-v>"] = false,
-        ["<C-x>"] = require('telescope.actions').select_vertical
+        ['<C-v>'] = false,
+        ['<C-x>'] = actions.select_vertical,
+        ['<C-q>'] = actions.close,
+        ['<C-CR>'] = actions.send_selected_to_qflist + actions.open_qflist,
+        ['<A-CR>'] = actions.send_to_qflist + actions.open_qflist
       }
     }
   }
