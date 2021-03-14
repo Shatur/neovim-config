@@ -2,12 +2,6 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.clipboard = 'unnamedplus'
 
--- Disable some built-in plugins
-vim.g.loaded_netrw = true
-vim.g.loaded_netrwPlugin = true
-vim.g.loaded_netrwSettings = true
-vim.g.loaded_netrwFileHandlers = true
-
 -- Usually installed system-wide, so disable it by the parameter
 vim.g.loaded_fzf = false
 
