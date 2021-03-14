@@ -5,7 +5,7 @@ endif
 scriptencoding utf-8
 
 function! StartifyEntryFormat() abort
-  return 'nerdfont#find(absolute_path) .. " " .. entry_path'
+  return 'luaeval("require(\"nvim-web-devicons\").get_icon(\"" .. absolute_path .. "\", \"" .. fnamemodify(absolute_path, ":e") .. "\", { default = true })") .. " " .. entry_path'
 endfunction
 
 function! s:GetRecentCMakeLists() abort

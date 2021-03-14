@@ -62,10 +62,6 @@
 	path = pack/plugins/opt/quickfix-reflector.vim
 	url = git@github.com:stefandtw/quickfix-reflector.vim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/fern.vim"]
-	path = pack/plugins/opt/fern.vim
-	url = git@github.com:lambdalisue/fern.vim.git
-	ignore = dirty
 [submodule "pack/plugins/opt/completion-nvim"]
 	path = pack/plugins/opt/completion-nvim
 	url = git@github.com:nvim-lua/completion-nvim.git
@@ -90,17 +86,9 @@
 	path = pack/plugins/opt/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
 	ignore = dirty
-[submodule "pack/plugins/opt/nerdfont.vim"]
-	path = pack/plugins/opt/nerdfont.vim
-	url = git@github.com:lambdalisue/nerdfont.vim.git
-	ignore = dirty
 [submodule "pack/plugins/opt/glyph-palette.vim"]
 	path = pack/plugins/opt/glyph-palette.vim
 	url = git@github.com:lambdalisue/glyph-palette.vim.git
-	ignore = dirty
-[submodule "pack/plugins/opt/fern-renderer-nerdfont.vim"]
-	path = pack/plugins/opt/fern-renderer-nerdfont.vim
-	url = git@github.com:lambdalisue/fern-renderer-nerdfont.vim.git
 	ignore = dirty
 [submodule "pack/plugins/start/vim-move"]
 	path = pack/plugins/start/vim-move
@@ -129,10 +117,6 @@
 [submodule "pack/plugins/opt/conflict-marker.vim"]
 	path = pack/plugins/opt/conflict-marker.vim
 	url = git@github.com:rhysd/conflict-marker.vim.git
-	ignore = dirty
-[submodule "pack/plugins/opt/fern-hijack.vim"]
-	path = pack/plugins/opt/fern-hijack.vim
-	url = git@github.com:lambdalisue/fern-hijack.vim.git
 	ignore = dirty
 [submodule "pack/plugins/opt/nvim-cursorline"]
 	path = pack/plugins/opt/nvim-cursorline
@@ -185,4 +169,8 @@
 [submodule "pack/plugins/opt/gitsigns.nvim"]
 	path = pack/plugins/opt/gitsigns.nvim
 	url = https://github.com/lewis6991/gitsigns.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/opt/nvim-tree.lua"]
+	path = pack/plugins/opt/nvim-tree.lua
+	url = git@github.com:kyazdani42/nvim-tree.lua.git
 	ignore = dirty
