@@ -35,6 +35,12 @@ scoop bucket add nerd-fonts
 sudo scoop install -g ripgrep SourceCodePro-NF
 ```
 
+Windows-version of xkb-switch should be downloaded manually:
+
+```bash
+(New-Object System.Net.WebClient).DownloadFile("https://github.com/DeXP/xkb-switch-win/releases/download/1.0.0/libxkbswitch64.dll", "$env:LOCALAPPDATA/nvim-data/libxkbswitch64.dll")
+```
+
 ### Updating plugins
 
 Plugins are stored as submodules.
