@@ -7,6 +7,10 @@ vim.g.nvim_tree_show_icons = {
   files = 1
 }
 
+vim.g.nvim_tree_icons = {
+  default = ''
+}
+
 vim.g.nvim_tree_bindings = {
   ['l'] = '<cmd>lua require"nvim-tree".on_keypress("edit")<CR>',
   ['h'] = '<cmd>lua require"nvim-tree".on_keypress("close_node")<CR>',
