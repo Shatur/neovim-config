@@ -30,6 +30,8 @@ vim.api.nvim_set_keymap('n', '<Leader>gd', '<Cmd>call VSCodeNotify("git.openChan
 -- Visual-Multi-like
 vim.api.nvim_set_keymap('n', '<A-m>', 'i<Cmd>call VSCodeNotify("editor.action.addSelectionToNextFindMatch")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('v', '<A-m>', '<Esc>i<Cmd>lua require("utils.vscode").command_on_last_selection("editor.action.addSelectionToNextFindMatch")<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<A-a>', 'i<Cmd>call VSCodeNotify("editor.action.selectHighlights")<CR>', { noremap = true })
+vim.api.nvim_set_keymap('v', '<A-a>', '<Esc>i<Cmd>lua require("utils.vscode").command_on_last_selection("editor.action.selectHighlights")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-Down>', 'i<Cmd>call VSCodeNotify("editor.action.insertCursorBelow")<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-Up>', 'i<Cmd>call VSCodeNotify("editor.action.insertCursorAbove")<CR>', { noremap = true })
 
