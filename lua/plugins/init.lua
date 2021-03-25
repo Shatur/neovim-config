@@ -37,13 +37,12 @@ if vim.fn.exists('g:started_by_firenvim') == 1 then
   return
 end
 
-vim.cmd('packadd! completion-buffers')
-vim.cmd('packadd! completion-nvim')
 vim.cmd('packadd! conflict-marker.vim')
 vim.cmd('packadd! gitsigns.nvim')
 vim.cmd('packadd! glyph-palette.vim')
 vim.cmd('packadd! lualine.nvim')
 vim.cmd('packadd! nvim-bufferline.lua')
+vim.cmd('packadd! nvim-compe')
 vim.cmd('packadd! nvim-tree.lua')
 vim.cmd('packadd! nvim-treesitter')
 vim.cmd('packadd! nvim-ts-rainbow')
@@ -60,7 +59,7 @@ vim.cmd('packadd! vim-startify')
 vim.cmd('packadd! vim-terminal-help')
 
 require('plugins.settings.bufferline')
-require('plugins.settings.completion')
+require('plugins.settings.compe')
 require('plugins.settings.fugitive')
 require('plugins.settings.gitsigns')
 require('plugins.settings.lualine')

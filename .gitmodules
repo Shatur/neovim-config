@@ -62,14 +62,6 @@
 	path = pack/plugins/opt/quickfix-reflector.vim
 	url = git@github.com:stefandtw/quickfix-reflector.vim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/completion-nvim"]
-	path = pack/plugins/opt/completion-nvim
-	url = git@github.com:nvim-lua/completion-nvim.git
-	ignore = dirty
-[submodule "pack/plugins/opt/completion-buffers"]
-	path = pack/plugins/opt/completion-buffers
-	url = git@github.com:steelsojka/completion-buffers.git
-	ignore = dirty
 [submodule "pack/plugins/opt/asyncrun.vim"]
 	path = pack/plugins/opt/asyncrun.vim
 	url = git@github.com:skywind3000/asyncrun.vim.git
@@ -173,4 +165,8 @@
 [submodule "pack/plugins/opt/nvim-tree.lua"]
 	path = pack/plugins/opt/nvim-tree.lua
 	url = git@github.com:kyazdani42/nvim-tree.lua.git
+	ignore = dirty
+[submodule "pack/plugins/opt/nvim-compe"]
+	path = pack/plugins/opt/nvim-compe
+	url = git@github.com:hrsh7th/nvim-compe.git
 	ignore = dirty
