@@ -54,10 +54,6 @@
 	path = pack/plugins/opt/vim-lastplace
 	url = git@github.com:farmergreg/vim-lastplace.git
 	ignore = dirty
-[submodule "pack/plugins/opt/vim-fugitive"]
-	path = pack/plugins/opt/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
-	ignore = dirty
 [submodule "pack/plugins/opt/quickfix-reflector.vim"]
 	path = pack/plugins/opt/quickfix-reflector.vim
 	url = git@github.com:stefandtw/quickfix-reflector.vim.git
@@ -169,4 +165,8 @@
 [submodule "pack/plugins/opt/nvim-compe"]
 	path = pack/plugins/opt/nvim-compe
 	url = git@github.com:hrsh7th/nvim-compe.git
+	ignore = dirty
+[submodule "pack/plugins/opt/neogit"]
+	path = pack/plugins/opt/neogit
+	url = git@github.com:TimUntersberger/neogit.git
 	ignore = dirty
