@@ -1,7 +1,11 @@
 require('compe').setup{
   source = {
-    buffer = true,
-    spell = true
+    buffer = {
+      menu = 'ﮜ'
+    },
+    spell = {
+      menu = ''
+    }
   }
 }
 
