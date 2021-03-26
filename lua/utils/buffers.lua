@@ -8,12 +8,12 @@ function M.is_special_buffer()
 end
 
 function M.switch_to_normal_buffer()
-  local current_buffer = vim.fn.winnr()
+  local current_buffer = vim.api.nvim_get_current_buf()
   while M.is_special_buffer() do
-      vim.api.nvim_command('wincmd w')
-      if current_buffer == vim.fn.winnr() then
+      vim.cmd('wincmd w')
+      if current_buffer == vim.api.nvim_get_current_buf() then
         -- To avoid infinity loop
-        vim.api.nvim_command('only')
+        vim.cmd('only')
         break
       end
   end
@@ -21,26 +21,25 @@ end
 
 function M.close_current_buffer()
   if M.is_special_buffer() then
-    vim.api.nvim_command('bdelete')
+    vim.api.nvim_buf_delete(0, {force = vim.bo.buftype == 'terminal'})
     return
   end
   local current_buffer = vim.fn.bufnr()
   if #vim.fn.getbufinfo({buflisted=1}) == 1 then
-    vim.api.nvim_command('enew')
+    vim.cmd('enew')
     vim.bo.bufhidden = 'wipe'
   else
-    vim.api.nvim_command('bprevious')
+    vim.cmd('bprevious')
   end
-  vim.api.nvim_command('bdelete ' .. current_buffer)
+  vim.api.nvim_buf_delete(current_buffer, {})
 end
 
 function M.close_other_buffers()
-  local current_bufnr = vim.fn.bufnr()
-  local buffers_info = vim.fn.getbufinfo()
+  local current_buffer = vim.api.nvim_get_current_buf()
+  local buffers_info = vim.api.nvim_list_bufs()
   for _, buffer in ipairs(buffers_info) do
-    local bufnr = buffer['bufnr']
-    if bufnr ~= current_bufnr and not vim.api.nvim_buf_get_option(0, 'modified') then
-      vim.api.nvim_command('bdelete ' .. bufnr)
+    if buffer ~= current_buffer and not vim.api.nvim_buf_get_option(buffer, 'modified') then
+      vim.api.nvim_buf_delete(buffer, {force = true})
     end
   end
 end
