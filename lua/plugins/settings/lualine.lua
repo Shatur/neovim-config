@@ -1,5 +1,5 @@
 local lualine = require('lualine')
-require('lualine').status{
+require('lualine').setup{
   options = {
     theme = 'codedark',
     section_separators = {},
