@@ -170,3 +170,7 @@
 	path = pack/plugins/opt/neogit
 	url = git@github.com:TimUntersberger/neogit.git
 	ignore = dirty
+[submodule "pack/plugins/opt/telescope-project.nvim"]
+	path = pack/plugins/opt/telescope-project.nvim
+	url = git@github.com:nvim-telescope/telescope-project.nvim.git
+	ignore = dirty
