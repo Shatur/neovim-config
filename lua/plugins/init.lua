@@ -56,7 +56,6 @@ vim.cmd('packadd! telescope.nvim')
 vim.cmd('packadd! vim-eunuch')
 vim.cmd('packadd! vim-lastplace')
 vim.cmd('packadd! vim-scriptease')
-vim.cmd('packadd! vim-startify')
 vim.cmd('packadd! vim-terminal-help')
 
 require('plugins.settings.bufferline')

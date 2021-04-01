@@ -42,10 +42,6 @@
 	path = pack/plugins/opt/vim-terminal-help
 	url = git@github.com:skywind3000/vim-terminal-help.git
 	ignore = dirty
-[submodule "pack/plugins/opt/vim-startify"]
-	path = pack/plugins/opt/vim-startify
-	url = git@github.com:mhinz/vim-startify.git
-	ignore = dirty
 [submodule "pack/plugins/opt/vim-scriptease"]
 	path = pack/plugins/opt/vim-scriptease
 	url = git@github.com:tpope/vim-scriptease.git
