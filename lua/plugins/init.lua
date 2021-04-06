@@ -9,9 +9,6 @@ if vim.fn.exists('g:vscode') == 1 then
   return
 end
 
--- Colorscheme (should be initialized before other things)
-vim.cmd('colorscheme codedark')
-
 vim.cmd('packadd! asyncrun.vim')
 vim.cmd('packadd! kommentary')
 vim.cmd('packadd! nvim-autopairs')
@@ -23,6 +20,9 @@ vim.cmd('packadd! vim-cool')
 vim.cmd('packadd! vim-easymotion')
 vim.cmd('packadd! vim-visual-multi')
 vim.cmd('packadd! vim-visual-star-search')
+vim.cmd('packadd! zephyr-nvim')
+
+require('zephyr') -- Colorscheme
 
 require('plugins.settings.asyncrun')
 require('plugins.settings.autopairs')

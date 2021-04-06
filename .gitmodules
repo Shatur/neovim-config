@@ -122,10 +122,6 @@
 	path = pack/plugins/opt/nvim-bufferline.lua
 	url = git@github.com:akinsho/nvim-bufferline.lua.git
 	ignore = dirty
-[submodule "pack/plugins/opt/vim-code-dark"]
-	path = pack/plugins/opt/vim-code-dark
-	url = git@github.com:tomasiser/vim-code-dark.git
-	ignore = dirty
 [submodule "pack/plugins/opt/telescope.nvim"]
 	path = pack/plugins/opt/telescope.nvim
 	url = git@github.com:nvim-telescope/telescope.nvim.git
@@ -169,4 +165,8 @@
 [submodule "pack/plugins/opt/telescope-project.nvim"]
 	path = pack/plugins/opt/telescope-project.nvim
 	url = git@github.com:nvim-telescope/telescope-project.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/opt/zephyr-nvim"]
+	path = pack/plugins/opt/zephyr-nvim
+	url = git@github.com:glepnir/zephyr-nvim.git
 	ignore = dirty
