@@ -25,14 +25,14 @@ call firenvim#install(0) " To enable embedding in browsers via firenvim
 **Arch Linux**
 
 ```bash
-yay -S ripgrep nerd-fonts-source-code-pro xkb-switch
+yay -S ripgrep nerd-fonts-fira-code xkb-switch
 ```
 
 **Windows**
 
 ```bash
 scoop bucket add nerd-fonts
-sudo scoop install -g ripgrep SourceCodePro-NF
+sudo scoop install -g ripgrep FiraCode-NF
 ```
 
 Windows-version of xkb-switch should be downloaded manually:

@@ -67,9 +67,9 @@ vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
 
 -- Fonts
 if vim.fn.has('win32') == 1 then
-  vim.o.guifont = 'SauceCodePro NF'
+  vim.o.guifont = 'FiraCode NF:w57'
 else
-  vim.o.guifont = 'SauceCodePro Nerd Font Mono'
+  vim.o.guifont = 'FiraCode Nerd Font Mono:l'
 end
 
 -- Movement around wrapped lines
