@@ -4,11 +4,10 @@ function M.completion_confirm()
   if vim.fn.pumvisible() ~= 0  then
     if vim.fn.complete_info()['selected'] ~= -1 then
       vim.fn['compe#confirm']()
-      return require('nvim-autopairs').esc('<C-y>')
+      return require('nvim-autopairs').esc('')
     else
-      vim.defer_fn(function()
-        vim.fn['compe#confirm']('<CR>')
-      end, 20)
+      vim.api.nvim_select_popupmenu_item(0, false, false, {})
+      vim.fn['compe#confirm']()
       return require('nvim-autopairs').esc('<C-n>')
     end
   else
