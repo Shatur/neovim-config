@@ -51,6 +51,7 @@ vim.wo.number = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.cmd('set expandtab') -- https://github.com/neovim/neovim/issues/12978
+vim.o.list = true
 vim.o.listchars = 'space:⋅,tab:→ ' -- Display tabs
 vim.o.fillchars = 'eob: ' -- Hide ~
 vim.o.whichwrap = vim.o.whichwrap .. 'h,l,<,>,[,]'  -- Wrap movement between lines in edit mode
