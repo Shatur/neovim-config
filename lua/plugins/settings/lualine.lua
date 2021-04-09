@@ -1,14 +1,19 @@
-local auto = require('lualine.themes.auto')
--- Fix weird bg color in automatically generated theme
-auto.normal.c.bg = auto.normal.b.bg
-auto.insert.c.bg = auto.insert.b.bg
-auto.replace.c.bg = auto.replace.b.bg
-auto.visual.c.bg = auto.visual.b.bg
-auto.command.c.bg = auto.command.b.bg
+local zephyr_status = require('lualine.themes.auto')
+local zephyr = require('zephyr')
+zephyr_status.normal.b.bg = zephyr.base2
+zephyr_status.insert.b.bg = zephyr.base2
+zephyr_status.replace.b.bg = zephyr.base2
+zephyr_status.visual.b.bg = zephyr.base2
+zephyr_status.command.b.bg = zephyr.base2
+zephyr_status.normal.c.bg = zephyr.bg2
+zephyr_status.insert.c.bg = zephyr.bg2
+zephyr_status.replace.c.bg = zephyr.bg2
+zephyr_status.visual.c.bg = zephyr.bg2
+zephyr_status.command.c.bg = zephyr.bg2
 
 require('lualine').setup{
   options = {
-    theme = auto,
+    theme = zephyr_status,
     section_separators = {},
     component_separators = {'|', '|'},
   },
