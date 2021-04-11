@@ -170,3 +170,8 @@
 	path = pack/plugins/opt/zephyr-nvim
 	url = git@github.com:glepnir/zephyr-nvim.git
 	ignore = dirty
+[submodule "pack/plugins/opt/indent-blankline.nvim"]
+	path = pack/plugins/opt/indent-blankline.nvim
+	url = git@github.com:lukas-reineke/indent-blankline.nvim.git
+	branch = lua
+	ignore = dirty

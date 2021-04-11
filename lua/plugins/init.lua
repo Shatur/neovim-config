@@ -40,6 +40,7 @@ end
 vim.cmd('packadd! conflict-marker.vim')
 vim.cmd('packadd! gitsigns.nvim')
 vim.cmd('packadd! glyph-palette.vim')
+vim.cmd('packadd! indent-blankline.nvim ')
 vim.cmd('packadd! lualine.nvim')
 vim.cmd('packadd! neogit')
 vim.cmd('packadd! nvim-bufferline.lua')
