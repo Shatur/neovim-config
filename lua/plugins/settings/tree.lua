@@ -13,10 +13,10 @@ vim.g.nvim_tree_icons = {
 }
 
 vim.g.nvim_tree_bindings = {
-  ['l'] = '<cmd>lua require"nvim-tree".on_keypress("edit")<CR>',
-  ['h'] = '<cmd>lua require"nvim-tree".on_keypress("close_node")<CR>',
+  ['l'] = '<Cmd>lua require"nvim-tree".on_keypress("edit")<CR>',
+  ['h'] = '<Cmd>lua require"nvim-tree".on_keypress("close_node")<CR>',
 }
 
 -- Disable additional decorations
-vim.cmd("highlight! default NvimTreeSpecialFile guifg=orange")
-vim.cmd("highlight! default NvimTreeExecFile guifg=none guibg=none gui=NONE")
+vim.cmd('highlight! default NvimTreeSpecialFile guifg=orange')
+vim.cmd('highlight! default NvimTreeExecFile guifg=none guibg=none gui=NONE')
