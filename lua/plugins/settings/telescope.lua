@@ -8,8 +8,7 @@ require('telescope').setup{
         ['<C-v>'] = false,
         ['<C-x>'] = actions.select_vertical,
         ['<C-q>'] = actions.close,
-        ['<C-CR>'] = actions.send_selected_to_qflist + actions.open_qflist,
-        ['<A-CR>'] = actions.send_to_qflist + actions.open_qflist
+        ['<C-CR>'] = actions.smart_send_to_qflist + actions.open_qflist,
       }
     }
   }
