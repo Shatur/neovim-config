@@ -26,8 +26,6 @@ vim.api.nvim_set_keymap('', '<C-Tab>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telesc
 vim.api.nvim_set_keymap('i', '<C-Tab>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope buffers theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<F1>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope help_tags theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<F1>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope help_tags theme=get_dropdown<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-s>', '<Cmd>Telescope keymaps theme=get_dropdown<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-s>', '<Cmd>Telescope keymaps theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<A-o>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope oldfiles theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-o>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope oldfiles theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<C-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope find_files theme=get_dropdown<CR>', { noremap = true })
