@@ -1,6 +1,7 @@
+local telescope = require('telescope')
 local actions = require('telescope.actions')
 
-require('telescope').setup{
+telescope.setup{
   defaults = {
     file_sorter =  require('telescope.sorters').get_fzy_sorter,
     mappings = {
@@ -14,28 +15,29 @@ require('telescope').setup{
   }
 }
 
-require('telescope').load_extension('project')
-vim.api.nvim_set_keymap('n', '<A-b>', '<Cmd>Telescope git_branches<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope project<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'z=', '<Cmd>Telescope spell_suggest<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<S-CR>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope commands<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<S-CR>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope commands<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<C-Tab>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope buffers<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-Tab>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope buffers<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<F1>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope help_tags<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<F1>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope help_tags<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-s>', '<Cmd>Telescope keymaps<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-s>', '<Cmd>Telescope keymaps<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-o>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope oldfiles<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-o>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope oldfiles<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<C-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope find_files<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope find_files<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-/>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope live_grep<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-/>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope live_grep<CR>', { noremap = true })
+telescope.load_extension('project')
+
+vim.api.nvim_set_keymap('n', '<A-b>', '<Cmd>Telescope git_branches theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope project theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', 'z=', '<Cmd>Telescope spell_suggest theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<S-CR>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope commands theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<S-CR>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope commands theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<C-Tab>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope buffers theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-Tab>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope buffers theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<F1>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope help_tags theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<F1>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope help_tags theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<A-s>', '<Cmd>Telescope keymaps theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-s>', '<Cmd>Telescope keymaps theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<A-o>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope oldfiles theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-o>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope oldfiles theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<C-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope find_files theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope find_files theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<A-/>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-/>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
 if vim.fn.has('win32') then
-  vim.api.nvim_set_keymap('', '<C-/>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope current_buffer_fuzzy_find<CR>', { noremap = true })
-  vim.api.nvim_set_keymap('i', '<C-/>', '<Cmd>SwitchToNormalBuffer<CR><Esc><Cmd>Telescope current_buffer_fuzzy_find<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('', '<C-/>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope current_buffer_fuzzy_find theme=get_dropdown<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('i', '<C-/>', '<Cmd>SwitchToNormalBuffer<CR><Esc><Cmd>Telescope current_buffer_fuzzy_find theme=get_dropdown<CR>', { noremap = true })
 else
-  vim.api.nvim_set_keymap('', '<C-_>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope current_buffer_fuzzy_find<CR>', { noremap = true })
-  vim.api.nvim_set_keymap('i', '<C-_>', '<Cmd>SwitchToNormalBuffer<CR><Esc><Cmd>Telescope current_buffer_fuzzy_find<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('', '<C-_>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope current_buffer_fuzzy_find theme=get_dropdown<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('i', '<C-_>', '<Cmd>SwitchToNormalBuffer<CR><Esc><Cmd>Telescope current_buffer_fuzzy_find theme=get_dropdown<CR>', { noremap = true })
 end
