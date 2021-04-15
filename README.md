@@ -25,7 +25,7 @@ call firenvim#install(0) " To enable embedding in browsers via firenvim
 **Arch Linux**
 
 ```bash
-yay -S ripgrep nerd-fonts-fira-code xkb-switch
+yay -S ripgrep nerd-fonts-fira-code xkb-switch lua-language-server clang
 ```
 
 **Windows**

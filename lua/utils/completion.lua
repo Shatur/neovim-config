@@ -13,4 +13,22 @@ function M.completion_confirm()
   end
 end
 
+function M.tab_complete()
+  if vim.fn.pumvisible() == 1 then
+    return vim.api.nvim_replace_termcodes('<C-n><CR>', true, true, true)
+  elseif require('luasnip').expand_or_jumpable() then
+    return vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true)
+  else
+    return vim.api.nvim_replace_termcodes('<Tab>', true, true, true)
+  end
+end
+
+function M.s_tab_complete()
+  if require('luasnip').jumpable() then
+    return vim.api.nvim_replace_termcodes('<Plug>luasnip-jump-prev', true, true, true)
+  else
+    return vim.api.nvim_replace_termcodes('<S-Tab>', true, true, true)
+  end
+end
+
 return M

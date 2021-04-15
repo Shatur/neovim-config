@@ -175,3 +175,31 @@
 	url = git@github.com:lukas-reineke/indent-blankline.nvim.git
 	branch = lua
 	ignore = dirty
+[submodule "pack/plugins/opt/LuaSnip"]
+	path = pack/plugins/opt/LuaSnip
+	url = git@github.com:L3MON4D3/LuaSnip.git
+	ignore = dirty
+[submodule "pack/plugins/opt/lsp-status.nvim"]
+	path = pack/plugins/opt/lsp-status.nvim
+	url = git@github.com:nvim-lua/lsp-status.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/opt/nvim-dap-virtual-text"]
+	path = pack/plugins/opt/nvim-dap-virtual-text
+	url = git@github.com:theHamsta/nvim-dap-virtual-text.git
+	ignore = dirty
+[submodule "pack/plugins/opt/nvim-dap"]
+	path = pack/plugins/opt/nvim-dap
+	url = git@github.com:mfussenegger/nvim-dap.git
+	ignore = dirty
+[submodule "pack/plugins/opt/telescope-dap.nvim"]
+	path = pack/plugins/opt/telescope-dap.nvim
+	url = git@github.com:nvim-telescope/telescope-dap.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/opt/neovim-cmake-projects"]
+	path = pack/plugins/opt/neovim-cmake-projects
+	url = git@github.com:Shatur95/neovim-cmake-projects.git
+	ignore = dirty
+[submodule "pack/plugins/opt/nvim-lspconfig"]
+	path = pack/plugins/opt/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig.git
+	ignore = dirty

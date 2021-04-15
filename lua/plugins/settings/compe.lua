@@ -1,11 +1,14 @@
 require('compe').setup{
   source = {
     buffer = {
-      menu = 'ﮜ'
+      menu = ' Buffer',
     },
     spell = {
-      menu = ''
-    }
+      menu = ' Spell'
+    },
+    nvim_lsp = true,
+    nvim_lua = true,
+    luasnip = true
   }
 }
 
@@ -13,8 +16,3 @@ require('compe').setup{
 vim.api.nvim_set_keymap('i', '<CR>', [[luaeval('require("utils.completion").completion_confirm()')]], { expr = true, noremap = true })
 vim.api.nvim_set_keymap('i', '<C-Space>', 'compe#complete()', { noremap = true, expr = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-e>', 'compe#close("<C-e>")', { noremap = true, expr = true, silent = true })
-
-vim.api.nvim_set_keymap('i', '<Tab>', 'pumvisible() ? "<Down>" : "<Tab>"', { expr = true })
-vim.api.nvim_set_keymap('s', '<Tab>', 'pumvisible() ? "<Down>" : "<Tab>"', { expr = true })
-vim.api.nvim_set_keymap('i', '<S-Tab>', 'pumvisible() ? "<Up>" : "<S-Tab>"', { expr = true })
-vim.api.nvim_set_keymap('s', '<S-Tab>', 'pumvisible() ? "<Up>" : "<S-Tab>"', { expr = true })
