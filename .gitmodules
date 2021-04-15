@@ -203,3 +203,6 @@
 	path = pack/plugins/opt/nvim-lspconfig
 	url = git@github.com:neovim/nvim-lspconfig.git
 	ignore = dirty
+[submodule "pack/plugins/opt/Fold-License"]
+	path = pack/plugins/opt/Fold-License
+	url = git@github.com:vim-scripts/Fold-License.git

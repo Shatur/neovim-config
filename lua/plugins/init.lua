@@ -37,6 +37,7 @@ if vim.fn.exists('g:started_by_firenvim') == 1 then
   return
 end
 
+vim.cmd('packadd! Fold-License')
 vim.cmd('packadd! LuaSnip')
 vim.cmd('packadd! conflict-marker.vim')
 vim.cmd('packadd! gitsigns.nvim')
@@ -45,6 +46,7 @@ vim.cmd('packadd! indent-blankline.nvim ')
 vim.cmd('packadd! lsp-status.nvim')
 vim.cmd('packadd! lualine.nvim')
 vim.cmd('packadd! neogit')
+vim.cmd('packadd! neovim-cmake-projects')
 vim.cmd('packadd! nvim-bufferline.lua')
 vim.cmd('packadd! nvim-compe')
 vim.cmd('packadd! nvim-dap ')
@@ -60,7 +62,6 @@ vim.cmd('packadd! quickfix-reflector.vim')
 vim.cmd('packadd! telescope-dap.nvim')
 vim.cmd('packadd! telescope-project.nvim')
 vim.cmd('packadd! telescope.nvim')
-vim.cmd('packadd! neovim-cmake-projects')
 vim.cmd('packadd! vim-eunuch')
 vim.cmd('packadd! vim-lastplace')
 vim.cmd('packadd! vim-scriptease')
