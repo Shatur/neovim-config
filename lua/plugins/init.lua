@@ -17,7 +17,6 @@ if vim.fn.exists('g:started_by_firenvim') == 1 then
   return
 end
 
-vim.cmd('packadd! Fold-License')
 vim.cmd('packadd! LuaSnip')
 vim.cmd('packadd! cfilter')
 vim.cmd('packadd! conflict-marker.vim')
