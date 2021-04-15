@@ -34,8 +34,8 @@
 	path = pack/plugins/start/vim-cutlass
 	url = git@github.com:svermeulen/vim-cutlass.git
 	ignore = dirty
-[submodule "pack/plugins/opt/vim-visual-multi"]
-	path = pack/plugins/opt/vim-visual-multi
+[submodule "pack/plugins/start/vim-visual-multi"]
+	path = pack/plugins/start/vim-visual-multi
 	url = git@github.com:mg979/vim-visual-multi.git
 	ignore = dirty
 [submodule "pack/plugins/opt/vim-terminal-help"]
@@ -54,20 +54,16 @@
 	path = pack/plugins/opt/quickfix-reflector.vim
 	url = git@github.com:stefandtw/quickfix-reflector.vim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/asyncrun.vim"]
-	path = pack/plugins/opt/asyncrun.vim
+[submodule "pack/plugins/start/asyncrun.vim"]
+	path = pack/plugins/start/asyncrun.vim
 	url = git@github.com:skywind3000/asyncrun.vim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/scroll.vim"]
-	path = pack/plugins/opt/scroll.vim
+[submodule "pack/plugins/start/scroll.vim"]
+	path = pack/plugins/start/scroll.vim
 	url = git@github.com:mg979/scroll.vim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/vscode-easymotion"]
-	path = pack/plugins/opt/vscode-easymotion
-	url = git@github.com:asvetliakov/vim-easymotion.git
-	ignore = dirty
-[submodule "pack/plugins/opt/vim-easymotion"]
-	path = pack/plugins/opt/vim-easymotion
+[submodule "pack/plugins/start/vim-easymotion"]
+	path = pack/plugins/start/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion
 	ignore = dirty
 [submodule "pack/plugins/opt/glyph-palette.vim"]
@@ -78,32 +74,32 @@
 	path = pack/plugins/start/vim-move
 	url = git@github.com:matze/vim-move.git
 	ignore = dirty
-[submodule "pack/plugins/opt/vim-cool"]
-	path = pack/plugins/opt/vim-cool
+[submodule "pack/plugins/start/vim-cool"]
+	path = pack/plugins/start/vim-cool
 	url = git@github.com:romainl/vim-cool.git
 	ignore = dirty
-[submodule "pack/plugins/opt/vim-visual-star-search"]
-	path = pack/plugins/opt/vim-visual-star-search
+[submodule "pack/plugins/start/vim-visual-star-search"]
+	path = pack/plugins/start/vim-visual-star-search
 	url = git@github.com:bronson/vim-visual-star-search.git
 	ignore = dirty
 [submodule "pack/plugins/opt/vim-eunuch"]
 	path = pack/plugins/opt/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
 	ignore = dirty
-[submodule "pack/plugins/opt/open-browser.vim"]
-	path = pack/plugins/opt/open-browser.vim
+[submodule "pack/plugins/start/open-browser.vim"]
+	path = pack/plugins/start/open-browser.vim
 	url = git@github.com:tyru/open-browser.vim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/open-browser-github.vim"]
-	path = pack/plugins/opt/open-browser-github.vim
+[submodule "pack/plugins/start/open-browser-github.vim"]
+	path = pack/plugins/start/open-browser-github.vim
 	url = git@github.com:tyru/open-browser-github.vim.git
 	ignore = dirty
 [submodule "pack/plugins/opt/conflict-marker.vim"]
 	path = pack/plugins/opt/conflict-marker.vim
 	url = git@github.com:rhysd/conflict-marker.vim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/nvim-cursorline"]
-	path = pack/plugins/opt/nvim-cursorline
+[submodule "pack/plugins/start/nvim-cursorline"]
+	path = pack/plugins/start/nvim-cursorline
 	url = git@github.com:yamatsum/nvim-cursorline.git
 	ignore = dirty
 [submodule "pack/plugins/opt/lualine.nvim"]
@@ -134,16 +130,16 @@
 	path = pack/plugins/opt/popup.nvim
 	url = git@github.com:nvim-lua/popup.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/nvim-autopairs"]
-	path = pack/plugins/opt/nvim-autopairs
+[submodule "pack/plugins/start/nvim-autopairs"]
+	path = pack/plugins/start/nvim-autopairs
 	url = git@github.com:windwp/nvim-autopairs.git
 	ignore = dirty
 [submodule "pack/plugins/opt/nvim-ts-rainbow"]
 	path = pack/plugins/opt/nvim-ts-rainbow
 	url = git@github.com:p00f/nvim-ts-rainbow.git
 	ignore = dirty
-[submodule "pack/plugins/opt/kommentary"]
-	path = pack/plugins/opt/kommentary
+[submodule "pack/plugins/start/kommentary"]
+	path = pack/plugins/start/kommentary
 	url = git@github.com:b3nj5m1n/kommentary.git
 	ignore = dirty
 [submodule "pack/plugins/opt/gitsigns.nvim"]
@@ -166,8 +162,8 @@
 	path = pack/plugins/opt/telescope-project.nvim
 	url = git@github.com:nvim-telescope/telescope-project.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/zephyr-nvim"]
-	path = pack/plugins/opt/zephyr-nvim
+[submodule "pack/plugins/start/zephyr-nvim"]
+	path = pack/plugins/start/zephyr-nvim
 	url = git@github.com:glepnir/zephyr-nvim.git
 	ignore = dirty
 [submodule "pack/plugins/opt/indent-blankline.nvim"]
