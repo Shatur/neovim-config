@@ -19,6 +19,7 @@ end
 
 vim.cmd('packadd! Fold-License')
 vim.cmd('packadd! LuaSnip')
+vim.cmd('packadd! cfilter')
 vim.cmd('packadd! conflict-marker.vim')
 vim.cmd('packadd! gitsigns.nvim')
 vim.cmd('packadd! glyph-palette.vim')
