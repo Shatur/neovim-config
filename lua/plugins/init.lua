@@ -19,6 +19,7 @@ if vim.fn.exists('g:started_by_firenvim') == 1 then
 end
 
 vim.cmd('packadd! LuaSnip')
+vim.cmd('packadd! asynctasks.vim')
 vim.cmd('packadd! cfilter')
 vim.cmd('packadd! conflict-marker.vim')
 vim.cmd('packadd! gitsigns.nvim')
@@ -39,6 +40,7 @@ vim.cmd('packadd! nvim-web-devicons')
 vim.cmd('packadd! plenary.nvim')
 vim.cmd('packadd! popup.nvim')
 vim.cmd('packadd! quickfix-reflector.vim')
+vim.cmd('packadd! telescope-asynctasks.nvim')
 vim.cmd('packadd! telescope-dap.nvim')
 vim.cmd('packadd! telescope-project.nvim')
 vim.cmd('packadd! telescope.nvim')

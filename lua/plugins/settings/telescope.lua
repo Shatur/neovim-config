@@ -17,6 +17,7 @@ telescope.setup{
 
 telescope.load_extension('project')
 telescope.load_extension('dap')
+telescope.load_extension('asynctasks')
 
 vim.api.nvim_set_keymap('n', '<A-b>', '<Cmd>Telescope git_branches theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope project theme=get_dropdown<CR>', { noremap = true })
@@ -33,6 +34,8 @@ vim.api.nvim_set_keymap('', '<C-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescop
 vim.api.nvim_set_keymap('i', '<C-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope find_files theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<A-/>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-/>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-t>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope asynctasks all theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<A-t>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope asynctasks all theme=get_dropdown<CR>', { noremap = true })
 if vim.fn.has('win32') then
   vim.api.nvim_set_keymap('', '<C-/>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope current_buffer_fuzzy_find theme=get_dropdown<CR>', { noremap = true })
   vim.api.nvim_set_keymap('i', '<C-/>', '<Cmd>SwitchToNormalBuffer<CR><Esc><Cmd>Telescope current_buffer_fuzzy_find theme=get_dropdown<CR>', { noremap = true })

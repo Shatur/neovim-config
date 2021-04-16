@@ -206,3 +206,12 @@
 [submodule "pack/plugins/start/nvim-colorizer.lua"]
 	path = pack/plugins/start/nvim-colorizer.lua
 	url = git@github.com:norcalli/nvim-colorizer.lua.git
+	ignore = dirty
+[submodule "pack/plugins/opt/asynctasks.vim"]
+	path = pack/plugins/opt/asynctasks.vim
+	url = git@github.com:skywind3000/asynctasks.vim.git
+	ignore = dirty
+[submodule "pack/plugins/opt/telescope-asynctasks.nvim"]
+	path = pack/plugins/opt/telescope-asynctasks.nvim
+	url = git@github.com:GustavoKatel/telescope-asynctasks.nvim.git
+	ignore = dirty
