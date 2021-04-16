@@ -199,3 +199,7 @@
 	path = pack/plugins/start/hop.nvim
 	url = git@github.com:phaazon/hop.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/formatter.nvim"]
+	path = pack/plugins/start/formatter.nvim
+	url = git@github.com:mhartington/formatter.nvim.git
+	ignore = dirty
