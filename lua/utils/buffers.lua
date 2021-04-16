@@ -20,6 +20,10 @@ function M.switch_to_normal_buffer()
 end
 
 function M.close_current_buffer()
+  if vim.bo.filetype == 'NvimTree' then
+    require('nvim-tree').close()
+    return
+  end
   if M.is_special_buffer() then
     vim.api.nvim_buf_delete(0, {force = vim.bo.buftype == 'terminal'})
     return

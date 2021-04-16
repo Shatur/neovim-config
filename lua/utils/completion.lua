@@ -15,7 +15,7 @@ end
 
 function M.tab_complete()
   if vim.fn.pumvisible() == 1 then
-    return vim.api.nvim_replace_termcodes('<C-n><CR>', true, true, true)
+    return vim.fn['compe#confirm']({keys = '<Tab>', select = true})
   elseif require('luasnip').expand_or_jumpable() then
     return vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true)
   else
