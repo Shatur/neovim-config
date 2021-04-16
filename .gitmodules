@@ -146,8 +146,8 @@
 	path = pack/plugins/opt/nvim-tree.lua
 	url = git@github.com:kyazdani42/nvim-tree.lua.git
 	ignore = dirty
-[submodule "pack/plugins/opt/nvim-compe"]
-	path = pack/plugins/opt/nvim-compe
+[submodule "pack/plugins/start/nvim-compe"]
+	path = pack/plugins/start/nvim-compe
 	url = git@github.com:hrsh7th/nvim-compe.git
 	ignore = dirty
 [submodule "pack/plugins/opt/neogit"]
