@@ -15,13 +15,13 @@ telescope.setup{
   }
 }
 
-telescope.load_extension('project')
 telescope.load_extension('dap')
 telescope.load_extension('asynctasks')
 telescope.load_extension('cmake')
+telescope.load_extension('session_manager')
 
 vim.api.nvim_set_keymap('n', '<A-b>', '<Cmd>Telescope git_branches theme=get_dropdown<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope project theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope session_manager load theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', 'z=', '<Cmd>Telescope spell_suggest theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<S-CR>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope commands theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-CR>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope commands theme=get_dropdown<CR>', { noremap = true })

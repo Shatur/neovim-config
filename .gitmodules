@@ -154,10 +154,6 @@
 	path = pack/plugins/opt/neogit
 	url = git@github.com:TimUntersberger/neogit.git
 	ignore = dirty
-[submodule "pack/plugins/opt/telescope-project.nvim"]
-	path = pack/plugins/opt/telescope-project.nvim
-	url = git@github.com:nvim-telescope/telescope-project.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/zephyr-nvim"]
 	path = pack/plugins/start/zephyr-nvim
 	url = git@github.com:glepnir/zephyr-nvim.git
@@ -214,4 +210,8 @@
 [submodule "pack/plugins/opt/telescope-asynctasks.nvim"]
 	path = pack/plugins/opt/telescope-asynctasks.nvim
 	url = git@github.com:GustavoKatel/telescope-asynctasks.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/opt/neovim-session-manager"]
+	path = pack/plugins/opt/neovim-session-manager
+	url = git@github.com:Shatur95/neovim-session-manager.git
 	ignore = dirty
