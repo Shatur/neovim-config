@@ -187,9 +187,9 @@
 	path = pack/plugins/opt/telescope-dap.nvim
 	url = git@github.com:nvim-telescope/telescope-dap.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/neovim-cmake-projects"]
-	path = pack/plugins/opt/neovim-cmake-projects
-	url = git@github.com:Shatur95/neovim-cmake-projects.git
+[submodule "pack/plugins/opt/neovim-cmake"]
+	path = pack/plugins/opt/neovim-cmake
+	url = git@github.com:Shatur95/neovim-cmake.git
 	ignore = dirty
 [submodule "pack/plugins/opt/nvim-lspconfig"]
 	path = pack/plugins/opt/nvim-lspconfig
