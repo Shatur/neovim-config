@@ -18,6 +18,7 @@ telescope.setup{
 telescope.load_extension('project')
 telescope.load_extension('dap')
 telescope.load_extension('asynctasks')
+telescope.load_extension('cmake')
 
 vim.api.nvim_set_keymap('n', '<A-b>', '<Cmd>Telescope git_branches theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope project theme=get_dropdown<CR>', { noremap = true })
