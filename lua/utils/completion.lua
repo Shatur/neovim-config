@@ -3,8 +3,7 @@ local M = {}
 function M.completion_confirm()
   if vim.fn.pumvisible() ~= 0  then
     if vim.fn.complete_info()['selected'] ~= -1 then
-      vim.fn['compe#confirm']()
-      return require('nvim-autopairs').esc('')
+      return vim.fn['compe#confirm'](require('nvim-autopairs').esc('<CR>'))
     else
       return require('nvim-autopairs').esc('<CR>')
     end
@@ -14,9 +13,7 @@ function M.completion_confirm()
 end
 
 function M.tab_complete()
-  if vim.fn.pumvisible() == 1 then
-    return vim.fn['compe#confirm']({keys = '<Tab>', select = true})
-  elseif require('luasnip').expand_or_jumpable() then
+  if require('luasnip').expand_or_jumpable() then
     return vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true)
   else
     return vim.api.nvim_replace_termcodes('<Tab>', true, true, true)
