@@ -215,3 +215,7 @@
 	path = pack/plugins/opt/neovim-session-manager
 	url = git@github.com:Shatur95/neovim-session-manager.git
 	ignore = dirty
+[submodule "pack/plugins/opt/playground"]
+	path = pack/plugins/opt/playground
+	url = git@github.com:nvim-treesitter/playground.git
+	ignore = dirty
