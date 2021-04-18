@@ -30,7 +30,7 @@ vim.api.nvim_set_keymap('n', '<Leader>lp', '<Cmd>lua require"dap".set_breakpoint
 vim.api.nvim_set_keymap('n', '<A-d>', '<Cmd>lua require"dap".repl.toggle({height = 15})<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<A-BS>', '<Cmd>lua require"dap".stop()<CR>', { noremap = true })
 
-vim.api.nvim_set_keymap('n', 'gb', '<Cmd>Telescope dap list_breakpoints theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>p', '<Cmd>Telescope dap list_breakpoints theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>c', '<Cmd>Telescope dap commands theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>v', '<Cmd>Telescope dap variables theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>f', '<Cmd>Telescope dap frames theme=get_dropdown<CR>', { noremap = true })
