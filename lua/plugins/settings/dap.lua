@@ -28,7 +28,7 @@ vim.api.nvim_set_keymap('n', '<Leader>b', '<Cmd>lua require("dap").toggle_breakp
 vim.api.nvim_set_keymap('n', '<Leader>B', '<Cmd>lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>lp', '<Cmd>lua require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<A-d>', '<Cmd>lua require("dap").repl.toggle({height = 15})<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<A-BS>', '<Cmd>lua require("dap").stop()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<A-BS>', '<Cmd>lua require("dap").disconnect(); require("dap").repl.close()<CR>', { noremap = true })
 
 vim.api.nvim_set_keymap('n', '<Leader>p', '<Cmd>Telescope dap list_breakpoints theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>c', '<Cmd>Telescope dap commands theme=get_dropdown<CR>', { noremap = true })
