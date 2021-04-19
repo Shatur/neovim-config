@@ -1,44 +1,7 @@
+-- General
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.clipboard = 'unnamedplus'
-
--- Usually installed system-wide, so disable it by the parameter
-vim.g.loaded_fzf = false
-
--- Remap useless keys
-vim.g.mapleader = ' '
-vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
-vim.api.nvim_set_keymap('n', '<CR>', ':', { noremap = true })
-
--- Move operator
-vim.api.nvim_set_keymap('', 'm', 'd', { noremap = true })
-vim.api.nvim_set_keymap('', 'M', 'D', { noremap = true })
-vim.api.nvim_set_keymap('n', 'mm', 'dd', { noremap = true })
-
--- Remap increase / decrease number shortucts to + and - signs
-vim.api.nvim_set_keymap('n', '<C-=>', '<C-a>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-->', '<C-x>', { noremap = true })
-
--- ..and use <C-a> to select all
-vim.api.nvim_set_keymap('', '<C-a>', 'gg0vG$', { noremap = true })
-vim.api.nvim_set_keymap('v', '<C-a>', '<Esc>gg0vG$', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-a>', '<Esc>gg0vG$', { noremap = true })
-
--- Custom group for all autocmd's in configuration
-vim.cmd('augroup vimrc')
-vim.cmd('autocmd!')
--- Highligh yanked text
-vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
-vim.cmd('augroup END')
-
-require('plugins')
-
-if vim.fn.exists('g:vscode') == 1 then
-  -- VSCode do not need the next settings
-  return
-end
-
--- General
 vim.o.title = true
 vim.o.titlestring = '%F'
 vim.o.cursorline = true
@@ -73,6 +36,29 @@ if vim.fn.has('win32') == 1 then
 else
   vim.o.guifont = 'FiraCode Nerd Font Mono:l'
 end
+
+-- Usually installed system-wide, so disable it by the parameter
+vim.g.loaded_fzf = false
+
+-- Remap useless keys
+vim.g.mapleader = ' '
+vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
+vim.api.nvim_set_keymap('n', '<CR>', ':', { noremap = true })
+
+-- Move operator
+vim.api.nvim_set_keymap('', 'm', 'd', { noremap = true })
+vim.api.nvim_set_keymap('', 'M', 'D', { noremap = true })
+vim.api.nvim_set_keymap('n', 'mm', 'dd', { noremap = true })
+
+-- Remap increase / decrease number shortucts to + and - signs
+vim.api.nvim_set_keymap('n', '<C-=>', '<C-a>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-->', '<C-x>', { noremap = true })
+
+-- ..and use <C-a> to select all
+vim.api.nvim_set_keymap('', '<C-a>', 'gg0vG$', { noremap = true })
+vim.api.nvim_set_keymap('v', '<C-a>', '<Esc>gg0vG$', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-a>', '<Esc>gg0vG$', { noremap = true })
+
 
 -- Movement around wrapped lines
 vim.api.nvim_set_keymap('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true })
@@ -127,5 +113,12 @@ vim.api.nvim_set_keymap('i', '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true
 vim.api.nvim_set_keymap('', '<A-x>', '<Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-x>', '<Esc><Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
 
--- Contains custom scripted things
-require('utils')
+--- Custom group for all autocmd's in configuration
+vim.cmd('augroup vimrc')
+vim.cmd('autocmd!')
+--- Highligh yanked text
+vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
+vim.cmd('augroup END')
+
+require('utils') -- Contains custom scripted things
+require('plugins')
