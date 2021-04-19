@@ -77,6 +77,8 @@ lspconfig.sumneko_lua.setup{
   },
 }
 
+lspconfig.gdscript.setup{}
+
 -- Icons
 local kinds = require('vim.lsp.protocol').CompletionItemKind
 kinds[kinds.Text] = ' Text'
