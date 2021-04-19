@@ -30,6 +30,16 @@ vim.o.completeopt = 'menuone,noselect,noinsert'
 vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
 vim.o.sessionoptions = vim.o.sessionoptions:gsub('help,', ''):gsub('blank,', ''):gsub('buffers,', '')
 
+-- Use Powershell on Windows
+if vim.fn.has('win32') == 1 then
+  vim.o.shell = 'powershell'
+  vim.o.shellquote = ''
+  vim.o.shellpipe = '|'
+  vim.o.shellxquote = ''
+  vim.o.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'
+  vim.o.shellredir = '| Out-File -Encoding UTF8'
+end
+
 -- Fonts
 if vim.fn.has('win32') == 1 then
   vim.o.guifont = 'FiraCode NF:w57'
