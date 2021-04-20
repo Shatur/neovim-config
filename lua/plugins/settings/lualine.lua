@@ -14,7 +14,7 @@ require('lualine').setup{
   },
   sections = {
     lualine_a = {require('utils.statusline').mode},
-    lualine_c = {'filename', {'diagnostics', sources = {'nvim_lsp'}, color_error = zephyr.red, color_warn = zephyr.orange, color_info = zephyr.fg}},
+    lualine_c = {{'filename', symbols = {modified = ' ', readonly = ' '}}, {'diagnostics', sources = {'nvim_lsp'}, color_error = zephyr.red, color_warn = zephyr.orange, color_info = zephyr.fg}},
     lualine_x = {require('dap').status, require('lsp-status').status, require('utils.statusline').cursors, 'encoding', 'fileformat', 'filetype'}
   }
 }
