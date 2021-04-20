@@ -219,3 +219,7 @@
 	path = pack/plugins/opt/playground
 	url = git@github.com:nvim-treesitter/playground.git
 	ignore = dirty
+[submodule "pack/plugins/opt/vim-cpp-helper"]
+	path = pack/plugins/opt/vim-cpp-helper
+	url = git@github.com:d86leader/vim-cpp-helper.git
+	ignore = dirty
