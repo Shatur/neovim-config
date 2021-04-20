@@ -32,7 +32,7 @@ yay -S ripgrep nerd-fonts-fira-code xkb-switch lua-language-server clang lua-for
 
 ```bash
 scoop bucket add nerd-fonts
-sudo scoop install -g ripgrep FiraCode-NF
+sudo scoop install -g ripgrep llvm FiraCode-NF
 ```
 
 Windows-version of xkb-switch should be downloaded manually:
