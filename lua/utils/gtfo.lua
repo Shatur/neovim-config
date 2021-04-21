@@ -20,7 +20,7 @@ function M.open_terminal(path)
   if vim.fn.has('unix') == 1 then
     vim.fn.system('konsole --separate --workdir ' .. vim.fn.shellescape(path) .. ' &')
   else
-    vim.fn.system('start /D "' .. vim.fn.shellescape(path) .. '" powershell')
+    vim.fn.system('wt -d ' .. vim.fn.shellescape(path))
   end
 end
 
