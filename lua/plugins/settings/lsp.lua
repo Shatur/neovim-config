@@ -77,7 +77,10 @@ lspconfig.sumneko_lua.setup{
   },
 }
 
-lspconfig.gdscript.setup{}
+lspconfig.gdscript.setup{
+  capabilities = lsp_status.capabilities,
+  on_attach = on_attach
+}
 
 -- Icons
 local kinds = require('vim.lsp.protocol').CompletionItemKind
