@@ -3,9 +3,6 @@ require('compe').setup{
     buffer = {
       menu = ' Buffer',
     },
-    spell = {
-      menu = ' Spell'
-    },
     nvim_lsp = true,
     nvim_lua = true,
     luasnip = true
