@@ -25,7 +25,7 @@ call firenvim#install(0) " To enable embedding in browsers via firenvim
 **Arch Linux**
 
 ```bash
-yay -S ripgrep nerd-fonts-fira-code xkb-switch lua-language-server clang lua-format
+yay -S ripgrep nerd-fonts-fira-code xkb-switch lua-language-server clang cmake-language-server lua-format
 ```
 
 **Windows**
@@ -33,7 +33,8 @@ yay -S ripgrep nerd-fonts-fira-code xkb-switch lua-language-server clang lua-for
 ```bash
 scoop bucket add nerd-fonts
 scoop bucket add extras
-sudo scoop install -g ripgrep llvm FiraCode-NF windows-terminal
+sudo scoop install -g ripgrep llvm FiraCode-NF windows-terminal python
+pip install cmake-language-server
 ```
 
 Windows-version of xkb-switch should be downloaded manually:
