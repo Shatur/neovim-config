@@ -1,15 +1,15 @@
-local M = {}
+local buffers = {}
 
-function M.is_special_buffer()
+local function is_special_buffer()
   return not vim.api.nvim_buf_get_option(0, 'modifiable') or
     vim.bo.filetype == 'gitrebase' or
     vim.bo.filetype == 'gitcommit' or
     vim.bo.filetype == 'qf'
 end
 
-function M.switch_to_normal_buffer()
+function buffers.switch_to_normal_buffer()
   local current_buffer = vim.api.nvim_get_current_buf()
-  while M.is_special_buffer() do
+  while is_special_buffer() do
       vim.cmd('wincmd w')
       if current_buffer == vim.api.nvim_get_current_buf() then
         -- To avoid infinity loop
@@ -19,12 +19,12 @@ function M.switch_to_normal_buffer()
   end
 end
 
-function M.close_current_buffer()
+function buffers.close_current_buffer()
   if vim.bo.filetype == 'NvimTree' then
     require('nvim-tree').close()
     return
   end
-  if M.is_special_buffer() then
+  if is_special_buffer() then
     vim.api.nvim_buf_delete(0, {force = vim.bo.buftype == 'terminal'})
     return
   end
@@ -38,7 +38,7 @@ function M.close_current_buffer()
   vim.api.nvim_buf_delete(current_buffer, {})
 end
 
-function M.close_other_buffers()
+function buffers.close_other_buffers()
   local current_buffer = vim.api.nvim_get_current_buf()
   local buffers_info = vim.api.nvim_list_bufs()
   for _, buffer in ipairs(buffers_info) do
@@ -48,4 +48,4 @@ function M.close_other_buffers()
   end
 end
 
-return M
+return buffers

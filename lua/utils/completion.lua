@@ -1,6 +1,6 @@
-local M = {}
+local completion = {}
 
-function M.completion_confirm()
+function completion.confirm()
   if vim.fn.pumvisible() ~= 0  then
     if vim.fn.complete_info()['selected'] ~= -1 then
       return vim.fn['compe#confirm'](require('nvim-autopairs').esc('<CR>'))
@@ -12,7 +12,7 @@ function M.completion_confirm()
   end
 end
 
-function M.tab_complete()
+function completion.tab_snippet()
   if require('luasnip').expand_or_jumpable() then
     return vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true)
   else
@@ -20,7 +20,7 @@ function M.tab_complete()
   end
 end
 
-function M.s_tab_complete()
+function completion.s_tab_snippet()
   if require('luasnip').jumpable() then
     return vim.api.nvim_replace_termcodes('<Plug>luasnip-jump-prev', true, true, true)
   else
@@ -28,4 +28,4 @@ function M.s_tab_complete()
   end
 end
 
-return M
+return completion
