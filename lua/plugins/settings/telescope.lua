@@ -10,6 +10,9 @@ telescope.setup{
         ['<C-x>'] = actions.select_vertical,
         ['<C-q>'] = actions.close,
         ['<C-CR>'] = actions.smart_send_to_qflist + actions.open_qflist,
+      },
+      n = {
+        ['<C-q>'] = actions.close,
       }
     }
   }
