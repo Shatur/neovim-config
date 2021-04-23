@@ -223,3 +223,6 @@
 	path = pack/plugins/opt/vim-cpp-helper
 	url = git@github.com:d86leader/vim-cpp-helper.git
 	ignore = dirty
+[submodule "pack/plugins/opt/lsp-trouble.nvim"]
+	path = pack/plugins/opt/lsp-trouble.nvim
+	url = git@github.com:folke/lsp-trouble.nvim.git
