@@ -22,6 +22,7 @@ vim.o.pumheight = 10
 vim.o.wildmode = 'longest:full,full'
 vim.o.termguicolors = true
 vim.o.winblend = 20
+vim.o.foldenable = false
 vim.o.hidden = true -- For switching between edited buffers
 vim.o.showmode = false -- Do not display current mode (use statusline for it)
 vim.wo.signcolumn = 'yes' -- Always show the signcolum, otherwise it would shift the text each time changes appear/disappear

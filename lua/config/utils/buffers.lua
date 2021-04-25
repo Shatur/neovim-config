@@ -4,6 +4,7 @@ local function is_special_buffer()
   return not vim.api.nvim_buf_get_option(0, 'modifiable') or
     vim.bo.filetype == 'gitrebase' or
     vim.bo.filetype == 'gitcommit' or
+    vim.bo.filetype == 'spectre_panel' or
     vim.bo.filetype == 'qf'
 end
 

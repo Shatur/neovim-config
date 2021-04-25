@@ -226,3 +226,8 @@
 [submodule "pack/plugins/opt/lsp-trouble.nvim"]
 	path = pack/plugins/opt/lsp-trouble.nvim
 	url = git@github.com:folke/lsp-trouble.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/opt/nvim-spectre"]
+	path = pack/plugins/opt/nvim-spectre
+	url = git@github.com:windwp/nvim-spectre.git
+	ignore = dirty
