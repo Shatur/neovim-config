@@ -13,6 +13,12 @@ vim.cmd('command! BDelete lua require("config.utils.buffers").close_current_buff
 -- Delete all buffers except the current one
 vim.cmd('command! BDeleteOther lua require("config.utils.buffers").close_other_buffers()')
 
+-- Update all plugins and commit changes
+vim.cmd('command! -nargs=? UpdatePlugins lua require("config.utils.updater").update_plugins(<args>)')
+
+-- Pull latest configuration changes from repo
+vim.cmd('command! UpdateConfig lua require("config.utils.updater").update_config()')
+
 -- Buffers / tabs control
 vim.api.nvim_set_keymap('', '<C-q>', '<Cmd>BDelete<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true })
