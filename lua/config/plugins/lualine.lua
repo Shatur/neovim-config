@@ -13,8 +13,8 @@ require('lualine').setup{
     component_separators = {'|', '|'},
   },
   sections = {
-    lualine_a = {require('utils.statusline').mode},
+    lualine_a = {require('config.utils.statusline').mode},
     lualine_c = {{'filename', symbols = {modified = ' ', readonly = ' '}}, {'diagnostics', sources = {'nvim_lsp'}, color_error = zephyr.red, color_warn = zephyr.orange, color_info = zephyr.fg}},
-    lualine_x = {require('dap').status, require('lsp-status').status, require('utils.statusline').cursors, 'encoding', 'fileformat', 'filetype'}
+    lualine_x = {require('dap').status, require('lsp-status').status, require('config.utils.statusline').cursors, 'encoding', 'fileformat', 'filetype'}
   }
 }

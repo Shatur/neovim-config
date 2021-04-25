@@ -120,5 +120,5 @@ vim.cmd('autocmd!')
 vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
 vim.cmd('augroup END')
 
-require('utils') -- Contains custom scripted things
-require('plugins')
+require('config.utils') -- Contains custom scripted things
+require('config.plugins')
