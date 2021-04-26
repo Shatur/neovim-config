@@ -231,3 +231,7 @@
 	path = pack/plugins/opt/nvim-spectre
 	url = git@github.com:windwp/nvim-spectre.git
 	ignore = dirty
+[submodule "pack/plugins/opt/octo.nvim"]
+	path = pack/plugins/opt/octo.nvim
+	url = git@github.com:pwntester/octo.nvim.git
+	ignore = dirty
