@@ -113,6 +113,8 @@ vim.api.nvim_set_keymap('', '<A-q>', '<Cmd>tabclose<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<A-x>', '<Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-x>', '<Esc><Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', ']t', '<Cmd>tabnext<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '[t', '<Cmd>tabnext<CR>', { noremap = true })
 
 --- Custom group for all autocmd's in configuration
 vim.cmd('augroup vimrc')
