@@ -1,7 +1,11 @@
 local cursor = {}
 
+local timer = vim.loop.new_timer()
+
 function cursor.highlight_current_word()
-  local cursorword = vim.fn.expand('<cword>')
+  local column = vim.api.nvim_win_get_cursor(0)[2]
+  local line = vim.api.nvim_get_current_line()
+  local cursorword = vim.fn.matchstr(line:sub(1, column + 1), [[\k*$]]) .. vim.fn.matchstr(line:sub(column + 1), [[^\k*]]):sub(2)
   if cursorword == vim.w.cursorword then
     return
   end
@@ -9,11 +13,19 @@ function cursor.highlight_current_word()
   if vim.w.cursorword_id then
     vim.call('matchdelete', vim.w.cursorword_id)
   end
-  if #cursorword > 100 or #cursorword < 3 or string.find(cursorword, '[\192-\255]+') ~= nil then
-    vim.w.cursorword_id = false
-    return
+  vim.w.cursorword_id = false
+  timer:stop()
+  if #cursorword < 100 and #cursorword > 3 then
+    timer:start(
+      300,
+      0,
+      vim.schedule_wrap(
+      function()
+        vim.w.cursorword_id = vim.fn.matchadd('PmenuSbar', [[\<]] .. cursorword .. [[\>]], -1)
+      end
+      )
+    )
   end
-  vim.w.cursorword_id = vim.fn.matchadd('PmenuSbar', [[\<]] .. cursorword .. [[\>]], -1)
 end
 
 return cursor
