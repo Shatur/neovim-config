@@ -3,7 +3,6 @@ require('zephyr') -- Colorscheme
 require('config.plugins.asyncrun')
 require('config.plugins.autopairs')
 require('config.plugins.compe')
-require('config.plugins.cursorline')
 require('config.plugins.hop')
 require('config.plugins.kommentary')
 require('config.plugins.open-browser')

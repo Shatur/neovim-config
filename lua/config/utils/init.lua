@@ -33,3 +33,13 @@ vim.api.nvim_set_keymap('', 'got', '<Cmd>lua require("config.utils.gtfo").open_t
 vim.api.nvim_set_keymap('', 'goT', '<Cmd>lua require("config.utils.gtfo").open_terminal()<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', 'gof', '<Cmd>lua require("config.utils.gtfo").open_explorer(vim.fn.expand("%:h"))<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', 'goF', '<Cmd>lua require("config.utils.gtfo").open_explorer()<CR>', { noremap = true })
+
+--- Custom group for all autocmd's in configuration
+vim.cmd('augroup vimrc')
+vim.cmd('autocmd!')
+--- Highligh yanked text
+vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
+--- Highligh word under cursor
+vim.cmd('autocmd CursorMoved,CursorMovedI * lua require("config.utils.cursor").highlight_current_word()')
+vim.cmd('augroup END')
+

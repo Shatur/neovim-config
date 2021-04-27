@@ -116,12 +116,5 @@ vim.api.nvim_set_keymap('i', '<A-x>', '<Esc><Cmd>w<CR><Cmd>tabclose<CR>', { nore
 vim.api.nvim_set_keymap('', ']t', '<Cmd>tabnext<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '[t', '<Cmd>tabnext<CR>', { noremap = true })
 
---- Custom group for all autocmd's in configuration
-vim.cmd('augroup vimrc')
-vim.cmd('autocmd!')
---- Highligh yanked text
-vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
-vim.cmd('augroup END')
-
 require('config.utils') -- Contains custom scripted things
 require('config.plugins')
