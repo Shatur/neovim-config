@@ -231,3 +231,7 @@
 	path = pack/plugins/opt/octo.nvim
 	url = git@github.com:pwntester/octo.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/opt/diffview.nvim"]
+	path = pack/plugins/opt/diffview.nvim
+	url = git@github.com:sindrets/diffview.nvim.git
+	ignore = dirty
