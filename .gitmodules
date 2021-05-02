@@ -150,10 +150,6 @@
 	path = pack/plugins/opt/neogit
 	url = git@github.com:TimUntersberger/neogit.git
 	ignore = dirty
-[submodule "pack/plugins/start/zephyr-nvim"]
-	path = pack/plugins/start/zephyr-nvim
-	url = git@github.com:glepnir/zephyr-nvim.git
-	ignore = dirty
 [submodule "pack/plugins/opt/indent-blankline.nvim"]
 	path = pack/plugins/opt/indent-blankline.nvim
 	url = git@github.com:lukas-reineke/indent-blankline.nvim.git
@@ -234,4 +230,8 @@
 [submodule "pack/plugins/opt/diffview.nvim"]
 	path = pack/plugins/opt/diffview.nvim
 	url = git@github.com:sindrets/diffview.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/neovim-ayu"]
+	path = pack/plugins/start/neovim-ayu
+	url = git@github.com:Shatur95/neovim-ayu.git
 	ignore = dirty

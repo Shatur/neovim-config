@@ -21,7 +21,7 @@ function cursor.highlight_current_word()
       0,
       vim.schedule_wrap(
       function()
-        vim.w.cursorword_id = vim.fn.matchadd('PmenuSbar', [[\<]] .. cursorword .. [[\>]], -1)
+        vim.w.cursorword_id = vim.fn.matchadd('CursorWord', [[\<]] .. cursorword .. [[\>]], -1)
       end
       )
     )

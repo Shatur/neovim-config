@@ -1,4 +1,4 @@
-require('zephyr') -- Colorscheme
+require('ayu').colorscheme()
 
 require('config.plugins.asyncrun')
 require('config.plugins.autopairs')
