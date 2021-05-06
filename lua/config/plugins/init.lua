@@ -20,7 +20,6 @@ end
 vim.cmd('packadd! LuaSnip')
 vim.cmd('packadd! asynctasks.vim')
 vim.cmd('packadd! cfilter')
-vim.cmd('packadd! conflict-marker.vim')
 vim.cmd('packadd! diffview.nvim')
 vim.cmd('packadd! gitsigns.nvim')
 vim.cmd('packadd! glyph-palette.vim')
