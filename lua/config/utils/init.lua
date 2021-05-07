@@ -19,6 +19,9 @@ vim.cmd('command! -nargs=? UpdatePlugins lua require("config.utils.updater").upd
 -- Pull latest configuration changes from repo
 vim.cmd('command! UpdateConfig lua require("config.utils.updater").update_config()')
 
+-- Start debugging
+vim.cmd('command! -complete=file -nargs=+  Gdb lua require("config.utils.debug").gdb(<f-args>)')
+
 -- Buffers / tabs control
 vim.api.nvim_set_keymap('', '<C-q>', '<Cmd>BDelete<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true })
