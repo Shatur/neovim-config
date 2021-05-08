@@ -90,10 +90,6 @@
 	path = pack/plugins/start/open-browser-github.vim
 	url = git@github.com:tyru/open-browser-github.vim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/lualine.nvim"]
-	path = pack/plugins/opt/lualine.nvim
-	url = git@github.com:hoob3rt/lualine.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/opt/nvim-web-devicons"]
 	path = pack/plugins/opt/nvim-web-devicons
 	url = git@github.com:kyazdani42/nvim-web-devicons.git
@@ -230,4 +226,8 @@
 [submodule "pack/plugins/start/neovim-ayu"]
 	path = pack/plugins/start/neovim-ayu
 	url = git@github.com:Shatur95/neovim-ayu.git
+	ignore = dirty
+[submodule "pack/plugins/opt/galaxyline.nvim"]
+	path = pack/plugins/opt/galaxyline.nvim
+	url = git@github.com:glepnir/galaxyline.nvim.git
 	ignore = dirty
