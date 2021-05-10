@@ -118,10 +118,6 @@
 	path = pack/plugins/start/nvim-autopairs
 	url = git@github.com:windwp/nvim-autopairs.git
 	ignore = dirty
-[submodule "pack/plugins/opt/nvim-ts-rainbow"]
-	path = pack/plugins/opt/nvim-ts-rainbow
-	url = git@github.com:p00f/nvim-ts-rainbow.git
-	ignore = dirty
 [submodule "pack/plugins/start/kommentary"]
 	path = pack/plugins/start/kommentary
 	url = git@github.com:b3nj5m1n/kommentary.git
