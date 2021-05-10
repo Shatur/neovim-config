@@ -142,11 +142,6 @@
 	path = pack/plugins/opt/neogit
 	url = git@github.com:TimUntersberger/neogit.git
 	ignore = dirty
-[submodule "pack/plugins/opt/indent-blankline.nvim"]
-	path = pack/plugins/opt/indent-blankline.nvim
-	url = git@github.com:lukas-reineke/indent-blankline.nvim.git
-	branch = lua
-	ignore = dirty
 [submodule "pack/plugins/opt/LuaSnip"]
 	path = pack/plugins/opt/LuaSnip
 	url = git@github.com:L3MON4D3/LuaSnip.git
