@@ -136,6 +136,19 @@ table.insert(gls.left, {
 })
 
 table.insert(gls.right, {
+  Asynctasks = {
+    provider = function()
+      if vim.g.asyncrun_status == 'running' then
+        return 'Running'
+      end
+      return ''
+    end,
+    icon = '  ',
+    highlight = {colors.tag, colors.panel_border},
+  }
+})
+
+table.insert(gls.right, {
   LspStatus = {
     provider = require('lsp-status').status,
     highlight = {colors.func, colors.panel_border}
