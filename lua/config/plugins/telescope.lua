@@ -40,6 +40,8 @@ vim.api.nvim_set_keymap('i', '<A-t>', '<Cmd>Telescope asynctasks all theme=get_d
 vim.api.nvim_set_keymap('', '<A-t>', '<Cmd>Telescope asynctasks all theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-c>', '<Cmd>Telescope git_commits theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<A-c>', '<Cmd>Telescope git_commits theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-n>', '<Cmd>Telescope git_stash theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<A-n>', '<Cmd>Telescope git_stash theme=get_dropdown<CR>', { noremap = true })
 if vim.fn.has('win32') == 1 then
   vim.api.nvim_set_keymap('', '<C-_>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
   vim.api.nvim_set_keymap('i', '<C-_>', '<Cmd>SwitchToNormalBuffer<CR><Esc><Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
