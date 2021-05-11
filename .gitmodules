@@ -62,10 +62,6 @@
 	path = pack/plugins/start/scroll.vim
 	url = git@github.com:mg979/scroll.vim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/glyph-palette.vim"]
-	path = pack/plugins/opt/glyph-palette.vim
-	url = git@github.com:lambdalisue/glyph-palette.vim.git
-	ignore = dirty
 [submodule "pack/plugins/start/vim-move"]
 	path = pack/plugins/start/vim-move
 	url = git@github.com:matze/vim-move.git
