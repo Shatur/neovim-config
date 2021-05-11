@@ -8,8 +8,12 @@ gl.short_line_list = {
   'NvimTree',
   'NeogitStatus',
   'spectre_panel',
-  'qf',
+  'qf'
 }
+
+local icons = require('galaxyline.provider_fileinfo').define_file_icon() -- get file icon color
+icons['gitcommit'] = { colors.keyword, ''}
+icons['gitrebase'] = { colors.operator, ''}
 
 local modes = {
   n = {color = colors.entity, name = 'NORMAL'},
