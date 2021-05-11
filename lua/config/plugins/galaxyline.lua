@@ -151,6 +151,7 @@ table.insert(gls.right, {
 table.insert(gls.right, {
   LspStatus = {
     provider = require('lsp-status').status,
+    condition = condition.hide_in_width,
     highlight = {colors.func, colors.panel_border}
   }
 })
