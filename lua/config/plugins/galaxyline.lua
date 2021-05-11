@@ -9,7 +9,6 @@ gl.short_line_list = {
   'NeogitStatus',
   'spectre_panel',
   'qf',
-  'gitcommit'
 }
 
 local modes = {
