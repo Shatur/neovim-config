@@ -14,6 +14,7 @@ gl.short_line_list = {
 local icons = require('galaxyline.provider_fileinfo').define_file_icon() -- get file icon color
 icons['gitcommit'] = { colors.keyword, ''}
 icons['gitrebase'] = { colors.operator, ''}
+icons['DiffviewFiles'] = { colors.operator, ''}
 
 local modes = {
   n = {color = colors.entity, name = 'NORMAL'},
@@ -109,7 +110,7 @@ table.insert(gls.left, {
 table.insert(gls.left, {
   DiagnosticError = {
     provider = 'DiagnosticError',
-    icon = '  ',
+    icon = ' ',
     highlight = {colors.error, colors.panel_border}
   }
 })
@@ -117,7 +118,7 @@ table.insert(gls.left, {
 table.insert(gls.left, {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
-    icon = '  ',
+    icon = ' ',
     highlight = {colors.keyword, colors.panel_border},
   }
 })
@@ -125,7 +126,7 @@ table.insert(gls.left, {
 table.insert(gls.left, {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
-    icon = '  ',
+    icon = ' ',
     highlight = {colors.tag, colors.panel_border},
   }
 })
@@ -133,7 +134,7 @@ table.insert(gls.left, {
 table.insert(gls.left, {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
-    icon = '  ',
+    icon = ' ',
     highlight = {colors.tag, colors.panel_border},
   }
 })
@@ -146,7 +147,7 @@ table.insert(gls.right, {
       end
       return ''
     end,
-    icon = '  ',
+    icon = ' ',
     highlight = {colors.tag, colors.panel_border},
   }
 })
@@ -155,6 +156,8 @@ table.insert(gls.right, {
   LspStatus = {
     provider = require('lsp-status').status,
     condition = condition.hide_in_width,
+    separator = ' ',
+    separator_highlight = {'NONE', colors.panel_border},
     highlight = {colors.func, colors.panel_border}
   }
 })
@@ -183,7 +186,7 @@ table.insert(gls.right, {
     separator = ' ',
     separator_highlight = {'NONE', colors.panel_border},
     condition = condition.hide_in_width,
-    icon = '  ',
+    icon = ' ',
     highlight = {colors.vcs_added, colors.panel_border},
   }
 })
@@ -192,7 +195,7 @@ table.insert(gls.right, {
   DiffModified = {
     provider = 'DiffModified',
     condition = condition.hide_in_width,
-    icon = ' 柳',
+    icon = '柳',
     highlight = {colors.vcs_modified, colors.panel_border},
   }
 })
@@ -201,7 +204,7 @@ table.insert(gls.right, {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = condition.hide_in_width,
-    icon = '  ',
+    icon = ' ',
     highlight = {colors.vcs_removed, colors.panel_border},
   }
 })
