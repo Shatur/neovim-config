@@ -3,6 +3,9 @@ require('neogit').setup{
     section = {'', ''},
     item = {'', ''},
     hunk = {'', '▾'},
+  },
+  integrations = {
+    diffview = true
   }
 }
 
