@@ -154,7 +154,9 @@ table.insert(gls.right, {
 
 table.insert(gls.right, {
   LspStatus = {
-    provider = require('lsp-status').status,
+    provider = function()
+        return require('lsp-status').status():gsub('%%%%', '%%')
+    end,
     condition = condition.hide_in_width,
     separator = ' ',
     separator_highlight = {'NONE', colors.panel_border},
