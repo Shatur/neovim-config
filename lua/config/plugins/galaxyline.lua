@@ -5,10 +5,11 @@ local colors = require('ayu.colors')
 local gls = gl.section
 
 gl.short_line_list = {
-  'NvimTree',
   'NeogitStatus',
-  'spectre_panel',
-  'qf'
+  'NvimTree',
+  'dap-repl',
+  'qf',
+  'spectre_panel'
 }
 
 local icons = require('galaxyline.provider_fileinfo').define_file_icon() -- get file icon color
