@@ -2,10 +2,9 @@ local buffers = {}
 
 local function is_special_buffer()
   return not vim.api.nvim_buf_get_option(0, 'modifiable') or
-    vim.bo.filetype == 'gitrebase' or
-    vim.bo.filetype == 'gitcommit' or
-    vim.bo.filetype == 'spectre_panel' or
-    vim.bo.filetype == 'qf'
+    #vim.api.nvim_buf_get_option(0, 'buftype') ~= 0 or
+    vim.api.nvim_buf_get_option(0, 'buflisted') == false or
+    vim.api.nvim_buf_get_option(0, 'filetype') == 'gitcommit'
 end
 
 function buffers.switch_to_normal_buffer()
@@ -21,7 +20,7 @@ function buffers.switch_to_normal_buffer()
 end
 
 function buffers.close_current_buffer()
-  if vim.bo.filetype == 'NvimTree' then
+  if vim.api.nvim_buf_get_option(0, 'filetype') == 'NvimTree' then
     require('nvim-tree').close()
     return
   end
