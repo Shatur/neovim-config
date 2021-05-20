@@ -20,7 +20,10 @@ vim.cmd('command! -nargs=? UpdatePlugins lua require("config.utils.updater").upd
 vim.cmd('command! UpdateConfig lua require("config.utils.updater").update_config()')
 
 -- Start debugging
-vim.cmd('command! -complete=file -nargs=+  Gdb lua require("config.utils.debug").gdb(<f-args>)')
+vim.cmd('command! -complete=file -nargs=+ Gdb lua require("config.utils.debug").gdb(<f-args>)')
+
+-- Toggle diagnostics
+vim.cmd('command! LspToggleDiagnostics lua require("config.utils.diagnostics").toggle_diagnostics()')
 
 -- Buffers / tabs control
 vim.api.nvim_set_keymap('', '<C-q>', '<Cmd>BDelete<CR>', { noremap = true })
