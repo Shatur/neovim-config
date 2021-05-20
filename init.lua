@@ -40,6 +40,9 @@ end
 -- Usually installed system-wide, so disable it by the parameter
 vim.g.loaded_fzf = false
 
+-- Disable default keybindings <C-a> and <C-x> for interactive rebase
+vim.g.no_gitrebase_maps = false
+
 -- Remap useless keys
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
