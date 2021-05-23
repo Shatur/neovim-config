@@ -62,7 +62,6 @@ vim.api.nvim_set_keymap('', '<C-a>', 'gg0vG$', { noremap = true })
 vim.api.nvim_set_keymap('v', '<C-a>', '<Esc>gg0vG$', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-a>', '<Esc>gg0vG$', { noremap = true })
 
-
 -- Movement around wrapped lines
 vim.api.nvim_set_keymap('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true })
 vim.api.nvim_set_keymap('n', 'k', 'v:count ? "k" : "gk"', { noremap = true, expr = true })
