@@ -46,10 +46,6 @@
 	path = pack/plugins/opt/vim-scriptease
 	url = git@github.com:tpope/vim-scriptease.git
 	ignore = dirty
-[submodule "pack/plugins/opt/vim-lastplace"]
-	path = pack/plugins/opt/vim-lastplace
-	url = git@github.com:farmergreg/vim-lastplace.git
-	ignore = dirty
 [submodule "pack/plugins/opt/quickfix-reflector.vim"]
 	path = pack/plugins/opt/quickfix-reflector.vim
 	url = git@github.com:stefandtw/quickfix-reflector.vim.git
@@ -217,4 +213,8 @@
 [submodule "pack/plugins/opt/galaxyline.nvim"]
 	path = pack/plugins/opt/galaxyline.nvim
 	url = git@github.com:glepnir/galaxyline.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/opt/nvim-lastplace"]
+	path = pack/plugins/opt/nvim-lastplace
+	url = git@github.com:ethanholz/nvim-lastplace.git
 	ignore = dirty
