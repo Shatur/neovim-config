@@ -38,15 +38,15 @@ function buffers.close_current_buffer()
   else
     vim.cmd('bprevious')
   end
-  vim.api.nvim_buf_delete(current_buffer, {})
+  vim.cmd('bdelete ' .. current_buffer)
 end
 
 function buffers.close_other_buffers()
   local current_buffer = vim.api.nvim_get_current_buf()
   local buffers_info = vim.api.nvim_list_bufs()
   for _, buffer in ipairs(buffers_info) do
-    if buffer ~= current_buffer and not vim.api.nvim_buf_get_option(buffer, 'modified') then
-      vim.api.nvim_buf_delete(buffer, {force = true})
+    if buffer ~= current_buffer and vim.api.nvim_buf_is_loaded(buffer) and not vim.api.nvim_buf_get_option(buffer, 'modified') then
+      vim.cmd('bdelete! ' .. buffer)
     end
   end
 end
