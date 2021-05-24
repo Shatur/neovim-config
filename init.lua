@@ -37,6 +37,14 @@ else
   vim.o.guifont = 'FiraCode Nerd Font Mono:l'
 end
 
+-- Set background depending on time
+local hours = tonumber(os.date('%H'))
+if hours >= 20 or hours <= 7 then
+  vim.o.background = 'dark'
+else
+  vim.o.background = 'light'
+end
+
 -- Usually installed system-wide, so disable it by the parameter
 vim.g.loaded_fzf = false
 
