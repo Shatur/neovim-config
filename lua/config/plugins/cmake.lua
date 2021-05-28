@@ -1,5 +1,7 @@
 vim.g.cmake_configure_arguments = '-G Ninja -D CMAKE_EXPORT_COMPILE_COMMANDS=1'
-if vim.fn.has('win32') == 1 then
+if vim.fn.has('unix') == 1 then
+  vim.g.cmake_configure_arguments = vim.g.cmake_configure_arguments .. ' -D CMAKE_CXX_FLAGS=-gdwarf-4'
+else
   vim.g.cmake_configure_arguments = vim.g.cmake_configure_arguments .. ' -D CMAKE_TOOLCHAIN_FILE=C:/ProgramData/vcpkg/scripts/buildsystems/vcpkg.cmake -D VCPKG_TARGET_TRIPLET=x64-windows'
 end
 
