@@ -7,11 +7,7 @@ local config = {
     -- Disable sections and component separators
     component_separators = '',
     section_separators = '',
-    theme = {
-      -- We are going to use lualine_c an lualine_x as left and right section. Both are highlighted by c theme.
-      normal = {c = {fg = colors.fg, bg = colors.panel_border}},
-      inactive = {c = {fg = colors.fg, bg = colors.panel_border}}
-    }
+    theme = 'ayu'
   },
   sections = {
     -- Remove the defaults
