@@ -148,7 +148,7 @@
 	ignore = dirty
 [submodule "pack/plugins/opt/neovim-cmake"]
 	path = pack/plugins/opt/neovim-cmake
-	url = git@github.com:Shatur95/neovim-cmake.git
+	url = git@github.com:Shatur/neovim-cmake.git
 	ignore = dirty
 [submodule "pack/plugins/opt/nvim-lspconfig"]
 	path = pack/plugins/opt/nvim-lspconfig
@@ -176,7 +176,7 @@
 	ignore = dirty
 [submodule "pack/plugins/opt/neovim-session-manager"]
 	path = pack/plugins/opt/neovim-session-manager
-	url = git@github.com:Shatur95/neovim-session-manager.git
+	url = git@github.com:Shatur/neovim-session-manager.git
 	ignore = dirty
 [submodule "pack/plugins/opt/playground"]
 	path = pack/plugins/opt/playground
@@ -204,7 +204,7 @@
 	ignore = dirty
 [submodule "pack/plugins/start/neovim-ayu"]
 	path = pack/plugins/start/neovim-ayu
-	url = git@github.com:Shatur95/neovim-ayu.git
+	url = git@github.com:Shatur/neovim-ayu.git
 	ignore = dirty
 [submodule "pack/plugins/opt/nvim-lastplace"]
 	path = pack/plugins/opt/nvim-lastplace
