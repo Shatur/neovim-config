@@ -27,7 +27,8 @@ local config = {
     lualine_z = {},
     lualine_c = {},
     lualine_x = {}
-  }
+  },
+  extensions = {'nvim-tree', 'quickfix'}
 }
 
 -- Left sections
