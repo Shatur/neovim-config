@@ -25,6 +25,7 @@ local config = {
     lualine_v = {},
     lualine_y = {},
     lualine_z = {},
+    -- Will be filled later
     lualine_c = {},
     lualine_x = {}
   },
@@ -162,5 +163,9 @@ table.insert(config.sections.lualine_x, {
   icons_enabled = false,
   color = {fg = colors.string, gui = 'bold'}
 })
+
+
+vim.list_extend(config.inactive_sections.lualine_c, config.sections.lualine_c, 3, #config.sections.lualine_c)
+vim.list_extend(config.inactive_sections.lualine_x, config.sections.lualine_x, 4, #config.sections.lualine_x)
 
 lualine.setup(config)
