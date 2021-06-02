@@ -218,3 +218,7 @@
 	path = pack/plugins/opt/lualine.nvim
 	url = git@github.com:hoob3rt/lualine.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/opt/nvim-luaref"]
+	path = pack/plugins/opt/nvim-luaref
+	url = git@github.com:milisims/nvim-luaref.git
+	ignore = dirty
