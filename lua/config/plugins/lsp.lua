@@ -45,8 +45,7 @@ end
 
 -- Language servers configuration
 lspconfig.clangd.setup{
-  cmd = {'clangd', '--background-index', '--cross-file-rename', '--header-insertion=never', '--suggest-missing-includes', '--pch-storage=memory',
-    '--clang-tidy', '--clang-tidy-checks=-clang-analyzer-*,bugprone-*,misc-*,-misc-non-private-member-variables-in-classes,performance-*,-performance-no-automatic-move,modernize-use-*,-modernize-use-nodiscard,-modernize-use-trailing-return-type'},
+  cmd = {'clangd', '--background-index', '--cross-file-rename', '--header-insertion=never', '--suggest-missing-includes', '--pch-storage=memory'},
   handlers = lsp_status.extensions.clangd.setup(),
   init_options = {
     clangdFileStatus = true
