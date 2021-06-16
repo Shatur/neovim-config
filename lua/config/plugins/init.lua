@@ -12,7 +12,7 @@ require('config.plugins.swap')
 require('config.plugins.visual-multi')
 require('config.plugins.xkbswitch')
 
-if vim.fn.exists('g:started_by_firenvim') == 1 then
+if vim.g.started_by_firenvim == true then
   vim.cmd('packadd! firenvim')
   require('config.plugins.firenvim')
   return
