@@ -222,3 +222,7 @@
 	path = pack/plugins/opt/nvim-luaref
 	url = git@github.com:milisims/nvim-luaref.git
 	ignore = dirty
+[submodule "pack/plugins/opt/vim-sleuth"]
+	path = pack/plugins/opt/vim-sleuth
+	url = git@github.com:tpope/vim-sleuth.git
+	ignore = dirty
