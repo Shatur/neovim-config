@@ -1,4 +1,3 @@
-vim.bo.formatoptions = vim.bo.formatoptions:gsub('cro', '')
 vim.bo.colorcolumn = 80
 vim.cmd('setlocal nowrap')
 vim.bo.cinkeys = vim.bo.cinkeys:gsub('0#', '')
