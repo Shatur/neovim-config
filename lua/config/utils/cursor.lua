@@ -22,9 +22,9 @@ function cursor.highlight_current_word()
 
   vim.w.cursorword = cursorword
   if vim.w.cursorword_id then
-    vim.call('matchdelete', vim.w.cursorword_id)
+    vim.fn.matchdelete(vim.w.cursorword_id)
   end
-  vim.w.cursorword_id = false
+  vim.w.cursorword_id = nil
   timer:stop()
   if #cursorword < 100 and #cursorword > 3 then
     timer:start(
