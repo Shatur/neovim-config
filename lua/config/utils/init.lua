@@ -45,7 +45,5 @@ vim.cmd('augroup vimrc')
 vim.cmd('autocmd!')
 --- Highligh yanked text
 vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
---- Highligh word under cursor
-vim.cmd('autocmd CursorMoved,CursorMovedI * lua require("config.utils.cursor").highlight_current_word()')
 vim.cmd('augroup END')
 
