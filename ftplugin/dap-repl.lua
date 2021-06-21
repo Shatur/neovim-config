@@ -1,3 +1,3 @@
 vim.cmd('resize 15')
-vim.bo.winfixheight = true
+vim.cmd('setlocal winfixheight')
 vim.bo.buflisted = false
