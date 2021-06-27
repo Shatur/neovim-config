@@ -32,9 +32,9 @@ vim.o.formatoptions = vim.bo.formatoptions:gsub('cro', '')
 
 -- Fonts
 if vim.fn.has('win32') == 1 then
-  vim.o.guifont = 'FiraCode NF:w57'
+  vim.o.guifont = 'CaskadiyaCove NF'
 else
-  vim.o.guifont = 'FiraCode Nerd Font Mono:l'
+  vim.o.guifont = 'CaskaydiaCove Nerd Font Mono'
 end
 
 -- Set background depending on time
