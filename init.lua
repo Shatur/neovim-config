@@ -21,7 +21,6 @@ vim.o.whichwrap = vim.o.whichwrap .. 'h,l,<,>,[,]'  -- Wrap movement between lin
 vim.o.pumheight = 10
 vim.o.wildmode = 'longest:full,full'
 vim.o.termguicolors = true
-vim.o.winblend = 20
 vim.o.foldenable = false
 vim.o.hidden = true -- For switching between edited buffers
 vim.o.showmode = false -- Do not display current mode (use statusline for it)
