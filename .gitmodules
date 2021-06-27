@@ -222,3 +222,7 @@
 	path = pack/plugins/opt/vim-sleuth
 	url = git@github.com:tpope/vim-sleuth.git
 	ignore = dirty
+[submodule "pack/plugins/opt/lsp_signature.nvim"]
+	path = pack/plugins/opt/lsp_signature.nvim
+	url = git@github.com:ray-x/lsp_signature.nvim.git
+	ignore = dirty

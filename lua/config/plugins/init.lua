@@ -49,6 +49,7 @@ vim.cmd('packadd! telescope.nvim')
 vim.cmd('packadd! vim-eunuch')
 vim.cmd('packadd! vim-scriptease')
 vim.cmd('packadd! vim-sleuth')
+vim.cmd('packadd! lsp_signature.nvim')
 vim.cmd('packadd! vim-terminal-help')
 
 require('config.plugins.bufferline')

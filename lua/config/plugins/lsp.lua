@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local lsp_signature = require('lsp_signature')
 
 -- LSP status
 local lsp_status = require('lsp-status')
@@ -13,6 +14,10 @@ lsp_status.register_progress()
 -- Buffer with LSP settings
 local on_attach = function(client, bufnr)
   lsp_status.on_attach(client, bufnr)
+  lsp_signature.on_attach({
+    floating_window = false,
+    hint_prefix = ' ',
+  })
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-LeftMouse>', '<Cmd>Telescope lsp_definitions theme=get_dropdown<CR>', {noremap=true})
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<Cmd>Telescope lsp_definitions theme=get_dropdown<CR>', {noremap=true})
