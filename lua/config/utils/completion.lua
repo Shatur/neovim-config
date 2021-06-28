@@ -1,17 +1,5 @@
 local completion = {}
 
-function completion.confirm()
-  if vim.fn.pumvisible() ~= 0  then
-    if vim.fn.complete_info()['selected'] ~= -1 then
-      return vim.fn['compe#confirm'](require('nvim-autopairs').esc('<CR>'))
-    else
-      return require('nvim-autopairs').esc('<CR>')
-    end
-  else
-    return require('nvim-autopairs').check_break_line_char()
-  end
-end
-
 function completion.trigger_completion()
   if vim.fn.pumvisible() ~= 0  then
     return vim.fn['compe#confirm']({keys = '<C-Space>', select = true})
