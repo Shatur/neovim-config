@@ -226,3 +226,7 @@
 	path = pack/plugins/opt/lsp_signature.nvim
 	url = git@github.com:ray-x/lsp_signature.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/opt/gitlinker.nvim"]
+	path = pack/plugins/opt/gitlinker.nvim
+	url = https://github.com/ruifm/gitlinker.nvim.git
+	ignore = dirty
