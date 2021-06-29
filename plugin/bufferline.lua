@@ -31,7 +31,13 @@ require('bufferline').setup{
     pick = {
       gui = 'bold'
     }
-  };
+  },
+  options = {
+    offsets = {
+      {filetype = "NvimTree", text = "File Explorer", text_align = "center"},
+      {filetype = "NeogitStatus", text = "Git", text_align = "center"}
+    }
+  }
 }
 
 vim.api.nvim_set_keymap('', ']b', '<Cmd>SwitchToNormalBuffer<CR><Cmd>BufferLineCycleNext<CR>', { noremap = true })
