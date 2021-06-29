@@ -1,3 +1,7 @@
+if vim.g.started_by_firenvim ~= true then
+  return
+end
+
 vim.g.laststatus = 0
 vim.g.showtabline = 0
 

@@ -1,3 +1,7 @@
+if vim.g.started_by_firenvim == true then
+  return
+end
+
 local lualine = require('lualine')
 local colors = require('ayu.colors')
 local theme_utils = require('ayu.utils')

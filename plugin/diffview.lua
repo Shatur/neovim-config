@@ -1,3 +1,7 @@
+if vim.g.started_by_firenvim == true then
+  return
+end
+
 local callback = require('diffview.config').diffview_callback
 
 require('diffview').setup {

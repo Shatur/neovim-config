@@ -1,3 +1,7 @@
+if vim.g.started_by_firenvim == true then
+  return
+end
+
 vim.g.terminal_default_mapping = false
 vim.g.terminal_list = false
 vim.g.terminal_height = 15

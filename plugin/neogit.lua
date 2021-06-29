@@ -1,3 +1,7 @@
+if vim.g.started_by_firenvim == true then
+  return
+end
+
 require('neogit').setup{
   disable_commit_confirmation = true,
   signs = {

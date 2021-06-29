@@ -90,17 +90,17 @@
 	path = pack/plugins/opt/nvim-bufferline.lua
 	url = git@github.com:akinsho/nvim-bufferline.lua.git
 	ignore = dirty
-[submodule "pack/plugins/opt/telescope.nvim"]
-	path = pack/plugins/opt/telescope.nvim
-	url = git@github.com:nvim-telescope/telescope.nvim.git
+[submodule "pack/plugins/start/telescope.nvim"]
+	path = pack/plugins/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/plenary.nvim"]
-	path = pack/plugins/opt/plenary.nvim
-	url = git@github.com:nvim-lua/plenary.nvim.git
+[submodule "pack/plugins/start/plenary.nvim"]
+	path = pack/plugins/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/opt/popup.nvim"]
-	path = pack/plugins/opt/popup.nvim
-	url = git@github.com:nvim-lua/popup.nvim.git
+[submodule "pack/plugins/start/popup.nvim"]
+	path = pack/plugins/start/popup.nvim
+	url = https://github.com/nvim-lua/popup.nvim.git
 	ignore = dirty
 [submodule "pack/plugins/start/nvim-autopairs"]
 	path = pack/plugins/start/nvim-autopairs

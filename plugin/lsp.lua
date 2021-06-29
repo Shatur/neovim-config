@@ -1,3 +1,7 @@
+if vim.g.started_by_firenvim == true then
+  return
+end
+
 local lspconfig = require('lspconfig')
 local lsp_signature = require('lsp_signature')
 

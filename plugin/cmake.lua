@@ -1,3 +1,7 @@
+if vim.g.started_by_firenvim == true then
+  return
+end
+
 vim.g.cmake_configure_arguments = '-G Ninja -D CMAKE_EXPORT_COMPILE_COMMANDS=1'
 if vim.fn.has('unix') == 1 then
   vim.g.cmake_configure_arguments = vim.g.cmake_configure_arguments .. ' -D CMAKE_CXX_FLAGS=-gdwarf-4'

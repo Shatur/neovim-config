@@ -1,3 +1,7 @@
+if vim.g.started_by_firenvim == true then
+  return
+end
+
 local dap = require('dap')
 
 dap.adapters.cpp = {

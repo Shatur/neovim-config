@@ -51,6 +51,33 @@ vim.g.loaded_fzf = false
 -- Disable default keybindings <C-a> and <C-x> for interactive rebase
 vim.g.no_gitrebase_maps = false
 
+-- Open folder in system explorer
+vim.cmd('command! -complete=dir -nargs=* Explorer lua require("config_utils.gtfo").open_explorer(vim.fn.expand("<args>"))')
+
+-- Open folder in system terminal
+vim.cmd('command! -complete=dir -nargs=* Terminal lua require("config_utils.gtfo").open_terminal(vim.fn.expand("<args>"))')
+
+-- Used to prevent opening new buffers in a small buffers
+vim.cmd('command! SwitchToNormalBuffer lua require("config_utils.buffers").switch_to_normal_buffer()')
+
+-- Delete buffer with saving the current layout (except special buffers)
+vim.cmd('command! BDelete lua require("config_utils.buffers").close_current_buffer()')
+
+-- Delete all buffers except the current one
+vim.cmd('command! BDeleteOther lua require("config_utils.buffers").close_other_buffers()')
+
+-- Update all plugins and commit changes
+vim.cmd('command! -nargs=? UpdatePlugins lua require("config_utils.updater").update_plugins(<args>)')
+
+-- Pull latest configuration changes from repo
+vim.cmd('command! UpdateConfig lua require("config_utils.updater").update_config()')
+
+-- Start debugging
+vim.cmd('command! -complete=file -nargs=+ Gdb lua require("config_utils.debug").gdb(<f-args>)')
+
+-- Toggle diagnostics
+vim.cmd('command! LspToggleDiagnostics lua require("config_utils.diagnostics").toggle_diagnostics()')
+
 -- Remap useless keys
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
@@ -117,13 +144,61 @@ vim.api.nvim_set_keymap('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
 -- Other
 vim.api.nvim_set_keymap('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true })
 
--- Tab control
-vim.api.nvim_set_keymap('', '<A-q>', '<Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-x>', '<Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-x>', '<Esc><Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', ']t', '<Cmd>tabnext<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '[t', '<Cmd>tabnext<CR>', { noremap = true })
+-- Buffers / tabs control
+vim.api.nvim_set_keymap('', '<C-q>', '<Cmd>BDelete<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true })
+vim.api.nvim_set_keymap('t', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<C-x>', '<Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-x>', '<Esc><Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', 'Q', '<Cmd>SwitchToNormalBuffer<CR><Cmd>BDeleteOther<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<Backspace>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>buffer #<CR>', { noremap = true })
 
-require('config.utils') -- Contains custom scripted things
-require('config.plugins')
+-- Open current file folder
+vim.api.nvim_set_keymap('', 'got', '<Cmd>lua require("config_utils.gtfo").open_terminal(vim.fn.expand("%:h"))<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', 'goT', '<Cmd>lua require("config_utils.gtfo").open_terminal()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', 'gof', '<Cmd>lua require("config_utils.gtfo").open_explorer(vim.fn.expand("%:h"))<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', 'goF', '<Cmd>lua require("config_utils.gtfo").open_explorer()<CR>', { noremap = true })
+
+--- Custom group for all autocmd's in configuration
+vim.cmd('augroup vimrc')
+vim.cmd('autocmd!')
+--- Highligh yanked text
+vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
+vim.cmd('augroup END')
+
+-- Load some plugins conditionally
+if vim.g.started_by_firenvim == true then
+  vim.cmd('packadd! firenvim')
+else
+  vim.cmd('packadd! LuaSnip')
+  vim.cmd('packadd! asynctasks.vim')
+  vim.cmd('packadd! cfilter')
+  vim.cmd('packadd! diffview.nvim')
+  vim.cmd('packadd! gitlinker.nvim')
+  vim.cmd('packadd! gitsigns.nvim')
+  vim.cmd('packadd! lsp-status.nvim')
+  vim.cmd('packadd! lsp-trouble.nvim')
+  vim.cmd('packadd! lsp_signature.nvim')
+  vim.cmd('packadd! lualine.nvim')
+  vim.cmd('packadd! neogit')
+  vim.cmd('packadd! neovim-cmake')
+  vim.cmd('packadd! neovim-session-manager')
+  vim.cmd('packadd! nvim-bufferline.lua')
+  vim.cmd('packadd! nvim-dap')
+  vim.cmd('packadd! nvim-dap-virtual-text')
+  vim.cmd('packadd! nvim-lastplace')
+  vim.cmd('packadd! nvim-lspconfig')
+  vim.cmd('packadd! nvim-luaref')
+  vim.cmd('packadd! nvim-spectre')
+  vim.cmd('packadd! nvim-tree.lua')
+  vim.cmd('packadd! nvim-treesitter')
+  vim.cmd('packadd! nvim-web-devicons')
+  vim.cmd('packadd! octo.nvim')
+  vim.cmd('packadd! quickfix-reflector.vim')
+  vim.cmd('packadd! telescope-asynctasks.nvim')
+  vim.cmd('packadd! telescope-dap.nvim')
+  vim.cmd('packadd! vim-eunuch')
+  vim.cmd('packadd! vim-scriptease')
+  vim.cmd('packadd! vim-sleuth')
+  vim.cmd('packadd! vim-terminal-help')
+end
