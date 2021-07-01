@@ -22,7 +22,8 @@ vim.g.nvim_tree_icons = {
   default = '',
 }
 
+local tree_cb = require('nvim-tree.config').nvim_tree_callback
 vim.g.nvim_tree_bindings = {
-  ['l'] = '<Cmd>lua require"nvim-tree".on_keypress("edit")<CR>',
-  ['h'] = '<Cmd>lua require"nvim-tree".on_keypress("close_node")<CR>',
+  {key = 'l', cb = tree_cb('edit')},
+  {key = 'h', cb = tree_cb('close_node')},
 }
