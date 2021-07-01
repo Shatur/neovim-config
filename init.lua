@@ -32,7 +32,7 @@ vim.o.formatoptions = vim.bo.formatoptions:gsub('cro', '')
 
 -- Fonts
 if vim.fn.has('win32') == 1 then
-  vim.o.guifont = 'CaskadiyaCove NF'
+  vim.o.guifont = 'CaskaydiaCove NF'
 else
   vim.o.guifont = 'CaskaydiaCove Nerd Font Mono'
 end
