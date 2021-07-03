@@ -86,10 +86,6 @@ lspconfig.sumneko_lua.setup{
   },
 }
 
-lspconfig.gdscript.setup{
-  capabilities = lsp_status.capabilities,
-  on_attach = on_attach
-}
 lspconfig.cmake.setup{
   capabilities = lsp_status.capabilities,
   on_attach = on_attach
