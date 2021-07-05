@@ -6,10 +6,6 @@
 	path = pack/plugins/start/vim-subversive
 	url = git@github.com:svermeulen/vim-subversive.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-swap"]
-	path = pack/plugins/start/vim-swap
-	url = git@github.com:machakann/vim-swap.git
-	ignore = dirty
 [submodule "pack/plugins/start/vim-unimpaired"]
 	path = pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
@@ -233,4 +229,8 @@
 [submodule "pack/plugins/opt/nvim-ts-rainbow"]
 	path = pack/plugins/opt/nvim-ts-rainbow
 	url = https://github.com/p00f/nvim-ts-rainbow.git
+	ignore = dirty
+[submodule "pack/plugins/opt/nvim-treesitter-textobjects"]
+	path = pack/plugins/opt/nvim-treesitter-textobjects
+	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git
 	ignore = dirty

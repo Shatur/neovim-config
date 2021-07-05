@@ -201,6 +201,7 @@ else
   vim.cmd('packadd! nvim-spectre')
   vim.cmd('packadd! nvim-tree.lua')
   vim.cmd('packadd! nvim-treesitter')
+  vim.cmd('packadd! nvim-treesitter-textobjects')
   vim.cmd('packadd! nvim-ts-rainbow')
   vim.cmd('packadd! nvim-web-devicons')
   vim.cmd('packadd! octo.nvim')
