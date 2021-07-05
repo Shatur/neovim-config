@@ -230,3 +230,7 @@
 	path = pack/plugins/opt/gitlinker.nvim
 	url = https://github.com/ruifm/gitlinker.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/opt/nvim-ts-rainbow"]
+	path = pack/plugins/opt/nvim-ts-rainbow
+	url = https://github.com/p00f/nvim-ts-rainbow.git
+	ignore = dirty
