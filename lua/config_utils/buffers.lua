@@ -1,13 +1,10 @@
 local buffers = {}
 
 local function is_special_buffer()
-  if not vim.api.nvim_buf_get_option(0, 'modifiable') or
-      #vim.api.nvim_buf_get_option(0, 'buftype') ~= 0 or
-      vim.api.nvim_buf_get_option(0, 'buflisted') == false then
-    return true
-  end
-  local filetype = vim.api.nvim_buf_get_option(0, 'filetype')
-  return filetype == 'gitcommit' or filetype == 'gitrebase'
+  return not vim.api.nvim_buf_get_option(0, 'modifiable') or
+    #vim.api.nvim_buf_get_option(0, 'buftype') ~= 0 or
+    vim.api.nvim_buf_get_option(0, 'buflisted') == false or
+    vim.api.nvim_buf_get_option(0, 'filetype') == 'gitcommit'
 end
 
 function buffers.switch_to_normal_buffer()
