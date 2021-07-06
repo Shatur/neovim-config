@@ -202,10 +202,6 @@
 	path = pack/plugins/opt/nvim-lastplace
 	url = git@github.com:ethanholz/nvim-lastplace.git
 	ignore = dirty
-[submodule "pack/plugins/start/neoscroll.nvim"]
-	path = pack/plugins/start/neoscroll.nvim
-	url = git@github.com:karb94/neoscroll.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/opt/lualine.nvim"]
 	path = pack/plugins/opt/lualine.nvim
 	url = git@github.com:hoob3rt/lualine.nvim.git
