@@ -7,6 +7,8 @@ telescope.setup{
     selection_caret = ' ',
     mappings = {
       i = {
+        ['<A-k>'] = actions.cycle_history_next,
+        ['<A-j>'] = actions.cycle_history_prev,
         ['<C-v>'] = false,
         ['<C-x>'] = actions.select_vertical,
         ['<C-q>'] = actions.close,
