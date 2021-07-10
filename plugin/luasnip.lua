@@ -11,9 +11,9 @@ local text_node = luasnip.text_node
 luasnip.snippets = {
   cpp = {
     snippet({trig = "log", name = "Log message", dscr = "Print information"}, snippet_node(1, {
-      text_node("UE_LOG(LogTemp, Warning, TEXT("),
+      text_node("UE_LOG(LogTemp, Warning, TEXT(\""),
       insert_node(1, "Some warning message"),
-      text_node("));"),
+      text_node("\"));"),
     }))
   }
 }
