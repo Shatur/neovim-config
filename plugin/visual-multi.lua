@@ -1,5 +1,3 @@
-vim.cmd('autocmd vimrc User visual_multi_mappings imap <buffer><expr> <CR> pumvisible() ? "<C-Y>" : "<Plug>(VM-I-Return)"')
-
 vim.g.VM_mouse_mappings = true
 vim.g.VM_show_warnings = false
 vim.g.VM_silent_exit = true
