@@ -3,7 +3,6 @@ vim.g.VM_show_warnings = false
 vim.g.VM_silent_exit = true
 vim.g.VM_set_statusline = 0
 vim.g.VM_leader = '<Space><Space>'
-vim.g.VM_recursive_operations_at_cursors = false
 
 vim.g.VM_maps = {
   ['Increase'] = '<C-=>',
