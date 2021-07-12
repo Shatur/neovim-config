@@ -18,9 +18,11 @@ function buffers.close_current_buffer(buffer, force)
   end
 
   if #vim.fn.getbufinfo({buflisted = 1}) == 1 then
+    -- Only one window left, create a new empty window
     vim.cmd('enew')
     vim.bo.bufhidden = 'wipe'
-  else
+  elseif vim.api.nvim_win_get_buf(0) == buffer then
+    -- Preserve layout only if this is a current buffer
     vim.cmd('bprevious')
   end
 
