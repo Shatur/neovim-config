@@ -24,7 +24,7 @@ function buffers.close_current_buffer(buffer, force)
     vim.cmd('bprevious')
   end
 
-  vim.cmd('bdelete ' .. force == true and '! ' or ' ' ..  buffer)
+  vim.cmd('bdelete ' .. (force and '! ' or ' ') ..  buffer)
 end
 
 return buffers
