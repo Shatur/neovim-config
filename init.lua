@@ -58,7 +58,7 @@ vim.cmd('command! -complete=dir -nargs=* Explorer lua require("config_utils.gtfo
 vim.cmd('command! -complete=dir -nargs=* Terminal lua require("config_utils.gtfo").open_terminal(vim.fn.expand("<args>"))')
 
 -- Delete buffer with saving the current layout (except special buffers)
-vim.cmd('command! BDelete lua require("config_utils.buffers").close_current_buffer()')
+vim.cmd('command! -nargs=? -bang BDelete lua require("config_utils.buffers").close_current_buffer(<q-args>, false)')
 
 -- Update all plugins and commit changes
 vim.cmd('command! -nargs=? UpdatePlugins lua require("config_utils.updater").update_plugins(<args>)')
