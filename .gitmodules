@@ -230,3 +230,7 @@
 	path = pack/plugins/opt/nvim-treesitter-textobjects
 	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git
 	ignore = dirty
+[submodule "pack/plugins/opt/stickybuf.nvim"]
+	path = pack/plugins/opt/stickybuf.nvim
+	url = https://github.com/stevearc/stickybuf.nvim.git
+	ignore = dirty

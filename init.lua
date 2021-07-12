@@ -57,14 +57,8 @@ vim.cmd('command! -complete=dir -nargs=* Explorer lua require("config_utils.gtfo
 -- Open folder in system terminal
 vim.cmd('command! -complete=dir -nargs=* Terminal lua require("config_utils.gtfo").open_terminal(vim.fn.expand("<args>"))')
 
--- Used to prevent opening new buffers in a small buffers
-vim.cmd('command! SwitchToNormalBuffer lua require("config_utils.buffers").switch_to_normal_buffer()')
-
 -- Delete buffer with saving the current layout (except special buffers)
 vim.cmd('command! BDelete lua require("config_utils.buffers").close_current_buffer()')
-
--- Delete all buffers except the current one
-vim.cmd('command! BDeleteOther lua require("config_utils.buffers").close_other_buffers()')
 
 -- Update all plugins and commit changes
 vim.cmd('command! -nargs=? UpdatePlugins lua require("config_utils.updater").update_plugins(<args>)')
@@ -150,8 +144,7 @@ vim.api.nvim_set_keymap('i', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true 
 vim.api.nvim_set_keymap('t', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<C-x>', '<Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-x>', '<Esc><Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', 'Q', '<Cmd>SwitchToNormalBuffer<CR><Cmd>BDeleteOther<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<Backspace>', '<Cmd>SwitchToNormalBuffer<CR><Cmd>buffer #<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<Backspace>', '<Cmd>buffer #<CR>', { noremap = true })
 
 -- Tab control
 vim.api.nvim_set_keymap('', '<A-q>', '<Cmd>tabclose<CR>', { noremap = true })
@@ -206,6 +199,7 @@ else
   vim.cmd('packadd! nvim-web-devicons')
   vim.cmd('packadd! octo.nvim')
   vim.cmd('packadd! quickfix-reflector.vim')
+  vim.cmd('packadd! stickybuf.nvim')
   vim.cmd('packadd! telescope-asynctasks.nvim')
   vim.cmd('packadd! telescope-dap.nvim')
   vim.cmd('packadd! vim-eunuch')
