@@ -12,6 +12,11 @@ function buffers.close_current_buffer(buffer, force)
     return
   end
 
+  if vim.endswith(vim.fn.bufname(), 'NEOGIT_COMMIT_EDITMSG') then
+    vim.cmd('close') -- A temporary workaround for https://github.com/TimUntersberger/neogit/issues/165
+    return
+  end
+
   if stickybuf_util.is_sticky_win() then
     vim.api.nvim_buf_delete(buffer, {force = force or vim.bo.buftype == 'terminal'})
     return

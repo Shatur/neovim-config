@@ -4,8 +4,5 @@ require('stickybuf').setup({
   },
   filetype = {
     spectre_panel = 'filetype'
-  },
-  bufname = {
-    ['.*NEOGIT_COMMIT_EDITMSG'] = 'bufnr',
-  },
+  }
 })
