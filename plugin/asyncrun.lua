@@ -1,5 +1,5 @@
 vim.g.asyncrun_open = 10
-vim.g.asyncrun_rootmarks = {'.git', '.compile_commands.json'}
+vim.g.asyncrun_rootmarks = { '.git', '.compile_commands.json' }
 
 vim.api.nvim_set_keymap('', '<F3>', '<Cmd>call asyncrun#quickfix_toggle(10)<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<F3>', '<Esc><Cmd>call asyncrun#quickfix_toggle(10)<CR>', { noremap = true })

@@ -14,8 +14,8 @@ vim.g.nvim_tree_show_icons = {
   files = 1,
 }
 vim.g.nvim_tree_window_picker_exclude = {
-  filetype = {'qf', 'gitstatus'},
-  buftype = {'terminal'}
+  filetype = { 'qf', 'gitstatus' },
+  buftype = { 'terminal' },
 }
 
 vim.g.nvim_tree_icons = {
@@ -24,6 +24,6 @@ vim.g.nvim_tree_icons = {
 
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
 vim.g.nvim_tree_bindings = {
-  {key = 'l', cb = tree_cb('edit')},
-  {key = 'h', cb = tree_cb('close_node')},
+  { key = 'l', cb = tree_cb('edit') },
+  { key = 'h', cb = tree_cb('close_node') },
 }

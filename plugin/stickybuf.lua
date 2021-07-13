@@ -4,9 +4,9 @@ end
 
 require('stickybuf').setup({
   buftype = {
-    terminal = 'buftype'
+    terminal = 'buftype',
   },
   filetype = {
-    spectre_panel = 'filetype'
-  }
+    spectre_panel = 'filetype',
+  },
 })

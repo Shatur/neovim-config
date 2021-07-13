@@ -7,14 +7,14 @@ vim.g.showtabline = 0
 
 vim.g.firenvim_config = {
   globalSettings = {
-    alt = 'all'
+    alt = 'all',
   },
   localSettings = {
     ['.*'] = {
       cmdline = 'firenvim',
-      takeover = 'never'
+      takeover = 'never',
     },
-  }
+  },
 }
 
 vim.api.nvim_set_keymap('n', '<Esc><Esc>', '<Cmd>call firenvim#focus_page()<CR>', { noremap = true })

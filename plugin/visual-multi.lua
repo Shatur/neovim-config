@@ -14,5 +14,5 @@ vim.g.VM_maps = {
   ['Reselect Last'] = '<A-r>',
   ['Mouse Cursor'] = '<A-LeftMouse>',
   ['Mouse Word'] = '<A-RightMouse>',
-  ['Visual All'] = '<A-a>'
+  ['Visual All'] = '<A-a>',
 }

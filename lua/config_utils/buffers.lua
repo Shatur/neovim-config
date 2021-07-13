@@ -18,11 +18,11 @@ function buffers.close_current_buffer(buffer, force)
   end
 
   if stickybuf_util.is_sticky_win() then
-    vim.api.nvim_buf_delete(buffer, {force = force or vim.bo.buftype == 'terminal'})
+    vim.api.nvim_buf_delete(buffer, { force = force or vim.bo.buftype == 'terminal' })
     return
   end
 
-  if #vim.fn.getbufinfo({buflisted = 1}) == 1 then
+  if #vim.fn.getbufinfo({ buflisted = 1 }) == 1 then
     -- Only one window left, create a new empty window
     vim.cmd('enew')
     vim.bo.bufhidden = 'wipe'
@@ -31,7 +31,7 @@ function buffers.close_current_buffer(buffer, force)
     vim.cmd('bprevious')
   end
 
-  vim.cmd('bdelete ' .. (force and '! ' or ' ') ..  buffer)
+  vim.cmd('bdelete ' .. (force and '! ' or ' ') .. buffer)
 end
 
 return buffers

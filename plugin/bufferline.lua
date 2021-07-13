@@ -2,10 +2,10 @@ if vim.g.started_by_firenvim == true then
   return
 end
 
-require('bufferline').setup{
+require('bufferline').setup({
   highlights = {
     buffer_selected = {
-      gui = 'bold'
+      gui = 'bold',
     },
     warning_selected = {
       gui = 'bold,underline',
@@ -23,24 +23,24 @@ require('bufferline').setup{
       gui = '',
     },
     pick_selected = {
-      gui = 'bold'
+      gui = 'bold',
     },
     pick_visible = {
-      gui = 'bold'
+      gui = 'bold',
     },
     pick = {
-      gui = 'bold'
-    }
+      gui = 'bold',
+    },
   },
   options = {
-    close_command = "BDelete! %d",
-    right_mouse_command = "BDelete! %d",
+    close_command = 'BDelete! %d',
+    right_mouse_command = 'BDelete! %d',
     offsets = {
-      {filetype = "NvimTree", text = "File Explorer", text_align = "center"},
-      {filetype = "NeogitStatus", text = "Git", text_align = "center"}
-    }
-  }
-}
+      { filetype = 'NvimTree', text = 'File Explorer', text_align = 'center' },
+      { filetype = 'NeogitStatus', text = 'Git', text_align = 'center' },
+    },
+  },
+})
 
 vim.api.nvim_set_keymap('', ']b', '<Cmd>BufferLineCycleNext<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '[b', '<Cmd>BufferLineCyclePrev<CR>', { noremap = true })

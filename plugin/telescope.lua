@@ -1,7 +1,7 @@
 local telescope = require('telescope')
 local actions = require('telescope.actions')
 
-telescope.setup{
+telescope.setup({
   defaults = {
     prompt_prefix = ' ',
     selection_caret = ' ',
@@ -16,23 +16,23 @@ telescope.setup{
       },
       n = {
         ['<C-q>'] = actions.close,
-      }
-    }
+      },
+    },
   },
   pickers = {
     git_commits = {
       mappings = {
         i = {
-          ["<C-o>"] = function(prompt_bufnr)
+          ['<C-o>'] = function(prompt_bufnr)
             actions.close(prompt_bufnr)
             local value = actions.get_selected_entry(prompt_bufnr).value
             vim.cmd('DiffviewOpen ' .. value .. '~1..' .. value)
           end,
-        }
-      }
-    }
-  }
-}
+        },
+      },
+    },
+  },
+})
 
 vim.api.nvim_set_keymap('n', 'z=', '<Cmd>Telescope spell_suggest theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<S-CR>', '<Cmd>Telescope commands theme=get_dropdown<CR>', { noremap = true })
@@ -70,4 +70,3 @@ else
   vim.api.nvim_set_keymap('', '<C-/>', '<Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
   vim.api.nvim_set_keymap('i', '<C-/>', '<Esc><Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
 end
-

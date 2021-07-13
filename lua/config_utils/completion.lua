@@ -1,8 +1,8 @@
 local completion = {}
 
 function completion.trigger_completion()
-  if vim.fn.pumvisible() ~= 0  then
-    return vim.fn['compe#confirm']({keys = '<C-Space>', select = true})
+  if vim.fn.pumvisible() ~= 0 then
+    return vim.fn['compe#confirm']({ keys = '<C-Space>', select = true })
   else
     return vim.fn['compe#complete']()
   end

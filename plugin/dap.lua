@@ -7,22 +7,22 @@ local dap = require('dap')
 dap.adapters.cpp = {
   type = 'executable',
   attach = {
-    pidProperty = "pid",
-    pidSelect = "ask"
+    pidProperty = 'pid',
+    pidSelect = 'ask',
   },
   command = 'lldb-vscode',
   env = {
-    LLDB_LAUNCH_FLAG_LAUNCH_IN_TTY = "YES"
+    LLDB_LAUNCH_FLAG_LAUNCH_IN_TTY = 'YES',
   },
-  name = "lldb"
+  name = 'lldb',
 }
 
 vim.g.dap_virtual_text = true
 
-vim.fn.sign_define('DapBreakpoint', {text='', texthl='LspDiagnosticsDefaultError'})
-vim.fn.sign_define('DapLogPoint', {text='', texthl='LspDiagnosticsDefaultInformation'})
-vim.fn.sign_define('DapStopped', {text=''})
-vim.fn.sign_define('DapBreakpointRejected', {text=''})
+vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'LspDiagnosticsDefaultError' })
+vim.fn.sign_define('DapLogPoint', { text = '', texthl = 'LspDiagnosticsDefaultInformation' })
+vim.fn.sign_define('DapStopped', { text = '' })
+vim.fn.sign_define('DapBreakpointRejected', { text = '' })
 
 vim.api.nvim_set_keymap('n', '<F10>', '<Cmd>lua require("dap").step_over()<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<F11>', '<Cmd>lua require("dap").step_into()<CR>', { noremap = true })
