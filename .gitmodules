@@ -234,3 +234,7 @@
 	path = pack/plugins/opt/stickybuf.nvim
 	url = https://github.com/stevearc/stickybuf.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/vim-abolish"]
+	path = pack/plugins/start/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
+	ignore = dirty
