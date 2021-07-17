@@ -12,13 +12,14 @@ function buffers.close_current_buffer(buffer, force)
     return
   end
 
-  if vim.endswith(vim.fn.bufname(), 'NEOGIT_COMMIT_EDITMSG') then
-    vim.cmd('close') -- To avoid conflicts with stickybuf.nvim, read more here: https://github.com/stevearc/stickybuf.nvim/issues/1#issuecomment-880107698
+  -- To avoid conflicts with stickybuf.nvim, read more here: https://github.com/stevearc/stickybuf.nvim/issues/1#issuecomment-880107698
+  if vim.endswith(vim.fn.bufname(), 'NEOGIT_COMMIT_EDITMSG') or vim.bo.buftype == 'terminal' then
+    vim.cmd('close')
     return
   end
 
   if stickybuf_util.is_sticky_win() then
-    vim.api.nvim_buf_delete(buffer, { force = force or vim.bo.buftype == 'terminal' })
+    vim.api.nvim_buf_delete(buffer, { force = force })
     return
   end
 

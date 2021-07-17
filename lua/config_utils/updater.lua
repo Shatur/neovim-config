@@ -1,16 +1,13 @@
 local updater = {}
+local toggleterm = require('toggleterm')
 
 function updater.update_plugins(path)
   path = path or 'pack'
-  vim.fn['asyncrun#run'](
-    '',
-    { mode = 'term', cwd = vim.fn.stdpath('config'), pos = 'thelp' },
-    'git submodule update --remote --jobs=8 ' .. path .. ' && git add --update ' .. path .. ' && git commit -m "Update plugins"'
-  )
+  toggleterm.exec('git submodule update --remote --jobs=8 ' .. path .. ' && git add --update ' .. path .. ' && git commit -m "Update plugins"', 1, nil, vim.fn.stdpath('config'))
 end
 
 function updater.update_config()
-  vim.fn['asyncrun#run']('', { mode = 'term', cwd = vim.fn.stdpath('config'), pos = 'thelp' }, 'git pull --recurse-submodules --jobs=8')
+  toggleterm.exec('git pull --recurse-submodules --jobs=8')
 end
 
 return updater

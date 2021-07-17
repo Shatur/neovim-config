@@ -30,6 +30,10 @@ vim.o.completeopt = 'menuone,noselect,noinsert'
 vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
 vim.o.formatoptions = vim.bo.formatoptions:gsub('cro', '')
 
+if vim.fn.has('unix') == 1 then
+  vim.o.shell = '/usr/bin/bash' -- I use fish on Linux and it slow for running internal commands
+end
+
 -- Fonts
 if vim.fn.has('win32') == 1 then
   vim.o.guifont = 'CaskaydiaCove NF'
@@ -192,6 +196,7 @@ else
   vim.cmd('packadd! nvim-lspconfig')
   vim.cmd('packadd! nvim-luaref')
   vim.cmd('packadd! nvim-spectre')
+  vim.cmd('packadd! nvim-toggleterm.lua')
   vim.cmd('packadd! nvim-tree.lua')
   vim.cmd('packadd! nvim-treesitter')
   vim.cmd('packadd! nvim-treesitter-textobjects')
@@ -205,5 +210,4 @@ else
   vim.cmd('packadd! vim-eunuch')
   vim.cmd('packadd! vim-scriptease')
   vim.cmd('packadd! vim-sleuth')
-  vim.cmd('packadd! vim-terminal-help')
 end
