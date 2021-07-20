@@ -61,3 +61,4 @@ vim.api.nvim_set_keymap('', '<A-8>', '<Cmd>lua require("bufferline").go_to_buffe
 vim.api.nvim_set_keymap('', '<A-9>', '<Cmd>lua require("bufferline").go_to_buffer(9)<CR>', { noremap = true })
 
 vim.api.nvim_set_keymap('', 'gb', '<Cmd>BufferLinePick<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', 'gB', '<Cmd>BufferLinePickClose<CR>', { noremap = true })
