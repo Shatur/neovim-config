@@ -14,13 +14,13 @@ require('bufferline').setup({
       gui = 'bold,underline',
     },
     duplicate_selected = {
-      gui = '',
+      gui = 'NONE',
     },
     duplicate_visible = {
-      gui = '',
+      gui = 'NONE',
     },
     duplicate = {
-      gui = '',
+      gui = 'NONE',
     },
     pick_selected = {
       gui = 'bold',
