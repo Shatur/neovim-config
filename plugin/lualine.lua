@@ -80,13 +80,14 @@ table.insert(config.sections.lualine_c, {
 })
 
 table.insert(config.sections.lualine_c, {
-  'filename',
-  color = { fg = colors.keyword, gui = 'bold' },
+  'filetype',
+  colored = true,
+  disable_text = true,
 })
 
 table.insert(config.sections.lualine_c, {
-  'filetype',
-  colored = true,
+  'filename',
+  color = { fg = colors.keyword, gui = 'bold' },
 })
 
 table.insert(config.sections.lualine_c, {
