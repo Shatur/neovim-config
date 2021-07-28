@@ -183,7 +183,6 @@ else
   vim.cmd('packadd! gitlinker.nvim')
   vim.cmd('packadd! gitsigns.nvim')
   vim.cmd('packadd! lsp-status.nvim')
-  vim.cmd('packadd! lsp-trouble.nvim')
   vim.cmd('packadd! lsp_signature.nvim')
   vim.cmd('packadd! lualine.nvim')
   vim.cmd('packadd! neogit')
