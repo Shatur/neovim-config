@@ -6,3 +6,5 @@ GuiScrollBar 1
 nnoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>
 inoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>
 vnoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>gv
+
+GuiFont! CaskaydiaCove\ NF

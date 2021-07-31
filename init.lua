@@ -34,10 +34,8 @@ if vim.fn.has('unix') == 1 then
   vim.o.shell = '/usr/bin/bash' -- I use fish on Linux and it slow for running internal commands
 end
 
--- Fonts
-if vim.fn.has('win32') == 1 then
-  vim.o.guifont = 'CaskaydiaCove NF'
-else
+-- Fonts on Windows set in ginit to avoid metrics error in Neovim Qt
+if vim.fn.has('win32') == 0 then
   vim.o.guifont = 'CaskaydiaCove Nerd Font Mono'
 end
 
