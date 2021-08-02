@@ -126,6 +126,7 @@ vim.api.nvim_set_keymap('i', '<C-z>', '<C-o>u', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-v>', '<C-g>u<Cmd>set paste<CR><C-r>+<Cmd>set nopaste<CR>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-v>', '<C-r>+', { noremap = true })
 vim.api.nvim_set_keymap('t', '<C-v>', '<C-\\><C-N>pi', { noremap = true })
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-Left>', '<Esc>vb', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-Right>', '<Esc>ve', { noremap = true })
 
