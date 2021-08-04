@@ -7,4 +7,6 @@ nnoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>
 inoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>
 vnoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>gv
 
-GuiFont! CaskaydiaCove\ NF
+if has('win32')
+    GuiFont! CaskaydiaCove\ NF
+endif
