@@ -33,7 +33,7 @@ paru -S ripgrep nerd-fonts-cascadia-code xkb-switch lua-language-server clang cm
 ```bash
 scoop bucket add nerd-fonts
 scoop bucket add extras
-sudo scoop install -g ripgrep llvm CascadiaCode-NF-Mono windows-terminal gh python
+sudo scoop install -g ripgrep llvm CascadiaCode-NF-Mono windows-terminal gh python pwsh
 pip install cmake-language-server
 ```
 
