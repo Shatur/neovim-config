@@ -145,7 +145,7 @@ table.insert(config.sections.lualine_x, {
 })
 
 table.insert(config.sections.lualine_x, {
-  'branch',
+  'b:gitsigns_head',
   icon = '',
   color = { fg = colors.fg, gui = 'bold' },
 })
