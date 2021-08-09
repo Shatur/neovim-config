@@ -234,3 +234,7 @@
 	path = pack/plugins/opt/nvim-toggleterm.lua
 	url = https://github.com/akinsho/nvim-toggleterm.lua.git
 	ignore = dirty
+[submodule "pack/plugins/opt/luv-vimdocs"]
+	path = pack/plugins/opt/luv-vimdocs
+	url = https://github.com/nanotee/luv-vimdocs.git
+	ignore = dirty

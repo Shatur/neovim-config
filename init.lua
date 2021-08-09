@@ -184,6 +184,7 @@ else
   vim.cmd('packadd! lsp-status.nvim')
   vim.cmd('packadd! lsp_signature.nvim')
   vim.cmd('packadd! lualine.nvim')
+  vim.cmd('packadd! luv-vimdocs')
   vim.cmd('packadd! neogit')
   vim.cmd('packadd! neovim-cmake')
   vim.cmd('packadd! neovim-session-manager')
