@@ -152,6 +152,12 @@ table.insert(config.sections.lualine_x, {
 
 table.insert(config.sections.lualine_x, {
   'diff',
+  source = function()
+    local gitsigns = vim.b.gitsigns_status_dict
+    if gitsigns then
+      return { added = gitsigns.added, modified = gitsigns.changed, removed = gitsigns.removed }
+    end
+  end,
   symbols = { added = ' ', modified = '柳 ', removed = ' ' },
   color_added = colors.vcs_added,
   color_modified = colors.vcs_modified,
