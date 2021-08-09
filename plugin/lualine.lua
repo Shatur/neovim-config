@@ -115,9 +115,9 @@ table.insert(config.sections.lualine_c, {
   'diagnostics',
   sources = { 'nvim_lsp' },
   symbols = { error = ' ', warn = ' ', info = ' ' },
-  color_error = colors.error,
-  color_warn = colors.warning,
-  color_info = colors.tag,
+  color_error = { fg = colors.error },
+  color_warn = { fg = colors.warning },
+  color_info = { fg = colors.tag },
 })
 
 -- Right sections
@@ -159,9 +159,9 @@ table.insert(config.sections.lualine_x, {
     end
   end,
   symbols = { added = ' ', modified = '柳 ', removed = ' ' },
-  color_added = colors.vcs_added,
-  color_modified = colors.vcs_modified,
-  color_removed = colors.vcs_removed,
+  color_added = { fg = colors.vcs_added },
+  color_modified = { fg = colors.vcs_modified },
+  color_removed = { fg = colors.vcs_removed },
 })
 
 table.insert(config.sections.lualine_x, {
