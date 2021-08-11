@@ -90,10 +90,6 @@
 	path = pack/plugins/start/plenary.nvim
 	url = https://github.com/nvim-lua/plenary.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/popup.nvim"]
-	path = pack/plugins/start/popup.nvim
-	url = https://github.com/nvim-lua/popup.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-autopairs"]
 	path = pack/plugins/start/nvim-autopairs
 	url = git@github.com:windwp/nvim-autopairs.git
