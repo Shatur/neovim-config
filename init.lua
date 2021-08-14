@@ -191,7 +191,6 @@ else
   vim.cmd('packadd! nvim-lastplace')
   vim.cmd('packadd! nvim-lspconfig')
   vim.cmd('packadd! nvim-luaref')
-  vim.cmd('packadd! nvim-spectre')
   vim.cmd('packadd! nvim-toggleterm.lua')
   vim.cmd('packadd! nvim-tree.lua')
   vim.cmd('packadd! nvim-treesitter')
