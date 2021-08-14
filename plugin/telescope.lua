@@ -64,9 +64,9 @@ vim.api.nvim_set_keymap('', '<A-c>', '<Cmd>Telescope git_commits theme=get_dropd
 vim.api.nvim_set_keymap('i', '<A-s>', '<Cmd>Telescope git_stash theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<A-s>', '<Cmd>Telescope git_stash theme=get_dropdown<CR>', { noremap = true })
 if vim.fn.has('win32') == 1 then
-  vim.api.nvim_set_keymap('', '<C-_>', '<Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
-  vim.api.nvim_set_keymap('i', '<C-_>', '<Esc><Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
-else
   vim.api.nvim_set_keymap('', '<C-/>', '<Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
   vim.api.nvim_set_keymap('i', '<C-/>', '<Esc><Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
+else
+  vim.api.nvim_set_keymap('', '<C-_>', '<Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
+  vim.api.nvim_set_keymap('i', '<C-_>', '<Esc><Cmd>Telescope live_grep theme=get_dropdown<CR>', { noremap = true })
 end
