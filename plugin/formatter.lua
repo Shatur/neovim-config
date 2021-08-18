@@ -1,32 +1,44 @@
+local function stylua()
+  return {
+    exe = 'stylua',
+    args = { '--search-parent-directories', '-' },
+    stdin = true,
+  }
+end
+
+local function prettier()
+  return {
+    exe = 'prettier',
+    args = { '--stdin-filepath', vim.api.nvim_buf_get_name(0) },
+    stdin = true,
+  }
+end
+
+local function clang_format()
+  return {
+    exe = 'clang-format',
+    args = { '--assume-filename', vim.api.nvim_buf_get_name(0) },
+    stdin = true,
+    cwd = vim.fn.expand('%:p:h'), -- Run clang-format in cwd of the file.
+  }
+end
+
 require('formatter').setup({
   filetype = {
     lua = {
-      function()
-        return {
-          exe = 'stylua',
-          args = { '--search-parent-directories', '-' },
-          stdin = true,
-        }
-      end,
+      stylua,
     },
     markdown = {
-      function()
-        return {
-          exe = 'prettier',
-          args = { '--stdin-filepath', vim.api.nvim_buf_get_name(0) },
-          stdin = true,
-        }
-      end,
+      prettier,
+    },
+    yaml = {
+      prettier,
+    },
+    json = {
+      prettier,
     },
     cpp = {
-      function()
-        return {
-          exe = 'clang-format',
-          args = {"--assume-filename", vim.api.nvim_buf_get_name(0)},
-          stdin = true,
-          cwd = vim.fn.expand('%:p:h'),  -- Run clang-format in cwd of the file.
-        }
-      end,
+      clang_format,
     },
   },
 })
