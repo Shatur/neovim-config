@@ -98,8 +98,8 @@ lspconfig.cmake.setup({
 -- Icons
 local kinds = require('vim.lsp.protocol').CompletionItemKind
 kinds[kinds.Text] = ' Text'
-kinds[kinds.Method] = 'ƒ Method'
-kinds[kinds.Function] = ' Function'
+kinds[kinds.Method] = ' Method'
+kinds[kinds.Function] = ' Function'
 kinds[kinds.Constructor] = ' Constructor'
 kinds[kinds.Field] = 'ﰠ Field'
 kinds[kinds.Variable] = ' Variable'
@@ -110,7 +110,7 @@ kinds[kinds.Property] = ' Property'
 kinds[kinds.Unit] = ' Unit'
 kinds[kinds.Value] = ' Value'
 kinds[kinds.Enum] = ' Enum'
-kinds[kinds.Keyword] = ' Keyword'
+kinds[kinds.Keyword] = ' Keyword'
 kinds[kinds.Snippet] = '﬌ Snippet'
 kinds[kinds.Color] = ' Color'
 kinds[kinds.File] = ' File'
@@ -119,9 +119,9 @@ kinds[kinds.Folder] = ' Folder'
 kinds[kinds.EnumMember] = ' EnumMember'
 kinds[kinds.Constant] = ' Constant'
 kinds[kinds.Struct] = ' Struct'
-kinds[kinds.Event] = ' Event'
+kinds[kinds.Event] = 'ﯓ Event'
 kinds[kinds.Operator] = ' Operator'
-kinds[kinds.TypeParameter] = ' TypeParameter'
+kinds[kinds.TypeParameter] = ' TypeParameter'
 
 -- Diagnistic signs
 vim.fn.sign_define('LspDiagnosticsSignError', { text = '' })
