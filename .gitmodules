@@ -78,9 +78,9 @@
 	path = pack/plugins/opt/nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
 	ignore = dirty
-[submodule "pack/plugins/opt/nvim-bufferline.lua"]
-	path = pack/plugins/opt/nvim-bufferline.lua
-	url = git@github.com:akinsho/nvim-bufferline.lua.git
+[submodule "pack/plugins/opt/bufferline.nvim"]
+	path = pack/plugins/opt/bufferline.nvim
+	url = git@github.com:akinsho/bufferline.nvim.git
 	ignore = dirty
 [submodule "pack/plugins/start/telescope.nvim"]
 	path = pack/plugins/start/telescope.nvim

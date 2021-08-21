@@ -185,7 +185,7 @@ else
   vim.cmd('packadd! neogit')
   vim.cmd('packadd! neovim-cmake')
   vim.cmd('packadd! neovim-session-manager')
-  vim.cmd('packadd! nvim-bufferline.lua')
+  vim.cmd('packadd! bufferline.nvim')
   vim.cmd('packadd! nvim-dap')
   vim.cmd('packadd! nvim-dap-virtual-text')
   vim.cmd('packadd! nvim-lastplace')
