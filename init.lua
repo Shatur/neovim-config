@@ -192,7 +192,7 @@ else
   vim.cmd('packadd! nvim-lspconfig')
   vim.cmd('packadd! nvim-luaref')
   vim.cmd('packadd! nvim-notify')
-  vim.cmd('packadd! nvim-toggleterm.lua')
+  vim.cmd('packadd! toggleterm.nvim')
   vim.cmd('packadd! nvim-tree.lua')
   vim.cmd('packadd! nvim-treesitter')
   vim.cmd('packadd! nvim-treesitter-textobjects')

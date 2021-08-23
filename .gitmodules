@@ -222,9 +222,9 @@
 	path = pack/plugins/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish.git
 	ignore = dirty
-[submodule "pack/plugins/opt/nvim-toggleterm.lua"]
-	path = pack/plugins/opt/nvim-toggleterm.lua
-	url = https://github.com/akinsho/nvim-toggleterm.lua.git
+[submodule "pack/plugins/opt/toggleterm.nvim"]
+	path = pack/plugins/opt/toggleterm.nvim
+	url = https://github.com/akinsho/toggleterm.nvim.git
 	ignore = dirty
 [submodule "pack/plugins/opt/luv-vimdocs"]
 	path = pack/plugins/opt/luv-vimdocs
