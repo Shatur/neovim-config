@@ -25,7 +25,7 @@ call firenvim#install(0) " To enable embedding in browsers via firenvim
 **Arch Linux**
 
 ```bash
-paru -S ripgrep nerd-fonts-cascadia-code xkb-switch lua-language-server clang cmake-language-server stylua-git github-cli
+paru -S ripgrep nerd-fonts-fira-code xkb-switch lua-language-server clang cmake-language-server stylua-git github-cli
 ```
 
 **Windows**
@@ -33,7 +33,7 @@ paru -S ripgrep nerd-fonts-cascadia-code xkb-switch lua-language-server clang cm
 ```bash
 scoop bucket add nerd-fonts
 scoop bucket add extras
-sudo scoop install -g ripgrep llvm CascadiaCode-NF-Mono windows-terminal gh python pwsh
+sudo scoop install -g ripgrep llvm FiraCode-NF windows-terminal gh python pwsh
 pip install cmake-language-server
 ```
 

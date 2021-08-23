@@ -36,7 +36,7 @@ end
 
 -- Fonts on Windows set in ginit to avoid metrics error in Neovim Qt
 if vim.fn.has('win32') == 0 then
-  vim.o.guifont = 'CaskaydiaCove Nerd Font Mono'
+  vim.o.guifont = 'FiraCode Nerd Font Mono'
 end
 
 -- Set background depending on time

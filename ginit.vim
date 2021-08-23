@@ -8,5 +8,5 @@ inoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>
 vnoremap <RightMouse> <Cmd>call GuiShowContextMenu()<CR>gv
 
 if has('win32')
-    GuiFont! CaskaydiaCove\ NF
+    GuiFont! FiraCode\ NF:w57
 endif
