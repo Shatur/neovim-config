@@ -7,7 +7,7 @@ function updater.update_plugins(path)
 end
 
 function updater.update_config()
-  toggleterm.exec('git pull --recurse-submodules --jobs=8', 1)
+  toggleterm.exec('git pull --recurse-submodules --jobs=8', 1, nil, vim.fn.stdpath('config'))
 end
 
 return updater
