@@ -19,7 +19,7 @@ function buffers.close_current_buffer(buffer, force)
   end
 
   if stickybuf_util.is_sticky_win() then
-    vim.api.nvim_buf_delete(buffer, { force = force })
+    vim.api.nvim_buf_delete(buffer, { force = force == '!' })
     return
   end
 
@@ -32,7 +32,7 @@ function buffers.close_current_buffer(buffer, force)
     vim.cmd('bprevious')
   end
 
-  vim.cmd('bdelete' .. (force and '! ' or ' ') .. buffer)
+  vim.cmd('bdelete' .. force .. ' ' .. buffer)
 end
 
 return buffers
