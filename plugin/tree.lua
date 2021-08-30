@@ -9,6 +9,7 @@ vim.g.nvim_tree_special_files = {}
 vim.g.nvim_tree_group_empty = 1
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_auto_resize = 0
+vim.g.nvim_tree_follow = 0
 vim.g.nvim_tree_respect_buf_cwd = 1
 vim.g.nvim_tree_show_icons = {
   git = 0, -- Causes slowdown
