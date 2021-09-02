@@ -12,7 +12,7 @@ lsp_status.config({
   current_function = false,
   diagnostics = false, -- Will be displayed via lualine
 })
-lsp_status.capabilities.textDocument.completion.completionItem.snippetSupport = true
+lsp_status.capabilities = require('cmp_nvim_lsp').update_capabilities(lsp_status.capabilities)
 lsp_status.register_progress()
 
 -- Buffer with LSP settings
@@ -94,34 +94,6 @@ lspconfig.cmake.setup({
   capabilities = lsp_status.capabilities,
   on_attach = on_attach,
 })
-
--- Icons
-local kinds = require('vim.lsp.protocol').CompletionItemKind
-kinds[kinds.Text] = ' Text'
-kinds[kinds.Method] = ' Method'
-kinds[kinds.Function] = ' Function'
-kinds[kinds.Constructor] = ' Constructor'
-kinds[kinds.Field] = 'ﰠ Field'
-kinds[kinds.Variable] = ' Variable'
-kinds[kinds.Class] = ' Class'
-kinds[kinds.Interface] = ' Interface'
-kinds[kinds.Module] = ' Module'
-kinds[kinds.Property] = ' Property'
-kinds[kinds.Unit] = ' Unit'
-kinds[kinds.Value] = ' Value'
-kinds[kinds.Enum] = ' Enum'
-kinds[kinds.Keyword] = ' Keyword'
-kinds[kinds.Snippet] = '﬌ Snippet'
-kinds[kinds.Color] = ' Color'
-kinds[kinds.File] = ' File'
-kinds[kinds.Reference] = ' Reference'
-kinds[kinds.Folder] = ' Folder'
-kinds[kinds.EnumMember] = ' EnumMember'
-kinds[kinds.Constant] = ' Constant'
-kinds[kinds.Struct] = ' Struct'
-kinds[kinds.Event] = 'ﯓ Event'
-kinds[kinds.Operator] = ' Operator'
-kinds[kinds.TypeParameter] = ' TypeParameter'
 
 -- Diagnistic signs
 vim.fn.sign_define('LspDiagnosticsSignError', { text = '' })

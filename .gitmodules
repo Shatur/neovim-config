@@ -106,10 +106,6 @@
 	path = pack/plugins/opt/nvim-tree.lua
 	url = git@github.com:kyazdani42/nvim-tree.lua.git
 	ignore = dirty
-[submodule "pack/plugins/start/nvim-compe"]
-	path = pack/plugins/start/nvim-compe
-	url = git@github.com:hrsh7th/nvim-compe.git
-	ignore = dirty
 [submodule "pack/plugins/opt/neogit"]
 	path = pack/plugins/opt/neogit
 	url = git@github.com:TimUntersberger/neogit.git
@@ -233,4 +229,20 @@
 [submodule "pack/plugins/opt/nvim-notify"]
 	path = pack/plugins/opt/nvim-notify
 	url = git@github.com:rcarriga/nvim-notify.git
+	ignore = dirty
+[submodule "pack/plugins/start/nvim-cmp"]
+	path = pack/plugins/start/nvim-cmp
+	url = git@github.com:hrsh7th/nvim-cmp.git
+	ignore = dirty
+[submodule "pack/plugins/start/cmp-buffer"]
+	path = pack/plugins/start/cmp-buffer
+	url = git@github.com:hrsh7th/cmp-buffer.git
+	ignore = dirty
+[submodule "pack/plugins/opt/cmp_luasnip"]
+	path = pack/plugins/opt/cmp_luasnip
+	url = git@github.com:saadparwaiz1/cmp_luasnip.git
+	ignore = dirty
+[submodule "pack/plugins/opt/cmp-nvim-lsp"]
+	path = pack/plugins/opt/cmp-nvim-lsp
+	url = git@github.com:hrsh7th/cmp-nvim-lsp.git
 	ignore = dirty
