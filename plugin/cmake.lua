@@ -1,13 +1,9 @@
-if vim.g.started_by_firenvim == true then
-  return
-end
-
-vim.g.cmake_configure_arguments = vim.g.cmake_configure_arguments .. ' -G Ninja'
+vim.g.cmake_configure_arguments = '-D CMAKE_EXPORT_COMPILE_COMMANDS=1 -G Ninja'
 if vim.fn.has('unix') == 1 then
   vim.g.cmake_configure_arguments = vim.g.cmake_configure_arguments .. ' -D CMAKE_CXX_FLAGS=-gdwarf-4'
 else
   vim.g.cmake_configure_arguments = vim.g.cmake_configure_arguments .. ' -D CMAKE_TOOLCHAIN_FILE=C:/ProgramData/vcpkg/scripts/buildsystems/vcpkg.cmake -D VCPKG_TARGET_TRIPLET=x64-windows'
-  vim.g.cmake_asyncrun_options = vim.tbl_extend('force', vim.g.cmake_asyncrun_options, { program = 'vcvars64' })
+  vim.g.cmake_asyncrun_options = { save = 2, program = 'vcvars64' }
 end
 
 vim.api.nvim_set_keymap('', '<F5>', '<Cmd>CMake build_and_debug<CR>', { noremap = true })

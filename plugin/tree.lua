@@ -1,7 +1,3 @@
-if vim.g.started_by_firenvim == true then
-  return
-end
-
 vim.api.nvim_set_keymap('', '<A-f>', '<Cmd>NvimTreeFindFile<CR>', { noremap = true })
 
 vim.g.nvim_tree_follow = 1

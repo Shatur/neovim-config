@@ -16,12 +16,6 @@ git clone --recursive git@github.com:Shatur95/neovim-config.git $env:LOCALAPPDAT
 
 ### Plugins
 
-**General**
-
-```vim
-call firenvim#install(0) " To enable embedding in browsers via firenvim
-```
-
 **Arch Linux**
 
 ```bash
