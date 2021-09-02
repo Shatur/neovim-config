@@ -1,15 +1,15 @@
 local lspconfig = require('lspconfig')
 local lsp_signature = require('lsp_signature')
-
--- LSP status
 local lsp_status = require('lsp-status')
+
 lsp_status.config({
   status_symbol = '',
   current_function = false,
   diagnostics = false, -- Will be displayed via lualine
 })
-lsp_status.capabilities = require('cmp_nvim_lsp').update_capabilities(lsp_status.capabilities)
 lsp_status.register_progress()
+
+local capabilities = require('cmp_nvim_lsp').update_capabilities(lsp_status.capabilities)
 
 -- Buffer with LSP settings
 local on_attach = function(client, bufnr)
@@ -56,13 +56,13 @@ lspconfig.clangd.setup({
     clangdFileStatus = true,
   },
   on_attach = on_attach,
-  capabilities = lsp_status.capabilities,
+  capabilities = capabilities,
 })
 
 lspconfig.sumneko_lua.setup({
   cmd = { 'lua-language-server' },
   on_attach = on_attach,
-  capabilities = lsp_status.capabilities,
+  capabilities = capabilities,
   settings = {
     Lua = {
       runtime = {
@@ -83,11 +83,11 @@ lspconfig.sumneko_lua.setup({
 })
 
 lspconfig.gdscript.setup{
-  capabilities = lsp_status.capabilities,
+  capabilities = capabilities,
   on_attach = on_attach
 }
 lspconfig.cmake.setup({
-  capabilities = lsp_status.capabilities,
+  capabilities = capabilities,
   on_attach = on_attach,
 })
 
