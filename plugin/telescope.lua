@@ -10,7 +10,7 @@ telescope.setup({
         ['<C-k>'] = actions.cycle_history_next,
         ['<C-j>'] = actions.cycle_history_prev,
         ['<C-v>'] = false,
-        ['<C-x>'] = actions.select_vertical,
+        ['<C-s>'] = actions.select_vertical,
         ['<C-q>'] = actions.close,
         ['<C-CR>'] = actions.smart_send_to_qflist + actions.open_qflist,
       },
