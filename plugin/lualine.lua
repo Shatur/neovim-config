@@ -67,7 +67,7 @@ table.insert(config.sections.lualine_c, {
       t = { color = colors.constant, name = 'TERMINAL' },
     }
 
-    local mode = modes[vim.fn.mode()]
+    local mode = modes[vim.api.nvim_get_mode().mode]
     theme_utils.highlight('LualineMode', { fg = mode.color, bg = colors.panel_border, style = 'bold' })
     return mode.name
   end,
