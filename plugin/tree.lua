@@ -13,7 +13,7 @@ vim.g.nvim_tree_show_icons = {
   files = 1,
 }
 vim.g.nvim_tree_window_picker_exclude = {
-  filetype = { 'qf', 'gitstatus', 'dap-repl', 'NeogitStatus' },
+  filetype = { 'qf', 'gitstatus', 'dap-repl', 'notify', 'NeogitStatus' },
   buftype = { 'terminal' },
 }
 
