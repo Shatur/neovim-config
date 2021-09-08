@@ -37,7 +37,7 @@ telescope.setup({
 telescope.load_extension('dap')
 telescope.load_extension('asynctasks')
 telescope.load_extension('cmake')
-telescope.load_extension('session_manager')
+telescope.load_extension('sessions')
 
 vim.api.nvim_set_keymap('n', 'z=', '<Cmd>Telescope spell_suggest theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<S-CR>', '<Cmd>Telescope commands theme=get_dropdown<CR>', { noremap = true })
@@ -49,7 +49,7 @@ vim.api.nvim_set_keymap('i', '<F1>', '<Cmd>Telescope help_tags theme=get_dropdow
 vim.api.nvim_set_keymap('', '<A-o>', '<Cmd>Telescope oldfiles theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-o>', '<Cmd>Telescope oldfiles theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<A-b>', '<Cmd>Telescope git_branches theme=get_dropdown<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>Telescope session_manager load theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<A-p>', '<Cmd>SaveSession<CR><Cmd>Telescope sessions theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<C-p>', '<Cmd>Telescope find_files hidden=true theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-p>', '<Cmd>Telescope find_files hidden=true theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-t>', '<Cmd>Telescope asynctasks all theme=get_dropdown<CR>', { noremap = true })
