@@ -238,3 +238,7 @@
 	path = pack/plugins/start/cmp-nvim-lsp
 	url = git@github.com:hrsh7th/cmp-nvim-lsp.git
 	ignore = dirty
+[submodule "pack/plugins/start/nvim-dap-ui"]
+	path = pack/plugins/start/nvim-dap-ui
+	url = git@github.com:rcarriga/nvim-dap-ui.git
+	ignore = dirty
