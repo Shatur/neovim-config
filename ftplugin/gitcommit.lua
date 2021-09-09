@@ -1,1 +1,1 @@
-vim.cmd('setlocal spell')
+vim.api.nvim_command('setlocal spell')

@@ -1,2 +1,2 @@
 vim.bo.buflisted = false
-vim.cmd('setlocal winfixwidth')
+vim.api.nvim_command('setlocal winfixwidth')

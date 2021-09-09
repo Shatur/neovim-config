@@ -52,25 +52,25 @@ end
 vim.g.no_gitrebase_maps = false
 
 -- Open folder in system explorer
-vim.cmd('command! -complete=dir -nargs=* Explorer lua require("config_utils.gtfo").open_explorer(vim.fn.expand("<args>"))')
+vim.api.nvim_command('command! -complete=dir -nargs=* Explorer lua require("config_utils.gtfo").open_explorer(vim.fn.expand("<args>"))')
 
 -- Open folder in system terminal
-vim.cmd('command! -complete=dir -nargs=* Terminal lua require("config_utils.gtfo").open_terminal(vim.fn.expand("<args>"))')
+vim.api.nvim_command('command! -complete=dir -nargs=* Terminal lua require("config_utils.gtfo").open_terminal(vim.fn.expand("<args>"))')
 
 -- Delete buffer with saving the current layout (except special buffers)
-vim.cmd('command! -nargs=? -bang BDelete lua require("config_utils.buffers").close_current_buffer(<q-args>, <q-bang>)')
+vim.api.nvim_command('command! -nargs=? -bang BDelete lua require("config_utils.buffers").close_current_buffer(<q-args>, <q-bang>)')
 
 -- Update all plugins and commit changes
-vim.cmd('command! -nargs=? UpdatePlugins lua require("config_utils.updater").update_plugins(<args>)')
+vim.api.nvim_command('command! -nargs=? UpdatePlugins lua require("config_utils.updater").update_plugins(<args>)')
 
 -- Pull latest configuration changes from repo
-vim.cmd('command! UpdateConfig lua require("config_utils.updater").update_config()')
+vim.api.nvim_command('command! UpdateConfig lua require("config_utils.updater").update_config()')
 
 -- Start debugging
-vim.cmd('command! -complete=file -nargs=+ Gdb lua require("config_utils.debug").gdb(<f-args>)')
+vim.api.nvim_command('command! -complete=file -nargs=+ Gdb lua require("config_utils.debug").gdb(<f-args>)')
 
 -- Toggle diagnostics
-vim.cmd('command! LspToggleDiagnostics lua require("config_utils.diagnostics").toggle_diagnostics()')
+vim.api.nvim_command('command! LspToggleDiagnostics lua require("config_utils.diagnostics").toggle_diagnostics()')
 
 -- Remap useless keys
 vim.g.mapleader = ' '
@@ -163,8 +163,8 @@ vim.api.nvim_set_keymap('', 'gof', '<Cmd>lua require("config_utils.gtfo").open_e
 vim.api.nvim_set_keymap('', 'goF', '<Cmd>lua require("config_utils.gtfo").open_explorer()<CR>', { noremap = true })
 
 --- Custom group for all autocmd's in configuration
-vim.cmd('augroup vimrc')
-vim.cmd('autocmd!')
+vim.api.nvim_command('augroup vimrc')
+vim.api.nvim_command('autocmd!')
 --- Highligh yanked text
-vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
-vim.cmd('augroup END')
+vim.api.nvim_command('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
+vim.api.nvim_command('augroup END')

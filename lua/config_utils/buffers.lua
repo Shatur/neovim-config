@@ -14,7 +14,7 @@ function buffers.close_current_buffer(buffer, force)
 
   -- To avoid conflicts with stickybuf.nvim, read more here: https://github.com/stevearc/stickybuf.nvim/issues/1#issuecomment-880107698
   if vim.endswith(vim.fn.bufname(), 'NEOGIT_COMMIT_EDITMSG') or vim.bo.buftype == 'terminal' then
-    vim.cmd('close')
+    vim.api.nvim_command('close')
     return
   end
 
@@ -25,14 +25,14 @@ function buffers.close_current_buffer(buffer, force)
 
   if #vim.fn.getbufinfo({ buflisted = 1 }) == 1 then
     -- Only one window left, create a new empty window
-    vim.cmd('enew')
+    vim.api.nvim_command('enew')
     vim.bo.bufhidden = 'wipe'
   elseif vim.api.nvim_win_get_buf(0) == buffer then
     -- Preserve layout only if this is a current buffer
-    vim.cmd('bprevious')
+    vim.api.nvim_command('bprevious')
   end
 
-  vim.cmd('bdelete' .. force .. ' ' .. buffer)
+  vim.api.nvim_command('bdelete' .. force .. ' ' .. buffer)
 end
 
 return buffers

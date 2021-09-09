@@ -42,7 +42,7 @@ telescope.setup({
           ['<C-o>'] = function(prompt_bufnr)
             actions.close(prompt_bufnr)
             local value = actions.get_selected_entry(prompt_bufnr).value
-            vim.cmd('DiffviewOpen ' .. value .. '~1..' .. value)
+            vim.api.nvim_command('DiffviewOpen ' .. value .. '~1..' .. value)
           end,
         },
       },
