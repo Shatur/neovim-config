@@ -128,6 +128,14 @@ vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-Left>', '<Esc>vb', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-Right>', '<Esc>ve', { noremap = true })
 
+-- Move lines
+vim.api.nvim_set_keymap('n', '<A-j>', '<Cmd>move+1<CR>==', { noremap = true })
+vim.api.nvim_set_keymap('n', '<A-k>', '<Cmd>move-2<CR>==', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-j>', '<Esc><Cmd>move+1<CR>==gi', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-k>', '<Esc><Cmd>move-2<CR>==gi', { noremap = true })
+vim.api.nvim_set_keymap('v', '<A-j>', "<Esc><Cmd>'<,'>move'>+1<CR>gv=gv", { noremap = true })
+vim.api.nvim_set_keymap('v', '<A-k>', "<Esc><Cmd>'<,'>move'<-2<CR>gv=gv", { noremap = true })
+
 -- Cmdline shortcuts
 vim.api.nvim_set_keymap('c', '<C-a>', '<Home>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-e>', '<End>', { noremap = true })
