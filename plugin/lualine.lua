@@ -32,6 +32,19 @@ local config = {
   extensions = { 'nvim-tree', 'quickfix' },
 }
 
+-- Display only buffer names for these file types
+table.insert(config.extensions, {
+  sections = {
+    lualine_a = { 'filename' },
+    lualine_b = {
+      function()
+        return ' '
+      end,
+    },
+  },
+  filetypes = { 'NeogitStatus', 'dapui_watches', 'dapui_stacks', 'dapui_breakpoints', 'dapui_scopes' },
+})
+
 -- Left sections
 table.insert(config.sections.lualine_c, {
   function()
