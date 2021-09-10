@@ -1,6 +1,10 @@
 require('dapui').setup({
   sidebar = {
     size = 55,
+    position = 'right',
+  },
+  tray = {
+    size = 15,
   },
 })
 
@@ -50,13 +54,9 @@ vim.api.nvim_set_keymap('n', '<Leader>b', '<Cmd>lua require("dap").toggle_breakp
 vim.api.nvim_set_keymap('n', '<Leader>B', '<Cmd>lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>lp', '<Cmd>lua require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>', { noremap = true })
 
-vim.api.nvim_set_keymap('n', '<A-d>', '<Cmd>lua require("dap").repl.toggle({height = 15})<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-d>', '<Cmd>lua require("dap").repl.toggle({height = 15})<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<A-d>', '<Cmd>lua require("dap").repl.toggle({height = 15})<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('n', '<A-u>', '<Cmd>lua require("dapui").toggle()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-u>', '<Cmd>lua require("dapui").toggle()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<A-u>', '<Cmd>lua require("dapui").toggle()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<A-d>', '<Cmd>lua require("dapui").toggle()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-d>', '<Cmd>lua require("dapui").toggle()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('v', '<A-d>', '<Cmd>lua require("dapui").toggle()<CR>', { noremap = true })
 
 vim.api.nvim_set_keymap('n', '<A-BS>', '<Cmd>lua require("dap").repl.close(); require("dapui").close(); require("dap").disconnect(); require("dap").close()<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-BS>', '<Cmd>lua require("dap").repl.close(); require("dapui").close(); require("dap").disconnect(); require("dap").close()<CR>', { noremap = true })
