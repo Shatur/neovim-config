@@ -7,5 +7,6 @@ require('stickybuf').setup({
   },
   bufname = {
     ['.*NEOGIT_COMMIT_EDITMSG'] = 'bufnr',
+    ['DAP *.'] = 'bufnr',
   },
 })
