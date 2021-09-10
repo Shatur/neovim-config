@@ -42,9 +42,7 @@ end
 
 -- Set background depending on time
 local hours = tonumber(os.date('%H'))
-if hours >= 20 or hours <= 7 then
-  vim.o.background = 'dark'
-else
+if hours >= 9 and hours <= 17 then
   vim.o.background = 'light'
 end
 
