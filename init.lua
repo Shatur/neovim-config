@@ -168,9 +168,10 @@ vim.api.nvim_set_keymap('', 'goT', '<Cmd>lua require("config_utils.gtfo").open_t
 vim.api.nvim_set_keymap('', 'gof', '<Cmd>lua require("config_utils.gtfo").open_explorer(vim.fn.expand("%:h"))<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', 'goF', '<Cmd>lua require("config_utils.gtfo").open_explorer()<CR>', { noremap = true })
 
---- Custom group for all autocmd's in configuration
-vim.api.nvim_command('augroup vimrc')
-vim.api.nvim_command('autocmd!')
---- Highligh yanked text
-vim.api.nvim_command('autocmd TextYankPost * silent! lua vim.highlight.on_yank()')
-vim.api.nvim_command('augroup END')
+-- Highlight yanked text
+vim.cmd([[
+augroup hi_on_yank
+  autocmd!
+  autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+augroup END
+]])
