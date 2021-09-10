@@ -7,6 +7,11 @@ function buffers.close_current_buffer(buffer, force)
     buffer = vim.api.nvim_get_current_buf()
   end
 
+  if vim.api.nvim_buf_get_option(buffer, 'modified') then
+    vim.notify('No write since last change for buffer ' .. buffer .. '\nAdd ! to override', vim.log.levels.ERROR, { title = 'Buffer' })
+    return
+  end
+
   if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'NvimTree' then
     require('nvim-tree').close()
     return
