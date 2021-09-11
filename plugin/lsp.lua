@@ -82,10 +82,10 @@ lspconfig.sumneko_lua.setup({
   },
 })
 
-lspconfig.gdscript.setup{
+lspconfig.gdscript.setup({
   capabilities = capabilities,
-  on_attach = on_attach
-}
+  on_attach = on_attach,
+})
 lspconfig.cmake.setup({
   capabilities = capabilities,
   on_attach = on_attach,
