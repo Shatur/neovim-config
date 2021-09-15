@@ -51,7 +51,7 @@ table.insert(config.sections.lualine_c, {
     return '▊'
   end,
   color = { fg = colors.tag },
-  left_padding = 0, -- We don't need space before this
+  padding = { left = 0, right = 1 }, -- We don't need space before this
 })
 
 table.insert(config.sections.lualine_c, {
@@ -85,13 +85,13 @@ table.insert(config.sections.lualine_c, {
     return mode.name
   end,
   color = 'LualineMode',
-  left_padding = 0,
+  padding = { left = 0 },
 })
 
 table.insert(config.sections.lualine_c, {
   'filetype',
   colored = true,
-  disable_text = true,
+  icon_only = true,
 })
 
 table.insert(config.sections.lualine_c, {
@@ -124,9 +124,12 @@ table.insert(config.sections.lualine_c, {
   'diagnostics',
   sources = { 'nvim_lsp' },
   symbols = { error = ' ', warn = ' ', info = ' ' },
-  color_error = { fg = colors.error },
-  color_warn = { fg = colors.warning },
-  color_info = { fg = colors.tag },
+  diagnostics_color = {
+    error = { fg = colors.error },
+    warning = { fg = colors.warning },
+    info = { fg = colors.tag },
+    hint = { fg = colors.regexp },
+  },
 })
 
 -- Right sections
@@ -168,20 +171,22 @@ table.insert(config.sections.lualine_x, {
     end
   end,
   symbols = { added = ' ', modified = '柳 ', removed = ' ' },
-  color_added = { fg = colors.vcs_added },
-  color_modified = { fg = colors.vcs_modified },
-  color_removed = { fg = colors.vcs_removed },
+  diff_color = {
+    added = { fg = colors.vcs_added },
+    modified = { fg = colors.vcs_modified },
+    removed = { fg = colors.vcs_removed },
+  },
 })
 
 table.insert(config.sections.lualine_x, {
   'o:encoding',
-  upper = true,
+  fmt = string.upper,
   color = { fg = colors.string, gui = 'bold' },
 })
 
 table.insert(config.sections.lualine_x, {
   'fileformat',
-  upper = true,
+  fmt = string.upper,
   icons_enabled = false,
   color = { fg = colors.string, gui = 'bold' },
 })
