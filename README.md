@@ -14,7 +14,7 @@ git clone --recursive git@github.com:Shatur95/neovim-config.git ~/.config/nvim
 git clone --recursive git@github.com:Shatur95/neovim-config.git $env:LOCALAPPDATA/nvim
 ```
 
-### Plugins
+### Dependencies
 
 **Arch Linux**
 
@@ -35,20 +35,4 @@ Windows-version of xkb-switch should be downloaded manually:
 
 ```bash
 (New-Object System.Net.WebClient).DownloadFile("https://github.com/DeXP/xkb-switch-win/releases/download/1.0.0/libxkbswitch64.dll", "$env:LOCALAPPDATA/nvim-data/libxkbswitch64.dll")
-```
-
-### Updating plugins
-
-Plugins are stored as submodules.
-
-**Linux**
-
-```bash
-git -C ~/.local/share/nvim/site/pack/Shatur submodule update --remote
-```
-
-**Windows**
-
-```bash
-git -C $env:LOCALAPPDATA/nvim-data/site/pack/Shatur submodule update --remote
 ```
