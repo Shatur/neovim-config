@@ -30,9 +30,9 @@ local luasnip = require('luasnip')
 local cmp = require('cmp')
 cmp.setup({
   sources = {
-    { name = 'buffer' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'buffer' },
   },
   mapping = {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
