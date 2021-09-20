@@ -21,7 +21,19 @@ telescope.setup({
   },
   pickers = {
     spell_suggest = {
-      theme = 'dropdown',
+      theme = 'cursor',
+    },
+    lsp_definitions = {
+      theme = 'cursor',
+    },
+    lsp_code_actions = {
+      theme = 'cursor',
+    },
+    lsp_range_code_actions = {
+      theme = 'cursor',
+    },
+    lsp_references = {
+      theme = 'cursor',
     },
     buffers = {
       theme = 'dropdown',
