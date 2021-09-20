@@ -190,10 +190,6 @@
 	path = pack/plugins/start/lsp_signature.nvim
 	url = git@github.com:ray-x/lsp_signature.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/gitlinker.nvim"]
-	path = pack/plugins/start/gitlinker.nvim
-	url = https://github.com/ruifm/gitlinker.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-ts-rainbow"]
 	path = pack/plugins/start/nvim-ts-rainbow
 	url = https://github.com/p00f/nvim-ts-rainbow.git
