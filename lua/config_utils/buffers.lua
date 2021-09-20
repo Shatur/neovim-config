@@ -7,7 +7,7 @@ function buffers.close_current_buffer(buffer, force)
     buffer = vim.api.nvim_get_current_buf()
   end
 
-  if vim.api.nvim_buf_get_option(buffer, 'modified') then
+  if vim.api.nvim_buf_get_option(buffer, 'modified') and (not force or #force == 0) then
     vim.notify('No write since last change for buffer ' .. buffer .. '\nAdd ! to override', vim.log.levels.ERROR, { title = 'Buffer' })
     return
   end
@@ -24,7 +24,7 @@ function buffers.close_current_buffer(buffer, force)
   end
 
   if stickybuf_util.is_sticky_win() then
-    vim.api.nvim_buf_delete(buffer, { force = force == '!' })
+    vim.api.nvim_buf_delete(buffer, { force = force and #force ~= 0 })
     return
   end
 
