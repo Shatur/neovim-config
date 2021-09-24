@@ -1,7 +1,7 @@
 local dap = require('dap')
 local debug = {}
 
-function debug.gdb(command, ...)
+function debug.lldb(command, ...)
   local config = {
     type = 'cpp',
     name = command,

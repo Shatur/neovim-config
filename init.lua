@@ -65,7 +65,7 @@ vim.api.nvim_command('command! -nargs=? UpdatePlugins lua require("config_utils.
 vim.api.nvim_command('command! UpdateConfig lua require("config_utils.updater").update_config()')
 
 -- Start debugging
-vim.api.nvim_command('command! -complete=file -nargs=+ Gdb lua require("config_utils.debug").gdb(<f-args>)')
+vim.api.nvim_command('command! -complete=file -nargs=+ Lldb lua require("config_utils.debug").lldb(<f-args>)')
 
 -- Toggle diagnostics
 vim.api.nvim_command('command! LspToggleDiagnostics lua require("config_utils.diagnostics").toggle_diagnostics()')
