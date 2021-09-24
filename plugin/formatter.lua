@@ -23,6 +23,14 @@ local function clang_format()
   }
 end
 
+local function rustfmt()
+  return {
+    exe = 'rustfmt',
+    args = { '--emit=stdout' },
+    stdin = true,
+  }
+end
+
 require('formatter').setup({
   filetype = {
     lua = {
@@ -39,6 +47,9 @@ require('formatter').setup({
     },
     cpp = {
       clang_format,
+    },
+    rust = {
+      rustfmt,
     },
   },
 })
