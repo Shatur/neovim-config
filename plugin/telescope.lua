@@ -86,8 +86,8 @@ vim.api.nvim_set_keymap('', '<A-s>', '<Cmd>Telescope git_stash<CR>', { noremap =
 vim.api.nvim_set_keymap('i', '<A-s>', '<Cmd>Telescope git_stash<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<A-t>', '<Cmd>Telescope asynctasks all theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-t>', '<Cmd>Telescope asynctasks all theme=get_dropdown<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-p>', '<Cmd>Telescope sessions save_current=true theme=get_dropdown<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-p>', '<Cmd>Telescope sessions save_current=true theme=get_dropdown<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<A-p>', '<Cmd>Telescope sessions save_current=true<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-p>', '<Cmd>Telescope sessions save_current=true<CR>', { noremap = true })
 if vim.fn.has('win32') == 1 then
   vim.api.nvim_set_keymap('', '<C-/>', '<Cmd>Telescope live_grep<CR>', { noremap = true })
   vim.api.nvim_set_keymap('i', '<C-/>', '<Esc><Cmd>Telescope live_grep<CR>', { noremap = true })
