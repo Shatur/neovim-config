@@ -23,16 +23,10 @@ telescope.setup({
     spell_suggest = {
       theme = 'cursor',
     },
-    lsp_definitions = {
-      theme = 'cursor',
-    },
     lsp_code_actions = {
       theme = 'cursor',
     },
     lsp_range_code_actions = {
-      theme = 'cursor',
-    },
-    lsp_references = {
       theme = 'cursor',
     },
     buffers = {
