@@ -238,3 +238,7 @@
 	path = pack/plugins/start/nvim-dap-ui
 	url = git@github.com:rcarriga/nvim-dap-ui.git
 	ignore = dirty
+[submodule "pack/plugins/start/vim-liberty"]
+	path = pack/plugins/start/vim-liberty
+	url = git@github.com:tarikgraba/vim-liberty.git
+	ignore = dirty
