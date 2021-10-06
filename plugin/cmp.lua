@@ -37,8 +37,15 @@ cmp.setup({
   mapping = {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.confirm({ select = true }),
     ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
+    ['<C-Space>'] = function()
+      if vim.fn.pumvisible() == 1 then
+        cmp.confirm({ select = true })
+      else
+        cmp.complete()
+      end
+    end,
   },
   snippet = {
     expand = function(args)
