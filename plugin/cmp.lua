@@ -1,10 +1,10 @@
 local kinds = {
   Text = ' Text',
   Method = ' Method',
-  Fun = ' Fun',
+  Function = ' Function',
   Constructor = ' Constructor',
   Field = 'ﰠ Field',
-  Var = ' Var',
+  Variable = ' Variable',
   Class = 'ﴯ Class',
   Interface = ' Interface',
   Module = ' Module',
@@ -40,7 +40,7 @@ cmp.setup({
     ['<C-e>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({ select = false }),
     ['<C-Space>'] = function()
-      if vim.fn.pumvisible() == 1 then
+      if cmp.visible() then
         cmp.confirm({ select = true })
       else
         cmp.complete()
