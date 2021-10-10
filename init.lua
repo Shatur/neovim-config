@@ -27,7 +27,6 @@ vim.o.hidden = true -- For switching between edited buffers
 vim.o.showmode = false -- Do not display current mode (use statusline for it)
 vim.o.signcolumn = 'yes' -- Always show the signcolum, otherwise it would shift the text each time changes appear/disappear
 vim.o.updatetime = 100 -- To show git changes often
-vim.o.completeopt = 'menuone,noselect,noinsert'
 vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
 vim.o.formatoptions = vim.bo.formatoptions:gsub('cro', '')
 
