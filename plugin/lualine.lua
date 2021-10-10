@@ -146,7 +146,7 @@ table.insert(config.sections.lualine_x, {
 
 table.insert(config.sections.lualine_x, {
   function()
-    return require('lsp-status').status():gsub('%%%%', '%%')
+    return require('lsp-status').status()
   end,
   color = { fg = colors.func },
 })
