@@ -176,7 +176,7 @@
 	ignore = dirty
 [submodule "pack/plugins/start/lualine.nvim"]
 	path = pack/plugins/start/lualine.nvim
-	url = git@github.com:shadmansaleh/lualine.nvim.git
+	url = git@github.com:nvim-lualine/lualine.nvim.git
 	ignore = dirty
 [submodule "pack/plugins/start/nvim-luaref"]
 	path = pack/plugins/start/nvim-luaref
