@@ -33,7 +33,6 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gh', '<Cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', { noremap = true })
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-s>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', { noremap = true })
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<F2>', '<Cmd>lua vim.lsp.buf.rename()<CR>', { noremap = true })
 
   if vim.fn.exists('ClangdSwitchSourceHeader') then
