@@ -242,3 +242,7 @@
 	path = pack/plugins/start/vim-liberty
 	url = git@github.com:tarikgraba/vim-liberty.git
 	ignore = dirty
+[submodule "pack/plugins/start/cmp-path"]
+	path = pack/plugins/start/cmp-path
+	url = git@github.com:hrsh7th/cmp-path.git
+	ignore = dirty

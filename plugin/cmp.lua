@@ -61,3 +61,9 @@ cmp.setup({
     end,
   },
 })
+
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' },
+  },
+})
