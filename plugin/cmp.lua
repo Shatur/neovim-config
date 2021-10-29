@@ -1,3 +1,6 @@
+local luasnip = require('luasnip')
+local cmp = require('cmp')
+
 local items = {
   Text = { icon = '', name = 'Text' },
   Method = { icon = '', name = 'Method' },
@@ -26,8 +29,6 @@ local items = {
   TypeParameter = { icon = '', name = 'Type-param' },
 }
 
-local luasnip = require('luasnip')
-local cmp = require('cmp')
 cmp.setup({
   sources = {
     { name = 'nvim_lsp' },
