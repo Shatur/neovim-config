@@ -19,6 +19,7 @@ vim.o.listchars = 'space:⋅,tab:→ ' -- Display tabs
 vim.o.fillchars = 'eob: ' -- Hide ~
 vim.o.whichwrap = vim.o.whichwrap .. 'h,l,<,>,[,]' -- Wrap movement between lines in edit mode
 vim.o.pumheight = 10
+vim.o.pumblend = 10
 vim.o.wildmode = 'longest:full,full'
 vim.o.termguicolors = true
 vim.o.foldenable = false
