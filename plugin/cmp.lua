@@ -67,3 +67,11 @@ cmp.setup.cmdline('/', {
     { name = 'buffer' },
   },
 })
+
+cmp.setup.cmdline(':', {
+  sources = cmp.config.sources({
+    { name = 'path' },
+  }, {
+    { name = 'cmdline' },
+  }),
+})
