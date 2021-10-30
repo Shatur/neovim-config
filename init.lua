@@ -58,6 +58,9 @@ vim.api.nvim_command('command! -complete=dir -nargs=* Terminal lua require("conf
 -- Delete buffer with saving the current layout (except special buffers)
 vim.api.nvim_command('command! -nargs=? -bang BDelete lua require("config_utils.buffers").close_current_buffer(<q-args>, <q-bang>)')
 
+-- Toggle quickfix list
+vim.api.nvim_command('command! Cftoggle lua require("config_utils.buffers").toggle_quickfix()')
+
 -- Update all plugins and commit changes
 vim.api.nvim_command('command! -nargs=? UpdatePlugins lua require("config_utils.updater").update_plugins(<args>)')
 
@@ -152,6 +155,8 @@ vim.api.nvim_set_keymap('t', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true 
 vim.api.nvim_set_keymap('', '<C-x>', '<Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-x>', '<Esc><Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<Backspace>', '<Cmd>buffer #<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<F3>', '<Cmd>Cftoggle<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<F3>', '<Cmd>Cftoggle<CR>', { noremap = true })
 
 -- Tab control
 vim.api.nvim_set_keymap('', '<A-q>', '<Cmd>tabclose<CR>', { noremap = true })

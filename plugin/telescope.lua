@@ -57,7 +57,6 @@ telescope.setup({
 })
 
 telescope.load_extension('dap')
-telescope.load_extension('asynctasks')
 telescope.load_extension('cmake')
 telescope.load_extension('sessions')
 
@@ -78,8 +77,6 @@ vim.api.nvim_set_keymap('', '<A-c>', '<Cmd>Telescope git_commits<CR>', { noremap
 vim.api.nvim_set_keymap('i', '<A-c>', '<Cmd>Telescope git_commits<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<A-s>', '<Cmd>Telescope git_stash<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-s>', '<Cmd>Telescope git_stash<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-t>', '<Cmd>Telescope asynctasks all theme=get_dropdown<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-t>', '<Cmd>Telescope asynctasks all theme=get_dropdown<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<A-p>', '<Cmd>Telescope sessions save_current=true<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-p>', '<Cmd>Telescope sessions save_current=true<CR>', { noremap = true })
 if vim.fn.has('win32') == 1 then

@@ -40,4 +40,14 @@ function buffers.close_current_buffer(buffer, force)
   vim.api.nvim_command('bdelete' .. force .. ' ' .. buffer)
 end
 
+function buffers.toggle_quickfix()
+  for _, win in pairs(vim.fn.getwininfo()) do
+    if win.quickfix == 1 then
+      vim.api.nvim_command('cclose')
+      return
+    end
+  end
+  vim.api.nvim_command('copen')
+end
+
 return buffers
