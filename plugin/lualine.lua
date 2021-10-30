@@ -1,6 +1,7 @@
 local lualine = require('lualine')
 local colors = require('ayu.colors')
 local theme_utils = require('ayu.utils')
+local cmake_utils = require('cmake.utils')
 
 local config = {
   options = {
@@ -135,10 +136,10 @@ table.insert(config.sections.lualine_c, {
 -- Right sections
 table.insert(config.sections.lualine_x, {
   function()
-    if vim.g.asyncrun_status == 'running' then
-      return 'Running'
+    if not cmake_utils.last_job or cmake_utils.last_job.is_shutdown then
+      return ''
     end
-    return ''
+    return 'Running ' .. cmake_utils.last_job.command
   end,
   icon = '',
   color = { fg = colors.tag },
