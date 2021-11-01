@@ -23,7 +23,7 @@ dap.adapters.cpp = {
   name = 'lldb',
 }
 
-vim.g.dap_virtual_text = true
+require('nvim-dap-virtual-text').setup()
 
 vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'LspDiagnosticsDefaultError' })
 vim.fn.sign_define('DapLogPoint', { text = '', texthl = 'LspDiagnosticsDefaultInformation' })
