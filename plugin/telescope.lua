@@ -59,6 +59,7 @@ telescope.setup({
 telescope.load_extension('dap')
 telescope.load_extension('cmake')
 telescope.load_extension('sessions')
+pcall(telescope.load_extension, 'fzf') -- Load only if compiled
 
 vim.api.nvim_set_keymap('n', 'z=', '<Cmd>Telescope spell_suggest<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', '<S-CR>', '<Cmd>Telescope commands<CR>', { noremap = true })
