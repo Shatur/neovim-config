@@ -238,3 +238,7 @@
 	path = pack/plugins/start/cmp-cmdline
 	url = git@github.com:hrsh7th/cmp-cmdline.git
 	ignore = dirty
+[submodule "pack/plugins/start/cmp-git"]
+	path = pack/plugins/start/cmp-git
+	url = git@github.com:petertriho/cmp-git.git
+	ignore = dirty

@@ -27,6 +27,7 @@ local items = {
   Event = { icon = '', name = 'Event' },
   Operator = { icon = '', name = 'Operator' },
   TypeParameter = { icon = '', name = 'Type-param' },
+  GitHub = { icon = '', name = 'GitHub' },
 }
 
 cmp.setup({
@@ -34,6 +35,7 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'buffer' },
+    { name = 'cmp_git' },
   },
   mapping = {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
@@ -54,8 +56,8 @@ cmp.setup({
     end,
   },
   formatting = {
-    format = function(_, vim_item)
-      local item = items[vim_item.kind]
+    format = function(entry, vim_item)
+      local item = entry.source.name == 'cmp_git' and items['GitHub'] or items[vim_item.kind]
       vim_item.kind = item.icon
       vim_item.menu = item.name
       return vim_item
@@ -75,4 +77,8 @@ cmp.setup.cmdline(':', {
   }, {
     { name = 'cmdline' },
   }),
+})
+
+require('cmp_git').setup({
+  filetypes = { 'gitcommit', 'NeogitCommitMessage' },
 })
