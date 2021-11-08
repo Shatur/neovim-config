@@ -250,3 +250,7 @@
 	path = pack/plugins/start/telescope-fzf-native.nvim
 	url = git@github.com:nvim-telescope/telescope-fzf-native.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/neogen"]
+	path = pack/plugins/start/neogen
+	url = git@github.com:danymat/neogen.git
+	ignore = dirty
