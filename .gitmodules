@@ -82,10 +82,6 @@
 	path = pack/plugins/start/nvim-autopairs
 	url = git@github.com:windwp/nvim-autopairs.git
 	ignore = dirty
-[submodule "pack/plugins/start/kommentary"]
-	path = pack/plugins/start/kommentary
-	url = git@github.com:b3nj5m1n/kommentary.git
-	ignore = dirty
 [submodule "pack/plugins/start/gitsigns.nvim"]
 	path = pack/plugins/start/gitsigns.nvim
 	url = https://github.com/lewis6991/gitsigns.nvim.git
@@ -253,4 +249,8 @@
 [submodule "pack/plugins/start/neogen"]
 	path = pack/plugins/start/neogen
 	url = git@github.com:danymat/neogen.git
+	ignore = dirty
+[submodule "pack/plugins/start/Comment.nvim"]
+	path = pack/plugins/start/Comment.nvim
+	url = git@github.com:numToStr/Comment.nvim.git
 	ignore = dirty
