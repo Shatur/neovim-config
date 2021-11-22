@@ -254,7 +254,7 @@
 	path = pack/plugins/start/Comment.nvim
 	url = git@github.com:numToStr/Comment.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/telescope-live-grep-raw.nvim"]
-	path = pack/plugins/start/telescope-live-grep-raw.nvim
-	url = git@github.com:nvim-telescope/telescope-live-grep-raw.nvim.git
+[submodule "pack/plugins/start/telescope-rg.nvim"]
+	path = pack/plugins/start/telescope-rg.nvim
+	url = git@github.com:nvim-telescope/telescope-rg.nvim.git
 	ignore = dirty
