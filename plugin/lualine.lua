@@ -185,7 +185,7 @@ table.insert(config.sections.lualine_x, {
       return { added = gitsigns.added, modified = gitsigns.changed, removed = gitsigns.removed }
     end
   end,
-  symbols = { added = ' ', modified = '柳 ', removed = ' ' },
+  symbols = { added = ' ', modified = ' ', removed = ' ' },
   diff_color = {
     added = { fg = colors.vcs_added },
     modified = { fg = colors.vcs_modified },
