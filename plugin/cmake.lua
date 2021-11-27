@@ -11,6 +11,8 @@ else
   table.insert(config.configure_args, 'CMAKE_TOOLCHAIN_FILE=C:/ProgramData/vcpkg/scripts/buildsystems/vcpkg.cmake')
   table.insert(config.configure_args, '-D')
   table.insert(config.configure_args, 'VCPKG_TARGET_TRIPLET=x64-windows')
+  table.insert(config.configure_args, '-D')
+  table.insert(config.configure_args, 'VCPKG_INSTALL_OPTIONS=--clean-after-build')
 end
 
 require('cmake').setup(config)
