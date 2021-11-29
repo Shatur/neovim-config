@@ -1,33 +1,33 @@
 local luasnip = require('luasnip')
 local cmp = require('cmp')
 
-local items = {
-  Text = { icon = '', name = 'Text' },
-  Method = { icon = '', name = 'Method' },
-  Function = { icon = '', name = 'Function' },
-  Constructor = { icon = '', name = 'Constructor' },
-  Field = { icon = 'ﰠ', name = 'Field' },
-  Variable = { icon = '', name = 'Variable' },
-  Class = { icon = 'ﴯ', name = 'Class' },
-  Interface = { icon = '', name = 'Interface' },
-  Module = { icon = '', name = 'Module' },
-  Property = { icon = 'ﰠ', name = 'Property' },
-  Unit = { icon = '', name = 'Unit' },
-  Value = { icon = '', name = 'Value' },
-  Enum = { icon = '', name = 'Enum' },
-  Keyword = { icon = '', name = 'Keyword' },
-  Snippet = { icon = '﬌', name = 'Snippet' },
-  Color = { icon = '', name = 'Color' },
-  File = { icon = '', name = 'File' },
-  Reference = { icon = '', name = 'Reference' },
-  Folder = { icon = '', name = 'Folder' },
-  EnumMember = { icon = '', name = 'Enum-member' },
-  Constant = { icon = '', name = 'Constant' },
-  Struct = { icon = 'פּ', name = 'Struct' },
-  Event = { icon = '', name = 'Event' },
-  Operator = { icon = '', name = 'Operator' },
-  TypeParameter = { icon = '', name = 'Type-param' },
-  GitHub = { icon = '', name = 'GitHub' },
+local item_kinds = {
+  Text = ' Text',
+  Method = ' Method',
+  Function = ' Function',
+  Constructor = ' Constructor',
+  Field = 'ﰠ Field',
+  Variable = ' Variable',
+  Class = 'ﴯ Class',
+  Interface = ' Interface',
+  Module = ' Module',
+  Property = 'ﰠ Property',
+  Unit = ' Unit',
+  Value = ' Value',
+  Enum = ' Enum',
+  Keyword = ' Keyword',
+  Snippet = '﬌ Snippet',
+  Color = ' Color',
+  File = ' File',
+  Reference = ' Reference',
+  Folder = ' Folder',
+  EnumMember = ' Enum-member',
+  Constant = ' Constant',
+  Struct = 'פּ Struct',
+  Event = ' Event',
+  Operator = ' Operator',
+  TypeParameter = ' Type-param',
+  GitHub = ' GitHub',
 }
 
 cmp.setup({
@@ -57,9 +57,7 @@ cmp.setup({
   },
   formatting = {
     format = function(entry, vim_item)
-      local item = entry.source.name == 'cmp_git' and items['GitHub'] or items[vim_item.kind]
-      vim_item.kind = item.icon
-      vim_item.menu = item.name
+      vim_item.kind = entry.source.name == 'cmp_git' and item_kinds['GitHub'] or item_kinds[vim_item.kind]
       return vim_item
     end,
   },
