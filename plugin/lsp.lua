@@ -94,10 +94,10 @@ lspconfig.rust_analyzer.setup({
 })
 
 -- Diagnistic signs
-vim.fn.sign_define('LspDiagnosticsSignError', { text = '' })
-vim.fn.sign_define('LspDiagnosticsSignWarning', { text = '' })
-vim.fn.sign_define('LspDiagnosticsSignInformation', { text = '' })
-vim.fn.sign_define('LspDiagnosticsSignHint', { text = '' })
+vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
+vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
+vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
+vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
 
 -- Use circle for diagnostic icon
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {

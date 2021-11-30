@@ -24,7 +24,6 @@ vim.o.wildmode = 'longest:full,full'
 vim.o.termguicolors = true
 vim.o.foldenable = false
 vim.o.swapfile = false
-vim.o.hidden = true -- For switching between edited buffers
 vim.o.showmode = false -- Do not display current mode (use statusline for it)
 vim.o.signcolumn = 'yes' -- Always show the signcolum, otherwise it would shift the text each time changes appear/disappear
 vim.o.updatetime = 100 -- To show git changes often
@@ -71,11 +70,11 @@ vim.api.nvim_command('command! UpdateConfig lua require("config_utils.updater").
 vim.api.nvim_command('command! -complete=file -nargs=+ Lldb lua require("config_utils.debug").lldb(<f-args>)')
 
 -- Toggle diagnostics
-vim.api.nvim_command('command! LspToggleDiagnostics lua require("config_utils.diagnostics").toggle_diagnostics()')
+vim.api.nvim_command('command! LspDiagnosticsEnable lua vim.diagnostic.enable()')
+vim.api.nvim_command('command! LspDiagnosticsDisable lua vim.diagnostic.disable()')
 
 -- Remap useless keys
 vim.g.mapleader = ' '
-vim.api.nvim_set_keymap('n', 'Y', 'y$', { noremap = true })
 vim.api.nvim_set_keymap('n', '<CR>', ':', { noremap = true })
 
 -- Move operator
