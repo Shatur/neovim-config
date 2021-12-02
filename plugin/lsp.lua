@@ -29,8 +29,7 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gO', '<Cmd>Telescope lsp_document_symbols<CR>', { noremap = true })
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<Cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true })
   vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<Cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gh', '<Cmd>lua vim.diagnostic.show_line_diagnostics()<CR>', { noremap = true })
-
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>k', '<Cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true })
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true })
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<F2>', '<Cmd>lua vim.lsp.buf.rename()<CR>', { noremap = true })
 
