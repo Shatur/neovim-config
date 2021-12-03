@@ -23,7 +23,7 @@ make
 **Arch Linux**
 
 ```bash
-paru -S ripgrep nerd-fonts-fira-code xkb-switch lua-language-server clang cmake-language-server stylua-git github-cli
+paru -S ripgrep nerd-fonts-jetbrains-mono xkb-switch lua-language-server clang cmake-language-server stylua-git github-cli
 ```
 
 **Windows**
@@ -31,7 +31,7 @@ paru -S ripgrep nerd-fonts-fira-code xkb-switch lua-language-server clang cmake-
 ```bash
 scoop bucket add nerd-fonts
 scoop bucket add extras
-sudo scoop install -g ripgrep llvm FiraCode-NF windows-terminal gh python pwsh
+sudo scoop install -g ripgrep llvm JetBrainsMono-NF-Mono windows-terminal gh python pwsh
 pip install cmake-language-server
 ```
 
