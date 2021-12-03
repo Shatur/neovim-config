@@ -61,6 +61,9 @@ cmp.setup({
       return vim_item
     end,
   },
+  documentation = {
+    border = 'rounded',
+  },
 })
 
 cmp.setup.cmdline('/', {
