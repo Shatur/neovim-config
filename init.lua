@@ -34,11 +34,6 @@ if vim.fn.has('unix') == 1 then
   vim.o.shell = '/usr/bin/bash' -- I use fish on Linux and it slow for running internal commands
 end
 
--- Fonts on Windows set in ginit to avoid metrics error in Neovim Qt
-if vim.fn.has('win32') == 0 then
-  vim.o.guifont = 'FiraCode Nerd Font Mono'
-end
-
 -- Set background depending on time
 local hours = tonumber(os.date('%H'))
 if hours >= 9 and hours <= 17 then
