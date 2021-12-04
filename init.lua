@@ -30,6 +30,12 @@ vim.o.updatetime = 100 -- To show git changes often
 vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
 vim.o.formatoptions = vim.bo.formatoptions:gsub('cro', '')
 
+if vim.fn.has('win32') == 1 then
+  vim.o.guifont = 'FiraCode NF:w57'
+else
+  vim.o.guifont = 'FiraCode Nerd Font Mono'
+end
+
 if vim.fn.has('unix') == 1 then
   vim.o.shell = '/usr/bin/bash' -- I use fish on Linux and it slow for running internal commands
 end
