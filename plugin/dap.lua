@@ -25,8 +25,8 @@ dap.adapters.cpp = {
 
 require('nvim-dap-virtual-text').setup()
 
-vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'LspDiagnosticsDefaultError' })
-vim.fn.sign_define('DapLogPoint', { text = '', texthl = 'LspDiagnosticsDefaultInformation' })
+vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DiagnosticError' })
+vim.fn.sign_define('DapLogPoint', { text = '', texthl = 'DiagnosticInfo' })
 vim.fn.sign_define('DapStopped', { text = '', texthl = 'Constant' })
 vim.fn.sign_define('DapBreakpointRejected', { text = '' })
 
