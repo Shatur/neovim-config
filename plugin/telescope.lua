@@ -60,6 +60,7 @@ telescope.load_extension('dap')
 telescope.load_extension('cmake')
 telescope.load_extension('sessions')
 telescope.load_extension('live_grep_raw')
+telescope.load_extension('yabs')
 pcall(telescope.load_extension, 'fzf') -- Load only if compiled
 
 vim.api.nvim_set_keymap('n', 'z=', '<Cmd>Telescope spell_suggest<CR>', { noremap = true })

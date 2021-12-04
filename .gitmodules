@@ -258,3 +258,7 @@
 	path = pack/plugins/start/telescope-rg.nvim
 	url = git@github.com:nvim-telescope/telescope-rg.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/yabs.nvim"]
+	path = pack/plugins/start/yabs.nvim
+	url = git@github.com:pianocomposer321/yabs.nvim.git
+	ignore = dirty
