@@ -31,6 +31,17 @@ local function rustfmt()
   }
 end
 
+local function autopep8()
+  return {
+    exe = 'python3 -m autopep8',
+    args = {
+      '--in-place --aggressive --aggressive',
+      vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+    },
+    stdin = false,
+  }
+end
+
 require('formatter').setup({
   filetype = {
     lua = {
@@ -50,6 +61,9 @@ require('formatter').setup({
     },
     rust = {
       rustfmt,
+    },
+    python = {
+      autopep8,
     },
   },
 })
