@@ -137,7 +137,6 @@ table.insert(config.sections.lualine_c, {
 
 table.insert(config.sections.lualine_c, {
   'diagnostics',
-  sources = { 'nvim_lsp' },
   symbols = { error = ' ', warn = ' ', info = ' ' },
   diagnostics_color = {
     error = { fg = colors.error },
