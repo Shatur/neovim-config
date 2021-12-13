@@ -262,3 +262,7 @@
 	path = pack/plugins/start/yabs.nvim
 	url = git@github.com:pianocomposer321/yabs.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/cutlass.nvim"]
+	path = pack/plugins/start/cutlass.nvim
+	url = git@github.com:gbprod/cutlass.nvim.git
+	ignore = dirty
