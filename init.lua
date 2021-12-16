@@ -72,11 +72,6 @@ vim.api.nvim_command('command! LspDiagnosticsDisable lua vim.diagnostic.disable(
 vim.g.mapleader = ' '
 vim.api.nvim_set_keymap('n', '<CR>', ':', { noremap = true })
 
--- Move operator
-vim.api.nvim_set_keymap('', 'm', 'd', { noremap = true })
-vim.api.nvim_set_keymap('', 'M', 'D', { noremap = true })
-vim.api.nvim_set_keymap('n', 'mm', 'dd', { noremap = true })
-
 -- Remap increase / decrease number shortucts to + and - signs
 vim.api.nvim_set_keymap('n', '<C-=>', '<C-a>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-->', '<C-x>', { noremap = true })
