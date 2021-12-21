@@ -1,9 +1,6 @@
 require('stickybuf').setup({
-  buftype = {
-    terminal = 'buftype',
-  },
   filetype = {
-    spectre_panel = 'filetype',
+    startuptime = 'filetype',
     NeogitCommitView = 'filetype',
   },
   bufname = {
