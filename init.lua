@@ -46,6 +46,9 @@ if hours >= 9 and hours <= 17 then
   vim.o.background = 'light'
 end
 
+-- Disable built-in netrw plugin part (other netrw stuff will be disabled by nvim-tree)
+vim.g.loaded_netrwPlugin = false
+
 -- Disable default keybindings <C-a> and <C-x> for interactive rebase
 vim.g.no_gitrebase_maps = false
 
