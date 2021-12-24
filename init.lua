@@ -31,9 +31,9 @@ vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
 vim.o.formatoptions = vim.bo.formatoptions:gsub('cro', '')
 
 if vim.fn.has('win32') == 1 then
-  vim.o.guifont = 'FiraCode NF:w57'
+  vim.o.guifont = 'FiraCode NF:w57:h12'
 else
-  vim.o.guifont = 'FiraCode Nerd Font Mono'
+  vim.o.guifont = 'FiraCode Nerd Font Mono:h12'
 end
 
 if vim.fn.has('unix') == 1 then
