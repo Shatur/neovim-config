@@ -2,10 +2,6 @@
 	path = pack/plugins/start/vim-sandwich
 	url = git@github.com:machakann/vim-sandwich.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-subversive"]
-	path = pack/plugins/start/vim-subversive
-	url = git@github.com:svermeulen/vim-subversive.git
-	ignore = dirty
 [submodule "pack/plugins/start/vim-unimpaired"]
 	path = pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
@@ -265,4 +261,8 @@
 [submodule "pack/plugins/start/matchparen.nvim"]
 	path = pack/plugins/start/matchparen.nvim
 	url = git@github.com:monkoose/matchparen.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/substitute.nvim"]
+	path = pack/plugins/start/substitute.nvim
+	url = git@github.com:gbprod/substitute.nvim.git
 	ignore = dirty
