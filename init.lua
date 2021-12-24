@@ -46,6 +46,9 @@ if hours >= 9 and hours <= 17 then
   vim.o.background = 'light'
 end
 
+-- Disable built-in matchparen plugin (use faster lua implementation)
+vim.g.loaded_matchparen = false
+
 -- Disable built-in netrw plugin part (other netrw stuff will be disabled by nvim-tree)
 vim.g.loaded_netrwPlugin = false
 

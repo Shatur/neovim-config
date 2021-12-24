@@ -262,3 +262,7 @@
 	path = pack/plugins/start/cutlass.nvim
 	url = git@github.com:gbprod/cutlass.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/matchparen.nvim"]
+	path = pack/plugins/start/matchparen.nvim
+	url = git@github.com:monkoose/matchparen.nvim.git
+	ignore = dirty
