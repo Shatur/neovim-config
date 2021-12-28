@@ -1,6 +1,7 @@
 local callback = require('diffview.config').diffview_callback
 
 require('diffview').setup({
+  enhanced_diff_hl = true,
   key_bindings = {
     view = {
       -- Defaults
@@ -29,5 +30,5 @@ require('diffview').setup({
   },
 })
 
-vim.api.nvim_set_keymap('', '<A-v>', '<Cmd>DiffviewOpen<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-v>', '<Cmd>DiffviewOpen<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '<A-g>', '<Cmd>DiffviewOpen<CR>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-g>', '<Cmd>DiffviewOpen<CR>', { noremap = true })
