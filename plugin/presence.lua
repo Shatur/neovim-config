@@ -1,0 +1,1 @@
+require('presence'):setup()

@@ -266,3 +266,7 @@
 	path = pack/plugins/start/substitute.nvim
 	url = git@github.com:gbprod/substitute.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/presence.nvim"]
+	path = pack/plugins/start/presence.nvim
+	url = git@github.com:andweeb/presence.nvim.git
+	ignore = dirty
