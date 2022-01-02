@@ -89,6 +89,21 @@ lspconfig.rust_analyzer.setup({
   on_attach = on_attach,
 })
 
+local null_ls = require('null-ls')
+null_ls.setup({
+  on_attach = on_attach,
+  sources = {
+    null_ls.builtins.formatting.stylua,
+    null_ls.builtins.formatting.autopep8,
+    null_ls.builtins.formatting.cmake_format,
+    null_ls.builtins.formatting.prettier,
+    null_ls.builtins.diagnostics.vint,
+    null_ls.builtins.diagnostics.shellcheck,
+    null_ls.builtins.code_actions.shellcheck,
+    null_ls.builtins.code_actions.gitsigns,
+  },
+})
+
 -- Diagnistic signs
 vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
 vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
