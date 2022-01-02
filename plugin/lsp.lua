@@ -88,13 +88,16 @@ lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
+lspconfig.pylsp.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
 
 local null_ls = require('null-ls')
 null_ls.setup({
   on_attach = on_attach,
   sources = {
     null_ls.builtins.formatting.stylua,
-    null_ls.builtins.formatting.autopep8,
     null_ls.builtins.formatting.cmake_format,
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.diagnostics.vint,
