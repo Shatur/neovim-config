@@ -2,10 +2,12 @@ name: Main
 on:
   push:
     paths-ignore:
+      - 'pack'
       - '**.md'
       - '.gitignore'
   pull_request:
     paths-ignore:
+      - 'pack'
       - '**.md'
       - '.gitignore'
 jobs:
