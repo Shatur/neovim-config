@@ -6,6 +6,13 @@ require('nvim-treesitter.configs').setup({
   playground = {
     enable = true,
   },
+  nt_cpp_tools = {
+    enable = true,
+    preview = {
+      quit = '<C-c>', -- optional keymapping for quit preview
+      accept = '<C-f>', -- optional keymapping for accept preview
+    },
+  },
   textobjects = {
     select = {
       enable = true,
