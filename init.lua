@@ -40,12 +40,6 @@ if vim.fn.has('unix') == 1 then
   vim.o.shell = '/usr/bin/bash' -- I use fish on Linux and it slow for running internal commands
 end
 
--- Set background depending on time
-local hours = tonumber(os.date('%H'))
-if hours >= 9 and hours <= 17 then
-  vim.o.background = 'light'
-end
-
 -- Disable built-in matchparen plugin (use faster lua implementation)
 vim.g.loaded_matchparen = false
 
