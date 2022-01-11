@@ -37,7 +37,10 @@ function buffers.close_current_buffer(buffer, force)
     vim.api.nvim_command('bprevious')
   end
 
-  vim.api.nvim_command('bdelete' .. force .. ' ' .. buffer)
+  -- Delete the buffer if it wasn't wiped automatically (via bufhidden)
+  if vim.api.nvim_buf_is_loaded(buffer) then
+    vim.api.nvim_command('bdelete' .. force .. ' ' .. buffer)
+  end
 end
 
 function buffers.toggle_quickfix()
