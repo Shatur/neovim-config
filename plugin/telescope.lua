@@ -57,8 +57,6 @@ telescope.setup({
 })
 
 telescope.load_extension('dap')
-telescope.load_extension('cmake')
-telescope.load_extension('sessions')
 telescope.load_extension('live_grep_raw')
 telescope.load_extension('yabs')
 pcall(telescope.load_extension, 'fzf') -- Load only if compiled
@@ -96,10 +94,6 @@ vim.api.nvim_set_keymap('t', '<A-c>', '<Cmd>Telescope git_commits<CR>', { norema
 vim.api.nvim_set_keymap('', '<A-s>', '<Cmd>Telescope git_stash<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-s>', '<Cmd>Telescope git_stash<CR>', { noremap = true })
 vim.api.nvim_set_keymap('t', '<A-s>', '<Cmd>Telescope git_stash<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('', '<A-p>', '<Cmd>Telescope sessions save_current=true<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-p>', '<Cmd>Telescope sessions save_current=true<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<A-p>', '<Cmd>Telescope sessions save_current=true<CR>', { noremap = true })
 
 vim.api.nvim_set_keymap('', '<S-F3>', '<Cmd>Telescope quickfix<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<S-F3>', '<Cmd>Telescope quickfix<CR>', { noremap = true })
