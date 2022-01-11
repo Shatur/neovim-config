@@ -38,7 +38,7 @@ local config = {
     lualine_c = {},
     lualine_x = {},
   },
-  extensions = { 'nvim-tree', 'quickfix' },
+  extensions = { 'nvim-tree', 'quickfix', 'fugitive' },
 }
 
 -- Display only buffer names for these file types
@@ -51,7 +51,7 @@ table.insert(config.extensions, {
       end,
     },
   },
-  filetypes = { 'NeogitStatus', 'dapui_watches', 'dapui_stacks', 'dapui_breakpoints', 'dapui_scopes' },
+  filetypes = { 'dapui_watches', 'dapui_stacks', 'dapui_breakpoints', 'dapui_scopes' },
 })
 
 -- Left sections
