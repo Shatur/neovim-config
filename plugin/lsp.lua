@@ -50,7 +50,7 @@ lspconfig.clangd.setup({
     clangdFileStatus = true,
   },
   on_attach = on_attach,
-  capabilities = vim.tbl_extend('force', capabilities, { offsetEncoding = { 'utf-16' } }), -- Required to warning messages when null-ls is enabled, see https://github.com/jose-elias-alvarez/null-ls.nvim/issues/428
+  capabilities = capabilities,
 })
 
 lspconfig.sumneko_lua.setup({
