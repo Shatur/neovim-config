@@ -168,10 +168,12 @@ vim.api.nvim_set_keymap('', 'goT', '<Cmd>lua require("config_utils.gtfo").open_t
 vim.api.nvim_set_keymap('', 'gof', '<Cmd>lua require("config_utils.gtfo").open_explorer(vim.fn.expand("%:h"))<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', 'goF', '<Cmd>lua require("config_utils.gtfo").open_explorer()<CR>', { noremap = true })
 
--- Highlight yanked text
 vim.cmd([[
 augroup hi_on_yank
   autocmd!
+  " Highlight yanked text
   autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+  " Display additions as deletions in Fugitive diffs
+  autocmd BufAdd fugitive://* if &diff | set winhighlight=DiffAdd:DiffDelete | endif
 augroup END
 ]])
