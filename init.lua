@@ -160,7 +160,7 @@ vim.api.nvim_set_keymap('t', '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true
 vim.api.nvim_set_keymap('', '<A-x>', '<Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
 vim.api.nvim_set_keymap('i', '<A-x>', '<Esc><Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
 vim.api.nvim_set_keymap('', ']t', '<Cmd>tabnext<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '[t', '<Cmd>tabnext<CR>', { noremap = true })
+vim.api.nvim_set_keymap('', '[t', '<Cmd>tabprevious<CR>', { noremap = true })
 
 -- Open current file folder
 vim.api.nvim_set_keymap('', 'got', '<Cmd>lua require("config_utils.gtfo").open_terminal(vim.fn.expand("%:h"))<CR>', { noremap = true })
