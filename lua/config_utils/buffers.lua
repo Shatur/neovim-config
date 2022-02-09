@@ -1,5 +1,6 @@
 local buffers = {}
 local stickybuf_util = require('stickybuf.util')
+local nvim_tree_view = require('nvim-tree.view')
 
 function buffers.close_current_buffer(buffer, force)
   buffer = tonumber(buffer) -- Can be passed as string from command
@@ -13,7 +14,7 @@ function buffers.close_current_buffer(buffer, force)
   end
 
   if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'NvimTree' then
-    require('nvim-tree').close()
+    nvim_tree_view.close()
     return
   end
 
