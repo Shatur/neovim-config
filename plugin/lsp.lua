@@ -101,8 +101,6 @@ null_ls.setup({
     null_ls.builtins.formatting.cmake_format,
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.diagnostics.vint,
-    null_ls.builtins.diagnostics.shellcheck,
-    null_ls.builtins.code_actions.shellcheck,
   },
 })
 
