@@ -6,10 +6,6 @@
 	path = pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-xkbswitch"]
-	path = pack/plugins/start/vim-xkbswitch
-	url = git@github.com:lyokha/vim-xkbswitch.git
-	ignore = dirty
 [submodule "pack/plugins/opt/Tortoise-Typing"]
 	path = pack/plugins/opt/Tortoise-Typing
 	url = git@github.com:thanthese/Tortoise-Typing.git

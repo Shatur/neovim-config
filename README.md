@@ -23,7 +23,7 @@ make
 **Arch Linux**
 
 ```bash
-paru -S ripgrep nerd-fonts-fira-code xkb-switch lua-language-server clang cmake-language-server stylua-git github-cli python-lsp-server
+paru -S ripgrep nerd-fonts-fira-code lua-language-server clang cmake-language-server stylua-git github-cli python-lsp-server
 ```
 
 **Windows**
@@ -33,10 +33,4 @@ scoop bucket add nerd-fonts
 scoop bucket add extras
 sudo scoop install -g ripgrep llvm FiraCode-NF windows-terminal gh python pwsh
 pip install cmake-language-server python-lsp-server
-```
-
-Windows-version of xkb-switch should be downloaded manually:
-
-```bash
-(New-Object System.Net.WebClient).DownloadFile("https://github.com/DeXP/xkb-switch-win/releases/download/1.0.0/libxkbswitch64.dll", "$env:LOCALAPPDATA/nvim-data/libxkbswitch64.dll")
 ```
