@@ -23,7 +23,7 @@ make
 **Arch Linux**
 
 ```bash
-paru -S ripgrep nerd-fonts-fira-code lua-language-server clang cmake-language-server stylua-git github-cli python-lsp-server
+paru -S ripgrep nerd-fonts-fira-code lua-language-server clang cmake-language-server stylua github-cli python-lsp-server
 ```
 
 **Windows**
