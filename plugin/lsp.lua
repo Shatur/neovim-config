@@ -1,5 +1,4 @@
 local lspconfig = require('lspconfig')
-local lsp_signature = require('lsp_signature')
 local lsp_status = require('lsp-status')
 
 lsp_status.config({
@@ -14,9 +13,6 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(lsp_status.capa
 -- Buffer with LSP settings
 local on_attach = function(client, bufnr)
   lsp_status.on_attach(client, bufnr)
-  lsp_signature.on_attach({
-    hint_enable = false,
-  })
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-LeftMouse>', '<Cmd>Telescope lsp_definitions<CR>', { noremap = true })
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<Cmd>Telescope lsp_definitions<CR>', { noremap = true })
