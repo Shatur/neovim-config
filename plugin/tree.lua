@@ -7,7 +7,7 @@ vim.g.nvim_tree_show_icons = {
   files = 1,
 }
 vim.g.nvim_tree_window_picker_exclude = {
-  filetype = { 'qf', 'gitstatus', 'dap-repl', 'notify', 'NeogitStatus', 'dapui_watches', 'dapui_stacks', 'dapui_breakpoints', 'dapui_scopes' },
+  filetype = { 'fugitive', 'qf', 'dap-repl', 'notify', 'dapui_watches', 'dapui_stacks', 'dapui_breakpoints', 'dapui_scopes' },
   buftype = { 'terminal' },
 }
 

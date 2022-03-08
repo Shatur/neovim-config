@@ -13,14 +13,13 @@ function buffers.close_current_buffer(buffer, force)
     return
   end
 
-  if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'NvimTree' then
-    nvim_tree_view.close()
+  if vim.bo.buftype == 'terminal' then
+    vim.api.nvim_command('close')
     return
   end
 
-  -- To avoid conflicts with stickybuf.nvim, read more here: https://github.com/stevearc/stickybuf.nvim/issues/1#issuecomment-880107698
-  if vim.endswith(vim.fn.bufname(), 'NEOGIT_COMMIT_EDITMSG') or vim.bo.buftype == 'terminal' then
-    vim.api.nvim_command('close')
+  if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'NvimTree' then
+    nvim_tree_view.close()
     return
   end
 
