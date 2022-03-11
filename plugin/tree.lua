@@ -6,11 +6,6 @@ vim.g.nvim_tree_show_icons = {
   folders = 1,
   files = 1,
 }
-vim.g.nvim_tree_window_picker_exclude = {
-  filetype = { 'fugitive', 'qf', 'dap-repl', 'notify', 'dapui_watches', 'dapui_stacks', 'dapui_breakpoints', 'dapui_scopes' },
-  buftype = { 'terminal' },
-}
-
 vim.g.nvim_tree_icons = {
   default = '',
 }
@@ -19,6 +14,16 @@ local tree_cb = require('nvim-tree.config').nvim_tree_callback
 require('nvim-tree').setup({
   disable_netrw = true,
   update_cwd = true,
+  actions = {
+    open_file = {
+      window_picker = {
+        exclude = {
+          filetype = { 'fugitive', 'qf', 'dap-repl', 'notify', 'dapui_watches', 'dapui_stacks', 'dapui_breakpoints', 'dapui_scopes' },
+          buftype = { 'terminal' },
+        },
+      },
+    },
+  },
   view = {
     mappings = {
       list = {
