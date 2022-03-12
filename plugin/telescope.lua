@@ -1,5 +1,6 @@
 local telescope = require('telescope')
 local actions = require('telescope.actions')
+local action_state = require('telescope.actions.state')
 
 telescope.setup({
   defaults = {
@@ -47,8 +48,8 @@ telescope.setup({
         i = {
           ['<C-o>'] = function(prompt_bufnr)
             actions.close(prompt_bufnr)
-            local value = actions.get_selected_entry(prompt_bufnr).value
-            vim.api.nvim_command('DiffviewOpen ' .. value .. '~1..' .. value)
+            local value = action_state.get_selected_entry().value
+            vim.api.nvim_command('G difftool -y ' .. value .. '~1..' .. value)
           end,
         },
       },
