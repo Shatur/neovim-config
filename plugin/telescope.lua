@@ -36,12 +36,13 @@ telescope.setup({
     oldfiles = {
       theme = 'dropdown',
     },
-    git_branches = {
-      theme = 'dropdown',
-    },
     find_files = {
       theme = 'dropdown',
       hidden = true,
+    },
+    git_branches = {
+      theme = 'dropdown',
+      pattern = '--sort=-committerdate',
     },
     git_commits = {
       mappings = {
