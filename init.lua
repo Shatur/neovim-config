@@ -163,7 +163,7 @@ vim.api.nvim_set_keymap('', 'gof', '<Cmd>lua require("config_utils.gtfo").open_e
 vim.api.nvim_set_keymap('', 'goF', '<Cmd>lua require("config_utils.gtfo").open_explorer()<CR>', { noremap = true })
 
 vim.cmd([[
-augroup hi_on_yank
+augroup config
   autocmd!
   " Highlight yanked text
   autocmd TextYankPost * silent! lua vim.highlight.on_yank()
