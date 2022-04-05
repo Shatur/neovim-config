@@ -113,11 +113,6 @@ table.insert(config.sections.lualine_c, {
 })
 
 table.insert(config.sections.lualine_c, {
-  'progress',
-  color = { fg = colors.fg, gui = 'bold' },
-})
-
-table.insert(config.sections.lualine_c, {
   function()
     local vm_info = vim.fn.VMInfos()
     if vim.tbl_isempty(vm_info) then
