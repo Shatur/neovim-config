@@ -134,7 +134,11 @@ vim.api.nvim_set_keymap('c', '<A-f>', '<C-Right>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-k>', '<C-\\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>', { noremap = true })
 vim.api.nvim_set_keymap('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
 
--- Other
+-- Do not exit visual mode on shift
+vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true })
+vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true })
+
+-- Change directory into the current file folder
 vim.api.nvim_set_keymap('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true })
 
 -- Buffers control
