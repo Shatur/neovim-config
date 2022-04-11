@@ -1,6 +1,5 @@
 vim.g.nvim_tree_special_files = {}
 vim.g.nvim_tree_group_empty = 1
-vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_show_icons = {
   git = 0, -- Causes slowdown
   folders = 1,
@@ -14,6 +13,11 @@ local tree_cb = require('nvim-tree.config').nvim_tree_callback
 require('nvim-tree').setup({
   disable_netrw = true,
   update_cwd = true,
+  renderer = {
+    indent_markers = {
+      enable = true,
+    },
+  },
   actions = {
     open_file = {
       window_picker = {
