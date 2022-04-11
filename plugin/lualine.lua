@@ -2,14 +2,6 @@ local lualine = require('lualine')
 local colors = require('ayu.colors')
 local theme_utils = require('ayu.utils')
 local cmake_utils = require('cmake.utils')
-local gps = require('nvim-gps')
-
-require('nvim-gps').setup({
-  icons = {
-    ['class-name'] = 'ﴯ ',
-    ['container-name'] = 'פּ ',
-  },
-})
 
 local config = {
   options = {
@@ -122,12 +114,6 @@ table.insert(config.sections.lualine_c, {
   end,
   icon = '',
   color = { fg = colors.special, gui = 'bold' },
-})
-
-table.insert(config.sections.lualine_c, {
-  gps.get_location,
-  cond = gps.is_available,
-  color = { fg = colors.func },
 })
 
 table.insert(config.sections.lualine_c, {

@@ -214,10 +214,6 @@
 	path = pack/plugins/start/cmp-git
 	url = git@github.com:petertriho/cmp-git.git
 	ignore = dirty
-[submodule "pack/plugins/start/nvim-gps"]
-	path = pack/plugins/start/nvim-gps
-	url = git@github.com:SmiteshP/nvim-gps.git
-	ignore = dirty
 [submodule "pack/plugins/start/telescope-fzf-native.nvim"]
 	path = pack/plugins/start/telescope-fzf-native.nvim
 	url = git@github.com:nvim-telescope/telescope-fzf-native.nvim.git
