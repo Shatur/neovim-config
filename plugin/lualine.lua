@@ -127,6 +127,13 @@ table.insert(config.sections.lualine_c, {
   },
 })
 
+table.insert(config.sections.lualine_c, {
+  function()
+    return require('lsp-status').status()
+  end,
+  color = { fg = colors.func },
+})
+
 -- Right sections
 table.insert(config.sections.lualine_x, {
   function()
@@ -137,13 +144,6 @@ table.insert(config.sections.lualine_x, {
   end,
   icon = '',
   color = { fg = colors.tag },
-})
-
-table.insert(config.sections.lualine_x, {
-  function()
-    return require('lsp-status').status()
-  end,
-  color = { fg = colors.func },
 })
 
 table.insert(config.sections.lualine_x, {
