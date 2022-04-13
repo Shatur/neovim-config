@@ -37,7 +37,7 @@ cmp.setup({
     { name = 'buffer' },
     { name = 'cmp_git' },
   },
-  mapping = {
+  mapping = cmp.mapping.preset.insert({
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
     ['<C-e>'] = cmp.mapping.close(),
@@ -49,7 +49,7 @@ cmp.setup({
         cmp.complete()
       end
     end,
-  },
+  }),
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
@@ -61,18 +61,22 @@ cmp.setup({
       return vim_item
     end,
   },
-  documentation = {
-    border = 'rounded',
+  window = {
+    documentation = {
+      border = 'rounded',
+    },
   },
 })
 
 cmp.setup.cmdline('/', {
+  mapping = cmp.mapping.preset.cmdline(),
   sources = {
     { name = 'buffer' },
   },
 })
 
 cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
     { name = 'path' },
   }, {
