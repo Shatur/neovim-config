@@ -84,6 +84,4 @@ cmp.setup.cmdline(':', {
   }),
 })
 
-require('cmp_git').setup({
-  filetypes = { 'gitcommit', 'NeogitCommitMessage' },
-})
+require('cmp_git').setup()
