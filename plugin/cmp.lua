@@ -62,9 +62,7 @@ cmp.setup({
     end,
   },
   window = {
-    documentation = {
-      border = 'rounded',
-    },
+    documentation = cmp.config.window.bordered(),
   },
 })
 
