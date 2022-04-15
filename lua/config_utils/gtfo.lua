@@ -1,11 +1,13 @@
 -- Like vim-gtfo plugin but with much simpler implementation and never hangs Neovim
+local Job = require('plenary.job')
+local Path = require('plenary.path')
 local gtfo = {}
 
 local function directory(path)
   if path == '' or path == nil then
-    return vim.fn.getcwd()
+    return vim.loop.cwd()
   end
-  if vim.fn.isdirectory(path) == 0 then
+  if not Path:new(path):is_dir() then
     print('Specified path is not an existing directory: ' .. path)
     return nil
   end
@@ -18,9 +20,17 @@ function gtfo.open_terminal(command)
     return
   end
   if vim.fn.has('unix') == 1 then
-    vim.fn.system('konsole --separate --workdir ' .. vim.fn.shellescape(path) .. ' &')
+    local job = Job:new({
+      command = 'konsole',
+      args = { '--separate', '--workdir', path },
+    })
+    job:start()
   else
-    vim.fn.system('wt -d ' .. vim.fn.shellescape(path))
+    local job = Job:new({
+      command = 'wt',
+      args = { '-d', path },
+    })
+    job:start()
   end
 end
 
@@ -29,11 +39,11 @@ function gtfo.open_explorer(command)
   if path == nil then
     return
   end
-  if vim.fn.has('unix') == 1 then
-    vim.fn.system('xdg-open ' .. vim.fn.shellescape(path))
-  else
-    vim.fn.system('explorer ' .. vim.fn.shellescape(path))
-  end
+  local job = Job:new({
+    command = vim.fn.has('unix') == 1 and 'xdg-open' or 'explorer',
+    args = { path },
+  })
+  job:start()
 end
 
 return gtfo
