@@ -43,30 +43,24 @@ vim.g.loaded_netrwPlugin = false
 -- Disable default keybindings <C-a> and <C-x> for interactive rebase
 vim.g.no_gitrebase_maps = false
 
--- Open folder in system explorer
-vim.api.nvim_command('command! -complete=dir -nargs=* Explorer lua require("config_utils.gtfo").open_explorer(vim.fn.expand("<args>"))')
-
--- Open folder in system terminal
-vim.api.nvim_command('command! -complete=dir -nargs=* Terminal lua require("config_utils.gtfo").open_terminal(vim.fn.expand("<args>"))')
-
--- Delete buffer with saving the current layout (except special buffers)
-vim.api.nvim_command('command! -nargs=? -bang BDelete lua require("config_utils.buffers").close_current_buffer(<q-args>, <q-bang>)')
-
--- Toggle quickfix list
-vim.api.nvim_command('command! Cftoggle lua require("config_utils.buffers").toggle_quickfix()')
-
--- Update all plugins and commit changes
-vim.api.nvim_command('command! -nargs=? UpdatePlugins lua require("config_utils.updater").update_plugins(<args>)')
-
--- Pull latest configuration changes from repo
-vim.api.nvim_command('command! UpdateConfig lua require("config_utils.updater").update_config()')
-
--- Start debugging
-vim.api.nvim_command('command! -complete=file -nargs=+ Lldb lua require("config_utils.debug").lldb(<f-args>)')
-
--- Toggle diagnostics
-vim.api.nvim_command('command! LspDiagnosticsEnable lua vim.diagnostic.enable()')
-vim.api.nvim_command('command! LspDiagnosticsDisable lua vim.diagnostic.disable()')
+-- Commands
+vim.api.nvim_create_user_command('Explorer', require('config_utils.gtfo').open_explorer, { nargs = '*', complete = 'dir', desc = 'Open folder in system explorer' })
+vim.api.nvim_create_user_command('Terminal', require('config_utils.gtfo').open_terminal, { nargs = '*', complete = 'dir', desc = 'Open folder in system terminal' })
+vim.api.nvim_create_user_command('Cftoggle', require('config_utils.buffers').toggle_quickfix, { desc = 'Toggle quickfix list' })
+vim.api.nvim_create_user_command('UpdatePlugins', require('config_utils.updater').update_plugins, { nargs = '?', complete = 'dir', desc = 'Update all plugins and commit the changes' })
+vim.api.nvim_create_user_command('UpdateConfig', require('config_utils.updater').update_config, { desc = 'Pull latest configuration changes from repo' })
+vim.api.nvim_create_user_command('Lldb', require('config_utils.debug').lldb, { nargs = '+', complete = 'file', desc = 'Start debugging' })
+vim.api.nvim_create_user_command('LspDiagnosticsEnable', function()
+  vim.diagnostic.enable()
+end, { desc = 'Enable LSP diagnostics' })
+vim.api.nvim_create_user_command('LspDiagnosticsDisable', function()
+  vim.diagnostic.disable()
+end, { desc = 'Disable LSP diagnostics' })
+vim.api.nvim_create_user_command(
+  'BDelete',
+  require('config_utils.buffers').close_current_buffer,
+  { nargs = '?', bang = true, desc = 'Delete buffer with saving the current layout (except special buffers)' }
+)
 
 -- Remap useless keys
 vim.g.mapleader = ' '

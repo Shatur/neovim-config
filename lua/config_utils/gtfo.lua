@@ -12,8 +12,8 @@ local function directory(path)
   return path
 end
 
-function gtfo.open_terminal(path)
-  path = directory(path)
+function gtfo.open_terminal(command)
+  local path = directory(command.args)
   if path == nil then
     return
   end
@@ -24,8 +24,8 @@ function gtfo.open_terminal(path)
   end
 end
 
-function gtfo.open_explorer(path)
-  path = directory(path)
+function gtfo.open_explorer(command)
+  local path = directory(command.args)
   if path == nil then
     return
   end

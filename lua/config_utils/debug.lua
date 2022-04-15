@@ -4,9 +4,9 @@ local debug = {}
 function debug.lldb(command, ...)
   local config = {
     type = 'cpp',
-    name = command,
+    name = command.args,
     request = 'launch',
-    program = command,
+    program = command.args,
     args = { ... },
   }
 

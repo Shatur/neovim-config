@@ -2,13 +2,13 @@ local buffers = {}
 local stickybuf_util = require('stickybuf.util')
 local nvim_tree_view = require('nvim-tree.view')
 
-function buffers.close_current_buffer(buffer, force)
-  buffer = tonumber(buffer) -- Can be passed as string from command
+function buffers.close_current_buffer(command)
+  local buffer = tonumber(command.args) -- Can be passed as string from command
   if buffer == 0 or not buffer then
     buffer = vim.api.nvim_get_current_buf()
   end
 
-  if vim.api.nvim_buf_get_option(buffer, 'modified') and (not force or #force == 0) then
+  if vim.api.nvim_buf_get_option(buffer, 'modified') and not command.bang then
     vim.notify('No write since last change for buffer ' .. buffer .. '\nAdd ! to override', vim.log.levels.ERROR, { title = 'Buffer' })
     return
   end
@@ -24,7 +24,7 @@ function buffers.close_current_buffer(buffer, force)
   end
 
   if stickybuf_util.is_sticky_win() then
-    vim.api.nvim_buf_delete(buffer, { force = force and #force ~= 0 })
+    vim.api.nvim_buf_delete(buffer, { force = command.bang })
     return
   end
 
@@ -39,7 +39,7 @@ function buffers.close_current_buffer(buffer, force)
 
   -- Delete the buffer if it wasn't wiped automatically (via bufhidden)
   if vim.api.nvim_buf_is_loaded(buffer) then
-    vim.api.nvim_command('bdelete' .. force .. ' ' .. buffer)
+    vim.api.nvim_command('bdelete' .. (command.bang and '!' or '') .. ' ' .. buffer)
   end
 end
 
