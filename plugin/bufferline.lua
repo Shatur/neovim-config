@@ -65,6 +65,12 @@ bufferline.setup({
         highlight = 'TabLine',
       },
     },
+    duplicate = {
+      gui = 'NONE',
+    },
+    duplicate_selected = {
+      gui = 'NONE',
+    },
   },
   options = {
     close_command = 'BDelete! %d',
