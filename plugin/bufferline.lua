@@ -2,32 +2,68 @@ local bufferline = require('bufferline')
 
 bufferline.setup({
   highlights = {
+    fill = {
+      guibg = {
+        attribute = 'bg',
+        highlight = 'TabLineFill',
+      },
+    },
+    background = {
+      guibg = {
+        attribute = 'bg',
+        highlight = 'TabLine',
+      },
+    },
+    tab = {
+      guibg = {
+        attribute = 'bg',
+        highlight = 'TabLine',
+      },
+    },
+    tab_selected = {
+      guifg = {
+        attribute = 'fg',
+        highlight = 'Normal',
+      },
+      gui = 'bold',
+    },
+    separator_selected = {
+      guifg = {
+        attribute = 'bg',
+        highlight = 'TabLine',
+      },
+      guibg = {
+        attribute = 'bg',
+        highlight = 'Normal',
+      },
+    },
+    separator = {
+      guifg = {
+        attribute = 'bg',
+        highlight = 'TabLine',
+      },
+      guibg = {
+        attribute = 'bg',
+        highlight = 'TabLine',
+      },
+    },
+    close_button = {
+      guibg = {
+        attribute = 'bg',
+        highlight = 'TabLine',
+      },
+    },
     buffer_selected = {
-      gui = 'bold',
-    },
-    warning_selected = {
-      gui = 'bold,underline',
-    },
-    error_selected = {
-      gui = 'bold,underline',
-    },
-    duplicate_selected = {
-      gui = 'NONE',
-    },
-    duplicate_visible = {
-      gui = 'NONE',
-    },
-    duplicate = {
-      gui = 'NONE',
-    },
-    pick_selected = {
-      gui = 'bold',
-    },
-    pick_visible = {
       gui = 'bold',
     },
     pick = {
       gui = 'bold',
+    },
+    modified = {
+      guibg = {
+        attribute = 'bg',
+        highlight = 'TabLine',
+      },
     },
   },
   options = {
