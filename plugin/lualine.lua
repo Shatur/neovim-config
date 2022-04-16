@@ -1,6 +1,5 @@
 local lualine = require('lualine')
 local colors = require('ayu.colors')
-local theme_utils = require('ayu.utils')
 local cmake_utils = require('cmake.utils')
 
 local config = {
@@ -82,7 +81,7 @@ table.insert(config.sections.lualine_c, {
     }
 
     local mode = modes[vim.api.nvim_get_mode().mode]
-    theme_utils.highlight('LualineMode', { fg = mode.color, bg = colors.panel_border, style = 'bold' })
+    vim.api.nvim_set_hl(0, 'LualineMode', { fg = mode.color, bg = colors.panel_border, bold = true })
     return mode.name
   end,
   color = 'LualineMode',
