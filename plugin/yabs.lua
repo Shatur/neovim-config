@@ -1,4 +1,6 @@
-require('yabs'):setup({
+local yabs = require('yabs')
+
+yabs:setup({
   languages = {
     lua = {
       tasks = {
@@ -18,7 +20,13 @@ require('yabs'):setup({
   },
 })
 
-vim.api.nvim_set_keymap('', '<A-t>', '<Cmd>Telescope yabs tasks<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<Leader>r', '<Cmd>YabsTask run<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<Leader>t', '<Cmd>YabsTask test<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<C-b>', '<Cmd>YabsTask build<CR>', { noremap = true })
+vim.keymap.set('', '<A-t>', require('telescope').extensions.yabs.tasks, { noremap = true })
+vim.keymap.set('', '<Leader>r', function()
+  yabs:run_task('run')
+end, { noremap = true })
+vim.keymap.set('', '<Leader>t', function()
+  yabs:run_task('test')
+end, { noremap = true })
+vim.keymap.set('', '<C-b>', function()
+  yabs:run_task('build')
+end, { noremap = true })

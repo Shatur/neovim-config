@@ -1,3 +1,1 @@
-vim.api.nvim_set_keymap('', '<A-p>', '<Cmd>SessionManager load_session<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-p>', '<Cmd>SessionManager load_session<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<A-p>', '<Cmd>SessionManager load_session<CR>', { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<A-p>', require('session_manager').load_session, { noremap = true })

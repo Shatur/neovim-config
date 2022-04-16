@@ -1,6 +1,7 @@
 local telescope = require('telescope')
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
+local telescope_builtin = require('telescope.builtin')
 
 telescope.setup({
   defaults = {
@@ -63,44 +64,19 @@ telescope.load_extension('live_grep_raw')
 telescope.load_extension('yabs')
 pcall(telescope.load_extension, 'fzf') -- Load only if compiled
 
-vim.api.nvim_set_keymap('n', 'z=', '<Cmd>Telescope spell_suggest<CR>', { noremap = true })
+vim.keymap.set('n', 'z=', telescope_builtin.spell_suggest, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<S-CR>', telescope_builtin.commands, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<C-Tab>', telescope_builtin.buffers, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<F1>', telescope_builtin.help_tags, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<A-o>', telescope_builtin.oldfiles, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<A-b>', telescope_builtin.git_branches, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<C-p>', telescope_builtin.find_files, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<A-c>', telescope_builtin.git_commits, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<A-s>', telescope_builtin.git_stash, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<S-F3>', telescope_builtin.quickfix, { noremap = true })
 
-vim.api.nvim_set_keymap('', '<S-CR>', '<Cmd>Telescope commands<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<S-CR>', '<Cmd>Telescope commands<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<S-CR>', '<Cmd>Telescope commands<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('', '<C-Tab>', '<Cmd>Telescope buffers<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-Tab>', '<Cmd>Telescope buffers<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<C-Tab>', '<Cmd>Telescope buffers<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('', '<F1>', '<Cmd>Telescope help_tags<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<F1>', '<Cmd>Telescope help_tags<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<F1>', '<Cmd>Telescope help_tags<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('', '<A-o>', '<Cmd>Telescope oldfiles<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-o>', '<Cmd>Telescope oldfiles<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<A-o>', '<Cmd>Telescope oldfiles<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('', '<A-b>', '<Cmd>Telescope git_branches<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-b>', '<Cmd>Telescope git_branches<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<A-b>', '<Cmd>Telescope git_branches<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('', '<C-p>', '<Cmd>Telescope find_files<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-p>', '<Cmd>Telescope find_files<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<C-p>', '<Cmd>Telescope find_files<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('', '<A-c>', '<Cmd>Telescope git_commits<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-c>', '<Cmd>Telescope git_commits<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<A-c>', '<Cmd>Telescope git_commits<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('', '<A-s>', '<Cmd>Telescope git_stash<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-s>', '<Cmd>Telescope git_stash<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<A-s>', '<Cmd>Telescope git_stash<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('', '<S-F3>', '<Cmd>Telescope quickfix<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<S-F3>', '<Cmd>Telescope quickfix<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<S-F3>', '<Cmd>Telescope quickfix<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('', '<C-/>', '<Cmd>Telescope live_grep_raw<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-/>', '<Esc><Cmd>Telescope live_grep_raw<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<C-/>', '<Esc><Cmd>Telescope live_grep_raw<CR>', { noremap = true })
+vim.keymap.set({ '', 'i' }, '<C-/>', telescope.extensions.live_grep_raw.live_grep_raw, { noremap = true })
+vim.keymap.set('t', '<C-/>', function()
+  telescope.extensions.live_grep_raw.live_grep_raw()
+  vim.api.nvim_input('i')
+end, { noremap = true })

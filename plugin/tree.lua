@@ -1,3 +1,6 @@
+local tree_cb = require('nvim-tree.config').nvim_tree_callback
+local nvim_tree = require('nvim-tree')
+
 vim.g.nvim_tree_special_files = {}
 vim.g.nvim_tree_group_empty = 1
 vim.g.nvim_tree_show_icons = {
@@ -9,8 +12,7 @@ vim.g.nvim_tree_icons = {
   default = '',
 }
 
-local tree_cb = require('nvim-tree.config').nvim_tree_callback
-require('nvim-tree').setup({
+nvim_tree.setup({
   disable_netrw = true,
   update_cwd = true,
   renderer = {
@@ -38,4 +40,7 @@ require('nvim-tree').setup({
   },
 })
 
-vim.api.nvim_set_keymap('', '<A-f>', '<Cmd>NvimTreeFindFile<CR>', { noremap = true })
+vim.keymap.set('', '<A-f>', function()
+  nvim_tree.find_file(true)
+  nvim_tree.focus()
+end, { noremap = true })

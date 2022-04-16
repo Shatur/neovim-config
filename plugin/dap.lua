@@ -1,14 +1,6 @@
-require('dapui').setup({
-  sidebar = {
-    size = 55,
-    position = 'right',
-  },
-  tray = {
-    size = 15,
-  },
-})
-
 local dap = require('dap')
+local dapui = require('dapui')
+local dap_virtual_text = require('nvim-dap-virtual-text')
 
 dap.adapters.cpp = {
   type = 'executable',
@@ -23,44 +15,57 @@ dap.adapters.cpp = {
   name = 'lldb',
 }
 
-require('nvim-dap-virtual-text').setup()
+dapui.setup({
+  sidebar = {
+    size = 55,
+    position = 'right',
+  },
+  tray = {
+    size = 15,
+  },
+})
+
+dap_virtual_text.setup()
 
 vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DiagnosticError' })
 vim.fn.sign_define('DapLogPoint', { text = '', texthl = 'DiagnosticInfo' })
 vim.fn.sign_define('DapStopped', { text = '', texthl = 'Constant' })
 vim.fn.sign_define('DapBreakpointRejected', { text = '' })
 
-vim.api.nvim_set_keymap('n', '<F10>', '<Cmd>lua require("dap").step_over()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<F10>', '<Cmd>lua require("dap").step_over()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<F10>', '<Cmd>lua require("dap").step_over()<CR>', { noremap = true })
+vim.keymap.set({ 'n', 'i', 'v' }, '<F10>', dap.step_over, { noremap = true })
+vim.keymap.set({ 'n', 'i', 'v' }, '<F11>', dap.step_into, { noremap = true })
+vim.keymap.set({ 'n', 'i', 'v' }, '<S-F11>', dap.step_out, { noremap = true })
+vim.keymap.set({ 'n', 'i', 'v' }, '<F12>', dap.continue, { noremap = true })
+vim.keymap.set({ 'n', 'i', 'v' }, '<S-F12>', dap.pause, { noremap = true })
+vim.keymap.set({ 'n', 'i', 'v' }, '<A-d>', dapui.toggle, { noremap = true })
+vim.keymap.set({ 'n', 'i', 'v' }, '<A-BS>', function()
+  dapui.close()
+  dap.terminate()
+  dap_virtual_text.refresh()
+end, { noremap = true })
+vim.keymap.set({ 'n', 'i', 'v' }, '<A-l>', dapui.eval, { noremap = true })
 
-vim.api.nvim_set_keymap('n', '<F11>', '<Cmd>lua require("dap").step_into()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<F11>', '<Cmd>lua require("dap").step_into()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<F11>', '<Cmd>lua require("dap").step_into()<CR>', { noremap = true })
+vim.keymap.set('n', '<Leader>b', dap.toggle_breakpoint, { noremap = true })
+vim.keymap.set('n', '<Leader>B', function()
+  vim.ui.input({ prompt = 'Breakpoint condition: ' }, function(condition)
+    dap.set_breakpoint(condition)
+  end)
+end, { noremap = true })
+vim.keymap.set('n', '<Leader>lp', function()
+  vim.ui.input({ prompt = 'Log point message: ' }, function(message)
+    dap.set_breakpoint(message)
+  end)
+end, { noremap = true })
 
-vim.api.nvim_set_keymap('n', '<S-F11>', '<Cmd>lua require("dap").step_out()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<S-F11>', '<Cmd>lua require("dap").step_out()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<S-F11>', '<Cmd>lua require("dap").step_out()<CR>', { noremap = true })
+vim.api.nvim_create_user_command('Lldb', function(command)
+  local config = {
+    type = 'cpp',
+    name = command.fargs[1],
+    request = 'launch',
+    program = command.fargs[1],
+    args = { vim.list_slice(command.fargs, 2, vim.tbl_count(command.fargs)) },
+  }
 
-vim.api.nvim_set_keymap('n', '<F12>', '<Cmd>lua require("dap").continue()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<F12>', '<Cmd>lua require("dap").continue()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<F12>', '<Cmd>lua require("dap").continue()<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('n', '<S-F12>', '<Cmd>lua require("dap").pause()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<S-F12>', '<Cmd>lua require("dap").pause()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<S-F12>', '<Cmd>lua require("dap").pause()<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('n', '<Leader>b', '<Cmd>lua require("dap").toggle_breakpoint()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>B', '<Cmd>lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>lp', '<Cmd>lua require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('n', '<A-d>', '<Cmd>lua require("dapui").toggle()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-d>', '<Cmd>lua require("dapui").toggle()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<A-d>', '<Cmd>lua require("dapui").toggle()<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('n', '<A-BS>', '<Cmd>lua require("dapui").close(); require("dap").terminate()<CR><Cmd>DapVirtualTextForceRefresh<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-BS>', '<Cmd>lua require("dapui").close(); require("dap").terminate()<CR><Cmd>DapVirtualTextForceRefresh<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<A-BS>', '<Cmd>lua require("dapui").close(); require("dap").terminate()<CR><Cmd>DapVirtualTextForceRefresh<CR>', { noremap = true })
-
-vim.api.nvim_set_keymap('n', '<A-l>', '<Cmd>lua require("dapui").eval()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('v', '<A-l>', '<Cmd>lua require("dapui").eval()<CR>', { noremap = true })
+  dap.run(config)
+  dap.repl.open()
+end, { nargs = '+', complete = 'file', desc = 'Start debugging' })

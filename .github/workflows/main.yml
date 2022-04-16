@@ -21,7 +21,7 @@ jobs:
       - name: Luacheck
         uses: nebularg/actions-luacheck@v1
         with:
-          files: ftplugin lua plugin init.lua
+          files: ftplugin plugin init.lua
           annotate: warning
 
   format:

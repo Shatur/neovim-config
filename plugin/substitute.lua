@@ -1,4 +1,6 @@
-vim.api.nvim_set_keymap('n', 's', '<Cmd>lua require("substitute").operator()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'ss', '<Cmd>lua require("substitute").line()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'S', '<Cmd>lua require("substitute").eol()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('x', 's', '<Cmd>lua require("substitute").visual()<CR>', { noremap = true })
+local substitute = require('substitute')
+
+vim.keymap.set('n', 's', substitute.operator, { noremap = true })
+vim.keymap.set('n', 'ss', substitute.line, { noremap = true })
+vim.keymap.set('n', 'S', substitute.eol, { noremap = true })
+vim.keymap.set('x', 's', substitute.visual, { noremap = true })

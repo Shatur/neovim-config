@@ -1,14 +1,14 @@
-local buffers = {}
 local stickybuf_util = require('stickybuf.util')
 local nvim_tree_view = require('nvim-tree.view')
 
-function buffers.close_current_buffer(command)
-  local buffer = tonumber(command.args) -- Can be passed as string from command
+local function close_current_buffer(command)
+  local bang = command and command.bang
+  local buffer = tonumber(command and command.args) -- Can be passed as string from command
   if buffer == 0 or not buffer then
     buffer = vim.api.nvim_get_current_buf()
   end
 
-  if vim.api.nvim_buf_get_option(buffer, 'modified') and not command.bang then
+  if vim.api.nvim_buf_get_option(buffer, 'modified') and not bang then
     vim.notify('No write since last change for buffer ' .. buffer .. '\nAdd ! to override', vim.log.levels.ERROR, { title = 'Buffer' })
     return
   end
@@ -24,7 +24,7 @@ function buffers.close_current_buffer(command)
   end
 
   if stickybuf_util.is_sticky_win() then
-    vim.api.nvim_buf_delete(buffer, { force = command.bang })
+    vim.api.nvim_buf_delete(buffer, { force = bang })
     return
   end
 
@@ -39,11 +39,11 @@ function buffers.close_current_buffer(command)
 
   -- Delete the buffer if it wasn't wiped automatically (via bufhidden)
   if vim.api.nvim_buf_is_loaded(buffer) then
-    vim.api.nvim_command('bdelete' .. (command.bang and '!' or '') .. ' ' .. buffer)
+    vim.api.nvim_command('bdelete' .. (bang and '!' or '') .. ' ' .. buffer)
   end
 end
 
-function buffers.toggle_quickfix()
+local function toggle_quickfix()
   for _, win in pairs(vim.fn.getwininfo()) do
     if win.quickfix == 1 then
       vim.api.nvim_command('cclose')
@@ -53,4 +53,16 @@ function buffers.toggle_quickfix()
   vim.api.nvim_command('copen')
 end
 
-return buffers
+vim.api.nvim_create_user_command('Cftoggle', toggle_quickfix, { desc = 'Toggle quickfix list' })
+vim.api.nvim_create_user_command('BDelete', close_current_buffer, { nargs = '?', bang = true, desc = 'Delete buffer with saving the current layout (except special buffers)' })
+
+vim.keymap.set('', '<C-q>', close_current_buffer, { noremap = true })
+vim.keymap.set({ 'i', 't' }, '<C-q>', function()
+  vim.api.nvim_input('<Esc>')
+  close_current_buffer()
+end, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<C-x>', function()
+  vim.api.nvim_command('write')
+  close_current_buffer()
+end, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<F3>', toggle_quickfix, { noremap = true })

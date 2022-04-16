@@ -1,3 +1,5 @@
+local cmake = require('cmake')
+
 local config = {
   configure_args = { '-D', 'CMAKE_EXPORT_COMPILE_COMMANDS=1', '-G', 'Ninja' },
   dap_open_command = require('dapui').open,
@@ -14,30 +16,40 @@ else
   table.insert(config.configure_args, '-D')
   table.insert(config.configure_args, 'VCPKG_INSTALL_OPTIONS=--clean-after-build')
 end
+cmake.setup(config)
 
-require('cmake').setup(config)
+local function save_all()
+  for _, buffer in ipairs(vim.api.nvim_list_bufs()) do
+    if #vim.api.nvim_buf_get_name(buffer) ~= 0 and vim.api.nvim_buf_get_option(buffer, 'modified') then
+      vim.api.nvim_command('silent write')
+    end
+  end
+end
 
-vim.api.nvim_set_keymap('', '<C-BS>', '<Cmd>CMake cancel<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-BS>', '<Cmd>CMake cancel<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<F5>', '<Cmd>wall<CR><Cmd>CMake build_and_debug<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<F5>', '<Cmd>wall<CR><Cmd>CMake build_and_debug<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<S-F5>', '<Cmd>CMake set_target_args<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<S-F5>', '<Cmd>CMake set_target_args<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-F5>', '<Cmd>CMake debug<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-F5>', '<Cmd>CMake debug<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<F6>', '<Cmd>wall<CR><Cmd>CMake build_and_run<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<F6>', '<Cmd>wall<CR><Cmd>CMake build_and_run<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-F6>', '<Cmd>CMake run<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-F6>', '<Cmd>CMake run<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<F7>', '<Cmd>wall<CR><Cmd>CMake build<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<F7>', '<Cmd>wall<CR><Cmd>CMake build<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<S-F7>', '<Cmd>CMake select_target<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<S-F7>', '<Cmd>CMake select_target<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-F7>', '<Cmd>wall<CR><Cmd>CMake build_all<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-F7>', '<Cmd>wall<CR><Cmd>CMake build_all<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<F8>', '<Cmd>wall<CR><Cmd>CMake configure<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<F8>', '<Cmd>wall<CR><Cmd>CMake configure<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<S-F8>', '<Cmd>CMake select_build_type<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<S-F8>', '<Cmd>CMake select_build_type<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-F8>', '<Cmd>CMake clear_cache<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-F8>', '<Cmd>CMake clear_cache<CR>', { noremap = true })
+vim.keymap.set({ '', 'i' }, '<C-BS>', cmake.cancel, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<F5>', function()
+  save_all()
+  cmake.build_and_debug()
+end, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<S-F5>', cmake.set_target_args, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<A-F5>', cmake.debug, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<F6>', function()
+  save_all()
+  cmake.build_and_run()
+end, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<A-F6>', cmake.run, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<F7>', function()
+  save_all()
+  cmake.build()
+end, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<S-F7>', cmake.select_target, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<A-F7>', function()
+  save_all()
+  cmake.build_all()
+end, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<F8>', function()
+  save_all()
+  cmake.configure()
+end, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<S-F8>', cmake.select_build_type, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<A-F8>', cmake.clear_cache, { noremap = true })

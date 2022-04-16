@@ -43,122 +43,83 @@ vim.g.loaded_netrwPlugin = false
 -- Disable default keybindings <C-a> and <C-x> for interactive rebase
 vim.g.no_gitrebase_maps = false
 
--- Commands
-vim.api.nvim_create_user_command('Explorer', require('config_utils.gtfo').open_explorer, { nargs = '*', complete = 'dir', desc = 'Open folder in system explorer' })
-vim.api.nvim_create_user_command('Terminal', require('config_utils.gtfo').open_terminal, { nargs = '*', complete = 'dir', desc = 'Open folder in system terminal' })
-vim.api.nvim_create_user_command('Cftoggle', require('config_utils.buffers').toggle_quickfix, { desc = 'Toggle quickfix list' })
-vim.api.nvim_create_user_command('UpdatePlugins', require('config_utils.updater').update_plugins, { nargs = '?', complete = 'dir', desc = 'Update all plugins and commit the changes' })
-vim.api.nvim_create_user_command('UpdateConfig', require('config_utils.updater').update_config, { desc = 'Pull latest configuration changes from repo' })
-vim.api.nvim_create_user_command('Lldb', require('config_utils.debug').lldb, { nargs = '+', complete = 'file', desc = 'Start debugging' })
-vim.api.nvim_create_user_command('LspDiagnosticsEnable', function()
-  vim.diagnostic.enable()
-end, { desc = 'Enable LSP diagnostics' })
-vim.api.nvim_create_user_command('LspDiagnosticsDisable', function()
-  vim.diagnostic.disable()
-end, { desc = 'Disable LSP diagnostics' })
-vim.api.nvim_create_user_command(
-  'BDelete',
-  require('config_utils.buffers').close_current_buffer,
-  { nargs = '?', bang = true, desc = 'Delete buffer with saving the current layout (except special buffers)' }
-)
-
 -- Remap useless keys
 vim.g.mapleader = ' '
-vim.api.nvim_set_keymap('n', '<CR>', ':', { noremap = true })
+vim.keymap.set({ 'n', 'v' }, '<CR>', ':', { noremap = true })
 
 -- Remap increase / decrease number shortucts to + and - signs
-vim.api.nvim_set_keymap('n', '<C-=>', '<C-a>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-->', '<C-x>', { noremap = true })
+vim.keymap.set('n', '<C-=>', '<C-a>', { noremap = true })
+vim.keymap.set('n', '<C-->', '<C-x>', { noremap = true })
 
 -- ..and use <C-a> to select all
-vim.api.nvim_set_keymap('', '<C-a>', 'gg0vG$', { noremap = true })
-vim.api.nvim_set_keymap('v', '<C-a>', '<Esc>gg0vG$', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-a>', '<Esc>gg0vG$', { noremap = true })
+vim.keymap.set('', '<C-a>', 'gg0vG$', { noremap = true })
+vim.keymap.set({ 'v', 'i' }, '<C-a>', '<Esc>gg0vG$', { noremap = true })
 
 -- Movement around wrapped lines
-vim.api.nvim_set_keymap('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true })
-vim.api.nvim_set_keymap('n', 'k', 'v:count ? "k" : "gk"', { noremap = true, expr = true })
-vim.api.nvim_set_keymap('n', '<Up>', 'v:count ? "<Up>" : "g<Up>"', { noremap = true, expr = true })
-vim.api.nvim_set_keymap('n', '<Down>', 'v:count ? "<Down>" : "g<Down>"', { noremap = true, expr = true })
-vim.api.nvim_set_keymap('i', '<Up>', 'pumvisible() ? "<Up>" : "<C-o>g<UP>"', { noremap = true, expr = true })
-vim.api.nvim_set_keymap('i', '<Down>', 'pumvisible() ? "<Down>" : "<C-o>g<Down>"', { noremap = true, expr = true })
+vim.keymap.set('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true })
+vim.keymap.set('n', 'k', 'v:count ? "k" : "gk"', { noremap = true, expr = true })
+vim.keymap.set('n', '<Up>', 'v:count ? "<Up>" : "g<Up>"', { noremap = true, expr = true })
+vim.keymap.set('n', '<Down>', 'v:count ? "<Down>" : "g<Down>"', { noremap = true, expr = true })
+vim.keymap.set('i', '<Up>', 'pumvisible() ? "<Up>" : "<C-o>g<UP>"', { noremap = true, expr = true })
+vim.keymap.set('i', '<Down>', 'pumvisible() ? "<Down>" : "<C-o>g<Down>"', { noremap = true, expr = true })
 
 -- Split navigation
-vim.api.nvim_set_keymap('t', '<C-h>', '<C-\\><C-N><C-w>h', { noremap = true })
-vim.api.nvim_set_keymap('t', '<C-j>', '<C-\\><C-N><C-w>j', { noremap = true })
-vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-N><C-w>k', { noremap = true })
-vim.api.nvim_set_keymap('t', '<C-l>', '<C-\\><C-N><C-w>l', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-h>', '<C-\\><C-N><C-w>h', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-j>', '<C-\\><C-N><C-w>j', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-k>', '<C-\\><C-N><C-w>k', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-l>', '<C-\\><C-N><C-w>l', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true })
+vim.keymap.set({ 't', 'i' }, '<C-h>', '<C-\\><C-N><C-w>h', { noremap = true })
+vim.keymap.set({ 't', 'i' }, '<C-j>', '<C-\\><C-N><C-w>j', { noremap = true })
+vim.keymap.set({ 't', 'i' }, '<C-k>', '<C-\\><C-N><C-w>k', { noremap = true })
+vim.keymap.set({ 't', 'i' }, '<C-l>', '<C-\\><C-N><C-w>l', { noremap = true })
+vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true })
 
 -- Quickfix history navigation
-vim.api.nvim_set_keymap('', ']h', '<Cmd>cnewer<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '[h', '<Cmd>colder<CR>', { noremap = true })
+vim.keymap.set('', ']h', '<Cmd>cnewer<CR>', { noremap = true })
+vim.keymap.set('', '[h', '<Cmd>colder<CR>', { noremap = true })
 
 -- Make behavior more like in common editors
-vim.api.nvim_set_keymap('', '<C-s>', '<Cmd>w<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-s>', '<Cmd>w<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-z>', '<C-o>u', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-v>', '<C-g>u<Cmd>set paste<CR><C-r>+<Cmd>set nopaste<CR>', { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-v>', '<C-r>+', { noremap = true })
-vim.api.nvim_set_keymap('t', '<C-v>', '<C-\\><C-N>pi', { noremap = true })
-vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<S-Left>', '<Esc>vb', { noremap = true })
-vim.api.nvim_set_keymap('i', '<S-Right>', '<Esc>ve', { noremap = true })
+vim.keymap.set({ '', 'i' }, '<C-s>', '<Cmd>write<CR>', { noremap = true })
+vim.keymap.set('i', '<C-z>', '<C-o>u', { noremap = true })
+vim.keymap.set('i', '<C-v>', '<C-g>u<Cmd>set paste<CR><C-r>+<Cmd>set nopaste<CR>', { noremap = true })
+vim.keymap.set('c', '<C-v>', '<C-r>+', { noremap = true })
+vim.keymap.set('t', '<C-v>', '<C-\\><C-N>pi', { noremap = true })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
+vim.keymap.set('i', '<S-Left>', '<Esc>vb', { noremap = true })
+vim.keymap.set('i', '<S-Right>', '<Esc>ve', { noremap = true })
 
 -- Move lines
-vim.api.nvim_set_keymap('n', '<A-j>', '<Cmd>move+1<CR>==', { noremap = true })
-vim.api.nvim_set_keymap('n', '<A-k>', '<Cmd>move-2<CR>==', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-j>', '<Esc><Cmd>move+1<CR>==gi', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-k>', '<Esc><Cmd>move-2<CR>==gi', { noremap = true })
-vim.api.nvim_set_keymap('v', '<A-j>', "<Esc><Cmd>'<,'>move'>+1<CR>gv=gv", { noremap = true })
-vim.api.nvim_set_keymap('v', '<A-k>', "<Esc><Cmd>'<,'>move'<-2<CR>gv=gv", { noremap = true })
+vim.keymap.set('n', '<A-j>', '<Cmd>move+1<CR>==', { noremap = true })
+vim.keymap.set('n', '<A-k>', '<Cmd>move-2<CR>==', { noremap = true })
+vim.keymap.set('i', '<A-j>', '<Esc><Cmd>move+1<CR>==gi', { noremap = true })
+vim.keymap.set('i', '<A-k>', '<Esc><Cmd>move-2<CR>==gi', { noremap = true })
+vim.keymap.set('v', '<A-j>', "<Esc><Cmd>'<,'>move'>+1<CR>gv=gv", { noremap = true })
+vim.keymap.set('v', '<A-k>', "<Esc><Cmd>'<,'>move'<-2<CR>gv=gv", { noremap = true })
 
 -- Cmdline shortcuts
-vim.api.nvim_set_keymap('c', '<C-a>', '<Home>', { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-e>', '<End>', { noremap = true })
-vim.api.nvim_set_keymap('c', '<A-b>', '<C-Left>', { noremap = true })
-vim.api.nvim_set_keymap('c', '<A-f>', '<C-Right>', { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-k>', '<C-\\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>', { noremap = true })
-vim.api.nvim_set_keymap('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
+vim.keymap.set('c', '<C-a>', '<Home>', { noremap = true })
+vim.keymap.set('c', '<C-e>', '<End>', { noremap = true })
+vim.keymap.set('c', '<A-b>', '<C-Left>', { noremap = true })
+vim.keymap.set('c', '<A-f>', '<C-Right>', { noremap = true })
+vim.keymap.set('c', '<C-k>', '<C-\\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>', { noremap = true })
+vim.keymap.set('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
 
 -- Do not exit visual mode on shift
-vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true })
-vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true })
+vim.keymap.set('v', '<', '<gv', { noremap = true })
+vim.keymap.set('v', '>', '>gv', { noremap = true })
 
 -- Change directory into the current file folder
-vim.api.nvim_set_keymap('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true })
+vim.keymap.set('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true })
 
--- Buffers control
-vim.api.nvim_set_keymap('', '<C-q>', '<Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<C-q>', '<Esc><Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<C-x>', '<Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-x>', '<Esc><Cmd>w<CR><Cmd>BDelete<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<Backspace>', '<Cmd>buffer #<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<F3>', '<Cmd>Cftoggle<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<F3>', '<Cmd>Cftoggle<CR>', { noremap = true })
+-- Back to the previous buffer
+vim.keymap.set('', '<Backspace>', '<Cmd>buffer #<CR>', { noremap = true })
 
 -- Tab control
-vim.api.nvim_set_keymap('', '<A-q>', '<Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('t', '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<A-x>', '<Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<A-x>', '<Esc><Cmd>w<CR><Cmd>tabclose<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', ']t', '<Cmd>tabnext<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '[t', '<Cmd>tabprevious<CR>', { noremap = true })
-
--- Open current file folder
-vim.api.nvim_set_keymap('', 'got', '<Cmd>lua require("config_utils.gtfo").open_terminal(vim.fn.expand("%:h"))<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', 'goT', '<Cmd>lua require("config_utils.gtfo").open_terminal()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', 'gof', '<Cmd>lua require("config_utils.gtfo").open_explorer(vim.fn.expand("%:h"))<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', 'goF', '<Cmd>lua require("config_utils.gtfo").open_explorer()<CR>', { noremap = true })
+vim.keymap.set('', '<A-q>', '<Cmd>tabclose<CR>', { noremap = true })
+vim.keymap.set({ 'i', 't' }, '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true })
+vim.keymap.set('', '<A-x>', '<Cmd>write<CR><Cmd>tabclose<CR>', { noremap = true })
+vim.keymap.set('i', '<A-x>', '<Esc><Cmd>write<CR><Cmd>tabclose<CR>', { noremap = true })
+vim.keymap.set('', ']t', '<Cmd>tabnext<CR>', { noremap = true })
+vim.keymap.set('', '[t', '<Cmd>tabprevious<CR>', { noremap = true })
 
 -- Autocommands
 local config_group = vim.api.nvim_create_augroup('Config', {})

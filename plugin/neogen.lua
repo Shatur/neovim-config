@@ -1,5 +1,7 @@
-require('neogen').setup({
+local neogen = require('neogen')
+
+neogen.setup({
   enabled = true,
 })
 
-vim.api.nvim_set_keymap('n', '<Leader>nf', "<Cmd>lua require('neogen').generate()<CR>", { noremap = true })
+vim.keymap.set('n', '<Leader>nf', neogen.generate, { noremap = true })

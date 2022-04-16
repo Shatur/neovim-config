@@ -1,5 +1,7 @@
 local lspconfig = require('lspconfig')
 local lsp_status = require('lsp-status')
+local telescope_builin = require('telescope.builtin')
+local null_ls = require('null-ls')
 
 lsp_status.config({
   status_symbol = '',
@@ -14,27 +16,27 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(lsp_status.capa
 local on_attach = function(client, bufnr)
   lsp_status.on_attach(client, bufnr)
 
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-LeftMouse>', '<Cmd>Telescope lsp_definitions<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<Cmd>Telescope lsp_definitions<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'ga', '<Cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'v', 'ga', '<Cmd>lua vim.lsp.buf.range_code_action()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<Cmd>Telescope lsp_references<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'go', '<Cmd>Telescope lsp_workspace_symbols<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gO', '<Cmd>Telescope lsp_document_symbols<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<Cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<Cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<Leader>k', '<Cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<F2>', '<Cmd>lua vim.lsp.buf.rename()<CR>', { noremap = true })
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gh', '<Cmd>ClangdSwitchSourceHeader<CR>', { noremap = true })
+  vim.keymap.set('n', '<C-LeftMouse>', telescope_builin.lsp_definitions, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', 'gd', telescope_builin.lsp_definitions, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { noremap = true, buffer = bufnr })
+  vim.keymap.set('v', 'ga', vim.lsp.buf.range_code_action, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', 'gr', telescope_builin.lsp_references, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', 'go', telescope_builin.lsp_workspace_symbols, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', 'gO', telescope_builin.lsp_document_symbols, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', '<Leader>k', vim.diagnostic.open_float, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', 'gh', lspconfig.clangd.commands['ClangdSwitchSourceHeader'][1], { noremap = true, buffer = bufnr })
 
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-=>', '<Cmd>lua vim.lsp.buf.formatting()<CR>', { noremap = true })
+    vim.keymap.set('n', '<A-=>', vim.lsp.buf.formatting, { noremap = true, buffer = bufnr })
   elseif client.resolved_capabilities.document_range_formatting then
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-=>', '<Cmd>lua vim.lsp.buf.range_formatting()<CR>', { noremap = true })
+    vim.keymap.set('n', '<A-=>', vim.lsp.buf.range_formatting, { noremap = true, buffer = bufnr })
   end
 end
 
@@ -93,7 +95,6 @@ lspconfig.taplo.setup({
   on_attach = on_attach,
 })
 
-local null_ls = require('null-ls')
 null_ls.setup({
   on_attach = on_attach,
   sources = {
@@ -120,3 +121,10 @@ vim.diagnostic.config({
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = 'rounded',
 })
+
+vim.api.nvim_create_user_command('LspDiagnosticsEnable', function()
+  vim.diagnostic.enable()
+end, { desc = 'Enable LSP diagnostics' })
+vim.api.nvim_create_user_command('LspDiagnosticsDisable', function()
+  vim.diagnostic.disable()
+end, { desc = 'Disable LSP diagnostics' })

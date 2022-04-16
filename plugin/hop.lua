@@ -1,7 +1,9 @@
-require('hop').setup()
+local hop = require('hop')
 
-vim.api.nvim_set_keymap('', '<Leader>w', '<Cmd>HopWord<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<Leader>/', '<Cmd>HopPattern<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<Leader>d', '<Cmd>HopLine<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<Leader>s', '<Cmd>HopChar1<CR>', { noremap = true })
-vim.api.nvim_set_keymap('', '<Leader>S', '<Cmd>HopChar2<CR>', { noremap = true })
+hop.setup()
+
+vim.keymap.set('', '<Leader>w', hop.hint_words, { noremap = true })
+vim.keymap.set('', '<Leader>/', hop.hint_patterns, { noremap = true })
+vim.keymap.set('', '<Leader>d', hop.hint_lines, { noremap = true })
+vim.keymap.set('', '<Leader>s', hop.hint_char1, { noremap = true })
+vim.keymap.set('', '<Leader>S', hop.hint_char2, { noremap = true })
