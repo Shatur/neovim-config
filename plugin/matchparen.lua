@@ -1,1 +1,1 @@
-require('matchparen').setup()
+require('matchparen').setup({})
