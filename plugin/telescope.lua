@@ -59,6 +59,15 @@ telescope.setup({
     },
     git_stash = {
       theme = 'ivy',
+      mappings = {
+        i = {
+          ['<C-o>'] = function(prompt_bufnr)
+            actions.close(prompt_bufnr)
+            local value = action_state.get_selected_entry().value
+            vim.api.nvim_command('G stash show -p ' .. value)
+          end,
+        },
+      },
     },
     help_tags = {
       theme = 'ivy',
