@@ -46,6 +46,7 @@ telescope.setup({
       pattern = '--sort=-committerdate',
     },
     git_commits = {
+      theme = 'ivy',
       mappings = {
         i = {
           ['<C-o>'] = function(prompt_bufnr)
@@ -55,6 +56,12 @@ telescope.setup({
           end,
         },
       },
+    },
+    git_stash = {
+      theme = 'ivy',
+    },
+    help_tags = {
+      theme = 'ivy',
     },
   },
 })
