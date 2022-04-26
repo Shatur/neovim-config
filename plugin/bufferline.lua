@@ -66,6 +66,10 @@ bufferline.setup({
       },
     },
     duplicate = {
+      guibg = {
+        attribute = 'bg',
+        highlight = 'TabLine',
+      },
       gui = 'NONE',
     },
     duplicate_selected = {
