@@ -42,14 +42,6 @@
 	path = pack/plugins/start/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
 	ignore = dirty
-[submodule "pack/plugins/start/open-browser.vim"]
-	path = pack/plugins/start/open-browser.vim
-	url = git@github.com:tyru/open-browser.vim.git
-	ignore = dirty
-[submodule "pack/plugins/start/open-browser-github.vim"]
-	path = pack/plugins/start/open-browser-github.vim
-	url = git@github.com:tyru/open-browser-github.vim.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-web-devicons"]
 	path = pack/plugins/start/nvim-web-devicons
 	url = git@github.com:kyazdani42/nvim-web-devicons.git
@@ -269,4 +261,8 @@
 [submodule "pack/plugins/start/nvim-scrollview"]
 	path = pack/plugins/start/nvim-scrollview
 	url = git@github.com:dstein64/nvim-scrollview.git
+	ignore = dirty
+[submodule "pack/plugins/start/vim-rhubarb"]
+	path = pack/plugins/start/vim-rhubarb
+	url = git@github.com:tpope/vim-rhubarb.git
 	ignore = dirty

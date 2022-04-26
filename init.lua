@@ -37,9 +37,6 @@ end
 -- Disable built-in matchparen plugin (use faster lua implementation)
 vim.g.loaded_matchparen = false
 
--- Disable built-in netrw plugin part (other netrw stuff will be disabled by nvim-tree)
-vim.g.loaded_netrwPlugin = false
-
 -- Disable default keybindings <C-a> and <C-x> for interactive rebase
 vim.g.no_gitrebase_maps = false
 

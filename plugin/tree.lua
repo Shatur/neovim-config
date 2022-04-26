@@ -13,7 +13,6 @@ vim.g.nvim_tree_icons = {
 }
 
 nvim_tree.setup({
-  disable_netrw = true,
   update_cwd = true,
   renderer = {
     indent_markers = {
