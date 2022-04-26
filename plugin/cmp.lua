@@ -1,33 +1,33 @@
 local luasnip = require('luasnip')
 local cmp = require('cmp')
 
-local item_kinds = {
-  Text = ' Text',
-  Method = ' Method',
-  Function = ' Function',
-  Constructor = ' Constructor',
-  Field = 'ﰠ Field',
-  Variable = ' Variable',
-  Class = 'ﴯ Class',
-  Interface = ' Interface',
-  Module = ' Module',
-  Property = 'ﰠ Property',
-  Unit = ' Unit',
-  Value = ' Value',
-  Enum = ' Enum',
-  Keyword = ' Keyword',
-  Snippet = '﬌ Snippet',
-  Color = ' Color',
-  File = ' File',
-  Reference = ' Reference',
-  Folder = ' Folder',
-  EnumMember = ' Enum-member',
-  Constant = ' Constant',
-  Struct = 'פּ Struct',
-  Event = ' Event',
-  Operator = ' Operator',
-  TypeParameter = ' Type-param',
-  GitHub = ' GitHub',
+local completion_types = {
+  Text = { kind = '', menu = 'Text' },
+  Method = { kind = '', menu = 'Method' },
+  Function = { kind = '', menu = 'Function' },
+  Constructor = { kind = '', menu = 'Constructor' },
+  Field = { kind = 'ﰠ', menu = 'Field' },
+  Variable = { kind = '', menu = 'Variable' },
+  Class = { kind = 'ﴯ', menu = 'Class' },
+  Interface = { kind = '', menu = 'Interface' },
+  Module = { kind = '', menu = 'Module' },
+  Property = { kind = 'ﰠ', menu = 'Property' },
+  Unit = { kind = '', menu = 'Unit' },
+  Value = { kind = '', menu = 'Value' },
+  Enum = { kind = '', menu = 'Enum' },
+  Keyword = { kind = '', menu = 'Keyword' },
+  Snippet = { kind = '﬌', menu = 'Snippet' },
+  Color = { kind = '', menu = 'Color' },
+  File = { kind = '', menu = 'File' },
+  Reference = { kind = '', menu = 'Reference' },
+  Folder = { kind = '', menu = 'Folder' },
+  EnumMember = { kind = '', menu = 'Enum-member' },
+  Constant = { kind = '', menu = 'Constant' },
+  Struct = { kind = 'פּ', menu = 'Struct' },
+  Event = { kind = '', menu = 'Event' },
+  Operator = { kind = '', menu = 'Operator' },
+  TypeParameter = { kind = '', menu = 'Type-param' },
+  GitHub = { kind = '', menu = 'GitHub' },
 }
 
 cmp.setup({
@@ -56,8 +56,11 @@ cmp.setup({
     end,
   },
   formatting = {
+    fields = { 'kind', 'abbr', 'menu' },
     format = function(entry, vim_item)
-      vim_item.kind = entry.source.name == 'cmp_git' and item_kinds['GitHub'] or item_kinds[vim_item.kind]
+      local completion_type = completion_types[entry.source.name == 'cmp_git' and 'GitHub' or vim_item.kind]
+      vim_item.kind = completion_type.kind
+      vim_item.menu = completion_type.menu
       return vim_item
     end,
   },
