@@ -1,46 +1,32 @@
-local tree_cb = require('nvim-tree.config').nvim_tree_callback
-local nvim_tree = require('nvim-tree')
+vim.g.neo_tree_remove_legacy_commands = true
 
-vim.g.nvim_tree_special_files = {}
-vim.g.nvim_tree_group_empty = 1
-vim.g.nvim_tree_show_icons = {
-  git = 0, -- Causes slowdown
-  folders = 1,
-  files = 1,
-}
-vim.g.nvim_tree_icons = {
-  default = '',
-}
-
-nvim_tree.setup({
-  auto_reload_on_write = false,
-  update_cwd = true,
-  renderer = {
-    indent_markers = {
-      enable = true,
+local config = {
+  enable_diagnostics = false,
+  enable_git_status = false,
+  enable_modified_markers = false,
+  enable_refresh_on_write = false,
+  use_popups_for_input = false,
+  default_component_configs = {
+    container = {
+      enable_character_fade = true,
+    },
+    indent = {
+      padding = 0,
+      with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
     },
   },
-  actions = {
-    open_file = {
-      window_picker = {
-        exclude = {
-          filetype = { 'fugitive', 'qf', 'dap-repl', 'notify', 'dapui_watches', 'dapui_stacks', 'dapui_breakpoints', 'dapui_scopes' },
-          buftype = { 'terminal' },
-        },
-      },
-    },
-  },
-  view = {
+  window = {
     mappings = {
-      list = {
-        { key = 'l', cb = tree_cb('edit') },
-        { key = 'h', cb = tree_cb('close_node') },
-      },
+      ['h'] = 'close_node',
+      ['l'] = 'open',
+      ['/'] = '',
     },
   },
-})
+}
 
+require('neo-tree').setup(config)
+
+local neo_tree_command = require('neo-tree.command')
 vim.keymap.set('', '<A-f>', function()
-  nvim_tree.find_file(true)
-  nvim_tree.focus()
+  neo_tree_command.execute({ reveal = true })
 end, { noremap = true })

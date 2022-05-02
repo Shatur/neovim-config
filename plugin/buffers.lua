@@ -1,5 +1,5 @@
+local neo_tree_command = require('neo-tree.command')
 local stickybuf_util = require('stickybuf.util')
-local nvim_tree_view = require('nvim-tree.view')
 
 local function close_current_buffer(command)
   local bang = command and command.bang
@@ -18,8 +18,8 @@ local function close_current_buffer(command)
     return
   end
 
-  if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'NvimTree' then
-    nvim_tree_view.close()
+  if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'neo-tree' then
+    neo_tree_command.execute({ action = 'close' })
     return
   end
 

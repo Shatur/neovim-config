@@ -70,10 +70,6 @@
 	path = pack/plugins/start/gitsigns.nvim
 	url = https://github.com/lewis6991/gitsigns.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/nvim-tree.lua"]
-	path = pack/plugins/start/nvim-tree.lua
-	url = git@github.com:kyazdani42/nvim-tree.lua.git
-	ignore = dirty
 [submodule "pack/plugins/start/neogit"]
 	path = pack/plugins/start/neogit
 	url = git@github.com:TimUntersberger/neogit.git
@@ -265,4 +261,12 @@
 [submodule "pack/plugins/start/vim-rhubarb"]
 	path = pack/plugins/start/vim-rhubarb
 	url = git@github.com:tpope/vim-rhubarb.git
+	ignore = dirty
+[submodule "pack/plugins/start/neo-tree.nvim"]
+	path = pack/plugins/start/neo-tree.nvim
+	url = git@github.com:nvim-neo-tree/neo-tree.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/nui.nvim"]
+	path = pack/plugins/start/nui.nvim
+	url = git@github.com:MunifTanjim/nui.nvim.git
 	ignore = dirty

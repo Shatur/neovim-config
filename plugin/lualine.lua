@@ -29,7 +29,7 @@ local config = {
     lualine_c = {},
     lualine_x = {},
   },
-  extensions = { 'nvim-tree', 'quickfix', 'fugitive' },
+  extensions = { 'neo-tree', 'quickfix', 'fugitive' },
 }
 
 -- Display only buffer names for these file types
