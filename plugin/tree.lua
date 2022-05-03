@@ -14,6 +14,11 @@ local config = {
       padding = 0,
       with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
     },
+    icon = {
+      folder_empty = '',
+      default = '',
+      highlight = 'Normal',
+    },
   },
   window = {
     mappings = {
