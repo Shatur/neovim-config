@@ -56,7 +56,17 @@ bufferline.setup({
     buffer_selected = {
       gui = 'bold',
     },
+    pick_selected = {
+      gui = 'bold',
+    },
+    pick_visible = {
+      gui = 'bold',
+    },
     pick = {
+      guibg = {
+        attribute = 'bg',
+        highlight = 'TabLine',
+      },
       gui = 'bold',
     },
     modified = {
