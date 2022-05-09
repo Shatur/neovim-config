@@ -77,7 +77,6 @@ telescope.setup({
 
 telescope.load_extension('dap')
 telescope.load_extension('live_grep_raw')
-telescope.load_extension('yabs')
 telescope.load_extension('notify')
 pcall(telescope.load_extension, 'fzf') -- Load only if compiled
 
