@@ -262,3 +262,7 @@
 	path = pack/plugins/start/nui.nvim
 	url = git@github.com:MunifTanjim/nui.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/indent-blankline.nvim"]
+	path = pack/plugins/start/indent-blankline.nvim
+	url = https://github.com/lukas-reineke/indent-blankline.nvim.git
+	ignore = dirty
