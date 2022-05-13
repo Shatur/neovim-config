@@ -32,6 +32,18 @@ fzf.setup({
       ['<C-u>'] = 'preview-page-up',
       ['<S-left>'] = 'preview-page-reset',
     },
+    fzf = {
+      ['ctrl-z'] = 'abort',
+      ['ctrl-f'] = 'half-page-down',
+      ['ctrl-b'] = 'half-page-up',
+      ['ctrl-a'] = 'beginning-of-line',
+      ['ctrl-e'] = 'end-of-line',
+      ['alt-a'] = 'toggle-all',
+      ['f3'] = 'toggle-preview-wrap',
+      ['f4'] = 'toggle-preview',
+      ['ctrl-d'] = 'preview-page-down',
+      ['ctrl-u'] = 'preview-page-up',
+    },
   },
   actions = {
     files = {
