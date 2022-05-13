@@ -54,10 +54,6 @@
 	path = pack/plugins/start/bufferline.nvim
 	url = git@github.com:akinsho/bufferline.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/telescope.nvim"]
-	path = pack/plugins/start/telescope.nvim
-	url = https://github.com/nvim-telescope/telescope.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/plenary.nvim"]
 	path = pack/plugins/start/plenary.nvim
 	url = https://github.com/nvim-lua/plenary.nvim.git
@@ -90,10 +86,6 @@
 	path = pack/plugins/start/nvim-dap
 	url = git@github.com:mfussenegger/nvim-dap.git
 	ignore = dirty
-[submodule "pack/plugins/start/telescope-dap.nvim"]
-	path = pack/plugins/start/telescope-dap.nvim
-	url = git@github.com:nvim-telescope/telescope-dap.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/neovim-cmake"]
 	path = pack/plugins/start/neovim-cmake
 	url = git@github.com:Shatur/neovim-cmake.git
@@ -117,10 +109,6 @@
 [submodule "pack/plugins/opt/playground"]
 	path = pack/plugins/opt/playground
 	url = git@github.com:nvim-treesitter/playground.git
-	ignore = dirty
-[submodule "pack/plugins/start/octo.nvim"]
-	path = pack/plugins/start/octo.nvim
-	url = git@github.com:pwntester/octo.nvim.git
 	ignore = dirty
 [submodule "pack/plugins/start/neovim-ayu"]
 	path = pack/plugins/start/neovim-ayu
@@ -202,10 +190,6 @@
 	path = pack/plugins/start/cmp-git
 	url = git@github.com:petertriho/cmp-git.git
 	ignore = dirty
-[submodule "pack/plugins/start/telescope-fzf-native.nvim"]
-	path = pack/plugins/start/telescope-fzf-native.nvim
-	url = git@github.com:nvim-telescope/telescope-fzf-native.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/neogen"]
 	path = pack/plugins/start/neogen
 	url = git@github.com:danymat/neogen.git
@@ -213,10 +197,6 @@
 [submodule "pack/plugins/start/Comment.nvim"]
 	path = pack/plugins/start/Comment.nvim
 	url = git@github.com:numToStr/Comment.nvim.git
-	ignore = dirty
-[submodule "pack/plugins/start/telescope-rg.nvim"]
-	path = pack/plugins/start/telescope-rg.nvim
-	url = git@github.com:nvim-telescope/telescope-rg.nvim.git
 	ignore = dirty
 [submodule "pack/plugins/start/cutlass.nvim"]
 	path = pack/plugins/start/cutlass.nvim
@@ -261,4 +241,8 @@
 [submodule "pack/plugins/start/nui.nvim"]
 	path = pack/plugins/start/nui.nvim
 	url = git@github.com:MunifTanjim/nui.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/fzf-lua"]
+	path = pack/plugins/start/fzf-lua
+	url = git@github.com:ibhagwan/fzf-lua.git
 	ignore = dirty
