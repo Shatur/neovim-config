@@ -80,10 +80,10 @@ bufferline.setup({
         attribute = 'bg',
         highlight = 'TabLine',
       },
-      gui = 'NONE',
+      gui = false,
     },
     duplicate_selected = {
-      gui = 'NONE',
+      gui = false,
     },
   },
   options = {
