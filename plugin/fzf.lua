@@ -20,7 +20,12 @@ fzf.setup({
       border = 'FloatBorder',
     },
     on_create = function()
+      -- Bind default alt-q to <C-CR> since it can't be done into FZF
       vim.keymap.set('t', '<C-CR>', '<A-q>', { noremap = true, buffer = 0 })
+
+      -- Disable global window switch mappings
+      vim.keymap.set('t', '<C-k>', '<C-k>', { noremap = true, buffer = 0 })
+      vim.keymap.set('t', '<C-j>', '<C-j>', { noremap = true, buffer = 0 })
     end,
   },
   keymap = {
@@ -46,6 +51,10 @@ fzf.setup({
       ['f4'] = 'toggle-preview',
       ['ctrl-d'] = 'preview-page-down',
       ['ctrl-u'] = 'preview-page-up',
+      ['ctrl-j'] = 'next-history',
+      ['ctrl-k'] = 'previous-history',
+      ['ctrl-p'] = 'up',
+      ['ctrl-n'] = 'down',
     },
   },
   actions = {
@@ -62,6 +71,9 @@ fzf.setup({
       ['ctrl-x'] = actions.buf_split,
       ['ctrl-t'] = actions.buf_tabedit,
     },
+  },
+  fzf_opts = {
+    ['--history'] = vim.loop.os_tmpdir() .. '/fzf-history',
   },
   fzf_colors = {
     ['fg'] = { 'fg', 'CursorLine' },
@@ -117,7 +129,7 @@ vim.keymap.set({ '', 'i' }, '<A-c>', fzf.git_commits, { noremap = true })
 vim.keymap.set({ '', 'i' }, '<A-s>', fzf.git_stash, { noremap = true })
 vim.keymap.set({ '', 'i' }, '<S-F3>', fzf.quickfix, { noremap = true })
 
-vim.keymap.set({ '', 'i' }, '<C-/>', fzf.live_grep_resume, { noremap = true })
+vim.keymap.set({ '', 'i' }, '<C-/>', fzf.live_grep_native, { noremap = true })
 vim.keymap.set('t', '<C-/>', function()
   fzf.live_grep_native()
   vim.api.nvim_input('i')
