@@ -16,6 +16,9 @@ end
 
 fzf.setup({
   winopts = {
+    hl = {
+      border = 'FloatBorder',
+    },
     on_create = function()
       vim.keymap.set('t', '<C-CR>', '<A-q>', { noremap = true, buffer = 0 })
     end,
@@ -59,6 +62,21 @@ fzf.setup({
       ['ctrl-x'] = actions.buf_split,
       ['ctrl-t'] = actions.buf_tabedit,
     },
+  },
+  fzf_colors = {
+    ['fg'] = { 'fg', 'CursorLine' },
+    ['bg'] = { 'bg', 'Normal' },
+    ['hl'] = { 'fg', 'Function' },
+    ['fg+'] = { 'fg', 'Normal', 'regular' },
+    ['bg+'] = { 'bg', 'Visual' },
+    ['hl+'] = { 'fg', 'Statement', 'regular' },
+    ['info'] = { 'fg', 'PreProc' },
+    ['prompt'] = { 'fg', 'Conditional' },
+    ['pointer'] = { 'fg', 'Identifier' },
+    ['marker'] = { 'fg', 'DiagnosticHint' },
+    ['spinner'] = { 'fg', 'Label' },
+    ['header'] = { 'fg', 'Comment' },
+    ['gutter'] = { 'bg', 'Normal' },
   },
   git = {
     branches = {
