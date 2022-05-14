@@ -113,6 +113,7 @@ fzf.setup({
     stash = {
       actions = {
         ['ctrl-o'] = show_stash,
+        ['ctrl-p'] = actions.git_stash_pop,
       },
     },
   },
