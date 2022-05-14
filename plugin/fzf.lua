@@ -78,6 +78,12 @@ fzf.setup({
     ['header'] = { 'fg', 'Comment' },
     ['gutter'] = { 'bg', 'Normal' },
   },
+  files = {
+    stderr = false,
+  },
+  grep = {
+    stderr = false,
+  },
   git = {
     branches = {
       cmd = 'git branch --sort=-committerdate --all --color',
