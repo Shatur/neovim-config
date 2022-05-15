@@ -20,8 +20,8 @@ fzf.setup({
       border = 'FloatBorder',
     },
     on_create = function()
-      -- Bind default alt-q to <C-CR> since it can't be done into FZF
-      vim.keymap.set('t', '<C-CR>', '<A-q>', { noremap = true, buffer = 0 })
+      -- Send all to quickfix
+      vim.keymap.set('t', '<C-CR>', '<A-a><CR>', { noremap = true, buffer = 0 })
 
       -- Disable global window switch mappings
       vim.keymap.set('t', '<C-k>', '<C-k>', { noremap = true, buffer = 0 })
