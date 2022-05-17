@@ -44,7 +44,7 @@ local function run_command(command, args)
   job:start()
 end
 
-vim.keymap.set({ '', 't', 'i' }, '<A-g>', '<Cmd>vert Git<CR>]]', { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<A-g>', '<Cmd>vert Git<CR>))', { noremap = true })
 vim.keymap.set('', '<Leader>gs', function()
   run_command('git', { 'status' })
 end, { noremap = true })
