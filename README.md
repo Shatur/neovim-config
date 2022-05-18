@@ -6,12 +6,16 @@
 
 ```bash
 git clone --recursive git@github.com:Shatur95/neovim-config.git ~/.config/nvim
+cd ~/.config/nvim/pack/plugins/start/telescope-fzf-native.nvim
+make
 ```
 
 **Windows**
 
 ```bash
 git clone --recursive git@github.com:Shatur95/neovim-config.git $env:LOCALAPPDATA/nvim
+cd $env:LOCALAPPDATA/nvim/pack/plugins/start/telescope-fzf-native.nvim
+make
 ```
 
 ### Dependencies
@@ -19,7 +23,7 @@ git clone --recursive git@github.com:Shatur95/neovim-config.git $env:LOCALAPPDAT
 **Arch Linux**
 
 ```bash
-paru -S fzf ripgrep nerd-fonts-fira-code lua-language-server clang cmake-language-server stylua python-lsp-server
+paru -S ripgrep nerd-fonts-fira-code lua-language-server clang cmake-language-server stylua github-cli python-lsp-server
 ```
 
 **Windows**
@@ -27,6 +31,6 @@ paru -S fzf ripgrep nerd-fonts-fira-code lua-language-server clang cmake-languag
 ```bash
 scoop bucket add nerd-fonts
 scoop bucket add extras
-sudo scoop install -g fzf ripgrep llvm FiraCode-NF-Mono windows-terminal python pwsh
+sudo scoop install -g ripgrep llvm FiraCode-NF-Mono windows-terminal gh python pwsh
 pip install cmake-language-server python-lsp-server
 ```
