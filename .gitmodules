@@ -246,10 +246,6 @@
 	path = pack/plugins/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
 	ignore = dirty
-[submodule "pack/plugins/start/nvim-scrollview"]
-	path = pack/plugins/start/nvim-scrollview
-	url = git@github.com:dstein64/nvim-scrollview.git
-	ignore = dirty
 [submodule "pack/plugins/start/vim-rhubarb"]
 	path = pack/plugins/start/vim-rhubarb
 	url = git@github.com:tpope/vim-rhubarb.git
