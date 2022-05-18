@@ -91,8 +91,9 @@ vim.keymap.set({ '', 't', 'i' }, '<A-c>', telescope_builtin.git_commits, { norem
 vim.keymap.set({ '', 't', 'i' }, '<A-s>', telescope_builtin.git_stash, { noremap = true })
 vim.keymap.set({ '', 't', 'i' }, '<S-F3>', telescope_builtin.quickfix, { noremap = true })
 
-vim.keymap.set({ '', 'i' }, '<C-/>', telescope.extensions.live_grep_raw.live_grep_raw, { noremap = true })
-vim.keymap.set('t', '<C-/>', function()
+local search_mapping = vim.fn.has('unix') and '<C-_>' or '<C-/>'
+vim.keymap.set({ '', 'i' }, search_mapping, telescope.extensions.live_grep_raw.live_grep_raw, { noremap = true })
+vim.keymap.set('t', search_mapping, function()
   telescope.extensions.live_grep_raw.live_grep_raw()
   vim.api.nvim_input('i')
 end, { noremap = true })
