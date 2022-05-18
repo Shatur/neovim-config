@@ -27,6 +27,6 @@ paru -S fzf ripgrep nerd-fonts-fira-code lua-language-server clang cmake-languag
 ```bash
 scoop bucket add nerd-fonts
 scoop bucket add extras
-sudo scoop install -g fzf ripgrep llvm FiraCode-NF windows-terminal python pwsh
+sudo scoop install -g fzf ripgrep llvm FiraCode-NF-Mono windows-terminal python pwsh
 pip install cmake-language-server python-lsp-server
 ```
