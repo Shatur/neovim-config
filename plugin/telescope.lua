@@ -78,7 +78,7 @@ telescope.setup({
 telescope.load_extension('dap')
 telescope.load_extension('live_grep_raw')
 telescope.load_extension('notify')
-pcall(telescope.load_extension, 'fzf') -- Load only if compiled
+telescope.load_extension('fzf')
 
 vim.keymap.set('n', 'z=', telescope_builtin.spell_suggest, { noremap = true })
 vim.keymap.set({ '', 't', 'i' }, '<S-CR>', telescope_builtin.commands, { noremap = true })
