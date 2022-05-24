@@ -66,6 +66,11 @@ telescope.setup({
             local value = action_state.get_selected_entry().value
             vim.api.nvim_command('G stash show -p ' .. value)
           end,
+          ['<C-x>'] = function(prompt_bufnr)
+            actions.close(prompt_bufnr)
+            local value = action_state.get_selected_entry().value
+            vim.api.nvim_command('G stash pop ' .. value)
+          end,
         },
       },
     },
