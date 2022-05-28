@@ -30,7 +30,6 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<Leader>k', vim.diagnostic.open_float, { noremap = true, buffer = bufnr })
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = true, buffer = bufnr })
   vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', 'gh', lspconfig.clangd.commands['ClangdSwitchSourceHeader'][1], { noremap = true, buffer = bufnr })
 
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
@@ -47,7 +46,10 @@ lspconfig.clangd.setup({
   init_options = {
     clangdFileStatus = true,
   },
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    vim.keymap.set('n', 'gh', lspconfig.clangd.commands['ClangdSwitchSourceHeader'][1], { noremap = true, buffer = bufnr })
+  end,
   capabilities = capabilities,
 })
 
