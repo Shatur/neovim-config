@@ -55,7 +55,10 @@ lspconfig.clangd.setup({
 
 lspconfig.sumneko_lua.setup({
   cmd = { 'lua-language-server' },
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    client.resolved_capabilities.document_formatting = false -- Use stylua instead
+  end,
   capabilities = capabilities,
   settings = {
     Lua = {
