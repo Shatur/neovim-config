@@ -1,7 +1,7 @@
 local neo_tree_command = require('neo-tree.command')
 local stickybuf_util = require('stickybuf.util')
 
-local function close_current_buffer(command)
+local function close_buffer(command)
   local bang = command and command.bang
   local buffer = tonumber(command and command.args) -- Can be passed as string from command
   if buffer == 0 or not buffer then
@@ -63,17 +63,17 @@ local function close_other_buffers()
 end
 
 vim.api.nvim_create_user_command('QFToggle', toggle_quickfix, { desc = 'Toggle quickfix list' })
-vim.api.nvim_create_user_command('BDelete', close_current_buffer, { nargs = '?', bang = true, desc = 'Delete buffer with saving the current layout (except special buffers)' })
+vim.api.nvim_create_user_command('BDelete', close_buffer, { nargs = '?', bang = true, desc = 'Delete buffer with saving the current layout (except special buffers)' })
 vim.api.nvim_create_user_command('BDeleteOther', close_other_buffers, { desc = 'Delete all other buffers expect current' })
 
 vim.keymap.set('', '<A-CR>', close_other_buffers, { noremap = true })
-vim.keymap.set('', '<C-q>', close_current_buffer, { noremap = true })
+vim.keymap.set('', '<C-q>', close_buffer, { noremap = true })
 vim.keymap.set({ 'i', 't' }, '<C-q>', function()
   vim.api.nvim_input('<Esc>')
-  close_current_buffer()
+  close_buffer()
 end, { noremap = true })
 vim.keymap.set({ '', 'i' }, '<C-x>', function()
   vim.api.nvim_command('write')
-  close_current_buffer()
+  close_buffer()
 end, { noremap = true })
 vim.keymap.set({ '', 'i' }, '<F3>', toggle_quickfix, { noremap = true })
