@@ -62,7 +62,7 @@ local function close_other_buffers()
   end
 end
 
-vim.api.nvim_create_user_command('Cftoggle', toggle_quickfix, { desc = 'Toggle quickfix list' })
+vim.api.nvim_create_user_command('QFToggle', toggle_quickfix, { desc = 'Toggle quickfix list' })
 vim.api.nvim_create_user_command('BDelete', close_current_buffer, { nargs = '?', bang = true, desc = 'Delete buffer with saving the current layout (except special buffers)' })
 
 vim.keymap.set('', '<A-CR>', close_other_buffers, { noremap = true })
