@@ -53,9 +53,19 @@ local function toggle_quickfix()
   vim.api.nvim_command('copen')
 end
 
+local function close_other_buffers()
+  local current_buffer = vim.api.nvim_get_current_buf()
+  for _, buffer in ipairs(vim.api.nvim_list_bufs()) do
+    if buffer ~= current_buffer and not vim.api.nvim_buf_get_option(buffer, 'modified') and vim.api.nvim_buf_get_option(buffer, 'buflisted') then
+      vim.api.nvim_buf_delete(buffer, {})
+    end
+  end
+end
+
 vim.api.nvim_create_user_command('Cftoggle', toggle_quickfix, { desc = 'Toggle quickfix list' })
 vim.api.nvim_create_user_command('BDelete', close_current_buffer, { nargs = '?', bang = true, desc = 'Delete buffer with saving the current layout (except special buffers)' })
 
+vim.keymap.set('', '<A-CR>', close_other_buffers, { noremap = true })
 vim.keymap.set('', '<C-q>', close_current_buffer, { noremap = true })
 vim.keymap.set({ 'i', 't' }, '<C-q>', function()
   vim.api.nvim_input('<Esc>')

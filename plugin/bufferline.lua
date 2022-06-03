@@ -110,11 +110,6 @@ vim.keymap.set('', '<A-[>', function()
   bufferline.move(-1)
 end, { noremap = true })
 
-vim.keymap.set('', 'Q', function()
-  bufferline.close_in_direction('left')
-  bufferline.close_in_direction('right')
-end, { noremap = true })
-
 for i = 1, 9 do
   vim.keymap.set('', string.format('<A-%d>', i), function()
     bufferline.go_to_buffer(i)
