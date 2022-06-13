@@ -68,6 +68,9 @@ vim.api.nvim_create_user_command('BDeleteOther', close_other_buffers, { desc = '
 
 vim.keymap.set('', '<A-CR>', close_other_buffers, { noremap = true })
 vim.keymap.set('', '<C-q>', close_buffer, { noremap = true })
+vim.keymap.set('', '<Leader><C-q>', function()
+  close_buffer({ bang = true })
+end, { noremap = true })
 vim.keymap.set({ 'i', 't' }, '<C-q>', function()
   vim.api.nvim_input('<Esc>')
   close_buffer()
