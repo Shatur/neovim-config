@@ -214,10 +214,6 @@
 	path = pack/plugins/start/Comment.nvim
 	url = git@github.com:numToStr/Comment.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/telescope-rg.nvim"]
-	path = pack/plugins/start/telescope-rg.nvim
-	url = git@github.com:nvim-telescope/telescope-rg.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/cutlass.nvim"]
 	path = pack/plugins/start/cutlass.nvim
 	url = git@github.com:gbprod/cutlass.nvim.git
@@ -257,4 +253,8 @@
 [submodule "pack/plugins/start/nui.nvim"]
 	path = pack/plugins/start/nui.nvim
 	url = git@github.com:MunifTanjim/nui.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/telescope-live-grep-args.nvim"]
+	path = pack/plugins/start/telescope-live-grep-args.nvim
+	url = git@github.com:nvim-telescope/telescope-live-grep-args.nvim.git
 	ignore = dirty
