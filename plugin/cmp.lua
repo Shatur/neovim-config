@@ -3,7 +3,7 @@ local cmp = require('cmp')
 
 local completion_types = {
   Text = { kind = '', menu = 'Text' },
-  Method = { kind = 'm', menu = 'Method' },
+  Method = { kind = '', menu = 'Method' },
   Function = { kind = '', menu = 'Function' },
   Constructor = { kind = '', menu = 'Constructor' },
   Field = { kind = '', menu = 'Field' },
