@@ -2,7 +2,7 @@ local dap = require('dap')
 local dapui = require('dapui')
 local dap_virtual_text = require('nvim-dap-virtual-text')
 
-dap.adapters.cpp = {
+dap.adapters.lldb = {
   type = 'executable',
   attach = {
     pidProperty = 'pid',
@@ -59,7 +59,7 @@ end, { noremap = true })
 
 vim.api.nvim_create_user_command('Lldb', function(command)
   local config = {
-    type = 'cpp',
+    type = 'lldb',
     name = command.fargs[1],
     request = 'launch',
     program = command.fargs[1],
