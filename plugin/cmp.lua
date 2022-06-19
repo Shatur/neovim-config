@@ -1,5 +1,6 @@
 local luasnip = require('luasnip')
 local cmp = require('cmp')
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
 local completion_types = {
   Text = { kind = '', menu = 'Text' },
@@ -84,5 +85,7 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' },
   }),
 })
+
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
 require('cmp_git').setup()
