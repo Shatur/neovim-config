@@ -62,14 +62,18 @@ vim.keymap.set('i', '<Up>', 'pumvisible() ? "<Up>" : "<C-o>g<UP>"', { noremap = 
 vim.keymap.set('i', '<Down>', 'pumvisible() ? "<Down>" : "<C-o>g<Down>"', { noremap = true, expr = true })
 
 -- Split navigation
-vim.keymap.set({ 't', 'i' }, '<C-h>', '<C-\\><C-N><C-w>h', { noremap = true })
-vim.keymap.set({ 't', 'i' }, '<C-j>', '<C-\\><C-N><C-w>j', { noremap = true })
-vim.keymap.set({ 't', 'i' }, '<C-k>', '<C-\\><C-N><C-w>k', { noremap = true })
-vim.keymap.set({ 't', 'i' }, '<C-l>', '<C-\\><C-N><C-w>l', { noremap = true })
+vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-w>h', { noremap = true })
+vim.keymap.set('t', '<C-j>', '<C-\\><C-n><C-w>j', { noremap = true })
+vim.keymap.set('t', '<C-k>', '<C-\\><C-n><C-w>k', { noremap = true })
+vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-w>l', { noremap = true })
 vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true })
+vim.keymap.set('i', '<C-h>', '<C-o><C-w>h', { noremap = true })
+vim.keymap.set('i', '<C-j>', '<C-o><C-w>j', { noremap = true })
+vim.keymap.set('i', '<C-k>', '<C-o><C-w>k', { noremap = true })
+vim.keymap.set('i', '<C-l>', '<C-o><C-w>l', { noremap = true })
 
 -- Quickfix history navigation
 vim.keymap.set('', ']h', '<Cmd>cnewer<CR>', { noremap = true })
