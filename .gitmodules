@@ -258,3 +258,7 @@
 	path = pack/plugins/start/telescope-live-grep-args.nvim
 	url = git@github.com:nvim-telescope/telescope-live-grep-args.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/neovim-rust"]
+	path = pack/plugins/start/neovim-rust
+	url = git@github.com:Shatur/neovim-rust.git
+	ignore = dirty
