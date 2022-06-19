@@ -1,6 +1,7 @@
 local lualine = require('lualine')
 local colors = require('ayu.colors')
 local cmake_utils = require('cmake.utils')
+local rust_utils = require('rust.utils')
 
 local config = {
   options = {
@@ -136,10 +137,18 @@ table.insert(config.sections.lualine_c, {
 -- Right sections
 table.insert(config.sections.lualine_x, {
   function()
-    if not cmake_utils.last_job or cmake_utils.last_job.is_shutdown then
-      return ''
+    local command = nil
+    if cmake_utils.last_job and not cmake_utils.last_job.is_shutdown then
+      command = cmake_utils.last_job.command
     end
-    return 'Running ' .. cmake_utils.last_job.command
+    if rust_utils.last_job and not rust_utils.last_job.is_shutdown then
+      command = rust_utils.last_job.command
+    end
+
+    if command then
+      return 'Running ' .. command
+    end
+    return ''
   end,
   icon = '',
   color = { fg = colors.tag },
