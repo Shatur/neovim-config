@@ -2,6 +2,8 @@ local lspconfig = require('lspconfig')
 local lsp_status = require('lsp-status')
 local telescope_builin = require('telescope.builtin')
 local null_ls = require('null-ls')
+local cmake = require('cmake')
+local rust = require('rust')
 
 local function setup_lsp_keymaps(client, buffer)
   lsp_status.on_attach(client)
@@ -29,6 +31,52 @@ local function setup_lsp_keymaps(client, buffer)
   end
 end
 
+local function setup_cmake_keymaps(buffer)
+  vim.keymap.set({ '', 'i' }, '<C-BS>', cmake.cancel, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<F5>', cmake.build_and_debug, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<S-F5>', cmake.set_target_args, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<A-F5>', cmake.debug, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<F6>', cmake.build_and_run, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<A-F6>', cmake.run, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<F7>', cmake.build, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<S-F7>', cmake.select_target, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<A-F7>', cmake.build_all, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<F8>', cmake.configure, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<S-F8>', cmake.select_build_type, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<A-F8>', cmake.clear_cache, { noremap = true, buffer = buffer })
+end
+
+local function setup_rust_keymaps(buffer)
+  vim.keymap.set({ '', 'i' }, '<C-BS>', rust.cancel, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<F5>', function()
+    rust.cargo('test')
+  end, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<S-F5>', function()
+    rust.set_args('test')
+  end, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<A-F5>', function()
+    rust.debug('test')
+  end, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<F6>', function()
+    rust.cargo('run')
+  end, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<S-F6>', function()
+    rust.set_args('run')
+  end, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<A-F6>', function()
+    rust.debug('run')
+  end, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<F7>', function()
+    rust.cargo('build')
+  end, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<F7>', function()
+    rust.cargo('build')
+  end, { noremap = true, buffer = buffer })
+  vim.keymap.set({ '', 'i' }, '<S-F7>', function()
+    rust.set_args('global')
+  end, { noremap = true, buffer = buffer })
+end
+
 lsp_status.config({
   status_symbol = '',
   current_function = false,
@@ -45,17 +93,18 @@ lspconfig.clangd.setup({
   init_options = {
     clangdFileStatus = true,
   },
-  on_attach = function(client, bufnr)
-    setup_lsp_keymaps(client, bufnr)
-    vim.keymap.set('n', 'gh', lspconfig.clangd.commands['ClangdSwitchSourceHeader'][1], { noremap = true, buffer = bufnr })
+  on_attach = function(client, buffer)
+    setup_lsp_keymaps(client, buffer)
+    setup_cmake_keymaps(buffer)
+    vim.keymap.set('n', 'gh', lspconfig.clangd.commands['ClangdSwitchSourceHeader'][1], { noremap = true, buffer = buffer })
   end,
   capabilities = capabilities,
 })
 
 lspconfig.sumneko_lua.setup({
   cmd = { 'lua-language-server' },
-  on_attach = function(client, bufnr)
-    setup_lsp_keymaps(client, bufnr)
+  on_attach = function(client, buffer)
+    setup_lsp_keymaps(client, buffer)
     client.resolved_capabilities.document_formatting = false -- Use stylua instead
   end,
   capabilities = capabilities,
@@ -80,11 +129,17 @@ lspconfig.sumneko_lua.setup({
 
 lspconfig.cmake.setup({
   capabilities = capabilities,
-  on_attach = setup_lsp_keymaps,
+  on_attach = function(client, buffer)
+    setup_lsp_keymaps(client, buffer)
+    setup_cmake_keymaps(buffer)
+  end,
 })
 lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
-  on_attach = setup_lsp_keymaps,
+  on_attach = function(client, buffer)
+    setup_lsp_keymaps(client, buffer)
+    setup_rust_keymaps(buffer)
+  end,
   commands = {
     RustOpenDocs = {
       function()
@@ -106,7 +161,10 @@ lspconfig.pylsp.setup({
 })
 lspconfig.taplo.setup({
   capabilities = capabilities,
-  on_attach = setup_lsp_keymaps,
+  on_attach = function(client, buffer)
+    setup_lsp_keymaps(client, buffer)
+    setup_rust_keymaps(buffer)
+  end,
 })
 
 null_ls.setup({

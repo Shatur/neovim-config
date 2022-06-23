@@ -17,16 +17,3 @@ else
   table.insert(config.configure_args, 'VCPKG_INSTALL_OPTIONS=--clean-after-build')
 end
 cmake.setup(config)
-
-vim.keymap.set({ '', 'i' }, '<C-BS>', cmake.cancel, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<F5>', cmake.build_and_debug, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<S-F5>', cmake.set_target_args, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<A-F5>', cmake.debug, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<F6>', cmake.build_and_run, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<A-F6>', cmake.run, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<F7>', cmake.build, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<S-F7>', cmake.select_target, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<A-F7>', cmake.build_all, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<F8>', cmake.configure, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<S-F8>', cmake.select_build_type, { noremap = true })
-vim.keymap.set({ '', 'i' }, '<A-F8>', cmake.clear_cache, { noremap = true })
