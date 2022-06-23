@@ -3,17 +3,7 @@ local lsp_status = require('lsp-status')
 local telescope_builin = require('telescope.builtin')
 local null_ls = require('null-ls')
 
-lsp_status.config({
-  status_symbol = '',
-  current_function = false,
-  diagnostics = false, -- Will be displayed via lualine
-})
-lsp_status.register_progress()
-
-local capabilities = require('cmp_nvim_lsp').update_capabilities(lsp_status.capabilities)
-
--- Buffer with LSP settings
-local on_attach = function(client, bufnr)
+local function setup_lsp_keymaps(client, bufnr)
   lsp_status.on_attach(client, bufnr)
 
   vim.keymap.set('n', '<C-LeftMouse>', telescope_builin.lsp_definitions, { noremap = true, buffer = bufnr })
@@ -39,6 +29,15 @@ local on_attach = function(client, bufnr)
   end
 end
 
+lsp_status.config({
+  status_symbol = '',
+  current_function = false,
+  diagnostics = false, -- Will be displayed via lualine
+})
+lsp_status.register_progress()
+
+local capabilities = require('cmp_nvim_lsp').update_capabilities(lsp_status.capabilities)
+
 -- Language servers configuration
 lspconfig.clangd.setup({
   cmd = { 'clangd', '--cross-file-rename', '--header-insertion=never', '--suggest-missing-includes', '--pch-storage=memory' },
@@ -47,7 +46,7 @@ lspconfig.clangd.setup({
     clangdFileStatus = true,
   },
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
+    setup_lsp_keymaps(client, bufnr)
     vim.keymap.set('n', 'gh', lspconfig.clangd.commands['ClangdSwitchSourceHeader'][1], { noremap = true, buffer = bufnr })
   end,
   capabilities = capabilities,
@@ -56,7 +55,7 @@ lspconfig.clangd.setup({
 lspconfig.sumneko_lua.setup({
   cmd = { 'lua-language-server' },
   on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
+    setup_lsp_keymaps(client, bufnr)
     client.resolved_capabilities.document_formatting = false -- Use stylua instead
   end,
   capabilities = capabilities,
@@ -81,15 +80,15 @@ lspconfig.sumneko_lua.setup({
 
 lspconfig.gdscript.setup({
   capabilities = capabilities,
-  on_attach = on_attach,
+  on_attach = setup_lsp_keymaps,
 })
 lspconfig.cmake.setup({
   capabilities = capabilities,
-  on_attach = on_attach,
+  on_attach = setup_lsp_keymaps,
 })
 lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
-  on_attach = on_attach,
+  on_attach = setup_lsp_keymaps,
   commands = {
     RustOpenDocs = {
       function()
@@ -107,15 +106,15 @@ lspconfig.rust_analyzer.setup({
 })
 lspconfig.pylsp.setup({
   capabilities = capabilities,
-  on_attach = on_attach,
+  on_attach = setup_lsp_keymaps,
 })
 lspconfig.taplo.setup({
   capabilities = capabilities,
-  on_attach = on_attach,
+  on_attach = setup_lsp_keymaps,
 })
 
 null_ls.setup({
-  on_attach = on_attach,
+  on_attach = setup_lsp_keymaps,
   sources = {
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.cmake_format,
