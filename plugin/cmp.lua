@@ -1,7 +1,6 @@
 local luasnip = require('luasnip')
 local cmp = require('cmp')
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-local handlers = require('nvim-autopairs.completion.handlers')
 
 local completion_types = {
   Text = { kind = '', menu = 'Text' },
@@ -90,14 +89,8 @@ cmp.setup.cmdline(':', {
 cmp.event:on(
   'confirm_done',
   cmp_autopairs.on_confirm_done({
-    ['lua'] = {
-      ['('] = {
-        kind = {
-          cmp.lsp.CompletionItemKind.Function,
-          cmp.lsp.CompletionItemKind.Method,
-        },
-        handler = handlers['*'],
-      },
+    filetypes = {
+      rust = false,
     },
   })
 )
