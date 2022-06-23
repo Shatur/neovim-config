@@ -78,10 +78,6 @@ lspconfig.sumneko_lua.setup({
   },
 })
 
-lspconfig.gdscript.setup({
-  capabilities = capabilities,
-  on_attach = setup_lsp_keymaps,
-})
 lspconfig.cmake.setup({
   capabilities = capabilities,
   on_attach = setup_lsp_keymaps,
