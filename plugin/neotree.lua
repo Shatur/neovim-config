@@ -20,20 +20,26 @@ local config = {
       highlight = 'Normal',
     },
   },
+  filesystem = {
+    commands = {
+      copy_file_name = function(state)
+        local node = state.tree:get_node()
+        vim.fn.setreg('+', node.name, 'c')
+      end,
+      copy_file_path = function(state)
+        local node = state.tree:get_node()
+        local relative_path = node.path:sub(#state.path + 2)
+        vim.fn.setreg('+', relative_path, 'c')
+      end,
+    },
+  },
   window = {
     mappings = {
       ['h'] = 'close_node',
       ['l'] = 'open',
       ['/'] = '',
-      ['Y'] = function(state)
-        local node = state.tree:get_node()
-        vim.fn.setreg('+', node.name, 'c')
-      end,
-      ['<C-y>'] = function(state)
-        local node = state.tree:get_node()
-        local relative_path = node.path:sub(#state.path + 2)
-        vim.fn.setreg('+', relative_path, 'c')
-      end,
+      ['Y'] = 'copy_file_name',
+      ['<C-y>'] = 'copy_file_path',
     },
   },
 }
