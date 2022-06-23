@@ -3,29 +3,29 @@ local lsp_status = require('lsp-status')
 local telescope_builin = require('telescope.builtin')
 local null_ls = require('null-ls')
 
-local function setup_lsp_keymaps(client, bufnr)
-  lsp_status.on_attach(client, bufnr)
+local function setup_lsp_keymaps(client, buffer)
+  lsp_status.on_attach(client)
 
-  vim.keymap.set('n', '<C-LeftMouse>', telescope_builin.lsp_definitions, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', 'gd', telescope_builin.lsp_definitions, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { noremap = true, buffer = bufnr })
-  vim.keymap.set('v', 'ga', vim.lsp.buf.range_code_action, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', 'gr', telescope_builin.lsp_references, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', 'go', telescope_builin.lsp_workspace_symbols, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', 'gO', telescope_builin.lsp_document_symbols, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', '<Leader>k', vim.diagnostic.open_float, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = true, buffer = bufnr })
-  vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { noremap = true, buffer = bufnr })
+  vim.keymap.set('n', '<C-LeftMouse>', telescope_builin.lsp_definitions, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', 'gd', telescope_builin.lsp_definitions, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { noremap = true, buffer = buffer })
+  vim.keymap.set('v', 'ga', vim.lsp.buf.range_code_action, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', 'gr', telescope_builin.lsp_references, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', 'go', telescope_builin.lsp_workspace_symbols, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', 'gO', telescope_builin.lsp_document_symbols, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', '<Leader>k', vim.diagnostic.open_float, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = true, buffer = buffer })
+  vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { noremap = true, buffer = buffer })
 
   -- Set some keybinds conditional on server capabilities
   if client.resolved_capabilities.document_formatting then
-    vim.keymap.set('n', '<A-=>', vim.lsp.buf.formatting, { noremap = true, buffer = bufnr })
+    vim.keymap.set('n', '<A-=>', vim.lsp.buf.formatting, { noremap = true, buffer = buffer })
   elseif client.resolved_capabilities.document_range_formatting then
-    vim.keymap.set('n', '<A-=>', vim.lsp.buf.range_formatting, { noremap = true, buffer = bufnr })
+    vim.keymap.set('n', '<A-=>', vim.lsp.buf.range_formatting, { noremap = true, buffer = buffer })
   end
 end
 
