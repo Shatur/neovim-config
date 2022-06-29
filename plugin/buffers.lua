@@ -66,7 +66,8 @@ vim.api.nvim_create_user_command('QFToggle', toggle_quickfix, { desc = 'Toggle q
 vim.api.nvim_create_user_command('BDelete', close_buffer, { nargs = '?', bang = true, desc = 'Delete buffer with saving the current layout (except special buffers)' })
 vim.api.nvim_create_user_command('BDeleteOther', close_other_buffers, { desc = 'Delete all other buffers expect current' })
 
-vim.keymap.set('', '<A-CR>', close_other_buffers, { noremap = true })
+vim.keymap.set('', '<C-\\>', close_other_buffers, { noremap = true })
+vim.keymap.set('', '<A-\\>', '<Cmd>tabonly<CR>', { noremap = true })
 vim.keymap.set('', '<C-q>', close_buffer, { noremap = true })
 vim.keymap.set('', '<Leader><C-q>', function()
   close_buffer({ bang = true })
