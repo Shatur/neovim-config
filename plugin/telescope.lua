@@ -64,7 +64,7 @@ telescope.setup({
           ['<C-o>'] = function(prompt_bufnr)
             actions.close(prompt_bufnr)
             local value = action_state.get_selected_entry().value
-            vim.api.nvim_command('G stash show -p ' .. value)
+            vim.api.nvim_command('vertical G stash show -p ' .. value)
           end,
           ['<C-x>'] = function(prompt_bufnr)
             actions.close(prompt_bufnr)
