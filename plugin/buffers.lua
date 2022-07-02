@@ -13,8 +13,9 @@ local function close_buffer(command)
     return
   end
 
-  if vim.bo.buftype == 'terminal' then
-    vim.api.nvim_command('close')
+  local buftype = vim.api.nvim_buf_get_option(buffer, 'buftype')
+  if buftype == 'terminal' or buftype == 'nowrite' then
+    vim.api.nvim_buf_delete(buffer, { force = true })
     return
   end
 
