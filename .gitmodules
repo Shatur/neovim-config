@@ -262,3 +262,7 @@
 	path = pack/plugins/start/neovim-rust
 	url = git@github.com:Shatur/neovim-rust.git
 	ignore = dirty
+[submodule "pack/plugins/start/crates.nvim"]
+	path = pack/plugins/start/crates.nvim
+	url = git@github.com:Saecki/crates.nvim.git
+	ignore = dirty
