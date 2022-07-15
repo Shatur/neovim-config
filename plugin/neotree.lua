@@ -11,7 +11,6 @@ local config = {
       enable_character_fade = true,
     },
     indent = {
-      padding = 0,
       with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
     },
     icon = {
