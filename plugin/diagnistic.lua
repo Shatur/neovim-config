@@ -14,9 +14,13 @@ vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = 'rounded',
 })
 
-vim.api.nvim_create_user_command('LspDiagnosticsEnable', function()
-  vim.diagnostic.enable()
-end, { desc = 'Enable LSP diagnostics' })
-vim.api.nvim_create_user_command('LspDiagnosticsDisable', function()
-  vim.diagnostic.disable()
-end, { desc = 'Disable LSP diagnostics' })
+local diagnostic_enabled = true
+vim.api.nvim_create_user_command('LspDiagnosticToggle', function()
+  if diagnostic_enabled then
+    vim.diagnostic.disable()
+    diagnostic_enabled = false
+  else
+    vim.diagnostic.enable()
+    diagnostic_enabled = true
+  end
+end, { desc = 'Toggle LSP diagnostics' })
