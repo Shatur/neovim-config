@@ -5,6 +5,7 @@ vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSig
 
 vim.diagnostic.config({
   virtual_text = { prefix = '' },
+  virtual_lines = false,
   float = {
     border = 'rounded',
   },
