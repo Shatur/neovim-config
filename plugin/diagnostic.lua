@@ -16,7 +16,7 @@ vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
 })
 
 local diagnostic_enabled = true
-vim.api.nvim_create_user_command('LspDiagnosticToggle', function()
+vim.keymap.set('n', 'yoD', function()
   if diagnostic_enabled then
     vim.diagnostic.disable()
     diagnostic_enabled = false
@@ -24,4 +24,4 @@ vim.api.nvim_create_user_command('LspDiagnosticToggle', function()
     vim.diagnostic.enable()
     diagnostic_enabled = true
   end
-end, { desc = 'Toggle LSP diagnostics' })
+end, { noremap = true })
