@@ -78,6 +78,16 @@ telescope.setup({
       theme = 'ivy',
     },
   },
+  extensions = {
+    live_grep_args = {
+      mappings = {
+        i = {
+          ["<C-'>"] = require('telescope-live-grep-args.actions').quote_prompt(),
+          ['<C-k>'] = actions.cycle_history_prev,
+        },
+      },
+    },
+  },
 })
 
 telescope.load_extension('dap')
