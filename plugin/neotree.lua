@@ -1,6 +1,6 @@
 vim.g.neo_tree_remove_legacy_commands = true
 
-local config = {
+require('neo-tree').setup({
   enable_diagnostics = false,
   enable_git_status = false,
   enable_modified_markers = false,
@@ -41,9 +41,7 @@ local config = {
       ['<C-y>'] = 'copy_file_path',
     },
   },
-}
-
-require('neo-tree').setup(config)
+})
 
 local neo_tree_command = require('neo-tree.command')
 vim.keymap.set('', '<A-f>', function()
