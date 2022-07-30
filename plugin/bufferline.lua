@@ -96,24 +96,14 @@ bufferline.setup({
   },
 })
 
-vim.keymap.set('', ']b', function()
-  bufferline.cycle(1)
-end, { noremap = true })
-vim.keymap.set('', '[b', function()
-  bufferline.cycle(-1)
-end, { noremap = true })
+vim.keymap.set('', ']b', function() bufferline.cycle(1) end, { noremap = true })
+vim.keymap.set('', '[b', function() bufferline.cycle(-1) end, { noremap = true })
 
-vim.keymap.set('', '<A-]>', function()
-  bufferline.move(1)
-end, { noremap = true })
-vim.keymap.set('', '<A-[>', function()
-  bufferline.move(-1)
-end, { noremap = true })
+vim.keymap.set('', '<A-]>', function() bufferline.move(1) end, { noremap = true })
+vim.keymap.set('', '<A-[>', function() bufferline.move(-1) end, { noremap = true })
 
 for i = 1, 9 do
-  vim.keymap.set('', string.format('<A-%d>', i), function()
-    bufferline.go_to_buffer(i)
-  end, { noremap = true })
+  vim.keymap.set('', string.format('<A-%d>', i), function() bufferline.go_to_buffer(i) end, { noremap = true })
 end
 
 vim.keymap.set('', '<Leader><Tab>', bufferline.pick_buffer, { noremap = true })

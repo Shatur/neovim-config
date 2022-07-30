@@ -17,9 +17,7 @@ require('gitsigns').setup({
       if vim.wo.diff then
         return ']c'
       end
-      vim.schedule(function()
-        gs.next_hunk()
-      end)
+      vim.schedule(function() gs.next_hunk() end)
       return '<Ignore>'
     end, { expr = true, buffer = bufnr })
 
@@ -27,9 +25,7 @@ require('gitsigns').setup({
       if vim.wo.diff then
         return '[c'
       end
-      vim.schedule(function()
-        gs.prev_hunk()
-      end)
+      vim.schedule(function() gs.prev_hunk() end)
       return '<Ignore>'
     end, { expr = true, buffer = bufnr })
 
@@ -40,14 +36,10 @@ require('gitsigns').setup({
     vim.keymap.set('n', '<Leader>hu', gs.undo_stage_hunk, { buffer = bufnr })
     vim.keymap.set('n', '<Leader>hR', gs.reset_buffer, { buffer = bufnr })
     vim.keymap.set('n', '<Leader>hp', gs.preview_hunk, { buffer = bufnr })
-    vim.keymap.set('n', '<Leader>hb', function()
-      gs.blame_line({ full = true })
-    end, { buffer = bufnr })
+    vim.keymap.set('n', '<Leader>hb', function() gs.blame_line({ full = true }) end, { buffer = bufnr })
     vim.keymap.set('n', '<Leader>tb', gs.toggle_current_line_blame, { buffer = bufnr })
     vim.keymap.set('n', '<Leader>hd', gs.diffthis, { buffer = bufnr })
-    vim.keymap.set('n', '<Leader>hD', function()
-      gs.diffthis('~')
-    end, { buffer = bufnr })
+    vim.keymap.set('n', '<Leader>hD', function() gs.diffthis('~') end, { buffer = bufnr })
     vim.keymap.set('n', '<Leader>td', gs.toggle_deleted, { buffer = bufnr })
 
     -- Text object

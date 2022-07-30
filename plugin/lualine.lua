@@ -35,9 +35,7 @@ local config = {
 
 -- Left sections
 table.insert(config.sections.lualine_c, {
-  function()
-    return '▊'
-  end,
+  function() return '▊' end,
   color = { fg = colors.tag },
   padding = { left = 0, right = 1 }, -- We don't need space before this
 })
@@ -115,9 +113,7 @@ table.insert(config.sections.lualine_c, {
 })
 
 table.insert(config.sections.lualine_c, {
-  function()
-    return require('lsp-status').status()
-  end,
+  function() return require('lsp-status').status() end,
   color = { fg = colors.func },
 })
 

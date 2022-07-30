@@ -127,9 +127,7 @@ vim.keymap.set('', '[t', '<Cmd>tabprevious<CR>', { noremap = true })
 local config_group = vim.api.nvim_create_augroup('Config', {})
 vim.api.nvim_create_autocmd({ 'TextYankPost' }, {
   group = config_group,
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+  callback = function() vim.highlight.on_yank() end,
 })
 vim.api.nvim_create_autocmd({ 'BufAdd' }, {
   pattern = 'fugitive://*',
