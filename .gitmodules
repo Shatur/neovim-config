@@ -98,10 +98,6 @@
 	path = pack/plugins/start/nvim-lspconfig
 	url = git@github.com:neovim/nvim-lspconfig.git
 	ignore = dirty
-[submodule "pack/plugins/start/hop.nvim"]
-	path = pack/plugins/start/hop.nvim
-	url = git@github.com:phaazon/hop.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-colorizer.lua"]
 	path = pack/plugins/start/nvim-colorizer.lua
 	url = git@github.com:norcalli/nvim-colorizer.lua.git
@@ -273,4 +269,8 @@
 [submodule "pack/plugins/start/nvim-surround"]
 	path = pack/plugins/start/nvim-surround
 	url = git@github.com:kylechui/nvim-surround.git
+	ignore = dirty
+[submodule "pack/plugins/start/leap.nvim"]
+	path = pack/plugins/start/leap.nvim
+	url = git@github.com:ggandor/leap.nvim.git
 	ignore = dirty

@@ -1,3 +1,3 @@
 require('cutlass').setup({
-  cut_key = 'm',
+  cut_key = '<Leader>c',
 })
