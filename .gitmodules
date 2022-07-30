@@ -1,7 +1,3 @@
-[submodule "pack/plugins/start/vim-sandwich"]
-	path = pack/plugins/start/vim-sandwich
-	url = git@github.com:machakann/vim-sandwich.git
-	ignore = dirty
 [submodule "pack/plugins/start/vim-unimpaired"]
 	path = pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
@@ -273,4 +269,8 @@
 [submodule "pack/plugins/start/lsp_lines.nvim"]
 	path = pack/plugins/start/lsp_lines.nvim
 	url = https://git.sr.ht/~whynothugo/lsp_lines.nvim
+	ignore = dirty
+[submodule "pack/plugins/start/nvim-surround"]
+	path = pack/plugins/start/nvim-surround
+	url = git@github.com:kylechui/nvim-surround.git
 	ignore = dirty
