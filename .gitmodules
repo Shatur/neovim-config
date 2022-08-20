@@ -86,10 +86,6 @@
 	path = pack/plugins/start/nvim-dap
 	url = git@github.com:mfussenegger/nvim-dap.git
 	ignore = dirty
-[submodule "pack/plugins/start/telescope-dap.nvim"]
-	path = pack/plugins/start/telescope-dap.nvim
-	url = git@github.com:nvim-telescope/telescope-dap.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/neovim-cmake"]
 	path = pack/plugins/start/neovim-cmake
 	url = git@github.com:Shatur/neovim-cmake.git
