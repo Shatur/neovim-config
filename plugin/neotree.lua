@@ -39,9 +39,10 @@ require('neo-tree').setup({
     mappings = {
       ['h'] = 'close_node',
       ['l'] = 'open',
+      ['<F2>'] = 'rename',
       ['/'] = '',
       ['Y'] = 'copy_file_name',
-      ['<C-y>'] = 'copy_file_path',
+      ['r'] = 'copy_file_path',
     },
   },
 })
