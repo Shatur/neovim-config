@@ -3,87 +3,87 @@ local bufferline = require('bufferline')
 bufferline.setup({
   highlights = {
     fill = {
-      guibg = {
+      bg = {
         attribute = 'bg',
         highlight = 'TabLineFill',
       },
     },
     background = {
-      guibg = {
+      bg = {
         attribute = 'bg',
         highlight = 'TabLine',
       },
     },
     tab = {
-      guibg = {
+      bg = {
         attribute = 'bg',
         highlight = 'TabLine',
       },
     },
     tab_selected = {
-      guifg = {
+      fg = {
         attribute = 'fg',
         highlight = 'Normal',
       },
-      gui = 'bold',
+      italic = false,
     },
     separator_selected = {
-      guifg = {
+      fg = {
         attribute = 'bg',
         highlight = 'TabLine',
       },
-      guibg = {
+      bg = {
         attribute = 'bg',
         highlight = 'Normal',
       },
     },
     separator = {
-      guifg = {
+      fg = {
         attribute = 'bg',
         highlight = 'TabLine',
       },
-      guibg = {
+      bg = {
         attribute = 'bg',
         highlight = 'TabLine',
       },
     },
     close_button = {
-      guibg = {
+      bg = {
         attribute = 'bg',
         highlight = 'TabLine',
       },
     },
     buffer_selected = {
-      gui = 'bold',
+      italic = false,
     },
     pick_selected = {
-      gui = 'bold',
+      italic = false,
     },
     pick_visible = {
-      gui = 'bold',
+      italic = false,
     },
     pick = {
-      guibg = {
+      bg = {
         attribute = 'bg',
         highlight = 'TabLine',
       },
-      gui = 'bold',
+      italic = false,
     },
     modified = {
-      guibg = {
+      bg = {
         attribute = 'bg',
         highlight = 'TabLine',
       },
     },
     duplicate = {
-      guibg = {
+      bg = {
         attribute = 'bg',
         highlight = 'TabLine',
       },
-      gui = false,
+      italic = false,
     },
     duplicate_selected = {
-      gui = false,
+      italic = false,
     },
   },
   options = {
