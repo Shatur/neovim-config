@@ -2,46 +2,16 @@ local lualine = require('lualine')
 local colors = require('ayu.colors')
 local cmake_utils = require('cmake.utils')
 local rust_utils = require('rust.utils')
-
-local config = {
-  options = {
-    -- Disable sections and component separators
-    component_separators = '',
-    section_separators = '',
-    theme = 'ayu',
-  },
-  sections = {
-    -- Remove the defaults
-    lualine_a = {},
-    lualine_b = {},
-    lualine_y = {},
-    lualine_z = {},
-    -- Will be filled later
-    lualine_c = {},
-    lualine_x = {},
-  },
-  inactive_sections = {
-    -- Remove the defaults
-    lualine_a = {},
-    lualine_v = {},
-    lualine_y = {},
-    lualine_z = {},
-    -- Will be filled later
-    lualine_c = {},
-    lualine_x = {},
-  },
-  extensions = { 'nvim-dap-ui', 'neo-tree', 'quickfix', 'fugitive' },
-}
+local lsp_status = require('lsp-status')
 
 -- Left sections
-table.insert(config.sections.lualine_c, {
+local pad = {
   function() return '▊' end,
   color = { fg = colors.tag },
   padding = { left = 0, right = 1 }, -- We don't need space before this
-})
+}
 
-table.insert(config.sections.lualine_c, {
-  -- Mode component
+local mode = {
   function()
     local modes = {
       n = { color = colors.entity, name = 'NORMAL' },
@@ -72,24 +42,20 @@ table.insert(config.sections.lualine_c, {
   end,
   color = 'LualineMode',
   padding = { left = 0 },
-})
+}
 
-table.insert(config.sections.lualine_c, {
+local filetype = {
   'filetype',
   colored = true,
   icon_only = true,
-})
+}
 
-table.insert(config.sections.lualine_c, {
+local filename = {
   'filename',
   color = { fg = colors.keyword, gui = 'bold' },
-})
+}
 
-table.insert(config.sections.lualine_c, {
-  'location',
-})
-
-table.insert(config.sections.lualine_c, {
+local multiple_cursros = {
   function()
     local vm_info = vim.fn.VMInfos()
     if vim.tbl_isempty(vm_info) then
@@ -99,9 +65,9 @@ table.insert(config.sections.lualine_c, {
   end,
   icon = '',
   color = { fg = colors.special, gui = 'bold' },
-})
+}
 
-table.insert(config.sections.lualine_c, {
+local diagnostics = {
   'diagnostics',
   symbols = { error = ' ', warn = ' ', info = ' ' },
   diagnostics_color = {
@@ -110,15 +76,15 @@ table.insert(config.sections.lualine_c, {
     info = { fg = colors.tag },
     hint = { fg = colors.regexp },
   },
-})
+}
 
-table.insert(config.sections.lualine_c, {
-  function() return require('lsp-status').status() end,
+local status = {
+  function() return lsp_status.status() end,
   color = { fg = colors.func },
-})
+}
 
 -- Right sections
-table.insert(config.sections.lualine_x, {
+local task = {
   function()
     local command = nil
     if cmake_utils.last_job and not cmake_utils.last_job.is_shutdown then
@@ -135,20 +101,20 @@ table.insert(config.sections.lualine_x, {
   end,
   icon = '',
   color = { fg = colors.tag },
-})
+}
 
-table.insert(config.sections.lualine_x, {
+local dap = {
   require('dap').status,
   color = { fg = colors.regexp },
-})
+}
 
-table.insert(config.sections.lualine_x, {
+local gitsigns_head = {
   'b:gitsigns_head',
   icon = '',
   color = { fg = colors.fg, gui = 'bold' },
-})
+}
 
-table.insert(config.sections.lualine_x, {
+local diff = {
   'diff',
   source = function()
     local gitsigns = vim.b.gitsigns_status_dict
@@ -162,22 +128,47 @@ table.insert(config.sections.lualine_x, {
     modified = { fg = colors.vcs_modified },
     removed = { fg = colors.vcs_removed },
   },
-})
+}
 
-table.insert(config.sections.lualine_x, {
+local encoding = {
   'o:encoding',
   fmt = string.upper,
   color = { fg = colors.string, gui = 'bold' },
-})
+}
 
-table.insert(config.sections.lualine_x, {
+local fileformat = {
   'fileformat',
   fmt = string.upper,
   icons_enabled = false,
   color = { fg = colors.string, gui = 'bold' },
+}
+
+lualine.setup({
+  options = {
+    -- Disable sections and component separators
+    component_separators = '',
+    section_separators = '',
+    theme = 'ayu',
+  },
+  sections = {
+    -- Remove the defaults
+    lualine_a = {},
+    lualine_b = {},
+    lualine_y = {},
+    lualine_z = {},
+    -- Will be filled later
+    lualine_c = { pad, mode, filetype, filename, 'location', multiple_cursros, diagnostics, status },
+    lualine_x = { task, dap, gitsigns_head, diff, encoding, fileformat },
+  },
+  inactive_sections = {
+    -- Remove the defaults
+    lualine_a = {},
+    lualine_v = {},
+    lualine_y = {},
+    lualine_z = {},
+    -- Will be filled later
+    lualine_c = { filetype, filename, 'location', multiple_cursros, diagnostics, status },
+    lualine_x = { diff, encoding, fileformat },
+  },
+  extensions = { 'nvim-dap-ui', 'neo-tree', 'quickfix', 'fugitive' },
 })
-
-vim.list_extend(config.inactive_sections.lualine_c, config.sections.lualine_c, 3, #config.sections.lualine_c)
-vim.list_extend(config.inactive_sections.lualine_x, config.sections.lualine_x, 4, #config.sections.lualine_x)
-
-lualine.setup(config)
