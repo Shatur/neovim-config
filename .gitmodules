@@ -94,10 +94,6 @@
 	path = pack/plugins/start/nvim-lspconfig
 	url = git@github.com:neovim/nvim-lspconfig.git
 	ignore = dirty
-[submodule "pack/plugins/start/nvim-colorizer.lua"]
-	path = pack/plugins/start/nvim-colorizer.lua
-	url = git@github.com:norcalli/nvim-colorizer.lua.git
-	ignore = dirty
 [submodule "pack/plugins/start/neovim-session-manager"]
 	path = pack/plugins/start/neovim-session-manager
 	url = git@github.com:Shatur/neovim-session-manager.git
@@ -269,4 +265,8 @@
 [submodule "pack/plugins/start/leap.nvim"]
 	path = pack/plugins/start/leap.nvim
 	url = git@github.com:ggandor/leap.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/nvim-highlight-colors"]
+	path = pack/plugins/start/nvim-highlight-colors
+	url = git@github.com:brenoprata10/nvim-highlight-colors.git
 	ignore = dirty
