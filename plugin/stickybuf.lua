@@ -4,6 +4,7 @@ require('stickybuf').setup({
     toggleterm = 'filetype',
     fugitive = 'filetype',
     fugitiveblame = 'filetype',
+    ['neo-tree'] = 'filetype',
   },
   bufname = {
     ['DAP *'] = 'bufnr',
