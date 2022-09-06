@@ -42,7 +42,7 @@ require('neo-tree').setup({
       ['<F2>'] = 'rename',
       ['/'] = '',
       ['Y'] = 'copy_file_name',
-      ['r'] = 'copy_file_path',
+      ['<C-y>'] = 'copy_file_path',
     },
   },
 })
