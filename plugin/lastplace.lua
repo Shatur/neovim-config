@@ -1,1 +1,1 @@
-require('nvim-lastplace').setup({})
+require('remember')
