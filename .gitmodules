@@ -86,10 +86,6 @@
 	path = pack/plugins/start/nvim-dap
 	url = git@github.com:mfussenegger/nvim-dap.git
 	ignore = dirty
-[submodule "pack/plugins/start/neovim-cmake"]
-	path = pack/plugins/start/neovim-cmake
-	url = git@github.com:Shatur/neovim-cmake.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-lspconfig"]
 	path = pack/plugins/start/nvim-lspconfig
 	url = git@github.com:neovim/nvim-lspconfig.git
@@ -238,10 +234,6 @@
 	path = pack/plugins/start/telescope-live-grep-args.nvim
 	url = git@github.com:nvim-telescope/telescope-live-grep-args.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/neovim-rust"]
-	path = pack/plugins/start/neovim-rust
-	url = git@github.com:Shatur/neovim-rust.git
-	ignore = dirty
 [submodule "pack/plugins/start/crates.nvim"]
 	path = pack/plugins/start/crates.nvim
 	url = git@github.com:Saecki/crates.nvim.git
@@ -270,3 +262,6 @@
 	path = pack/plugins/start/remember.nvim
 	url = git@github.com:vladdoster/remember.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/neovim-tasks"]
+	path = pack/plugins/start/neovim-tasks
+	url = git@github.com:Shatur/neovim-tasks.git

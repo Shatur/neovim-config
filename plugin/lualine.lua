@@ -1,8 +1,7 @@
 local lualine = require('lualine')
 local colors = require('ayu.colors')
-local cmake_utils = require('cmake.utils')
-local rust_utils = require('rust.utils')
 local lsp_status = require('lsp-status')
+local tasks_runner = require('tasks.runner')
 
 -- Left sections
 local pad = {
@@ -86,26 +85,14 @@ local status = {
 -- Right sections
 local task = {
   function()
-    local command = nil
-    if cmake_utils.last_job and not cmake_utils.last_job.is_shutdown then
-      command = cmake_utils.last_job.command
-    end
-    if rust_utils.last_job and not rust_utils.last_job.is_shutdown then
-      command = rust_utils.last_job.command
-    end
-
-    if command then
-      return 'Running ' .. command
+    local current_job_name = tasks_runner.get_current_job_name()
+    if current_job_name then
+      return 'Running ' .. current_job_name
     end
     return ''
   end,
   icon = '',
   color = { fg = colors.tag },
-}
-
-local dap = {
-  require('dap').status,
-  color = { fg = colors.regexp },
 }
 
 local gitsigns_head = {
@@ -158,7 +145,7 @@ lualine.setup({
     lualine_z = {},
     -- Will be filled later
     lualine_c = { pad, mode, filetype, filename, 'location', multiple_cursros, diagnostics, status },
-    lualine_x = { task, dap, gitsigns_head, diff, encoding, fileformat },
+    lualine_x = { task, gitsigns_head, diff, encoding, fileformat },
   },
   inactive_sections = {
     -- Remove the defaults
