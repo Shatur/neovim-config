@@ -47,6 +47,10 @@ local filetype = {
 local filename = {
   'filename',
   color = { fg = colors.keyword, gui = 'bold' },
+  symbols = {
+    modified = '',
+    readonly = '',
+  },
 }
 
 local multiple_cursros = {
