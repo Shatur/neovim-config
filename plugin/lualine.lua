@@ -4,12 +4,6 @@ local lsp_status = require('lsp-status')
 local tasks_runner = require('tasks.runner')
 
 -- Left sections
-local pad = {
-  function() return '▊' end,
-  color = { fg = colors.tag },
-  padding = { left = 0, right = 1 }, -- We don't need space before this
-}
-
 local mode = {
   function()
     local modes = {
@@ -37,16 +31,17 @@ local mode = {
 
     local mode = modes[vim.api.nvim_get_mode().mode]
     vim.api.nvim_set_hl(0, 'LualineMode', { fg = mode.color, bg = colors.panel_border, bold = true })
-    return mode.name
+    return '▊ ' .. mode.name
   end,
   color = 'LualineMode',
-  padding = { left = 0 },
+  padding = { left = 0, right = 1 },
 }
 
 local filetype = {
   'filetype',
   colored = true,
   icon_only = true,
+  padding = { left = 1, right = 0 },
 }
 
 local filename = {
@@ -138,22 +133,18 @@ lualine.setup({
     theme = 'ayu',
   },
   sections = {
-    -- Remove the defaults
     lualine_a = {},
     lualine_b = {},
     lualine_y = {},
     lualine_z = {},
-    -- Will be filled later
-    lualine_c = { pad, mode, filetype, filename, 'location', multiple_cursros, diagnostics, status },
+    lualine_c = { mode, filetype, filename, 'location', multiple_cursros, diagnostics, status },
     lualine_x = { task, gitsigns_head, diff, encoding, fileformat },
   },
   inactive_sections = {
-    -- Remove the defaults
     lualine_a = {},
     lualine_v = {},
     lualine_y = {},
     lualine_z = {},
-    -- Will be filled later
     lualine_c = { filetype, filename, 'location', multiple_cursros, diagnostics, status },
     lualine_x = { diff, encoding, fileformat },
   },
