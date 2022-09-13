@@ -5,35 +5,34 @@ local tasks_runner = require('tasks.runner')
 
 -- Left sections
 local mode = {
-  function()
-    local modes = {
-      n = { color = colors.entity, name = 'NORMAL' },
-      i = { color = colors.string, name = 'INSERT' },
-      v = { color = colors.accent, name = 'VISUAL' },
-      [''] = { color = colors.accent, name = 'VISUAL BLOCK' },
-      V = { color = colors.accent, name = 'VISUAL LINE' },
-      c = { color = colors.markup, name = 'COMMAND' },
-      no = { color = colors.entity, name = 'NORMAL' },
-      s = { color = colors.keyword, name = 'SELECT' },
-      S = { color = colors.keyword, name = 'SELECT LINE' },
-      [''] = { color = colors.keyword, name = 'SELECT BLOCK' },
-      ic = { color = colors.special, name = 'COMPLETION' },
-      R = { color = colors.tag, name = 'REPLACE' },
-      Rv = { color = colors.tag, name = 'REPLACE' },
-      cv = { color = colors.error, name = 'EX' },
-      ce = { color = colors.error, name = 'NORMAL EX' },
-      r = { color = colors.regexp, name = 'PROMPT' },
-      rm = { color = colors.regexp, name = 'PROMPT' },
-      ['r?'] = { color = colors.regexp, name = 'CONFIRM' },
-      ['!'] = { color = colors.constant, name = 'SHELL' },
-      t = { color = colors.constant, name = 'TERMINAL' },
+  'mode',
+  fmt = function(mode) return '▊ ' .. mode end,
+  color = function()
+    local mode_colors = {
+      n = colors.entity,
+      i = colors.string,
+      v = colors.accent,
+      [''] = colors.accent,
+      V = colors.accent,
+      c = colors.markup,
+      no = colors.entity,
+      s = colors.keyword,
+      S = colors.keyword,
+      [''] = colors.keyword,
+      ic = colors.special,
+      R = colors.tag,
+      Rv = colors.tag,
+      cv = colors.error,
+      ce = colors.error,
+      r = colors.regexp,
+      rm = colors.regexp,
+      ['r?'] = colors.regexp,
+      ['!'] = colors.constant,
+      t = colors.constant,
     }
-
-    local mode = modes[vim.api.nvim_get_mode().mode]
-    vim.api.nvim_set_hl(0, 'LualineMode', { fg = mode.color, bg = colors.panel_border, bold = true })
-    return '▊ ' .. mode.name
+    local mode = vim.api.nvim_get_mode().mode
+    return { fg = mode_colors[mode], bg = colors.panel_border, gui = 'bold' }
   end,
-  color = 'LualineMode',
   padding = { left = 0, right = 1 },
 }
 
