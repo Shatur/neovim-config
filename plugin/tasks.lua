@@ -31,8 +31,18 @@ end, { noremap = true, desc = 'Cancel last task' })
 local key_index = 5
 for _, task_name in ipairs({ 'debug', 'run', 'test', 'build' }) do
   vim.keymap.set({ '', 'i' }, string.format('<F%d>', key_index), function() tasks.start('auto', task_name) end, { noremap = true, desc = string.format('Run %s task', task_name) })
-  vim.keymap.set({ '', 'i' }, string.format('<S-F%d>', key_index), function() tasks.set_task_param('auto', task_name, 'args') end, { noremap = true, desc = string.format('Set args for %s task', task_name) })
-  vim.keymap.set({ '', 'i' }, string.format('<A-F%d>', key_index), function() tasks.set_task_param('auto', task_name, 'env') end, { noremap = true, desc = string.format('Set env for %s task', task_name) })
+  vim.keymap.set(
+    { '', 'i' },
+    string.format('<S-F%d>', key_index),
+    function() tasks.set_task_param('auto', task_name, 'args') end,
+    { noremap = true, desc = string.format('Set args for %s task', task_name) }
+  )
+  vim.keymap.set(
+    { '', 'i' },
+    string.format('<A-F%d>', key_index),
+    function() tasks.set_task_param('auto', task_name, 'env') end,
+    { noremap = true, desc = string.format('Set env for %s task', task_name) }
+  )
   key_index = key_index + 1
 end
 
