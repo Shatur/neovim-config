@@ -103,10 +103,6 @@ vim.keymap.set('c', '<C-e>', '<End>', { noremap = true })
 vim.keymap.set('c', '<A-b>', '<C-Left>', { noremap = true })
 vim.keymap.set('c', '<A-f>', '<C-Right>', { noremap = true })
 
--- Do not exit visual mode on shift
-vim.keymap.set('v', '<', '<gv', { noremap = true })
-vim.keymap.set('v', '>', '>gv', { noremap = true })
-
 -- Change directory into the current file folder
 vim.keymap.set('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true })
 
