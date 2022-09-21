@@ -102,8 +102,6 @@ vim.keymap.set('c', '<C-a>', '<Home>', { noremap = true })
 vim.keymap.set('c', '<C-e>', '<End>', { noremap = true })
 vim.keymap.set('c', '<A-b>', '<C-Left>', { noremap = true })
 vim.keymap.set('c', '<A-f>', '<C-Right>', { noremap = true })
-vim.keymap.set('c', '<C-k>', '<C-\\>e(strpart(getcmdline(), 0, getcmdpos() - 1))<CR>', { noremap = true })
-vim.keymap.set('c', '<C-l>', '<C-\\>e("")<CR>', { noremap = true })
 
 -- Do not exit visual mode on shift
 vim.keymap.set('v', '<', '<gv', { noremap = true })
