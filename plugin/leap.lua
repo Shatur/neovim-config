@@ -1,10 +1,2 @@
 local leap = require('leap')
-local leap_util = require('leap')
-
-vim.keymap.set({ 'n', 'x' }, 's', function() leap.leap({}) end, { noremap = true })
-vim.keymap.set({ 'n', 'x' }, 'S', function() leap.leap({ backward = true }) end, { noremap = true })
-vim.keymap.set('o', 'z', function() leap.leap({}) end, { noremap = true })
-vim.keymap.set('o', 'Z', function() leap.leap({ backward = true }) end, { noremap = true })
-vim.keymap.set('o', 'x', function() leap.leap({ offset = 1, inclusive_op = true }) end, { noremap = true })
-vim.keymap.set('o', 'X', function() leap.leap({ offset = 2, backward = true }) end, { noremap = true })
-vim.keymap.set({ 'n', 'x', 'o' }, 'gs', function() leap.leap({ target_windows = leap_util.get_enterable_windows() }) end, { noremap = true })
+leap.set_default_keymaps()

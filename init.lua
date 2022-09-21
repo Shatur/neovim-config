@@ -43,71 +43,63 @@ vim.g.no_gitrebase_maps = false
 
 -- Remap useless keys
 vim.g.mapleader = ' '
-vim.keymap.set({ 'n', 'v' }, '<CR>', ':', { noremap = true })
+vim.keymap.set({ 'n', 'v' }, '<CR>', ':', { noremap = true, desc = 'Enter command line mode' })
 
--- Remap increase / decrease number shortucts to + and - signs
-vim.keymap.set('n', '<C-=>', '<C-a>', { noremap = true })
-vim.keymap.set('n', '<C-->', '<C-x>', { noremap = true })
-
--- ..and use <C-a> to select all
-vim.keymap.set('', '<C-a>', 'gg0vG$', { noremap = true })
-vim.keymap.set({ 'v', 'i' }, '<C-a>', '<Esc>gg0vG$', { noremap = true })
+-- Increment / decrement
+vim.keymap.set('n', '<C-=>', '<C-a>', { noremap = true, desc = 'Decrease number' })
+vim.keymap.set('n', '<C-->', '<C-x>', { noremap = true, desc = 'Increase number' })
 
 -- Movement around wrapped lines
-vim.keymap.set('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true })
-vim.keymap.set('n', 'k', 'v:count ? "k" : "gk"', { noremap = true, expr = true })
-vim.keymap.set('n', '<Up>', 'v:count ? "<Up>" : "g<Up>"', { noremap = true, expr = true })
-vim.keymap.set('n', '<Down>', 'v:count ? "<Down>" : "g<Down>"', { noremap = true, expr = true })
-vim.keymap.set('i', '<Up>', 'pumvisible() ? "<Up>" : "<C-o>g<UP>"', { noremap = true, expr = true })
-vim.keymap.set('i', '<Down>', 'pumvisible() ? "<Down>" : "<C-o>g<Down>"', { noremap = true, expr = true })
+vim.keymap.set('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true, desc = 'Move down (including wrapping lines)' })
+vim.keymap.set('n', 'k', 'v:count ? "k" : "gk"', { noremap = true, expr = true, desc = 'Move up (including wrapping lines)' })
+vim.keymap.set('n', '<Up>', 'v:count ? "<Up>" : "g<Up>"', { noremap = true, expr = true, desc = 'Move up (including wrapping lines)' })
+vim.keymap.set('n', '<Down>', 'v:count ? "<Down>" : "g<Down>"', { noremap = true, expr = true, desc = 'Move down (including wrapping lines)' })
+vim.keymap.set('i', '<Up>', 'pumvisible() ? "<Up>" : "<C-o>g<UP>"', { noremap = true, expr = true, desc = 'Move up (including wrapping lines)' })
+vim.keymap.set('i', '<Down>', 'pumvisible() ? "<Down>" : "<C-o>g<Down>"', { noremap = true, expr = true, desc = 'Move down (including wrapping lines)' })
 
 -- Split navigation
-vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-w>h', { noremap = true })
-vim.keymap.set('t', '<C-j>', '<C-\\><C-n><C-w>j', { noremap = true })
-vim.keymap.set('t', '<C-k>', '<C-\\><C-n><C-w>k', { noremap = true })
-vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-w>l', { noremap = true })
-vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true })
-vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true })
-vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true })
-vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true })
-vim.keymap.set('i', '<C-h>', '<C-o><C-w>h', { noremap = true })
-vim.keymap.set('i', '<C-j>', '<C-o><C-w>j', { noremap = true })
-vim.keymap.set('i', '<C-k>', '<C-o><C-w>k', { noremap = true })
-vim.keymap.set('i', '<C-l>', '<C-o><C-w>l', { noremap = true })
+vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-w>h', { noremap = true, desc = 'Go to left window' })
+vim.keymap.set('t', '<C-j>', '<C-\\><C-n><C-w>j', { noremap = true, desc = 'Go to window below' })
+vim.keymap.set('t', '<C-k>', '<C-\\><C-n><C-w>k', { noremap = true, desc = 'Go to window above' })
+vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-w>l', { noremap = true, desc = 'Go to right window' })
+vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, desc = 'Go to left window' })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, desc = 'Go to window below' })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, desc = 'Go to window above' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, desc = 'Go to right window' })
+vim.keymap.set('i', '<C-h>', '<C-o><C-w>h', { noremap = true, desc = 'Go to left window' })
+vim.keymap.set('i', '<C-j>', '<C-o><C-w>j', { noremap = true, desc = 'Go to window below' })
+vim.keymap.set('i', '<C-k>', '<C-o><C-w>k', { noremap = true, desc = 'Go to window above' })
+vim.keymap.set('i', '<C-l>', '<C-o><C-w>l', { noremap = true, desc = 'Go to right window' })
 
 -- Quickfix history navigation
-vim.keymap.set('', ']h', '<Cmd>cnewer<CR>', { noremap = true })
-vim.keymap.set('', '[h', '<Cmd>colder<CR>', { noremap = true })
+vim.keymap.set('', ']h', '<Cmd>cnewer<CR>', { noremap = true, desc = 'Go to newer error list' })
+vim.keymap.set('', '[h', '<Cmd>colder<CR>', { noremap = true, desc = 'Go to older error list' })
 
 -- Make behavior more like in common editors
-vim.keymap.set({ '', 'i' }, '<C-s>', '<Cmd>write<CR>', { noremap = true })
-vim.keymap.set('i', '<C-z>', '<C-o>u', { noremap = true })
-vim.keymap.set('i', '<C-v>', '<C-g>u<Cmd>set paste<CR><C-r>+<Cmd>set nopaste<CR>', { noremap = true })
-vim.keymap.set('c', '<C-v>', '<C-r>+', { noremap = true })
-vim.keymap.set('t', '<C-v>', '<C-\\><C-N>pi', { noremap = true })
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
-vim.keymap.set('i', '<S-Left>', '<Esc>vb', { noremap = true })
-vim.keymap.set('i', '<S-Right>', '<Esc>ve', { noremap = true })
+vim.keymap.set({ '', 'i' }, '<C-s>', '<Cmd>write<CR>', { noremap = true, desc = 'Save' })
+vim.keymap.set('i', '<C-z>', '<C-o>u', { noremap = true, desc = 'Undo' })
+vim.keymap.set('i', '<C-v>', '<C-g>u<Cmd>set paste<CR><C-r>+<Cmd>set nopaste<CR>', { noremap = true, desc = 'Paste' })
+vim.keymap.set('c', '<C-v>', '<C-r>+', { noremap = true, desc = 'Paste' })
+vim.keymap.set('t', '<C-v>', '<C-\\><C-N>pi', { noremap = true, desc = 'Paste' })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, desc = 'Go back to normal mode' })
+vim.keymap.set('i', '<S-Left>', '<Esc>vb', { noremap = true, desc = 'Select character left' })
+vim.keymap.set('i', '<S-Right>', '<Esc>ve', { noremap = true, desc = 'Select character right' })
+vim.keymap.set('', '<C-a>', 'gg0vG$', { noremap = true, desc = 'Select all' })
+vim.keymap.set({ 'v', 'i' }, '<C-a>', '<Esc>gg0vG$', { noremap = true, desc = 'Select all' })
 
 -- Move lines
-vim.keymap.set('n', '<A-j>', '<Cmd>move+1<CR>==', { noremap = true })
-vim.keymap.set('n', '<A-k>', '<Cmd>move-2<CR>==', { noremap = true })
-vim.keymap.set('i', '<A-j>', '<Esc><Cmd>move+1<CR>==gi', { noremap = true })
-vim.keymap.set('i', '<A-k>', '<Esc><Cmd>move-2<CR>==gi', { noremap = true })
-vim.keymap.set('v', '<A-j>', "<Esc><Cmd>'<,'>move'>+1<CR>gv=gv", { noremap = true })
-vim.keymap.set('v', '<A-k>', "<Esc><Cmd>'<,'>move'<-2<CR>gv=gv", { noremap = true })
+vim.keymap.set('n', '<A-j>', '<Cmd>move+1<CR>==', { noremap = true, desc = 'Move line down' })
+vim.keymap.set('n', '<A-k>', '<Cmd>move-2<CR>==', { noremap = true, desc = 'Move line up' })
+vim.keymap.set('i', '<A-j>', '<Esc><Cmd>move+1<CR>==gi', { noremap = true, desc = 'Move line down' })
+vim.keymap.set('i', '<A-k>', '<Esc><Cmd>move-2<CR>==gi', { noremap = true, desc = 'Move line up' })
+vim.keymap.set('v', '<A-j>', "<Esc><Cmd>'<,'>move'>+1<CR>gv=gv", { noremap = true, desc = 'Move lines down' })
+vim.keymap.set('v', '<A-k>', "<Esc><Cmd>'<,'>move'<-2<CR>gv=gv", { noremap = true, desc = 'Move lines up' })
 
 -- Cmdline shortcuts
-vim.keymap.set('c', '<C-a>', '<Home>', { noremap = true })
-vim.keymap.set('c', '<C-e>', '<End>', { noremap = true })
-vim.keymap.set('c', '<A-b>', '<C-Left>', { noremap = true })
-vim.keymap.set('c', '<A-f>', '<C-Right>', { noremap = true })
-
--- Change directory into the current file folder
-vim.keymap.set('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true })
-
--- Back to the previous buffer
-vim.keymap.set('', '<Backspace>', '<Cmd>buffer #<CR>', { noremap = true })
+vim.keymap.set('c', '<C-a>', '<Home>', { noremap = true, desc = 'Go to beginning' })
+vim.keymap.set('c', '<C-e>', '<End>', { noremap = true, desc = 'Go to end' })
+vim.keymap.set('c', '<A-b>', '<C-Left>', { noremap = true, desc = 'Go to previous word' })
+vim.keymap.set('c', '<A-f>', '<C-Right>', { noremap = true, desc = 'Go to next word' })
 
 -- Tab control
 vim.keymap.set('', '<A-q>', '<Cmd>tabclose<CR>', { noremap = true })
@@ -117,7 +109,10 @@ vim.keymap.set('i', '<A-x>', '<Esc><Cmd>write<CR><Cmd>tabclose<CR>', { noremap =
 vim.keymap.set('', ']t', '<Cmd>tabnext<CR>', { noremap = true })
 vim.keymap.set('', '[t', '<Cmd>tabprevious<CR>', { noremap = true })
 
--- Autocommands
+-- Other
+vim.keymap.set('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true, desc = 'Change directory to current file folder' })
+vim.keymap.set('', '<Backspace>', '<Cmd>buffer #<CR>', { noremap = true, desc = 'Back to previous buffer' })
+
 local config_group = vim.api.nvim_create_augroup('Config', {})
 vim.api.nvim_create_autocmd({ 'TextYankPost' }, {
   group = config_group,

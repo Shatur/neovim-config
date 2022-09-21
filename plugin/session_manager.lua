@@ -7,4 +7,4 @@ session_manager.setup({
   },
 })
 
-vim.keymap.set({ '', 't', 'i' }, '<A-p>', session_manager.load_session, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<A-p>', session_manager.load_session, { noremap = true, desc = 'Load session' })

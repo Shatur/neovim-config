@@ -44,8 +44,8 @@ local function run_command(command, args)
   job:start()
 end
 
-vim.keymap.set({ '', 't', 'i' }, '<A-g>', '<Cmd>vert Git<CR>))', { noremap = true })
-vim.keymap.set('', '<Leader>gs', function() run_command('git', { 'status' }) end, { noremap = true })
-vim.keymap.set('', '<Leader>gP', function() run_command('git', { 'pull' }) end, { noremap = true })
-vim.keymap.set('', '<Leader>gp', function() run_command('git', { 'push' }) end, { noremap = true })
-vim.keymap.set('', '<Leader>gfp', function() run_command('git', { 'push', '--force' }) end, { noremap = true })
+vim.keymap.set({ '', 't', 'i' }, '<A-g>', '<Cmd>vert Git<CR>))', { noremap = true, desc = 'Open Fugitive' })
+vim.keymap.set('', '<Leader>gs', function() run_command('git', { 'status' }) end, { noremap = true, desc = 'Show git status' })
+vim.keymap.set('', '<Leader>gP', function() run_command('git', { 'pull' }) end, { noremap = true, desc = 'Git pull' })
+vim.keymap.set('', '<Leader>gp', function() run_command('git', { 'push' }) end, { noremap = true, desc = 'Git push' })
+vim.keymap.set('', '<Leader>gfp', function() run_command('git', { 'push', '--force' }) end, { noremap = true, desc = 'Git push (force)' })

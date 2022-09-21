@@ -1,13 +1,15 @@
 local neogen = require('neogen')
 local luasnip = require('luasnip')
 
-vim.keymap.set('i', '<C-f>', function()
+local function expand_or_jump()
   if neogen.jumpable() then
     neogen.jump_next()
   else
     luasnip.expand_or_jump()
   end
-end, {})
-vim.keymap.set('i', '<C-b>', function() luasnip.jump(-1) end, {})
-vim.keymap.set('s', '<C-b>', function() luasnip.jump(-1) end, {})
-vim.keymap.set('s', '<C-f>', luasnip.expand_or_jump, {})
+end
+
+for _, mode in ipairs({'s', 'i'}) do
+  vim.keymap.set(mode, '<C-f>', expand_or_jump, { desc = 'Jump to next snippet' })
+  vim.keymap.set(mode, '<C-b>', function() luasnip.jump(-1) end, { desc = 'Jump to previous snippet' })
+end

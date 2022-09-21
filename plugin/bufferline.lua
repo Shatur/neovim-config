@@ -96,15 +96,15 @@ bufferline.setup({
   },
 })
 
-vim.keymap.set('', ']b', function() bufferline.cycle(1) end, { noremap = true })
-vim.keymap.set('', '[b', function() bufferline.cycle(-1) end, { noremap = true })
+vim.keymap.set('', ']b', function() bufferline.cycle(1) end, { noremap = true, desc = 'Go to next buffer' })
+vim.keymap.set('', '[b', function() bufferline.cycle(-1) end, { noremap = true, desc = 'Go to previous buffer' })
 
-vim.keymap.set('', '<A-]>', function() bufferline.move(1) end, { noremap = true })
-vim.keymap.set('', '<A-[>', function() bufferline.move(-1) end, { noremap = true })
+vim.keymap.set('', '<A-]>', function() bufferline.move(1) end, { noremap = true, desc = 'Move current buffer right' })
+vim.keymap.set('', '<A-[>', function() bufferline.move(-1) end, { noremap = true, desc = 'Move current buffer left' })
 
 for i = 1, 9 do
-  vim.keymap.set('', string.format('<A-%d>', i), function() bufferline.go_to_buffer(i) end, { noremap = true })
+  vim.keymap.set('', string.format('<A-%d>', i), function() bufferline.go_to_buffer(i) end, { noremap = true, desc = 'Go to buffer ' .. i })
 end
 
-vim.keymap.set('', '<Leader><Tab>', bufferline.pick_buffer, { noremap = true })
-vim.keymap.set('', '<Leader><S-Tab>', bufferline.close_with_pick, { noremap = true })
+vim.keymap.set('', '<Leader><Tab>', bufferline.pick_buffer, { noremap = true, desc = 'Pick buffer to jump' })
+vim.keymap.set('', '<Leader><S-Tab>', bufferline.close_with_pick, { noremap = true, desc = 'Pick buffer to close' })

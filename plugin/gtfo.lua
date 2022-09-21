@@ -45,11 +45,11 @@ local function open_explorer(command)
   job:start()
 end
 
-vim.api.nvim_create_user_command('Explorer', open_explorer, { nargs = '*', complete = 'dir', desc = 'Open folder in system explorer' })
-vim.api.nvim_create_user_command('Terminal', open_terminal, { nargs = '*', complete = 'dir', desc = 'Open folder in system terminal' })
+vim.api.nvim_create_user_command('Explorer', open_explorer, { nargs = '*', complete = 'dir', desc = 'Open directory in system explorer' })
+vim.api.nvim_create_user_command('Terminal', open_terminal, { nargs = '*', complete = 'dir', desc = 'Open directory in system terminal' })
 
-vim.keymap.set('', 'goF', open_explorer, { noremap = true })
-vim.keymap.set('', 'goT', open_terminal, { noremap = true })
+vim.keymap.set('', 'goF', open_explorer, { noremap = true, desc = 'Open current directory in system explorer' })
+vim.keymap.set('', 'goT', open_terminal, { noremap = true, desc = 'Open current directory in system terminal' })
 
-vim.keymap.set('', 'got', function() open_terminal({ args = vim.fn.expand('%:h') }) end, { noremap = true })
-vim.keymap.set('', 'gof', function() open_explorer({ args = vim.fn.expand('%:h') }) end, { noremap = true })
+vim.keymap.set('', 'got', function() open_terminal({ args = vim.fn.expand('%:h') }) end, { noremap = true, desc = 'Open current file directory in system explorer' })
+vim.keymap.set('', 'gof', function() open_explorer({ args = vim.fn.expand('%:h') }) end, { noremap = true, desc = 'Open current file directory in system terminal' })

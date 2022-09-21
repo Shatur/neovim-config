@@ -48,4 +48,4 @@ require('neo-tree').setup({
 })
 
 local neo_tree_command = require('neo-tree.command')
-vim.keymap.set('', '<A-f>', function() neo_tree_command.execute({ reveal = true }) end, { noremap = true })
+vim.keymap.set('', '<A-f>', function() neo_tree_command.execute({ reveal = true }) end, { noremap = true, desc = 'Toggle file tree' })
