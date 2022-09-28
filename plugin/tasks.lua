@@ -29,7 +29,7 @@ vim.keymap.set({ '', 'i' }, '<C-BS>', function()
 end, { noremap = true, desc = 'Cancel last task' })
 
 local key_index = 5
-for _, task_name in ipairs({ 'debug', 'run', 'test', 'build' }) do
+for _, task_name in ipairs({ 'run', 'test', 'build' }) do
   vim.keymap.set({ '', 'i' }, string.format('<F%d>', key_index), function() tasks.start('auto', task_name) end, { noremap = true, desc = string.format('Run %s task', task_name) })
   vim.keymap.set(
     { '', 'i' },
@@ -46,9 +46,13 @@ for _, task_name in ipairs({ 'debug', 'run', 'test', 'build' }) do
   key_index = key_index + 1
 end
 
-vim.keymap.set({ '', 'i' }, '<C-F6>', function() tasks.set_module_param('auto', 'target') end, { noremap = true, desc = 'Select CMake target' })
-vim.keymap.set({ '', 'i' }, '<C-F8>', function() tasks.set_module_param('auto', 'build') end, { noremap = true, desc = 'Select CMake build type' })
+vim.keymap.set({ '', 'i' }, '<C-F5>', function() tasks.start('auto', 'debug') end, { noremap = true, desc = 'Run debug task' })
+vim.keymap.set({ '', 'i' }, '<C-F6>', function() tasks.start('auto', 'debug_test') end, { noremap = true, desc = 'Run debug_test task' })
 
-vim.keymap.set({ '', 'i' }, '<F9>', function() tasks.start('auto', 'configure') end, { noremap = true, desc = 'Run CMake configure task' })
+vim.keymap.set({ '', 'i' }, '<F8>', function() tasks.start('auto', 'configure') end, { noremap = true, desc = 'Run CMake configure task' })
+vim.keymap.set({ '', 'i' }, '<C-F8>', function() tasks.set_module_param('auto', 'target') end, { noremap = true, desc = 'Select CMake target' })
+vim.keymap.set({ '', 'i' }, '<S-F8>', function() tasks.set_module_param('auto', 'build') end, { noremap = true, desc = 'Select CMake build type' })
+
+vim.keymap.set({ '', 'i' }, '<F9>', function() tasks.start('auto', 'check') end, { noremap = true, desc = 'Run Cargo check task' })
 vim.keymap.set({ '', 'i' }, '<S-F9>', function() tasks.start('auto', 'clippy') end, { noremap = true, desc = 'Run Cargo clippy task' })
-vim.keymap.set({ '', 'i' }, '<A-F9>', function() tasks.start('auto', 'clean') end, { noremap = true, desc = 'Run CMake clean task' })
+vim.keymap.set({ '', 'i' }, '<A-F9>', function() tasks.start('auto', 'clean') end, { noremap = true, desc = 'Run clean task' })
