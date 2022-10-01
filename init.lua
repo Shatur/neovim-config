@@ -75,11 +75,11 @@ vim.keymap.set('i', '<C-k>', '<C-o><C-w>k', { noremap = true, desc = 'Go to wind
 vim.keymap.set('i', '<C-l>', '<C-o><C-w>l', { noremap = true, desc = 'Go to right window' })
 
 -- Quickfix history navigation
-vim.keymap.set('', ']h', '<Cmd>cnewer<CR>', { noremap = true, desc = 'Go to newer error list' })
-vim.keymap.set('', '[h', '<Cmd>colder<CR>', { noremap = true, desc = 'Go to older error list' })
+vim.keymap.set('', ']h', vim.cmd.cnewer, { noremap = true, desc = 'Go to newer error list' })
+vim.keymap.set('', '[h', vim.cmd.colder, { noremap = true, desc = 'Go to older error list' })
 
 -- Make behavior more like in common editors
-vim.keymap.set({ '', 'i' }, '<C-s>', '<Cmd>write<CR>', { noremap = true, desc = 'Save' })
+vim.keymap.set({ '', 'i' }, '<C-s>', vim.cmd.write, { noremap = true, desc = 'Save' })
 vim.keymap.set('i', '<C-z>', '<C-o>u', { noremap = true, desc = 'Undo' })
 vim.keymap.set('i', '<C-v>', '<C-g>u<Cmd>set paste<CR><C-r>+<Cmd>set nopaste<CR>', { noremap = true, desc = 'Paste' })
 vim.keymap.set('c', '<C-v>', '<C-r>+', { noremap = true, desc = 'Paste' })
@@ -105,12 +105,12 @@ vim.keymap.set('c', '<A-b>', '<C-Left>', { noremap = true, desc = 'Go to previou
 vim.keymap.set('c', '<A-f>', '<C-Right>', { noremap = true, desc = 'Go to next word' })
 
 -- Tab control
-vim.keymap.set('', '<A-q>', '<Cmd>tabclose<CR>', { noremap = true })
+vim.keymap.set('', '<A-q>', vim.cmd.tabclose, { noremap = true })
 vim.keymap.set({ 'i', 't' }, '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true })
 vim.keymap.set('', '<A-x>', '<Cmd>write<CR><Cmd>tabclose<CR>', { noremap = true })
 vim.keymap.set('i', '<A-x>', '<Esc><Cmd>write<CR><Cmd>tabclose<CR>', { noremap = true })
-vim.keymap.set('', ']t', '<Cmd>tabnext<CR>', { noremap = true })
-vim.keymap.set('', '[t', '<Cmd>tabprevious<CR>', { noremap = true })
+vim.keymap.set('', ']t', vim.cmd.tabnext, { noremap = true })
+vim.keymap.set('', '[t', vim.cmd.tabprevious, { noremap = true })
 
 -- Other
 vim.keymap.set('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true, desc = 'Change directory to current file folder' })
