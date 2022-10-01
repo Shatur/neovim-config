@@ -22,10 +22,10 @@ local function setup_lsp_keymaps(client, buffer)
   vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { noremap = true, buffer = buffer, desc = 'Rename symbol' })
 
   -- Set some keybinds conditional on server capabilities
-  if client.resolved_capabilities.document_formatting then
+  if client.server_capabilities.document_formatting then
     vim.keymap.set('n', '<A-=>', vim.lsp.buf.formatting, { noremap = true, buffer = buffer, desc = 'Format document' })
   end
-  if client.resolved_capabilities.document_range_formatting then
+  if client.server_capabilities.document_range_formatting then
     vim.keymap.set('v', '<A-=>', vim.lsp.buf.range_formatting, { noremap = true, buffer = buffer, desc = 'Format selection' })
   end
 end
@@ -57,7 +57,7 @@ lspconfig.sumneko_lua.setup({
   cmd = { 'lua-language-server' },
   on_attach = function(client, buffer)
     setup_lsp_keymaps(client, buffer)
-    client.resolved_capabilities.document_formatting = false -- Use stylua instead
+    client.server_capabilities.document_formatting = false -- Use stylua instead
   end,
   capabilities = capabilities,
   settings = {
