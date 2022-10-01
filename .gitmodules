@@ -30,10 +30,6 @@
 	path = pack/plugins/start/vim-cool
 	url = git@github.com:romainl/vim-cool.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-visual-star-search"]
-	path = pack/plugins/start/vim-visual-star-search
-	url = git@github.com:bronson/vim-visual-star-search.git
-	ignore = dirty
 [submodule "pack/plugins/start/vim-eunuch"]
 	path = pack/plugins/start/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
