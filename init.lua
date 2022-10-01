@@ -49,8 +49,8 @@ vim.keymap.set('n', '<C-=>', '<C-a>', { noremap = true, desc = 'Decrease number'
 vim.keymap.set('n', '<C-->', '<C-x>', { noremap = true, desc = 'Increase number' })
 vim.keymap.set('v', '<C-=>', '<C-a>', { noremap = true, desc = 'Decrease number' })
 vim.keymap.set('v', '<C-->', '<C-x>', { noremap = true, desc = 'Increase number' })
-vim.keymap.set('v', 'g<C-=>', 'g<C-a>', { noremap = true, desc = 'Columen decrease number' })
-vim.keymap.set('v', 'g<C-->', 'g<C-x>', { noremap = true, desc = 'Columen increase number' })
+vim.keymap.set('v', 'g<C-=>', 'g<C-a>', { noremap = true, desc = 'Column decrease number' })
+vim.keymap.set('v', 'g<C-->', 'g<C-x>', { noremap = true, desc = 'Column increase number' })
 
 -- Movement around wrapped lines
 vim.keymap.set('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true, desc = 'Move down (including wrapping lines)' })
