@@ -9,6 +9,7 @@ vim.o.lazyredraw = true
 vim.o.linebreak = true
 vim.o.splitright = true
 vim.o.spelllang = 'en_us,ru_ru'
+vim.o.spell = true
 vim.o.number = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
