@@ -6,7 +6,6 @@ require('nvim-treesitter.configs').setup({
     'comment',
     'cpp',
     'dockerfile',
-    'help',
     'html',
     'json',
     'lua',
