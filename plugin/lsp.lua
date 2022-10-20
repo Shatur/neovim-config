@@ -31,7 +31,7 @@ lsp_status.config({
 })
 lsp_status.register_progress()
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(lsp_status.capabilities)
+local capabilities = require('cmp_nvim_lsp').default_capabilities(lsp_status.capabilities)
 
 -- Language servers configuration
 lspconfig.clangd.setup({
