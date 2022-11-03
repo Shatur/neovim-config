@@ -29,6 +29,7 @@ vim.o.signcolumn = 'yes' -- Always show the signcolum, otherwise it would shift 
 vim.o.updatetime = 100 -- To show git changes often
 vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
 vim.o.formatoptions = vim.bo.formatoptions:gsub('cro', '')
+vim.o.scrolloff = 10
 
 if vim.fn.has('unix') == 1 then
   vim.o.guifont = 'FiraCode Nerd Font Mono' -- Fonts on Windows set in ginit to avoid metrics error in Neovim Qt
