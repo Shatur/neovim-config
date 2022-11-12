@@ -50,8 +50,8 @@ vim.keymap.set({ '', 'i' }, '<C-F5>', function() tasks.start('auto', 'debug') en
 vim.keymap.set({ '', 'i' }, '<C-F6>', function() tasks.start('auto', 'debug_test') end, { noremap = true, desc = 'Run debug_test task' })
 
 vim.keymap.set({ '', 'i' }, '<F8>', function() tasks.start('auto', 'configure') end, { noremap = true, desc = 'Run CMake configure task' })
-vim.keymap.set({ '', 'i' }, '<C-F8>', function() tasks.set_module_param('auto', 'target') end, { noremap = true, desc = 'Select CMake target' })
 vim.keymap.set({ '', 'i' }, '<S-F8>', function() tasks.set_module_param('auto', 'build') end, { noremap = true, desc = 'Select CMake build type' })
+vim.keymap.set({ '', 'i' }, '<A-F8>', function() tasks.set_module_param('auto', 'target') end, { noremap = true, desc = 'Select CMake target' })
 
 vim.keymap.set({ '', 'i' }, '<F9>', function() tasks.start('auto', 'check') end, { noremap = true, desc = 'Run Cargo check task' })
 vim.keymap.set({ '', 'i' }, '<S-F9>', function() tasks.start('auto', 'clippy') end, { noremap = true, desc = 'Run Cargo clippy task' })
