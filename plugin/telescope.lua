@@ -41,6 +41,9 @@ telescope.setup({
       theme = 'dropdown',
       hidden = true,
     },
+    git_files = {
+      theme = 'dropdown',
+    },
     git_branches = {
       theme = 'dropdown',
       pattern = '--sort=-committerdate',
@@ -100,10 +103,17 @@ vim.keymap.set({ '', 't', 'i' }, '<C-Tab>', telescope_builtin.buffers, { noremap
 vim.keymap.set({ '', 't', 'i' }, '<F1>', telescope_builtin.help_tags, { noremap = true, desc = 'Search help tags' })
 vim.keymap.set({ '', 't', 'i' }, '<A-o>', telescope_builtin.oldfiles, { noremap = true, desc = 'List previosly open files' })
 vim.keymap.set({ '', 't', 'i' }, '<A-b>', telescope_builtin.git_branches, { noremap = true, desc = 'List git branches' })
-vim.keymap.set({ '', 't', 'i' }, '<C-p>', telescope_builtin.find_files, { noremap = true, desc = 'Search for files' })
 vim.keymap.set({ '', 't', 'i' }, '<A-c>', telescope_builtin.git_commits, { noremap = true, desc = 'List git commits' })
 vim.keymap.set({ '', 't', 'i' }, '<A-s>', telescope_builtin.git_stash, { noremap = true, desc = 'List stash items' })
 vim.keymap.set({ '', 't', 'i' }, '<S-F3>', telescope_builtin.quickfix, { noremap = true, desc = 'List quickfix items' })
+
+vim.keymap.set({ '', 't', 'i' }, '<C-p>', function()
+  if vim.b.gitsigns_head then
+    telescope_builtin.git_files()
+  else
+    telescope_builtin.find_files()
+  end
+end, { noremap = true, desc = 'Search for files' })
 
 vim.keymap.set({ '', 'i' }, '<C-/>', telescope.extensions.live_grep_args.live_grep_args, { noremap = true, desc = 'Live grep' })
 vim.keymap.set('t', '<C-/>', function()
