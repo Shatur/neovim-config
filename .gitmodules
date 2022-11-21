@@ -34,10 +34,6 @@
 	path = pack/plugins/start/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
 	ignore = dirty
-[submodule "pack/plugins/start/nvim-web-devicons"]
-	path = pack/plugins/start/nvim-web-devicons
-	url = git@github.com:kyazdani42/nvim-web-devicons.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-treesitter"]
 	path = pack/plugins/start/nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
@@ -265,4 +261,8 @@
 [submodule "pack/plugins/start/presence.nvim"]
 	path = pack/plugins/start/presence.nvim
 	url = git@github.com:andweeb/presence.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/nvim-web-devicons"]
+	path = pack/plugins/start/nvim-web-devicons
+	url = git@github.com:nvim-tree/nvim-web-devicons.git
 	ignore = dirty
