@@ -29,6 +29,11 @@ local function close_buffer(command)
     return
   end
 
+  if #vim.fn.getcmdwintype() ~= 0 then
+    vim.cmd.quit()
+    return
+  end
+
   if #vim.fn.getbufinfo({ buflisted = 1 }) == 1 then
     -- Only one window left, create a new empty window
     vim.cmd.enew()
