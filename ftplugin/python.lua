@@ -1,2 +1,2 @@
-vim.api.nvim_command('setlocal colorcolumn=80')
+vim.cmd.setlocal('colorcolumn=80')
 vim.wo.wrap = false

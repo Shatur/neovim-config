@@ -31,27 +31,27 @@ local function close_buffer(command)
 
   if #vim.fn.getbufinfo({ buflisted = 1 }) == 1 then
     -- Only one window left, create a new empty window
-    vim.api.nvim_command('enew')
+    vim.cmd.enew()
     vim.bo.bufhidden = 'wipe'
   elseif vim.api.nvim_win_get_buf(0) == buffer then
     -- Preserve layout only if this is a current buffer
-    vim.api.nvim_command('bprevious')
+    vim.cmd.bprevious()
   end
 
   -- Delete the buffer if it wasn't wiped automatically (via bufhidden)
   if vim.api.nvim_buf_is_loaded(buffer) then
-    vim.api.nvim_command('bdelete' .. (bang and '!' or '') .. ' ' .. buffer)
+    vim.cmd.bdelete({ buffer, bang = bang })
   end
 end
 
 local function toggle_quickfix()
   for _, win in pairs(vim.fn.getwininfo()) do
     if win.quickfix == 1 then
-      vim.api.nvim_command('cclose')
+      vim.cmd.cclose()
       return
     end
   end
-  vim.api.nvim_command('copen')
+  vim.cmd.copen()
 end
 
 local function close_other_buffers()
@@ -76,7 +76,7 @@ vim.keymap.set({ 'i', 't' }, '<C-q>', function()
   close_buffer()
 end, { noremap = true, desc = 'Close current buffer' })
 vim.keymap.set({ '', 'i' }, '<C-x>', function()
-  vim.api.nvim_command('write')
+  vim.cmd.write()
   close_buffer()
 end, { noremap = true, desc = 'Save and close current buffer' })
 vim.keymap.set({ '', 'i' }, '<F3>', toggle_quickfix, { noremap = true, desc = 'Toggle quickfix' })

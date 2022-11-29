@@ -1,3 +1,3 @@
-vim.api.nvim_command('resize 15')
-vim.api.nvim_command('setlocal winfixheight')
+vim.cmd.resize(15)
+vim.cmd.setlocal('winfixwidth')
 vim.bo.buflisted = false
