@@ -36,6 +36,9 @@ if vim.fn.has('unix') == 1 then
   vim.o.shell = '/usr/bin/bash' -- I use fish on Linux and it slow for running internal commands
 end
 
+-- A built-in plugin to filter quickfix
+vim.cmd.packadd('cfilter')
+
 -- Disable built-in matchparen plugin (use faster lua implementation)
 vim.g.loaded_matchparen = false
 
