@@ -48,7 +48,6 @@ lspconfig.clangd.setup({
 })
 
 lspconfig.sumneko_lua.setup({
-  cmd = { 'lua-language-server' },
   on_attach = function(client, buffer)
     setup_lsp_keymaps(client, buffer)
     -- Use stylua instead
@@ -58,18 +57,8 @@ lspconfig.sumneko_lua.setup({
   capabilities = capabilities,
   settings = {
     Lua = {
-      runtime = {
-        version = 'LuaJIT',
-        path = vim.split(package.path, ';'),
-      },
       diagnostics = {
         globals = { 'vim' },
-      },
-      workspace = {
-        library = {
-          [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-          [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-        },
       },
     },
   },
