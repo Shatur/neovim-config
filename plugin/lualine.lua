@@ -1,6 +1,5 @@
 local lualine = require('lualine')
 local colors = require('ayu.colors')
-local lsp_status = require('lsp-status')
 local tasks_runner = require('tasks.runner')
 
 -- Left sections
@@ -91,11 +90,6 @@ local diagnostics = {
   },
 }
 
-local status = {
-  function() return lsp_status.status() end,
-  color = { fg = colors.func },
-}
-
 -- Right sections
 local task = {
   function()
@@ -156,7 +150,7 @@ lualine.setup({
     lualine_b = {},
     lualine_y = {},
     lualine_z = {},
-    lualine_c = { mode, filetype, filename, 'location', multiple_cursros, diagnostics, status },
+    lualine_c = { mode, filetype, filename, 'location', multiple_cursros, diagnostics },
     lualine_x = { task, gitsigns_head, diff, encoding, fileformat },
   },
   inactive_sections = {
@@ -164,7 +158,7 @@ lualine.setup({
     lualine_v = {},
     lualine_y = {},
     lualine_z = {},
-    lualine_c = { filetype, filename, 'location', multiple_cursros, diagnostics, status },
+    lualine_c = { filetype, filename, 'location', multiple_cursros, diagnostics },
     lualine_x = { diff, encoding, fileformat },
   },
   extensions = { 'nvim-dap-ui', 'neo-tree', 'quickfix', 'fugitive' },

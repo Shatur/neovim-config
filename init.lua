@@ -5,7 +5,6 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.title = true
 vim.o.titlestring = '%F'
 vim.o.cursorline = true
-vim.o.lazyredraw = true
 vim.o.linebreak = true
 vim.o.splitright = true
 vim.o.spelllang = 'en_us,ru_ru'

@@ -1,11 +1,8 @@
 local lspconfig = require('lspconfig')
-local lsp_status = require('lsp-status')
 local telescope_builin = require('telescope.builtin')
 local null_ls = require('null-ls')
 
-local function setup_lsp_keymaps(client, buffer)
-  lsp_status.on_attach(client)
-
+local function setup_lsp_keymaps(_, buffer)
   vim.keymap.set('n', '<C-LeftMouse>', telescope_builin.lsp_definitions, { noremap = true, buffer = buffer, desc = 'Go to definition' })
   vim.keymap.set('n', 'gd', telescope_builin.lsp_definitions, { noremap = true, buffer = buffer, desc = 'Go to definition' })
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { noremap = true, buffer = buffer, desc = 'Go to declaration' })
@@ -24,19 +21,11 @@ local function setup_lsp_keymaps(client, buffer)
   vim.keymap.set('v', '<A-=>', vim.lsp.buf.format, { noremap = true, buffer = buffer, desc = 'Format selection' })
 end
 
-lsp_status.config({
-  status_symbol = '',
-  current_function = false,
-  diagnostics = false, -- Will be displayed via lualine
-})
-lsp_status.register_progress()
-
-local capabilities = require('cmp_nvim_lsp').default_capabilities(lsp_status.capabilities)
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Language servers configuration
 lspconfig.clangd.setup({
   cmd = { 'clangd', '--cross-file-rename', '--header-insertion=never', '--suggest-missing-includes', '--pch-storage=memory' },
-  handlers = lsp_status.extensions.clangd.setup(),
   init_options = {
     clangdFileStatus = true,
   },
