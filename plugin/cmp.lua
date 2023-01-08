@@ -58,7 +58,7 @@ cmp.setup({
   formatting = {
     fields = { 'kind', 'abbr', 'menu' },
     format = function(entry, vim_item)
-      local completion_type = completion_types[entry.source.name == 'cmp_git' and 'GitHub' or vim_item.kind]
+      local completion_type = completion_types[entry.source.name == 'git' and 'GitHub' or vim_item.kind]
       vim_item.kind = completion_type.kind
       vim_item.menu = completion_type.menu
       return vim_item
