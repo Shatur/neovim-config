@@ -2,8 +2,6 @@
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.clipboard = 'unnamedplus'
-vim.o.title = true
-vim.o.titlestring = '%F'
 vim.o.cursorline = true
 vim.o.linebreak = true
 vim.o.splitright = true
