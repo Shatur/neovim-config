@@ -1,5 +1,6 @@
 local neo_tree_command = require('neo-tree.command')
 local stickybuf_util = require('stickybuf.util')
+local toggleterm = require('toggleterm')
 
 local function close_buffer(command)
   local bang = command and command.bang
@@ -13,14 +14,19 @@ local function close_buffer(command)
     return
   end
 
-  local buftype = vim.api.nvim_buf_get_option(buffer, 'buftype')
-  if buftype == 'terminal' or buftype == 'nowrite' then
+  if vim.api.nvim_buf_get_option(buffer, 'buftype') == 'nowrite' then
     vim.api.nvim_buf_delete(buffer, { force = true })
     return
   end
 
-  if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'neo-tree' then
+  local filetype = vim.api.nvim_buf_get_option(buffer, 'filetype')
+  if filetype == 'neo-tree' then
     neo_tree_command.execute({ action = 'close' })
+    return
+  end
+
+  if filetype == 'toggleterm' then
+    toggleterm.toggle(1)
     return
   end
 
