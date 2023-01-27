@@ -1,5 +1,7 @@
 local Job = require('plenary.job')
 
+vim.g.fugitive_legacy_commands = false
+
 local function run_command(command, args)
   local title = 'Running ' .. command .. ' ' .. table.concat(args, ' ')
   local output = ''
