@@ -23,7 +23,7 @@ cmake -S . -B build -D CMAKE_BUILD_TYPE=Release && cmake --build build --config 
 **Arch Linux**
 
 ```bash
-paru -S ripgrep nerd-fonts-fira-code lua-language-server clang cmake-language-server stylua github-cli python-lsp-server
+paru -S ripgrep nerd-fonts-fira-code rust-analyzer lua-language-server clang cmake-language-server stylua github-cli python-lsp-server
 ```
 
 **Windows**
@@ -31,6 +31,6 @@ paru -S ripgrep nerd-fonts-fira-code lua-language-server clang cmake-language-se
 ```bash
 scoop bucket add nerd-fonts
 scoop bucket add extras
-sudo scoop install -g ripgrep llvm FiraCode-NF-Mono windows-terminal gh python pwsh
+sudo scoop install -g ripgrep rustup llvm FiraCode-NF-Mono windows-terminal gh python pwsh
 pip install cmake-language-server python-lsp-server
 ```
