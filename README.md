@@ -5,7 +5,7 @@
 **Linux**
 
 ```bash
-git clone --recursive git@github.com:Shatur95/neovim-config.git ~/.config/nvim
+git clone --recursive git@github.com:Shatur/neovim-config.git ~/.config/nvim
 cd ~/.config/nvim/pack/plugins/start/telescope-fzf-native.nvim
 cmake -S . -B build -D CMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build
 ```
@@ -13,7 +13,7 @@ cmake -S . -B build -D CMAKE_BUILD_TYPE=Release && cmake --build build --config 
 **Windows**
 
 ```bash
-git clone --recursive git@github.com:Shatur95/neovim-config.git $env:LOCALAPPDATA/nvim
+git clone --recursive git@github.com:Shatur/neovim-config.git $env:LOCALAPPDATA/nvim
 cd $env:LOCALAPPDATA/nvim/pack/plugins/start/telescope-fzf-native.nvim
 cmake -S . -B build -D CMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build
 ```
