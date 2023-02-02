@@ -36,8 +36,8 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'crates' },
-    { name = 'buffer' },
     { name = 'git' },
+    { name = 'buffer' },
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
