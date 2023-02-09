@@ -118,10 +118,6 @@
 	path = pack/plugins/start/toggleterm.nvim
 	url = https://github.com/akinsho/toggleterm.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/luv-vimdocs"]
-	path = pack/plugins/start/luv-vimdocs
-	url = https://github.com/nanotee/luv-vimdocs.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-notify"]
 	path = pack/plugins/start/nvim-notify
 	url = git@github.com:rcarriga/nvim-notify.git
