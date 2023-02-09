@@ -103,8 +103,6 @@ vim.keymap.set('v', '<A-k>', "<Esc><Cmd>'<,'>move'<-2<CR>gv=gv", { noremap = tru
 -- Cmdline shortcuts
 vim.keymap.set('c', '<C-a>', '<Home>', { noremap = true, desc = 'Go to beginning' })
 vim.keymap.set('c', '<C-e>', '<End>', { noremap = true, desc = 'Go to end' })
-vim.keymap.set('c', '<A-b>', '<C-Left>', { noremap = true, desc = 'Go to previous word' })
-vim.keymap.set('c', '<A-f>', '<C-Right>', { noremap = true, desc = 'Go to next word' })
 
 -- Tab control
 vim.keymap.set('', '<A-q>', vim.cmd.tabclose, { noremap = true })
