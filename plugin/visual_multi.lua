@@ -7,12 +7,6 @@ vim.g.VM_leader = '<Space><Space>'
 vim.g.VM_maps = {
   ['Increase'] = '<C-=>',
   ['Decrease'] = '<C-->',
-  ['Find Subword Under'] = '<A-m>',
-  ['Find Under'] = '<A-m>',
-  ['Select All'] = '<A-a>',
-  ['Add Cursor At Pos'] = '<A-i>',
-  ['Reselect Last'] = '<A-n>',
   ['Mouse Cursor'] = '<A-LeftMouse>',
   ['Mouse Word'] = '<A-RightMouse>',
-  ['Visual All'] = '<A-a>',
 }
