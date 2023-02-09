@@ -107,7 +107,7 @@ vim.keymap.set({ '', 't' }, '<Leader>m', telescope_builtin.keymaps, { noremap = 
 vim.keymap.set({ '', 't' }, '<Leader><CR>', telescope_builtin.commands, { noremap = true, desc = 'List commands' })
 vim.keymap.set({ '', 't' }, '<Leader>t', telescope_builtin.buffers, { noremap = true, desc = 'List buffers' })
 vim.keymap.set({ '', 't', 'i' }, '<F1>', telescope_builtin.help_tags, { noremap = true, desc = 'Search help tags' })
-vim.keymap.set({ '', 't' }, '<Leader>o', telescope_builtin.oldfiles, { noremap = true, desc = 'List previosly open files' })
+vim.keymap.set({ '', 't' }, '<Leader>o', telescope_builtin.oldfiles, { noremap = true, desc = 'List previously open files' })
 vim.keymap.set({ '', 't' }, '<Leader>gb', telescope_builtin.git_branches, { noremap = true, desc = 'List git branches' })
 vim.keymap.set({ '', 't' }, '<Leader>gc', telescope_builtin.git_commits, { noremap = true, desc = 'List git commits' })
 vim.keymap.set({ '', 't' }, '<Leader>gs', telescope_builtin.git_stash, { noremap = true, desc = 'List stash items' })
