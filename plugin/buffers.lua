@@ -81,7 +81,7 @@ vim.api.nvim_create_user_command('BDeleteOther', close_other_buffers, { desc = '
 vim.keymap.set('', '<C-o>', close_other_buffers, { noremap = true, desc = 'Close other buffers' })
 vim.keymap.set('', '<A-o>', vim.cmd.tabonly, { noremap = true, desc = 'Close other tabs' })
 vim.keymap.set('', '<C-q>', close_buffer, { noremap = true, desc = 'Close current buffer' })
-vim.keymap.set({'', 'i', 'v'}, '<C-S-q>', function() close_buffer({ bang = true }) end, { noremap = true, desc = 'Force close current buffer' })
+vim.keymap.set({ '', 'i', 'v' }, '<C-S-q>', function() close_buffer({ bang = true }) end, { noremap = true, desc = 'Force close current buffer' })
 vim.keymap.set({ 'i', 't' }, '<C-q>', function()
   vim.api.nvim_input('<Esc>')
   close_buffer()
