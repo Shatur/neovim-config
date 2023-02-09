@@ -41,11 +41,11 @@ require('neo-tree').setup({
       ['l'] = 'open',
       ['<F2>'] = 'rename',
       ['/'] = '',
-      ['Y'] = 'copy_file_name',
-      ['<C-y>'] = 'copy_file_path',
+      ['<Leader>Y'] = 'copy_file_name',
+      ['<Leader>y'] = 'copy_file_path',
     },
   },
 })
 
 local neo_tree_command = require('neo-tree.command')
-vim.keymap.set('', '<A-f>', function() neo_tree_command.execute({ reveal = true }) end, { noremap = true, desc = 'Toggle file tree' })
+vim.keymap.set('', '<Leader>r', function() neo_tree_command.execute({ reveal = true }) end, { noremap = true, desc = 'Toggle file tree' })
