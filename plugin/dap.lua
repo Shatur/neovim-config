@@ -65,8 +65,8 @@ vim.keymap.set({ 'n', 'i', 'v' }, '<F11>', dap.step_into, { noremap = true, desc
 vim.keymap.set({ 'n', 'i', 'v' }, '<S-F11>', dap.step_out, { noremap = true, desc = 'Step out' })
 vim.keymap.set({ 'n', 'i', 'v' }, '<F12>', dap.continue, { noremap = true, desc = 'Debug continue' })
 vim.keymap.set({ 'n', 'i', 'v' }, '<S-F12>', dap.pause, { noremap = true, desc = 'Debug pause' })
-vim.keymap.set({ 'n', 'i', 'v' }, '<A-d>', dapui.toggle, { noremap = true, desc = 'Toggle debug interface' })
-vim.keymap.set({ 'n', 'i', 'v' }, '<A-l>', dapui.eval, { noremap = true, desc = 'Evaluate expression in debugger' })
+vim.keymap.set({ 'n', 'v' }, '<Leader>d', dapui.toggle, { noremap = true, desc = 'Toggle debug interface' })
+vim.keymap.set({ 'n', 'v' }, '<Leader>e', dapui.eval, { noremap = true, desc = 'Evaluate expression in debugger' })
 
 vim.keymap.set('n', '<Leader>b', dap.toggle_breakpoint, { noremap = true, desc = 'Toggle breakpoint' })
 vim.keymap.set('n', '<Leader>B', function()
