@@ -10,4 +10,27 @@ require('noice').setup({
     lsp_doc_border = true,
     long_message_to_split = true,
   },
+  routes = {
+    {
+      filter = {
+        event = 'msg_show',
+        find = 'written',
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = 'msg_show',
+        find = 'lines',
+      },
+      opts = { skip = true },
+    },
+    {
+      filter = {
+        event = 'msg_show',
+        find = 'ago',
+      },
+      opts = { skip = true },
+    },
+  },
 })
