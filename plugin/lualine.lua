@@ -103,6 +103,18 @@ local task = {
   color = { fg = colors.tag },
 }
 
+local lsp = {
+  function()
+    local client = vim.lsp.get_active_clients()[1]
+    if client then
+      return client.name
+    end
+    return ''
+  end,
+  icon = '',
+  color = { fg = colors.special },
+}
+
 local gitsigns_head = {
   'b:gitsigns_head',
   icon = '',
@@ -151,7 +163,7 @@ lualine.setup({
     lualine_y = {},
     lualine_z = {},
     lualine_c = { mode, filetype, filename, 'location', multiple_cursros, diagnostics },
-    lualine_x = { task, gitsigns_head, diff, encoding, fileformat },
+    lualine_x = { task, lsp, gitsigns_head, diff, encoding, fileformat },
   },
   inactive_sections = {
     lualine_a = {},
