@@ -17,8 +17,8 @@ local function setup_lsp_keymaps(_, buffer)
   vim.keymap.set('n', '<Leader>k', vim.diagnostic.open_float, { noremap = true, buffer = buffer, desc = 'Show diagnostic in floating window' })
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = true, buffer = buffer, desc = 'Display hover information' })
   vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { noremap = true, buffer = buffer, desc = 'Rename symbol' })
-  vim.keymap.set('n', '<A-=>', vim.lsp.buf.format, { noremap = true, buffer = buffer, desc = 'Format document' })
-  vim.keymap.set('v', '<A-=>', vim.lsp.buf.format, { noremap = true, buffer = buffer, desc = 'Format selection' })
+  vim.keymap.set('n', '<Leader>=', vim.lsp.buf.format, { noremap = true, buffer = buffer, desc = 'Format document' })
+  vim.keymap.set('v', '<Leader>=', vim.lsp.buf.format, { noremap = true, buffer = buffer, desc = 'Format selection' })
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
