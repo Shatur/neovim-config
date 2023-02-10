@@ -1,6 +1,7 @@
 local lualine = require('lualine')
 local colors = require('ayu.colors')
 local tasks_runner = require('tasks.runner')
+local noice = require('noice')
 
 -- Left sections
 local mode = {
@@ -91,6 +92,12 @@ local diagnostics = {
 }
 
 -- Right sections
+local macro = {
+  noice.api.statusline.mode.get,
+  cond = noice.api.statusline.mode.has,
+  color = { fg = colors.string },
+}
+
 local task = {
   function()
     local current_job_name = tasks_runner.get_current_job_name()
@@ -163,7 +170,7 @@ lualine.setup({
     lualine_y = {},
     lualine_z = {},
     lualine_c = { mode, filetype, filename, 'location', multiple_cursros, diagnostics },
-    lualine_x = { task, lsp, gitsigns_head, diff, encoding, fileformat },
+    lualine_x = { macro, task, lsp, gitsigns_head, diff, encoding, fileformat },
   },
   inactive_sections = {
     lualine_a = {},
