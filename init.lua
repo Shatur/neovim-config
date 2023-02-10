@@ -36,6 +36,9 @@ end
 -- A built-in plugin to filter quickfix
 vim.cmd.packadd('cfilter')
 
+-- Force English locale
+vim.cmd.language('en_US.utf8')
+
 -- Disable built-in matchparen plugin (use faster lua implementation)
 vim.g.loaded_matchparen = false
 
