@@ -36,7 +36,7 @@ lspconfig.clangd.setup({
   capabilities = capabilities,
 })
 
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
   on_attach = function(client, buffer)
     setup_lsp_keymaps(client, buffer)
     -- Use stylua instead
