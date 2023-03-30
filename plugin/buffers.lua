@@ -1,5 +1,5 @@
 local neo_tree_command = require('neo-tree.command')
-local stickybuf_util = require('stickybuf.util')
+local stickybuf = require('stickybuf')
 local toggleterm = require('toggleterm')
 
 local function close_buffer(command)
@@ -30,7 +30,16 @@ local function close_buffer(command)
     return
   end
 
-  if stickybuf_util.is_sticky_win() then
+  if filetype == 'gitcommit' then
+    for _, other_buffer in ipairs(vim.api.nvim_list_bufs()) do
+      if vim.api.nvim_buf_get_option(other_buffer, 'filetype') == 'fugitive' then
+        vim.api.nvim_buf_delete(buffer, { force = true })
+        return
+      end
+    end
+  end
+
+  if stickybuf.should_auto_pin(buffer) then
     vim.api.nvim_buf_delete(buffer, { force = bang })
     return
   end

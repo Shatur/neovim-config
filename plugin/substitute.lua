@@ -1,4 +1,9 @@
 local substitute = require('substitute')
+substitute.setup({
+  highlight_substituted_text = {
+    enabled = false,
+  },
+})
 
 vim.keymap.set('n', '<Leader>s', substitute.operator, { noremap = true, desc = 'Substitute operator' })
 vim.keymap.set('n', '<Leader>ss', substitute.line, { noremap = true, desc = 'Substitute current line' })
