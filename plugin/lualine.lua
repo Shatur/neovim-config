@@ -62,6 +62,7 @@ local filetype = {
 local filename = {
   'filename',
   color = { fg = colors.keyword, gui = 'bold' },
+  path = 4,
   symbols = {
     modified = '',
     readonly = '',
