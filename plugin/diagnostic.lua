@@ -20,14 +20,11 @@ vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = 'rounded',
 })
 
-local diagnostic_enabled = true
 local function toggle_disanostic()
-  if diagnostic_enabled then
-    vim.diagnostic.disable()
-    diagnostic_enabled = false
-  else
+  if vim.diagnostic.is_disabled() then
     vim.diagnostic.enable()
-    diagnostic_enabled = true
+  else
+    vim.diagnostic.disable()
   end
 end
 
