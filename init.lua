@@ -86,8 +86,7 @@ vim.keymap.set('', '[h', vim.cmd.colder, { noremap = true, desc = 'Go to older e
 -- Make behavior more like in common editors
 vim.keymap.set({ '', 'i' }, '<C-s>', vim.cmd.write, { noremap = true, desc = 'Save' })
 vim.keymap.set('i', '<C-z>', '<C-o>u', { noremap = true, desc = 'Undo' })
-vim.keymap.set('i', '<C-v>', '<C-g>u<Cmd>set paste<CR><C-r>+<Cmd>set nopaste<CR>', { noremap = true, desc = 'Paste' })
-vim.keymap.set('c', '<C-v>', '<C-r>+', { noremap = true, desc = 'Paste' })
+vim.keymap.set({ 'i', 'c' }, '<C-v>', '<C-r>+', { noremap = true, desc = 'Paste' })
 vim.keymap.set('t', '<C-v>', '<C-\\><C-N>pi', { noremap = true, desc = 'Paste' })
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, desc = 'Go back to normal mode' })
 vim.keymap.set('i', '<S-Left>', '<Esc>vb', { noremap = true, desc = 'Select character left' })
