@@ -78,10 +78,6 @@
 	path = pack/plugins/start/neovim-session-manager
 	url = git@github.com:Shatur/neovim-session-manager.git
 	ignore = dirty
-[submodule "pack/plugins/opt/playground"]
-	path = pack/plugins/opt/playground
-	url = git@github.com:nvim-treesitter/playground.git
-	ignore = dirty
 [submodule "pack/plugins/start/octo.nvim"]
 	path = pack/plugins/start/octo.nvim
 	url = git@github.com:pwntester/octo.nvim.git
