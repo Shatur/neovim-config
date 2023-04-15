@@ -254,3 +254,7 @@
 	path = pack/plugins/start/unimpaired.nvim
 	url = git@github.com:tummetott/unimpaired.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/which-key.nvim"]
+	path = pack/plugins/start/which-key.nvim
+	url = git@github.com:folke/which-key.nvim.git
+	ignore = dirty
