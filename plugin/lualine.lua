@@ -125,7 +125,7 @@ local lsp = {
 
 local gitsigns_head = {
   'b:gitsigns_head',
-  icon = '',
+  icon = '',
   color = { fg = colors.fg, gui = 'bold' },
 }
 
