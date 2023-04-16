@@ -57,4 +57,4 @@ vim.keymap.set({ '', 'i' }, '<F9>', function() tasks.start('auto', 'check') end,
 vim.keymap.set({ '', 'i' }, '<S-F9>', function() tasks.start('auto', 'clippy') end, { noremap = true, desc = 'Run Cargo clippy task' })
 vim.keymap.set({ '', 'i' }, '<A-F9>', function() tasks.start('auto', 'clean') end, { noremap = true, desc = 'Run clean task' })
 
-vim.keymap.set({ '' }, 'gob', function() tasks.start('auto', 'open_build_dir') end, { noremap = true, desc = 'Open CMake build directory' })
+vim.keymap.set({ '' }, 'gob', function() tasks.start('auto', 'open_build_dir') end, { noremap = true, desc = 'Open build directory in system explorer' })
