@@ -72,6 +72,6 @@ vim.keymap.set('n', '<Leader>b', dap.toggle_breakpoint, { noremap = true, desc =
 vim.keymap.set('n', '<Leader>B', function()
   vim.ui.input({ prompt = 'Breakpoint condition: ' }, function(condition) dap.set_breakpoint(condition) end)
 end, { noremap = true, desc = 'Toggle conditional breakpoint' })
-vim.keymap.set('n', '<Leader>lp', function()
+vim.keymap.set('n', '<Leader>lb', function()
   vim.ui.input({ prompt = 'Log point message: ' }, function(message) dap.set_breakpoint(message) end)
 end, { noremap = true, desc = 'Toggle log breakpoint' })
