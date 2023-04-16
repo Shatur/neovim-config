@@ -37,10 +37,10 @@ require('gitsigns').setup({
     vim.keymap.set('n', '<Leader>hR', gs.reset_buffer, { buffer = bufnr, desc = 'Reset buffer' })
     vim.keymap.set('n', '<Leader>hp', gs.preview_hunk, { buffer = bufnr, desc = 'Preview hunk' })
     vim.keymap.set('n', '<Leader>hb', function() gs.blame_line({ full = true }) end, { buffer = bufnr, desc = 'Blame line' })
-    vim.keymap.set('n', '<Leader>tb', gs.toggle_current_line_blame, { buffer = bufnr, desc = 'Toggle current line blame' })
+    vim.keymap.set('n', 'yogb', gs.toggle_current_line_blame, { buffer = bufnr, desc = 'Toggle current line blame' })
     vim.keymap.set('n', '<Leader>hd', gs.diffthis, { buffer = bufnr, desc = 'Diffthis' })
     vim.keymap.set('n', '<Leader>hD', function() gs.diffthis('~') end, { buffer = bufnr, desc = 'Diffthis against ~' })
-    vim.keymap.set('n', '<Leader>td', gs.toggle_deleted, { buffer = bufnr, desc = 'Toggle deleted' })
+    vim.keymap.set('n', 'yogd', gs.toggle_deleted, { buffer = bufnr, desc = 'Toggle deleted' })
 
     -- Text object
     vim.keymap.set({ 'o', 'x' }, 'ih', ':<C-u>Gitsigns select_hunk<CR>', { buffer = bufnr, desc = 'Select hunk' })
