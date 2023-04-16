@@ -18,10 +18,6 @@
 	path = pack/plugins/start/quickfix-reflector.vim
 	url = git@github.com:stefandtw/quickfix-reflector.vim.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-cool"]
-	path = pack/plugins/start/vim-cool
-	url = git@github.com:romainl/vim-cool.git
-	ignore = dirty
 [submodule "pack/plugins/start/vim-eunuch"]
 	path = pack/plugins/start/vim-eunuch
 	url = git@github.com:tpope/vim-eunuch.git
