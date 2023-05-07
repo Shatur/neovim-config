@@ -83,7 +83,7 @@ local multiple_cursros = {
 
 local diagnostics = {
   'diagnostics',
-  symbols = { error = ' ', warn = ' ', info = ' ' },
+  symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' },
   diagnostics_color = {
     error = { fg = colors.error },
     warning = { fg = colors.warning },
