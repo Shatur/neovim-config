@@ -43,6 +43,7 @@ telescope.setup({
     },
     git_files = {
       theme = 'dropdown',
+      show_untracked = true,
     },
     git_branches = {
       theme = 'dropdown',
