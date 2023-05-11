@@ -14,7 +14,7 @@ require('neo-tree').setup({
       with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
     },
     icon = {
-      folder_empty = '',
+      folder_empty = '',
       default = '',
       highlight = 'Normal',
     },

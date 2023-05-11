@@ -64,7 +64,7 @@ local filename = {
   color = { fg = colors.keyword, gui = 'bold' },
   path = 4,
   symbols = {
-    modified = '',
+    modified = '',
     readonly = '',
   },
 }
@@ -77,7 +77,7 @@ local multiple_cursros = {
     end
     return vm_info['current'] .. '/' .. vm_info['total']
   end,
-  icon = '',
+  icon = '󰇀',
   color = { fg = colors.special, gui = 'bold' },
 }
 
