@@ -257,3 +257,4 @@
 [submodule "pack/plugins/start/vim-unimpaired"]
 	path = pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
+	ignore = dirty
