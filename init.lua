@@ -30,8 +30,10 @@ vim.o.scrolloff = 10
 vim.o.diffopt = vim.o.diffopt .. ',linematch:50'
 
 if vim.fn.has('unix') == 1 then
-  vim.o.guifont = 'FiraCode Nerd Font Mono' -- Fonts on Windows set in ginit to avoid metrics error in Neovim Qt
+  vim.o.guifont = 'FiraMono Nerd Font Mono'
   vim.o.shell = '/usr/bin/bash' -- I use fish on Linux and it slow for running internal commands
+else
+  vim.o.guifont = 'FiraMono NF'
 end
 
 -- A built-in plugin to filter quickfix

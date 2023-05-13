@@ -23,7 +23,7 @@ cmake -S . -B build -D CMAKE_BUILD_TYPE=Release && cmake --build build --config 
 **Arch Linux**
 
 ```bash
-paru -S ripgrep ttf-firacode-nerd rust-analyzer lua-language-server clang cmake-language-server stylua github-cli python-lsp-server
+paru -S ripgrep otf-firamono-nerd rust-analyzer lua-language-server clang cmake-language-server stylua github-cli python-lsp-server
 ```
 
 **Windows**
