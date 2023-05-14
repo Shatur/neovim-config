@@ -28,12 +28,10 @@ vim.o.shortmess = vim.o.shortmess .. 'c' -- Shut off completion messages
 vim.o.formatoptions = vim.bo.formatoptions:gsub('cro', '')
 vim.o.scrolloff = 10
 vim.o.diffopt = vim.o.diffopt .. ',linematch:50'
+vim.o.guifont = 'FiraMono Nerd Font Mono'
 
 if vim.fn.has('unix') == 1 then
-  vim.o.guifont = 'FiraMono Nerd Font Mono'
   vim.o.shell = '/usr/bin/bash' -- I use fish on Linux and it slow for running internal commands
-else
-  vim.o.guifont = 'FiraMono NF'
 end
 
 -- A built-in plugin to filter quickfix
