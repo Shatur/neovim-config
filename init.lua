@@ -137,7 +137,7 @@ vim.api.nvim_create_autocmd({ 'BufAdd' }, {
   end,
 })
 vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = '*.rs',
+  pattern = { '*.rs', '*.lua' },
   group = config_group,
   callback = function() vim.lsp.buf.format() end,
 })
