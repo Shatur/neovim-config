@@ -136,3 +136,8 @@ vim.api.nvim_create_autocmd({ 'BufAdd' }, {
     end
   end,
 })
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.rs',
+  group = config_group,
+  callback = function() vim.lsp.buf.format() end,
+})
