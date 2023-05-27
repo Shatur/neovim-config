@@ -234,10 +234,6 @@
 	path = pack/plugins/start/neovim-tasks
 	url = git@github.com:Shatur/neovim-tasks.git
 	ignore = dirty
-[submodule "pack/plugins/start/presence.nvim"]
-	path = pack/plugins/start/presence.nvim
-	url = git@github.com:andweeb/presence.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-web-devicons"]
 	path = pack/plugins/start/nvim-web-devicons
 	url = git@github.com:nvim-tree/nvim-web-devicons.git
