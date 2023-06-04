@@ -254,3 +254,7 @@
 	path = pack/plugins/start/vim-unimpaired
 	url = git@github.com:tpope/vim-unimpaired.git
 	ignore = dirty
+[submodule "pack/plugins/start/nvimcord"]
+	path = pack/plugins/start/nvimcord
+	url = git@github.com:ObserverOfTime/nvimcord.git
+	ignore = dirty
