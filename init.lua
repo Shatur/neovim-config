@@ -127,17 +127,3 @@ vim.api.nvim_create_autocmd({ 'TextYankPost' }, {
   group = config_group,
   callback = function() vim.highlight.on_yank() end,
 })
-vim.api.nvim_create_autocmd({ 'BufAdd' }, {
-  pattern = 'fugitive://*',
-  group = config_group,
-  callback = function()
-    if vim.wo.diff then
-      vim.wo.winhighlight = 'DiffAdd:DiffDelete'
-    end
-  end,
-})
-vim.api.nvim_create_autocmd('BufWritePre', {
-  pattern = { '*.rs', '*.lua' },
-  group = config_group,
-  callback = function() vim.lsp.buf.format() end,
-})
