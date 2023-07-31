@@ -114,6 +114,7 @@ vim.keymap.set('', '<Leader>gc', telescope_builtin.git_commits, { noremap = true
 vim.keymap.set('', '<Leader>gs', telescope_builtin.git_stash, { noremap = true, desc = 'List stash items' })
 vim.keymap.set('', '<Leader>q', telescope_builtin.quickfix, { noremap = true, desc = 'List quickfix items' })
 vim.keymap.set('', '<Leader>/', telescope.extensions.live_grep_args.live_grep_args, { noremap = true, desc = 'Live grep' })
+vim.keymap.set('', '<Leader>u', telescope.extensions.undo.undo, { noremap = true, desc = 'Undo history' })
 
 vim.keymap.set('', '<Leader>f', function()
   if vim.b.gitsigns_head then

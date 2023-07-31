@@ -258,3 +258,7 @@
 	path = pack/plugins/start/unimpaired.nvim
 	url = git@github.com:tummetott/unimpaired.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/telescope-undo.nvim"]
+	path = pack/plugins/start/telescope-undo.nvim
+	url = git@github.com:debugloop/telescope-undo.nvim.git
+	ignore = dirty
