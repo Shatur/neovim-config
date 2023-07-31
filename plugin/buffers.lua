@@ -30,13 +30,9 @@ local function close_buffer(command)
     return
   end
 
-  if filetype == 'gitcommit' then
-    for _, other_buffer in ipairs(vim.api.nvim_list_bufs()) do
-      if vim.api.nvim_buf_get_option(other_buffer, 'filetype') == 'fugitive' then
-        vim.api.nvim_buf_delete(buffer, { force = true })
-        return
-      end
-    end
+  if filetype == 'NeogitCommitMessage' then
+    vim.api.nvim_buf_delete(buffer, { force = true })
+    return
   end
 
   if stickybuf.should_auto_pin(buffer) then

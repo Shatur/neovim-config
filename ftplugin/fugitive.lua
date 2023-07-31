@@ -1,1 +1,0 @@
-vim.bo.buflisted = false

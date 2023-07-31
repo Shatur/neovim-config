@@ -91,7 +91,6 @@ bufferline.setup({
     right_mouse_command = 'BDelete! %d',
     offsets = {
       { filetype = 'neo-tree', text = 'File Explorer', text_align = 'center' },
-      { filetype = 'fugitive', text = 'Git', text_align = 'center' },
     },
   },
 })

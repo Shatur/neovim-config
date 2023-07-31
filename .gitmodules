@@ -48,7 +48,7 @@
 	ignore = dirty
 [submodule "pack/plugins/start/neogit"]
 	path = pack/plugins/start/neogit
-	url = git@github.com:TimUntersberger/neogit.git
+	url = git@github.com:NeogitOrg/neogit.git
 	ignore = dirty
 [submodule "pack/plugins/start/LuaSnip"]
 	path = pack/plugins/start/LuaSnip
@@ -261,4 +261,8 @@
 [submodule "pack/plugins/start/text-case.nvim"]
 	path = pack/plugins/start/text-case.nvim
 	url = git@github.com:johmsalas/text-case.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/diffview.nvim"]
+	path = pack/plugins/start/diffview.nvim
+	url = git@github.com:sindrets/diffview.nvim.git
 	ignore = dirty
