@@ -250,11 +250,11 @@
 	path = pack/plugins/start/vim-cool
 	url = git@github.com:romainl/vim-cool.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-unimpaired"]
-	path = pack/plugins/start/vim-unimpaired
-	url = git@github.com:tpope/vim-unimpaired.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvimcord"]
 	path = pack/plugins/start/nvimcord
 	url = git@github.com:ObserverOfTime/nvimcord.git
+	ignore = dirty
+[submodule "pack/plugins/start/unimpaired.nvim"]
+	path = pack/plugins/start/unimpaired.nvim
+	url = git@github.com:tummetott/unimpaired.nvim.git
 	ignore = dirty
