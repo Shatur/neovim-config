@@ -182,10 +182,6 @@
 	path = pack/plugins/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-rhubarb"]
-	path = pack/plugins/start/vim-rhubarb
-	url = git@github.com:tpope/vim-rhubarb.git
-	ignore = dirty
 [submodule "pack/plugins/start/neo-tree.nvim"]
 	path = pack/plugins/start/neo-tree.nvim
 	url = git@github.com:nvim-neo-tree/neo-tree.nvim.git
@@ -265,4 +261,8 @@
 [submodule "pack/plugins/start/diffview.nvim"]
 	path = pack/plugins/start/diffview.nvim
 	url = git@github.com:sindrets/diffview.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/gitlinker.nvim"]
+	path = pack/plugins/start/gitlinker.nvim
+	url = git@github.com:linrongbin16/gitlinker.nvim.git
 	ignore = dirty
