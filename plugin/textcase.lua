@@ -1,3 +1,3 @@
 require('textcase').setup({
-  prefix = 'cr',
+  prefix = '<Leader>i',
 })
