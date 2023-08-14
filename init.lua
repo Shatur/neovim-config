@@ -48,6 +48,9 @@ vim.g.loaded_matchparen = false
 -- Disable default keybindings <C-a> and <C-x> for interactive rebase
 vim.g.no_gitrebase_maps = false
 
+-- Disable built-in python loader
+vim.g.loaded_python3_provider = false
+
 -- Remap useless keys
 vim.g.mapleader = ' '
 vim.keymap.set({ 'n', 'v' }, '<CR>', ':', { noremap = true, desc = 'Enter command line mode' })
