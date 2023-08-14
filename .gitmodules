@@ -178,10 +178,6 @@
 	path = pack/plugins/start/dressing.nvim
 	url = git@github.com:stevearc/dressing.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-fugitive"]
-	path = pack/plugins/start/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
-	ignore = dirty
 [submodule "pack/plugins/start/neo-tree.nvim"]
 	path = pack/plugins/start/neo-tree.nvim
 	url = git@github.com:nvim-neo-tree/neo-tree.nvim.git
