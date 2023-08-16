@@ -82,10 +82,6 @@
 	path = pack/plugins/start/nvim-luaref
 	url = git@github.com:milisims/nvim-luaref.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-sleuth"]
-	path = pack/plugins/start/vim-sleuth
-	url = git@github.com:tpope/vim-sleuth.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-treesitter-textobjects"]
 	path = pack/plugins/start/nvim-treesitter-textobjects
 	url = https://github.com/nvim-treesitter/nvim-treesitter-textobjects.git
@@ -257,4 +253,8 @@
 [submodule "pack/plugins/start/nvim-genghis"]
 	path = pack/plugins/start/nvim-genghis
 	url = git@github.com:chrisgrieser/nvim-genghis.git
+	ignore = dirty
+[submodule "pack/plugins/start/guess-indent.nvim"]
+	path = pack/plugins/start/guess-indent.nvim
+	url = git@github.com:NMAC427/guess-indent.nvim.git
 	ignore = dirty
