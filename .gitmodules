@@ -18,10 +18,6 @@
 	path = pack/plugins/start/quickfix-reflector.vim
 	url = git@github.com:stefandtw/quickfix-reflector.vim.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-eunuch"]
-	path = pack/plugins/start/vim-eunuch
-	url = git@github.com:tpope/vim-eunuch.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-treesitter"]
 	path = pack/plugins/start/nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
@@ -257,4 +253,8 @@
 [submodule "pack/plugins/start/auto-hlsearch.nvim"]
 	path = pack/plugins/start/auto-hlsearch.nvim
 	url = git@github.com:asiryk/auto-hlsearch.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/nvim-genghis"]
+	path = pack/plugins/start/nvim-genghis
+	url = git@github.com:chrisgrieser/nvim-genghis.git
 	ignore = dirty
