@@ -234,10 +234,6 @@
 	path = pack/plugins/start/which-key.nvim
 	url = git@github.com:folke/which-key.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/vim-cool"]
-	path = pack/plugins/start/vim-cool
-	url = git@github.com:romainl/vim-cool.git
-	ignore = dirty
 [submodule "pack/plugins/start/unimpaired.nvim"]
 	path = pack/plugins/start/unimpaired.nvim
 	url = git@github.com:tummetott/unimpaired.nvim.git
@@ -257,4 +253,8 @@
 [submodule "pack/plugins/start/gitlinker.nvim"]
 	path = pack/plugins/start/gitlinker.nvim
 	url = git@github.com:linrongbin16/gitlinker.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/auto-hlsearch.nvim"]
+	path = pack/plugins/start/auto-hlsearch.nvim
+	url = git@github.com:asiryk/auto-hlsearch.nvim.git
 	ignore = dirty
