@@ -250,10 +250,6 @@
 	path = pack/plugins/start/auto-hlsearch.nvim
 	url = git@github.com:asiryk/auto-hlsearch.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/nvim-genghis"]
-	path = pack/plugins/start/nvim-genghis
-	url = git@github.com:chrisgrieser/nvim-genghis.git
-	ignore = dirty
 [submodule "pack/plugins/start/guess-indent.nvim"]
 	path = pack/plugins/start/guess-indent.nvim
 	url = git@github.com:NMAC427/guess-indent.nvim.git
