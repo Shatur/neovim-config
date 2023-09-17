@@ -87,4 +87,6 @@ cmp.event:on(
   })
 )
 
-require('cmp_git').setup()
+require('cmp_git').setup({
+  filetypes = { 'gitcommit', 'octo', 'NeogitCommitMessage' },
+})
