@@ -1,4 +1,3 @@
-local neo_tree_command = require('neo-tree.command')
 local stickybuf = require('stickybuf')
 local toggleterm = require('toggleterm')
 
@@ -14,34 +13,18 @@ local function close_buffer(command)
     return
   end
 
-  if vim.api.nvim_buf_get_option(buffer, 'buftype') == 'nowrite' then
-    vim.api.nvim_buf_delete(buffer, { force = true })
-    return
-  end
-
-  local filetype = vim.api.nvim_buf_get_option(buffer, 'filetype')
-  if filetype == 'neo-tree' then
-    neo_tree_command.execute({ action = 'close' })
-    return
-  end
-
-  if filetype == 'toggleterm' then
+  -- Never kill toggleterm
+  if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'toggleterm' then
     toggleterm.toggle(1)
     return
   end
 
-  if filetype == 'NeogitCommitMessage' then
-    vim.api.nvim_buf_delete(buffer, { force = true })
-    return
-  end
-
-  if stickybuf.should_auto_pin(buffer) then
+  if vim.api.nvim_buf_get_option(buffer, 'buftype'):len() ~= 0 or stickybuf.should_auto_pin(buffer) then
+    local winid = vim.fn.bufwinid(buffer)
+    if stickybuf.is_pinned(winid) then
+      stickybuf.unpin(winid)
+    end
     vim.api.nvim_buf_delete(buffer, { force = bang })
-    return
-  end
-
-  if #vim.fn.getcmdwintype() ~= 0 then
-    vim.cmd.quit()
     return
   end
 
