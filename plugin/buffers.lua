@@ -75,9 +75,9 @@ local function close_other_buffers()
   for _, buffer in ipairs(vim.api.nvim_list_bufs()) do
     if buffer ~= current_buffer and not vim.api.nvim_buf_get_option(buffer, 'modified') and vim.api.nvim_buf_get_option(buffer, 'buflisted') then
       vim.cmd.bdelete({ buffer })
-      vim.cmd.redrawtabline()
     end
   end
+  vim.cmd.redrawtabline()
 end
 
 vim.api.nvim_create_user_command('QFToggle', toggle_quickfix, { desc = 'Toggle quickfix list' })
