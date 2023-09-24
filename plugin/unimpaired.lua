@@ -9,11 +9,5 @@ require('unimpaired').setup({
     tfirst = false,
     tlast = false,
     tnext = false,
-    cprevious = {
-      dot_repeat = false,
-    },
-    cnext = {
-      dot_repeat = false,
-    },
   },
 })
