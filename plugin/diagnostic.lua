@@ -34,4 +34,4 @@ local function toggle_virtual_lines()
 end
 
 vim.keymap.set('n', 'yoD', toggle_disanostic, { noremap = true, desc = 'Toggle diagnostic' })
-vim.keymap.set('n', 'yol', toggle_virtual_lines, { noremap = true, desc = 'Toggle virtual lines' })
+vim.keymap.set('n', 'yoL', toggle_virtual_lines, { noremap = true, desc = 'Toggle virtual lines' })
