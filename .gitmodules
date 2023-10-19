@@ -158,10 +158,6 @@
 	path = pack/plugins/start/substitute.nvim
 	url = git@github.com:gbprod/substitute.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/null-ls.nvim"]
-	path = pack/plugins/start/null-ls.nvim
-	url = git@github.com:jose-elias-alvarez/null-ls.nvim.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-treesitter-cpp-tools"]
 	path = pack/plugins/start/nvim-treesitter-cpp-tools
 	url = git@github.com:Badhi/nvim-treesitter-cpp-tools.git
@@ -253,4 +249,8 @@
 [submodule "pack/plugins/start/guess-indent.nvim"]
 	path = pack/plugins/start/guess-indent.nvim
 	url = git@github.com:NMAC427/guess-indent.nvim.git
+	ignore = dirty
+[submodule "pack/plugins/start/none-ls.nvim"]
+	path = pack/plugins/start/none-ls.nvim
+	url = git@github.com:nvimtools/none-ls.nvim.git
 	ignore = dirty
