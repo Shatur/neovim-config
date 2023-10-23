@@ -29,6 +29,7 @@ local completion_types = {
   Operator = { kind = '', menu = 'Operator' },
   TypeParameter = { kind = '', menu = 'Type-param' },
   GitHub = { kind = '', menu = 'GitHub' },
+  Version = { kind = '', menu = 'Version' },
 }
 
 cmp.setup({
