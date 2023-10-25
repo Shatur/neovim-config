@@ -14,12 +14,13 @@ local function close_buffer(command)
   end
 
   -- Never kill toggleterm
-  if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'toggleterm' then
+  local filettype = vim.api.nvim_buf_get_option(buffer, 'filetype')
+  if filettype == 'toggleterm' then
     toggleterm.toggle(1)
     return
   end
 
-  if vim.api.nvim_buf_get_option(buffer, 'buftype'):len() ~= 0 or stickybuf.should_auto_pin(buffer) then
+  if vim.api.nvim_buf_get_option(buffer, 'buftype'):len() ~= 0 or stickybuf.should_auto_pin(buffer) or filettype == 'NeogitCommitMessage' then
     local winid = vim.fn.bufwinid(buffer)
     if stickybuf.is_pinned(winid) then
       stickybuf.unpin(winid)
