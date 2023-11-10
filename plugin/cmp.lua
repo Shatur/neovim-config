@@ -30,6 +30,7 @@ local completion_types = {
   TypeParameter = { kind = '', menu = 'Type-param' },
   GitHub = { kind = '', menu = 'GitHub' },
   Version = { kind = '', menu = 'Version' },
+  Feature = { kind = '', menu = 'Feature' },
 }
 
 cmp.setup({
