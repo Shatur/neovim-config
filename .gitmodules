@@ -254,3 +254,7 @@
 	path = pack/plugins/start/none-ls.nvim
 	url = git@github.com:nvimtools/none-ls.nvim.git
 	ignore = dirty
+[submodule "pack/plugins/start/pest.vim"]
+	path = pack/plugins/start/pest.vim
+	url = git@github.com:pest-parser/pest.vim.git
+	ignore = dirty
