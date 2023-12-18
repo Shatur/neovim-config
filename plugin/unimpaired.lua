@@ -6,8 +6,5 @@ require('unimpaired').setup({
     bprevious = false,
     next_file = false,
     previous_file = false,
-    tfirst = false,
-    tlast = false,
-    tnext = false,
   },
 })
