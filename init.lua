@@ -112,10 +112,10 @@ vim.keymap.set('c', '<C-a>', '<Home>', { noremap = true, desc = 'Go to beginning
 vim.keymap.set('c', '<C-e>', '<End>', { noremap = true, desc = 'Go to end' })
 
 -- Tab control
-vim.keymap.set('', '<A-q>', vim.cmd.tabclose, { noremap = true })
-vim.keymap.set({ 'i', 't' }, '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true })
-vim.keymap.set('', ']t', vim.cmd.tabnext, { noremap = true })
-vim.keymap.set('', '[t', vim.cmd.tabprevious, { noremap = true })
+vim.keymap.set('', '<A-q>', vim.cmd.tabclose, { noremap = true, desc = 'Close current tab' })
+vim.keymap.set({ 'i', 't' }, '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true, desc = 'Close current tab' })
+vim.keymap.set('', ']t', vim.cmd.tabnext, { noremap = true, desc = 'Go to next tab' })
+vim.keymap.set('', '[t', vim.cmd.tabprevious, { noremap = true, desc = 'Go to next tab' })
 
 -- Other
 vim.keymap.set('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true, desc = 'Change directory to current file folder' })
