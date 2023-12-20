@@ -114,8 +114,6 @@ vim.keymap.set('c', '<C-e>', '<End>', { noremap = true, desc = 'Go to end' })
 -- Tab control
 vim.keymap.set('', '<A-q>', vim.cmd.tabclose, { noremap = true })
 vim.keymap.set({ 'i', 't' }, '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true })
-vim.keymap.set('', '<A-x>', '<Cmd>write<CR><Cmd>tabclose<CR>', { noremap = true })
-vim.keymap.set('i', '<A-x>', '<Esc><Cmd>write<CR><Cmd>tabclose<CR>', { noremap = true })
 vim.keymap.set('', ']t', vim.cmd.tabnext, { noremap = true })
 vim.keymap.set('', '[t', vim.cmd.tabprevious, { noremap = true })
 
