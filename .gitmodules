@@ -186,10 +186,6 @@
 	path = pack/plugins/start/sort.nvim
 	url = git@github.com:sQVe/sort.nvim.git
 	ignore = dirty
-[submodule "pack/plugins/start/lsp_lines.nvim"]
-	path = pack/plugins/start/lsp_lines.nvim
-	url = https://git.sr.ht/~whynothugo/lsp_lines.nvim
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-surround"]
 	path = pack/plugins/start/nvim-surround
 	url = git@github.com:kylechui/nvim-surround.git
