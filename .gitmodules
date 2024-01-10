@@ -258,3 +258,7 @@
 	path = pack/plugins/start/pest.vim
 	url = git@github.com:pest-parser/pest.vim.git
 	ignore = dirty
+[submodule "pack/plugins/start/nvim-treesitter-context"]
+	path = pack/plugins/start/nvim-treesitter-context
+	url = git@github.com:nvim-treesitter/nvim-treesitter-context.git
+	ignore = dirty
