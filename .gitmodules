@@ -258,3 +258,7 @@
 	path = pack/plugins/start/nvim-treesitter-context
 	url = git@github.com:nvim-treesitter/nvim-treesitter-context.git
 	ignore = dirty
+[submodule "pack/plugins/start/nvim-nio"]
+	path = pack/plugins/start/nvim-nio
+	url = git@github.com:nvim-neotest/nvim-nio.git
+	ignore = dirty
