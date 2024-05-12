@@ -51,10 +51,6 @@ lspconfig.lua_ls.setup({
   },
 })
 
-lspconfig.cmake.setup({
-  capabilities = capabilities,
-  on_attach = setup_lsp_keymaps,
-})
 lspconfig.rust_analyzer.setup({
   capabilities = capabilities,
   on_attach = setup_lsp_keymaps,

@@ -32,5 +32,5 @@ paru -S ripgrep otf-firamono-nerd rust-analyzer lua-language-server clang cmake-
 scoop bucket add nerd-fonts
 scoop bucket add extras
 sudo scoop install -g ripgrep rustup llvm FiraMono-NF-Mono windows-terminal gh python pwsh
-pip install cmake-language-server python-lsp-server
+pip install python-lsp-server
 ```
