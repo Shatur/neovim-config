@@ -20,12 +20,9 @@ local function close_buffer(command)
     return
   end
 
+  --
   if vim.api.nvim_buf_get_option(buffer, 'buftype'):len() ~= 0 or stickybuf.should_auto_pin(buffer) or filettype == 'NeogitCommitMessage' then
-    local winid = vim.fn.bufwinid(buffer)
-    if stickybuf.is_pinned(winid) then
-      stickybuf.unpin(winid)
-    end
-    vim.api.nvim_buf_delete(buffer, { force = bang })
+    vim.cmd.quit()
     return
   end
 
