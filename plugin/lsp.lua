@@ -11,10 +11,6 @@ local function setup_lsp_keymaps(_, buffer)
   vim.keymap.set('n', 'gr', telescope_builin.lsp_references, { noremap = true, buffer = buffer, desc = 'Go to reference' })
   vim.keymap.set('n', 'go', telescope_builin.lsp_workspace_symbols, { noremap = true, buffer = buffer, desc = 'Go to workspace symbol' })
   vim.keymap.set('n', 'gO', telescope_builin.lsp_document_symbols, { noremap = true, buffer = buffer, desc = 'Go to document symbol' })
-  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, buffer = buffer, desc = 'Jump to previous diagnostic' })
-  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, buffer = buffer, desc = 'Jump to next diagnostic' })
-  vim.keymap.set('n', '<Leader>k', vim.diagnostic.open_float, { noremap = true, buffer = buffer, desc = 'Show diagnostic in floating window' })
-  vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = true, buffer = buffer, desc = 'Display hover information' })
   vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { noremap = true, buffer = buffer, desc = 'Rename symbol' })
   vim.keymap.set({ 'n', 'v' }, '<Leader>=', vim.lsp.buf.format, { noremap = true, buffer = buffer, desc = 'Format document' })
 end
@@ -61,7 +57,7 @@ lspconfig.rust_analyzer.setup({
           if err then
             error(tostring(err))
           else
-            vim.fn['netrw#BrowseX'](url, 0)
+            vim.ui.open(url)
           end
         end)
       end,

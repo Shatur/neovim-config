@@ -4,7 +4,7 @@ local Path = require('plenary.path')
 
 local function directory(path)
   if path == '' or path == nil then
-    return vim.loop.cwd()
+    return vim.uv.cwd()
   end
   if not Path:new(path):is_dir() then
     print('Specified path is not an existing directory: ' .. path)
