@@ -52,9 +52,6 @@ cmp.setup({
       end
     end,
   }),
-  snippet = {
-    expand = function(args) vim.snippet.expand(args.body) end,
-  },
   formatting = {
     fields = { 'kind', 'abbr', 'menu' },
     format = function(entry, vim_item)
