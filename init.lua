@@ -66,8 +66,8 @@ vim.keymap.set('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true, 
 vim.keymap.set('n', 'k', 'v:count ? "k" : "gk"', { noremap = true, expr = true, desc = 'Move up (including wrapping lines)' })
 vim.keymap.set('n', '<Up>', 'v:count ? "k" : "gk"', { noremap = true, expr = true, desc = 'Move up (including wrapping lines)' })
 vim.keymap.set('n', '<Down>', 'v:count ? "j" : "gj"', { noremap = true, expr = true, desc = 'Move down (including wrapping lines)' })
-vim.keymap.set('i', '<Up>', 'pumvisible() ? "k" : "<C-o>gk"', { noremap = true, expr = true, desc = 'Move up (including wrapping lines)' })
-vim.keymap.set('i', '<Down>', 'pumvisible() ? "j" : "<C-o>gj"', { noremap = true, expr = true, desc = 'Move down (including wrapping lines)' })
+vim.keymap.set('i', '<Up>', '<C-o>gk', { noremap = true, desc = 'Move up (including wrapping lines)' })
+vim.keymap.set('i', '<Down>', '<C-o>gj', { noremap = true, desc = 'Move down (including wrapping lines)' })
 
 -- Split navigation
 vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-w>h', { noremap = true, desc = 'Go to left window' })
