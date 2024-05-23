@@ -61,10 +61,6 @@ local function close_other_buffers()
   vim.cmd.redrawtabline()
 end
 
-vim.api.nvim_create_user_command('QFToggle', toggle_quickfix, { desc = 'Toggle quickfix list' })
-vim.api.nvim_create_user_command('BDelete', close_buffer, { nargs = '?', bang = true, desc = 'Delete buffer with saving the current layout (except special buffers)' })
-vim.api.nvim_create_user_command('BDeleteOther', close_other_buffers, { desc = 'Delete all other buffers expect current' })
-
 vim.keymap.set('', '<C-w>O', close_other_buffers, { noremap = true, desc = 'Close other buffers' })
 vim.keymap.set('', '<C-w><A-o>', vim.cmd.tabonly, { noremap = true, desc = 'Close other tabs' })
 vim.keymap.set('', '<C-q>', close_buffer, { noremap = true, desc = 'Close current buffer' })
