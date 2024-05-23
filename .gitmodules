@@ -1,11 +1,3 @@
-[submodule "pack/plugins/opt/Tortoise-Typing"]
-	path = pack/plugins/opt/Tortoise-Typing
-	url = git@github.com:thanthese/Tortoise-Typing.git
-	ignore = dirty
-[submodule "pack/plugins/opt/vim-startuptime"]
-	path = pack/plugins/opt/vim-startuptime
-	url = git@github.com:dstein64/vim-startuptime.git
-	ignore = dirty
 [submodule "pack/plugins/start/vim-cutlass"]
 	path = pack/plugins/start/vim-cutlass
 	url = git@github.com:svermeulen/vim-cutlass.git
