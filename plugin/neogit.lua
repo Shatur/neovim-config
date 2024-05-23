@@ -5,6 +5,7 @@ neogit.setup({
   kind = 'vsplit',
   commit_editor = {
     kind = 'split',
+    show_staged_diff = false,
   },
   rebase_editor = {
     kind = 'split',
