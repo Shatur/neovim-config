@@ -1,4 +1,3 @@
-local luasnip = require('luasnip')
 local cmp = require('cmp')
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
@@ -36,7 +35,6 @@ local completion_types = {
 cmp.setup({
   sources = {
     { name = 'nvim_lsp' },
-    { name = 'luasnip' },
     { name = 'crates' },
     { name = 'git' },
     { name = 'buffer' },
@@ -55,7 +53,7 @@ cmp.setup({
     end,
   }),
   snippet = {
-    expand = function(args) luasnip.lsp_expand(args.body) end,
+    expand = function(args) vim.snippet.expand(args.body) end,
   },
   formatting = {
     fields = { 'kind', 'abbr', 'menu' },

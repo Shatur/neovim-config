@@ -117,6 +117,15 @@ vim.keymap.set({ 'i', 't' }, '<A-q>', '<Esc><Cmd>tabclose<CR>', { noremap = true
 vim.keymap.set('', ']t', vim.cmd.tabnext, { noremap = true, desc = 'Go to next tab' })
 vim.keymap.set('', '[t', vim.cmd.tabprevious, { noremap = true, desc = 'Go to next tab' })
 
+-- Snippets
+vim.keymap.set({ 'i', 's' }, '<Tab>', function()
+  if vim.snippet.active({ direction = 1 }) then
+    return '<Cmd>lua vim.snippet.jump(1)<CR>'
+  else
+    return '<Tab>'
+  end
+end, { expr = true })
+
 -- Other
 vim.keymap.set('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true, desc = 'Change directory to current file folder' })
 vim.keymap.set('', '<Backspace>', '<Cmd>buffer #<CR>', { noremap = true, desc = 'Back to previous buffer' })

@@ -38,10 +38,6 @@
 	path = pack/plugins/start/neogit
 	url = git@github.com:NeogitOrg/neogit.git
 	ignore = dirty
-[submodule "pack/plugins/start/LuaSnip"]
-	path = pack/plugins/start/LuaSnip
-	url = git@github.com:L3MON4D3/LuaSnip.git
-	ignore = dirty
 [submodule "pack/plugins/start/nvim-dap-virtual-text"]
 	path = pack/plugins/start/nvim-dap-virtual-text
 	url = git@github.com:theHamsta/nvim-dap-virtual-text.git
@@ -97,10 +93,6 @@
 [submodule "pack/plugins/start/cmp-buffer"]
 	path = pack/plugins/start/cmp-buffer
 	url = git@github.com:hrsh7th/cmp-buffer.git
-	ignore = dirty
-[submodule "pack/plugins/start/cmp_luasnip"]
-	path = pack/plugins/start/cmp_luasnip
-	url = git@github.com:saadparwaiz1/cmp_luasnip.git
 	ignore = dirty
 [submodule "pack/plugins/start/cmp-nvim-lsp"]
 	path = pack/plugins/start/cmp-nvim-lsp
