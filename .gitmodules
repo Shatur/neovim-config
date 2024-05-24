@@ -238,3 +238,7 @@
 	path = pack/plugins/start/nvim-nio
 	url = git@github.com:nvim-neotest/nvim-nio.git
 	ignore = dirty
+[submodule "pack/plugins/start/git-conflict.nvim"]
+	path = pack/plugins/start/git-conflict.nvim
+	url = git@github.com:akinsho/git-conflict.nvim.git
+	ignore = dirty
