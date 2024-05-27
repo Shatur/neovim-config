@@ -21,7 +21,7 @@ local function close_buffer(command)
   end
 
   if vim.api.nvim_buf_get_option(buffer, 'buftype'):len() ~= 0 or stickybuf.should_auto_pin(buffer) or filettype == 'NeogitCommitMessage' then
-    vim.cmd.quit()
+    vim.cmd.quit(command)
     return
   end
 
