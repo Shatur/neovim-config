@@ -13,6 +13,8 @@ local function setup_lsp_keymaps(_, buffer)
   vim.keymap.set('n', 'gO', telescope_builin.lsp_document_symbols, { noremap = true, buffer = buffer, desc = 'Go to document symbol' })
   vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { noremap = true, buffer = buffer, desc = 'Rename symbol' })
   vim.keymap.set({ 'n', 'v' }, '<Leader>=', vim.lsp.buf.format, { noremap = true, buffer = buffer, desc = 'Format document' })
+  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true, buffer = buffer, desc = 'Jump to previous diagnostic' })
+  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { noremap = true, buffer = buffer, desc = 'Jump to next diagnostic' })
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
