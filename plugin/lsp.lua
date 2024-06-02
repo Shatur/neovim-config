@@ -59,7 +59,9 @@ lspconfig.rust_analyzer.setup({
           if err then
             error(tostring(err))
           else
-            vim.ui.open(url)
+            if url then
+              vim.ui.open(url)
+            end
           end
         end)
       end,
