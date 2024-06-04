@@ -130,8 +130,6 @@ end, { expr = true })
 vim.keymap.set('', '<Leader>cd', '<Cmd>cd %:h<CR>', { noremap = true, desc = 'Change directory to current file folder' })
 vim.keymap.set('', '<Backspace>', '<Cmd>buffer #<CR>', { noremap = true, desc = 'Back to previous buffer' })
 
-local config_group = vim.api.nvim_create_augroup('Config', {})
 vim.api.nvim_create_autocmd({ 'TextYankPost' }, {
-  group = config_group,
   callback = function() vim.highlight.on_yank() end,
 })
