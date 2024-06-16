@@ -1,0 +1,18 @@
+[submodule "plugins/start/auto-hlsearch.nvim"]
+	path = pack/plugins/start/auto-hlsearch.nvim
+	url = git@github.com:asiryk/auto-hlsearch.nvim.git
+[submodule "pack/plugins/start/cutlass.nvim"]
+	path = pack/plugins/start/cutlass.nvim
+	url = git@github.com:gbprod/cutlass.nvim.git
+[submodule "pack/plugins/start/leap.nvim"]
+	path = pack/plugins/start/leap.nvim
+	url = git@github.com:ggandor/leap.nvim.git
+[submodule "pack/plugins/start/nvim-surround"]
+	path = pack/plugins/start/nvim-surround
+	url = git@github.com:kylechui/nvim-surround.git
+[submodule "pack/plugins/start/substitute.nvim"]
+	path = pack/plugins/start/substitute.nvim
+	url = git@github.com:gbprod/substitute.nvim.git
+[submodule "pack/plugins/start/unimpaired.nvim"]
+	path = pack/plugins/start/unimpaired.nvim
+	url = git@github.com:tummetott/unimpaired.nvim.git
