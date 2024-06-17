@@ -18,6 +18,6 @@ vim.keymap.set('', '[d', function() vscode.call('editor.action.marker.prev') end
 vim.keymap.set('', ']c', function() vscode.call('workbench.action.editor.nextChange') end, { noremap = true })
 vim.keymap.set('', '[c', function() vscode.call('workbench.action.editor.previousChange') end, { noremap = true })
 
-vim.keymap.set('', 'ghr', function() vscode.call('git.revertSelectedRanges') end, { noremap = true })
-vim.keymap.set('', 'ghs', function() vscode.call('git.stageSelectedRanges') end, { noremap = true })
-vim.keymap.set('', 'ghu', function() vscode.call('git.unstageSelectedRanges') end, { noremap = true })
+vim.keymap.set('', '<Leader>hr', function() vscode.call('git.revertSelectedRanges') end, { noremap = true })
+vim.keymap.set('', '<Leader>hs', function() vscode.call('git.stageSelectedRanges') end, { noremap = true })
+vim.keymap.set('', '<Leader>hu', function() vscode.call('git.unstageSelectedRanges') end, { noremap = true })
