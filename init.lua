@@ -31,5 +31,5 @@ vim.api.nvim_create_autocmd({ 'TextYankPost' }, {
   callback = function() vim.highlight.on_yank() end,
 })
 
-vim.keymap.set('', ']<Space>', ":<C-u>put =repeat([''],v:count)<bar>'[-1<CR>", { noremap = true })
-vim.keymap.set('', '[<Space>', ":<C-u>put!=repeat([''],v:count)<bar>']+1<CR>", { noremap = true })
+vim.keymap.set('', ']<Space>', "<Cmd>put =repeat([''],v:count)<bar>'[-1<CR>", { noremap = true })
+vim.keymap.set('', '[<Space>', "<Cmd>put!=repeat([''],v:count)<bar>']+1<CR>", { noremap = true })
