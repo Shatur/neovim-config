@@ -13,6 +13,3 @@
 [submodule "pack/plugins/start/substitute.nvim"]
 	path = pack/plugins/start/substitute.nvim
 	url = git@github.com:gbprod/substitute.nvim.git
-[submodule "pack/plugins/start/unimpaired.nvim"]
-	path = pack/plugins/start/unimpaired.nvim
-	url = git@github.com:tummetott/unimpaired.nvim.git

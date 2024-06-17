@@ -27,22 +27,9 @@ vim.keymap.set('n', '<Leader>ss', substitute.line, { noremap = true })
 vim.keymap.set('n', '<Leader>S', substitute.eol, { noremap = true })
 vim.keymap.set('x', 'p', substitute.visual, { noremap = true })
 
-local keymaps = not vim.g.vscode and {}
-  or {
-    bfirst = false,
-    blast = false,
-    bnext = false,
-    bprevious = false,
-    next_file = false,
-    previous_file = false,
-    tprevious = false,
-    tnext = false,
-    tfirst = false,
-    tlast = false,
-  }
-
-require('unimpaired').setup({ keymaps = keymaps })
-
 vim.api.nvim_create_autocmd({ 'TextYankPost' }, {
   callback = function() vim.highlight.on_yank() end,
 })
+
+vim.keymap.set('', ']<Space>', ":<C-u>put =repeat([''],v:count)<bar>'[-1<CR>", { noremap = true })
+vim.keymap.set('', '[<Space>', ":<C-u>put!=repeat([''],v:count)<bar>']+1<CR>", { noremap = true })
