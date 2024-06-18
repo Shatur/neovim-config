@@ -14,6 +14,8 @@ vim.keymap.set('', '[t', function() vscode.call('workbench.action.previousEditor
 
 vim.keymap.set('', ']d', function() vscode.call('editor.action.marker.next') end, { noremap = true })
 vim.keymap.set('', '[d', function() vscode.call('editor.action.marker.prev') end, { noremap = true })
+vim.keymap.set('', ']D', function() vscode.call('editor.action.marker.nextInFiles') end, { noremap = true })
+vim.keymap.set('', '[D', function() vscode.call('editor.action.marker.nextInFiles') end, { noremap = true })
 
 vim.keymap.set('', ']c', function() vscode.call('workbench.action.editor.nextChange') end, { noremap = true })
 vim.keymap.set('', '[c', function() vscode.call('workbench.action.editor.previousChange') end, { noremap = true })
