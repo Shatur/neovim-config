@@ -25,3 +25,6 @@ vim.keymap.set('', '[C', function() vscode.call('editor.action.dirtydiff.previou
 vim.keymap.set('', '<Leader>hr', function() vscode.call('git.revertSelectedRanges') end, { noremap = true })
 vim.keymap.set('', '<Leader>hs', function() vscode.call('git.stageSelectedRanges') end, { noremap = true })
 vim.keymap.set('', '<Leader>hu', function() vscode.call('git.unstageSelectedRanges') end, { noremap = true })
+
+vim.keymap.set('', '<C-w>q', function() vscode.call('workbench.action.closeEditorsAndGroup') end, { noremap = true })
+vim.keymap.set('', '<C-w>O', function() vscode.call('workbench.action.closeOtherEditors') end, { noremap = true })
