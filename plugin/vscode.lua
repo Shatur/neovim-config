@@ -2,6 +2,8 @@ if not vim.g.vscode then
   return
 end
 
+vim.api.nvim_set_hl(0, 'NvimSurroundHighlight', { bold = true })
+
 local vscode = require('vscode')
 
 vim.keymap.set('', ']b', function() vscode.call('workbench.action.nextEditorInGroup') end, { noremap = true })
