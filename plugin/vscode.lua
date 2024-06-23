@@ -6,6 +6,12 @@ vim.api.nvim_set_hl(0, 'NvimSurroundHighlight', { bold = true })
 
 local vscode = require('vscode')
 
+-- Remove cursor keybindings to avoid conflicts with cutlass.
+vim.keymap.del('x', 'mi')
+vim.keymap.del('x', 'ma')
+vim.keymap.del('x', 'mI')
+vim.keymap.del('x', 'mA')
+
 vim.keymap.set('', ']b', function() vscode.call('workbench.action.nextEditorInGroup') end, { noremap = true })
 vim.keymap.set('', '[b', function() vscode.call('workbench.action.previousEditorInGroup') end, { noremap = true })
 vim.keymap.set('', '[B', function() vscode.call('workbench.action.firstEditorInGroup') end, { noremap = true })
